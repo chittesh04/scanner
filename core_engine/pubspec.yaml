@@ -1,0 +1,12 @@
+name: smartscan_core_engine
+description: Core document processing engine for SmartScan
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  smartscan_models:
+    path: ../models
+  image: ^4.2.0

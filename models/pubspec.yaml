@@ -1,0 +1,7 @@
+name: smartscan_models
+description: Data models for SmartScan
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
