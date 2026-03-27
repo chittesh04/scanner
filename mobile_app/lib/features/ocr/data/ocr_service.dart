@@ -50,5 +50,6 @@ class OcrService implements OcrPipeline {
     );
   }
 
+  @override
   Future<void> dispose() => _textRecognizer.close();
 }

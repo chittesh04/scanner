@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\mat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\svd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\stdvec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\imgcodecs\imgcodecs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\imgproc\imgproc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\mat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\svd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\core\stdvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\imgcodecs\imgcodecs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\imgproc\imgproc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src\dartcv\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8D37FECC-E22C-3C02-8716-6B682019BA68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{039F2500-C0E0-381C-A098-79362248F981}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

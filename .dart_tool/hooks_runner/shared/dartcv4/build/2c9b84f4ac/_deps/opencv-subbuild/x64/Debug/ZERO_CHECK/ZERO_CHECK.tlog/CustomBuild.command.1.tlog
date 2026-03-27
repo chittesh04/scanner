@@ -1,0 +1,10 @@
+^C:\USERS\CHITT\DESKTOP\PROJECT\SMARTSCAN\.DART_TOOL\HOOKS_RUNNER\SHARED\DARTCV4\BUILD\2C9B84F4AC\_DEPS\OPENCV-SUBBUILD\CMAKEFILES\78A3133AA4050B6BD4338BC5C3459E05\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-subbuild -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-subbuild/opencv-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

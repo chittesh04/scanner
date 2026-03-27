@@ -16,4 +16,5 @@ class OcrResult {
 
 abstract interface class OcrPipeline {
   Future<OcrResult> recognizeText(String imagePath, {List<String> languageHints = const []});
+  Future<void> dispose();
 }

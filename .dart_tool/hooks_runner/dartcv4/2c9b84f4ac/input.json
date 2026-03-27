@@ -1,0 +1,32 @@
+{
+  "assets": {},
+  "config": {
+    "build_asset_types": [
+      "code_assets/code"
+    ],
+    "extensions": {
+      "code_assets": {
+        "c_compiler": {
+          "ar": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\lib.exe",
+          "cc": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe",
+          "ld": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe",
+          "windows": {
+            "developer_command_prompt": {
+              "arguments": [],
+              "script": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat"
+            }
+          }
+        },
+        "link_mode_preference": "dynamic",
+        "target_architecture": "x64",
+        "target_os": "windows"
+      }
+    },
+    "linking_enabled": false
+  },
+  "out_dir_shared": "c:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\",
+  "out_file": "c:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\dartcv4\\2c9b84f4ac\\output.json",
+  "package_name": "dartcv4",
+  "package_root": "C:\\Users\\chitt\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\dartcv4-2.2.1+4\\",
+  "user_defines": {}
+}

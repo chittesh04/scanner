@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\f7d1877acfcb6b41243877fd9ccce7ac\opencv-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\cee85ef6d0d3b429000dbb17a9fdf66f\opencv-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\78a3133aa4050b6bd4338bc5c3459e05\opencv-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-subbuild\CMakeFiles\opencv-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{98968395-DAB2-3541-82B9-1C8B4A1F849B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

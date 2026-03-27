@@ -1,0 +1,10 @@
+^C:\USERS\CHITT\DESKTOP\PROJECT\SMARTSCAN\.DART_TOOL\HOOKS_RUNNER\SHARED\DARTCV4\BUILD\2C9B84F4AC\_DEPS\OPENCV-SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac --check-stamp-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

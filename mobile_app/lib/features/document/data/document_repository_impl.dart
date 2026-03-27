@@ -7,6 +7,7 @@ import 'package:smartscan_models/document_collection.dart';
 import 'package:smartscan/features/document/domain/document_repository.dart';
 import 'package:smartscan_core_engine/document_pipeline/scan_pipeline.dart';
 import 'package:smartscan_core_engine/ocr_engine/ocr_pipeline.dart';
+import 'package:smartscan_services/background_tasks/work_manager_dispatcher.dart';
 import 'package:uuid/uuid.dart';
 
 class DocumentRepositoryImpl implements DocumentRepository {
@@ -194,6 +195,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
           ..width = page.width
           ..height = page.height
           ..hasSignature = false
+          ..ocrStatus = OcrStatus.pending
           ..updatedAt = DateTime.now();
         await _isar.pageEntitys.put(pageEntity);
         insertedPageIds.add(pageId);
@@ -209,11 +211,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
       }
     });
 
-    unawaited(
-      Future.wait(
-        insertedPageIds.map((pageId) => performOcr(documentId, pageId)),
-      ),
-    );
+    // Queue background OCR instead of blocking the main isolate.
+    unawaited(WorkManagerDispatcher.enqueueOcrIndexJob(documentId));
   }
 
   @override
@@ -393,11 +392,24 @@ class DocumentRepositoryImpl implements DocumentRepository {
       await page.ocrBlocks.load();
       final ocrText = page.ocrBlocks.map((b) => b.text).join(' ');
 
+      final ocrBlocks = page.ocrBlocks
+          .map((b) => OcrBlock(
+                text: b.text,
+                left: b.left,
+                top: b.top,
+                right: b.right,
+                bottom: b.bottom,
+              ))
+          .toList(growable: false);
+
       mappedPages.add(DocumentPage(
         pageId: page.pageId,
         order: page.order,
         processedImagePath: page.processedImagePath,
+        imageWidth: page.width,
+        imageHeight: page.height,
         ocrText: ocrText.isEmpty ? null : ocrText,
+        ocrBlocks: ocrBlocks,
         hasSignature: page.hasSignature,
         signatureX: page.signatureX,
         signatureY: page.signatureY,

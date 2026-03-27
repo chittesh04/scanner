@@ -4,7 +4,9 @@ publish_to: none
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
+
+resolution: workspace
 
 dependencies:
   flutter:
@@ -41,6 +43,7 @@ dependencies:
     path: ../core_engine
   smartscan_services:
     path: ../services
+  opencv_dart: ^2.2.1+4
 
 dev_dependencies:
   flutter_test:

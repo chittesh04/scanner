@@ -234,11 +234,22 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
       final request = ExportRequest(
         documentId: widget.documentId,
         title: doc.title,
-        pageImagePaths: doc.pages.map((p) => p.processedImagePath).toList(),
-        ocrTexts: doc.pages.map((p) => p.ocrText ?? '').toList(),
-        signatures: doc.pages.map((p) => p.hasSignature 
-           ? PageSignature(x: p.signatureX ?? 0.5, y: p.signatureY ?? 0.5, scale: p.signatureScale ?? 1.0) 
-           : null).toList(),
+        pages: doc.pages.map((p) => PageExportData(
+          imagePath: p.processedImagePath,
+          imageWidth: p.imageWidth,
+          imageHeight: p.imageHeight,
+          ocrBlocks: p.ocrBlocks.map((b) => ExportOcrBlock(
+            text: b.text,
+            left: b.left,
+            top: b.top,
+            right: b.right,
+            bottom: b.bottom,
+          )).toList(),
+          ocrText: p.ocrText ?? '',
+          signature: p.hasSignature
+              ? PageSignature(x: p.signatureX ?? 0.5, y: p.signatureY ?? 0.5, scale: p.signatureScale ?? 1.0)
+              : null,
+        )).toList(),
       );
 
       final file = await exportService.export(request);

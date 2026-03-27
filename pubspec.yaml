@@ -1,0 +1,14 @@
+name: smartscan_workspace
+description: A native Dart Workspace for SmartScan
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+workspace:
+  - core_engine
+  - database
+  - models
+  - services
+  - mobile_app

@@ -51,7 +51,7 @@ void main() {
     );
   });
 
-  test('PdfExportService composites signatures and hidden text OCR successfully', () async {
+  test('PdfExportService positions invisible text per OCR block for searchable PDF', () async {
     final storage = MockFileStorageService();
     final sigRepo = MockSignatureRepository();
     final service = PdfExportService(storage, sigRepo);
@@ -63,9 +63,31 @@ void main() {
     final request = ExportRequest(
       documentId: 'doc1',
       title: 'TestDoc',
-      pageImagePaths: [file.path],
-      ocrTexts: ['Hidden Searchable Test Layer'],
-      signatures: [const PageSignature(x: 0.5, y: 0.5, scale: 1.0)],
+      pages: [
+        PageExportData(
+          imagePath: file.path,
+          imageWidth: 1000,
+          imageHeight: 1400,
+          ocrBlocks: [
+            const ExportOcrBlock(
+              text: 'Hello',
+              left: 100,
+              top: 200,
+              right: 300,
+              bottom: 240,
+            ),
+            const ExportOcrBlock(
+              text: 'World',
+              left: 320,
+              top: 200,
+              right: 520,
+              bottom: 240,
+            ),
+          ],
+          ocrText: 'Hello World',
+          signature: const PageSignature(x: 0.5, y: 0.5, scale: 1.0),
+        ),
+      ],
       outputPath: '${tempDir.path}/test_pdf_export_output.pdf',
     );
 

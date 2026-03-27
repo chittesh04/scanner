@@ -1,0 +1,1 @@
+C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\2c9b84f4ac\_deps\opencv-build\3rdparty\libjpeg-turbo\jpeg16-static.dir\Release\jpeg16-static.lib

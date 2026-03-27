@@ -34,6 +34,8 @@ class CollectionEntity {
 
 enum DocumentStatus { draft, ready, archived }
 
+enum OcrStatus { pending, processing, completed, failed }
+
 @collection
 class PageEntity {
   Id id = Isar.autoIncrement;
@@ -52,6 +54,11 @@ class PageEntity {
   double? signatureScale;
   String? signatureImagePath;
   late DateTime updatedAt;
+
+  @enumerated
+  late OcrStatus ocrStatus;
+
+  String? fullText;
 
   final ocrBlocks = IsarLinks<OcrBlockEntity>();
 }

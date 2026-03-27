@@ -10,6 +10,8 @@ import 'package:smartscan/features/document/domain/document_repository.dart';
 import 'package:smartscan/features/ocr/data/ocr_service.dart';
 import 'package:smartscan/features/scan/data/scanning_service.dart';
 import 'package:smartscan/features/export/data/pdf_export_service.dart';
+import 'package:smartscan/features/export/data/docx_export_service.dart';
+import 'package:smartscan/features/export/data/xlsx_export_service.dart';
 import 'package:smartscan/features/signature/data/signature_repository_impl.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
@@ -49,4 +51,12 @@ final pdfExportProvider = Provider<PdfExportService>((ref) {
     ref.watch(fileStorageProvider),
     ref.watch(signatureRepositoryProvider),
   );
+});
+
+final docxExportProvider = Provider<DocxExportService>((ref) {
+  return DocxExportService(ref.watch(fileStorageProvider));
+});
+
+final xlsxExportProvider = Provider<XlsxExportService>((_) {
+  return XlsxExportService();
 });
