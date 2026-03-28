@@ -11,6 +11,12 @@ class DatabaseManager {
   Isar? _isar;
   Isar get isar => _isar!;
 
+  static Future<Isar> openInstance() async {
+    final manager = DatabaseManager.instance;
+    await manager.open();
+    return manager.isar;
+  }
+
   Future<void> open() async {
     if (_isar != null && _isar!.isOpen) return;
 

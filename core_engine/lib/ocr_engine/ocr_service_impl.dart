@@ -3,6 +3,8 @@ import 'package:smartscan_core_engine/ocr_engine/ocr_pipeline.dart';
 import 'package:smartscan_core_engine/ports/secure_storage_port.dart';
 
 import 'dart:io';
+import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart' as p;
 
 class OcrServiceImpl implements OcrPipeline {
   OcrServiceImpl(this._storagePort,
@@ -16,39 +18,46 @@ class OcrServiceImpl implements OcrPipeline {
   Future<OcrResult> recognizeText(String imagePath,
       {List<String> languageHints = const []}) async {
     final imageBytes = await _storagePort.readImageBytes(imagePath);
-    // Write to a temporary file because ML Kit requires a File path or a direct ByteBuffer.
-    // Using a temp file is the simplest matching the old logic for now.
-    final tempFile = File('$imagePath.tmp');
-    await tempFile.writeAsBytes(imageBytes);
+    
+    final tempDir = await getTemporaryDirectory();
+    final fileName = '${p.basename(imagePath)}_mlkit_tmp.jpg';
+    final tempFile = File(p.join(tempDir.path, fileName));
 
-    final inputImage = InputImage.fromFile(tempFile);
-    final recognized = await _textRecognizer.processImage(inputImage);
-    await tempFile.delete();
+    try {
+      await tempFile.writeAsBytes(imageBytes, flush: true);
 
-    final words = recognized.blocks
-        .expand((block) => block.lines)
-        .expand((line) => line.elements)
-        .map(
-          (element) => OcrWord(
-            text: element.text,
-            left: element.boundingBox.left,
-            top: element.boundingBox.top,
-            right: element.boundingBox.right,
-            bottom: element.boundingBox.bottom,
-          ),
-        )
-        .toList(growable: false);
+      final inputImage = InputImage.fromFile(tempFile);
+      final recognized = await _textRecognizer.processImage(inputImage);
 
-    return OcrResult(
-      fullText: recognized.text,
-      words: words,
-      detectedLanguages: recognized.blocks
-          .map((e) => e.recognizedLanguages)
-          .expand((e) => e)
-          .whereType<String>()
-          .toSet()
-          .toList(growable: false),
-    );
+      final words = recognized.blocks
+          .expand((block) => block.lines)
+          .expand((line) => line.elements)
+          .map(
+            (element) => OcrWord(
+              text: element.text,
+              left: element.boundingBox.left,
+              top: element.boundingBox.top,
+              right: element.boundingBox.right,
+              bottom: element.boundingBox.bottom,
+            ),
+          )
+          .toList(growable: false);
+
+      return OcrResult(
+        fullText: recognized.text,
+        words: words,
+        detectedLanguages: recognized.blocks
+            .map((e) => e.recognizedLanguages)
+            .expand((e) => e)
+            .whereType<String>()
+            .toSet()
+            .toList(growable: false),
+      );
+    } finally {
+      if (await tempFile.exists()) {
+        await tempFile.delete();
+      }
+    }
   }
 
   @override

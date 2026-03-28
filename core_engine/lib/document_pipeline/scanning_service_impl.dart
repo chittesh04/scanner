@@ -218,9 +218,13 @@ class ScanningServiceImpl implements ScanPipeline {
     final blurred = cv.gaussianBlur(resized, (5, 5), 0);
     final edges = cv.canny(blurred, 50, 150);
 
-    // Find contours
-    final (contours, _) = cv.findContours(
-      edges,
+    // Create a 3x3 structuring element for dilation
+    final kernel = cv.getStructuringElement(cv.MORPH_RECT, (3, 3));
+    final dilatedEdges = cv.dilate(edges, kernel);
+
+    // Find contours using dilated edges
+    final (contours, hierarchy) = cv.findContours(
+      dilatedEdges,
       cv.RETR_EXTERNAL,
       cv.CHAIN_APPROX_SIMPLE,
     );
@@ -241,7 +245,18 @@ class ScanningServiceImpl implements ScanPipeline {
         maxArea = area;
         bestQuad = approx.toList();
       }
+
+      // CRITICAL: Dispose the temporary native vector immediately
+      approx.dispose();
     }
+
+    // CRITICAL: Dispose the main contour vector and hierarchy
+    contours.dispose();
+    hierarchy.dispose();
+
+    // Dispose new native objects
+    kernel.dispose();
+    dilatedEdges.dispose();
 
     // Dispose OpenCV Mats eagerly
     gray.dispose();
@@ -304,14 +319,35 @@ class ScanningServiceImpl implements ScanPipeline {
 
       // ── 2. Adaptive Thresholding ("scanned" B&W look) ───────────────
       final grayWarped = cv.cvtColor(warped, cv.COLOR_BGR2GRAY);
+
+      // Illumination Normalization (Shadow Removal)
+      final dilateKernel = cv.getStructuringElement(cv.MORPH_RECT, (35, 35));
+      final bgDilated = cv.dilate(grayWarped, dilateKernel);
+      final bgMap = cv.medianBlur(bgDilated, 21);
+      final diff = cv.subtract(bgMap, grayWarped);
+      final normalized = cv.bitwiseNOT(diff);
+
+      // Dynamic Block Size Calculation
+      final minDimension = math.min(warped.cols, warped.rows);
+      int blockSize = (minDimension * 0.015).toInt();
+      if (blockSize % 2 == 0) blockSize++;
+      if (blockSize < 3) blockSize = 3;
+      final double cValue = 12.0;
+
       final enhanced = cv.adaptiveThreshold(
-        grayWarped,
+        normalized,
         255.0,
         cv.ADAPTIVE_THRESH_GAUSSIAN_C,
         cv.THRESH_BINARY,
-        11,
-        8.0,
+        blockSize,
+        cValue,
       );
+
+      dilateKernel.dispose();
+      bgDilated.dispose();
+      bgMap.dispose();
+      diff.dispose();
+      normalized.dispose();
 
       // ── 3. Thumbnail ────────────────────────────────────────────────
       final thumbH = enhanced.rows > 0
