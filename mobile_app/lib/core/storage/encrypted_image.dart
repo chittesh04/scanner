@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smartscan/core/di/service_locator.dart';
+import 'package:shimmer/shimmer.dart';
 
 class EncryptedImage extends ConsumerWidget {
   const EncryptedImage({
@@ -26,7 +27,15 @@ class EncryptedImage extends ConsumerWidget {
       future: storage.readEncrypted(File(imagePath)),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return Shimmer.fromColors(
+            baseColor: Colors.black12,
+            highlightColor: Colors.white54,
+            child: Container(
+              width: width,
+              height: height,
+              color: Colors.white,
+            ),
+          );
         }
 
         if (snapshot.hasError || !snapshot.hasData) {

@@ -103,10 +103,18 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
                   children: [
                     AspectRatio(
                       aspectRatio: 1,
-                      child: EncryptedImage(
-                        imagePath: page.processedImagePath,
-                        fit: BoxFit.cover,
-                      ),
+                      child: index == 0
+                          ? Hero(
+                              tag: 'document_image_${widget.documentId}',
+                              child: EncryptedImage(
+                                imagePath: page.processedImagePath,
+                                fit: BoxFit.cover,
+                              ),
+                            )
+                          : EncryptedImage(
+                              imagePath: page.processedImagePath,
+                              fit: BoxFit.cover,
+                            ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(12),

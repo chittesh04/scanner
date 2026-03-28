@@ -65,34 +65,56 @@ class _DocumentEditorPageState extends ConsumerState<DocumentEditorPage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          EncryptedImage(imagePath: widget.page.processedImagePath, fit: BoxFit.contain),
-          
-          if (_hasSignature && _signatureImage != null)
-            Align(
-              alignment: Alignment(
-                (_x * 2) - 1, 
-                (_y * 2) - 1,
-              ),
-              child: GestureDetector(
-                onPanUpdate: (details) {
-                  final renderBox = context.findRenderObject() as RenderBox;
-                  final size = renderBox.size;
-                  setState(() {
-                    _x = (_x + details.delta.dx / size.width).clamp(0.0, 1.0);
-                    _y = (_y + details.delta.dy / size.height).clamp(0.0, 1.0);
-                  });
-                },
-                child: Transform.scale(
-                  scale: _scale,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blueAccent, width: 2),
-                    ),
-                    child: Image(image: _signatureImage!, width: 200),
-                  ),
-                ),
-              ),
-            ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final imgRatio = widget.page.imageWidth / widget.page.imageHeight;
+              final viewRatio = constraints.maxWidth / constraints.maxHeight;
+              
+              double renderWidth, renderHeight;
+              if (imgRatio > viewRatio) {
+                renderWidth = constraints.maxWidth;
+                renderHeight = constraints.maxWidth / imgRatio;
+              } else {
+                renderHeight = constraints.maxHeight;
+                renderWidth = constraints.maxHeight * imgRatio;
+              }
+
+              return Center(
+                child: SizedBox(
+                  width: renderWidth,
+                  height: renderHeight,
+                  child: Stack(
+                    children:[
+                       EncryptedImage(imagePath: widget.page.processedImagePath, fit: BoxFit.fill),
+                       
+                       if (_hasSignature && _signatureImage != null)
+                         Positioned(
+                           left: _x * renderWidth,
+                           top: _y * renderHeight,
+                           child: GestureDetector(
+                             onPanUpdate: (details) {
+                               setState(() {
+                                  _x = (_x + details.delta.dx / renderWidth).clamp(0.0, 1.0);
+                                  _y = (_y + details.delta.dy / renderHeight).clamp(0.0, 1.0);
+                               });
+                             },
+                             child: Transform.scale(
+                               scale: _scale,
+                               child: Container(
+                                 decoration: BoxDecoration(
+                                   border: Border.all(color: Colors.blueAccent, width: 2),
+                                 ),
+                                 child: Image(image: _signatureImage!, width: 200),
+                               ),
+                             ),
+                           ),
+                         )
+                    ]
+                  )
+                )
+              );
+            }
+          ),
             
           Align(
             alignment: Alignment.bottomCenter,

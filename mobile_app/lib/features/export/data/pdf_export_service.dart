@@ -114,19 +114,7 @@ class PdfExportService {
                 for (final block in page.ocrBlocks)
                   _buildInvisibleTextBlock(block, scaleX, scaleY, pageHeight),
                 if (page.signature != null && signatureImage != null)
-                  pw.Align(
-                    alignment: pw.Alignment(
-                      (page.signature!.x * 2) - 1,
-                      (page.signature!.y * 2) - 1,
-                    ),
-                    child: pw.Transform.scale(
-                      scale: page.signature!.scale,
-                      child: pw.SizedBox(
-                        width: 200,
-                        child: pw.Image(signatureImage),
-                      ),
-                    ),
-                  ),
+                  _buildPdfSignature(page.signature!, signatureImage, pageWidth, pageHeight),
               ],
             );
           },
@@ -138,6 +126,31 @@ class PdfExportService {
     final pdfBytes = await pdf.save();
     await file.writeAsBytes(pdfBytes, flush: true);
     return payload.outputPath;
+  }
+
+  static pw.Widget _buildPdfSignature(
+    PageSignature signature,
+    pw.MemoryImage signatureImage,
+    double pageWidth,
+    double pageHeight,
+  ) {
+    final baseSignatureWidth = pageWidth * 0.25; 
+    final finalSignatureWidth = baseSignatureWidth * signature.scale;
+    final finalSignatureHeight = finalSignatureWidth / 2.0; 
+
+    final pdfLeft = signature.x * pageWidth;
+    final pdfTop = signature.y * pageHeight;
+    final pdfBottom = pageHeight - pdfTop - finalSignatureHeight;
+
+    return pw.Positioned(
+      left: pdfLeft,
+      bottom: pdfBottom,
+      child: pw.SizedBox(
+        width: finalSignatureWidth,
+        height: finalSignatureHeight,
+        child: pw.Image(signatureImage, fit: pw.BoxFit.contain),
+      ),
+    );
   }
 
   /// Creates a positioned, fully transparent text widget whose bounding

@@ -380,6 +380,7 @@ class _CameraPreviewLayer extends StatelessWidget {
                 painter: _ScanOverlayPainter(
                   rectangles: scanState.rectangles,
                   detectionStatus: scanState.detectionStatus,
+                  imageSize: Size(previewWidth, previewHeight),
                 ),
               ),
             ],
@@ -534,14 +535,37 @@ class _CapturedPagesPreview extends StatelessWidget {
 }
 
 class _ScanOverlayPainter extends CustomPainter {
-  _ScanOverlayPainter(
-      {required this.rectangles, required this.detectionStatus});
+  _ScanOverlayPainter({
+    required this.rectangles, 
+    required this.detectionStatus,
+    required this.imageSize,
+  });
 
   final List<DetectedRectangle> rectangles;
   final DetectionStatus detectionStatus;
+  final Size imageSize;
 
   @override
   void paint(Canvas canvas, Size size) {
+    // 1. Calculate the aspect ratios
+    final imageAspectRatio = imageSize.height / imageSize.width;
+    final canvasAspectRatio = size.height / size.width;
+
+    double scale;
+    double dx = 0.0;
+    double dy = 0.0;
+
+    // 2. Emulate BoxFit.cover math
+    if (imageAspectRatio > canvasAspectRatio) {
+      // Image is taller than canvas; crop top/bottom
+      scale = size.width / imageSize.width;
+      dy = (size.height - (imageSize.height * scale)) / 2.0;
+    } else {
+      // Image is wider than canvas; crop left/right
+      scale = size.height / imageSize.height;
+      dx = (size.width - (imageSize.width * scale)) / 2.0;
+    }
+
     final color = switch (detectionStatus) {
       DetectionStatus.notDetected => Colors.redAccent,
       DetectionStatus.adjusting => Colors.yellowAccent,
@@ -562,13 +586,13 @@ class _ScanOverlayPainter extends CustomPainter {
     final textPainter = TextPainter(textDirection: TextDirection.ltr);
 
     for (final rectangle in rectangles) {
-      final points = rectangle.corners
-          .map(
-              (corner) => Offset(corner.x * size.width, corner.y * size.height))
-          .toList(growable: false);
-      if (points.length != 4) {
-        continue;
-      }
+      final points = rectangle.corners.map((corner) {
+        final uncroppedX = corner.x * imageSize.width * scale;
+        final uncroppedY = corner.y * imageSize.height * scale;
+        return Offset(uncroppedX + dx, uncroppedY + dy);
+      }).toList(growable: false);
+
+      if (points.length != 4) continue;
 
       final path = Path()
         ..moveTo(points[0].dx, points[0].dy)

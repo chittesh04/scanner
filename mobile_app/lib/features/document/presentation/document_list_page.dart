@@ -595,8 +595,11 @@ class _RecentCarousel extends StatelessWidget {
                           height: 92,
                           child: document.thumbnailImagePath == null
                               ? const ColoredBox(color: Colors.black12)
-                              : EncryptedImage(
-                                  imagePath: document.thumbnailImagePath!),
+                              : Hero(
+                                  tag: 'document_image_${document.documentId}',
+                                  child: EncryptedImage(
+                                      imagePath: document.thumbnailImagePath!),
+                                ),
                         ),
                       ),
                       const SizedBox(width: 10),
@@ -760,7 +763,10 @@ class _DocumentCard extends StatelessWidget {
                     width: double.infinity,
                     child: firstImagePath == null
                         ? const Icon(Icons.description_rounded, size: 40)
-                        : EncryptedImage(imagePath: firstImagePath),
+                        : Hero(
+                            tag: 'document_image_${document.documentId}',
+                            child: EncryptedImage(imagePath: firstImagePath),
+                          ),
                   ),
                 ),
               ),

@@ -37,6 +37,7 @@ dependencies:
     path: ../core_engine
   smartscan_services:
     path: ../services
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

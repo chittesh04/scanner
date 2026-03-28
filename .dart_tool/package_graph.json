@@ -33,6 +33,7 @@
       "dependencies": [
         "isar",
         "isar_flutter_libs",
+        "path_provider",
         "smartscan_core_engine",
         "smartscan_models",
         "uuid"
@@ -86,6 +87,7 @@
         "path_provider",
         "pdf",
         "share_plus",
+        "shimmer",
         "smartscan_core_engine",
         "smartscan_database",
         "smartscan_models",
@@ -197,6 +199,13 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "shimmer",
+      "version": "3.0.0",
+      "dependencies": [
+        "flutter"
       ]
     },
     {
