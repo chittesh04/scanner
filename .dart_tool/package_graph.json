@@ -18,8 +18,12 @@
       "name": "smartscan_core_engine",
       "version": "1.0.0",
       "dependencies": [
+        "google_mlkit_text_recognition",
         "image",
-        "smartscan_models"
+        "opencv_dart",
+        "path_provider",
+        "smartscan_models",
+        "uuid"
       ],
       "devDependencies": []
     },
@@ -28,7 +32,10 @@
       "version": "1.0.0",
       "dependencies": [
         "isar",
-        "smartscan_models"
+        "isar_flutter_libs",
+        "smartscan_core_engine",
+        "smartscan_models",
+        "uuid"
       ],
       "devDependencies": [
         "build_runner",
@@ -45,12 +52,17 @@
       "name": "smartscan_services",
       "version": "1.0.0",
       "dependencies": [
+        "cryptography",
+        "encrypt",
         "google_sign_in",
         "googleapis",
         "http",
         "isar",
+        "local_auth",
+        "smartscan_core_engine",
         "smartscan_database",
         "smartscan_models",
+        "uuid",
         "workmanager"
       ],
       "devDependencies": []
@@ -62,21 +74,14 @@
         "archive",
         "camera",
         "collection",
-        "cryptography",
         "cupertino_icons",
-        "encrypt",
         "ffi",
         "flutter",
         "flutter_riverpod",
         "freezed_annotation",
-        "google_mlkit_text_recognition",
         "image",
-        "isar",
-        "isar_flutter_libs",
         "json_annotation",
-        "local_auth",
         "logging",
-        "opencv_dart",
         "path",
         "path_provider",
         "pdf",
@@ -94,23 +99,7 @@
         "flutter_lints",
         "flutter_test",
         "freezed",
-        "isar_generator",
         "json_serializable"
-      ]
-    },
-    {
-      "name": "isar_generator",
-      "version": "3.1.0+1",
-      "dependencies": [
-        "analyzer",
-        "build",
-        "dart_style",
-        "dartx",
-        "glob",
-        "isar",
-        "path",
-        "source_gen",
-        "xxh3"
       ]
     },
     {
@@ -211,14 +200,6 @@
       ]
     },
     {
-      "name": "opencv_dart",
-      "version": "2.2.1+4",
-      "dependencies": [
-        "dartcv4",
-        "flutter"
-      ]
-    },
-    {
       "name": "share_plus",
       "version": "10.1.4",
       "dependencies": [
@@ -281,57 +262,6 @@
         "workmanager_android",
         "workmanager_apple",
         "workmanager_platform_interface"
-      ]
-    },
-    {
-      "name": "cryptography",
-      "version": "2.9.0",
-      "dependencies": [
-        "collection",
-        "crypto",
-        "ffi",
-        "meta",
-        "typed_data"
-      ]
-    },
-    {
-      "name": "local_auth",
-      "version": "2.3.0",
-      "dependencies": [
-        "flutter",
-        "local_auth_android",
-        "local_auth_darwin",
-        "local_auth_platform_interface",
-        "local_auth_windows"
-      ]
-    },
-    {
-      "name": "encrypt",
-      "version": "5.0.3",
-      "dependencies": [
-        "args",
-        "asn1lib",
-        "clock",
-        "collection",
-        "crypto",
-        "pointycastle"
-      ]
-    },
-    {
-      "name": "isar_flutter_libs",
-      "version": "3.1.0+1",
-      "dependencies": [
-        "flutter",
-        "isar"
-      ]
-    },
-    {
-      "name": "isar",
-      "version": "3.1.0+1",
-      "dependencies": [
-        "ffi",
-        "js",
-        "meta"
       ]
     },
     {
@@ -408,14 +338,6 @@
       ]
     },
     {
-      "name": "google_mlkit_text_recognition",
-      "version": "0.13.1",
-      "dependencies": [
-        "flutter",
-        "google_mlkit_commons"
-      ]
-    },
-    {
       "name": "camera",
       "version": "0.11.4",
       "dependencies": [
@@ -442,6 +364,40 @@
         "meta",
         "sky_engine",
         "vector_math"
+      ]
+    },
+    {
+      "name": "cryptography",
+      "version": "2.9.0",
+      "dependencies": [
+        "collection",
+        "crypto",
+        "ffi",
+        "meta",
+        "typed_data"
+      ]
+    },
+    {
+      "name": "local_auth",
+      "version": "2.3.0",
+      "dependencies": [
+        "flutter",
+        "local_auth_android",
+        "local_auth_darwin",
+        "local_auth_platform_interface",
+        "local_auth_windows"
+      ]
+    },
+    {
+      "name": "encrypt",
+      "version": "5.0.3",
+      "dependencies": [
+        "args",
+        "asn1lib",
+        "clock",
+        "collection",
+        "crypto",
+        "pointycastle"
       ]
     },
     {
@@ -474,9 +430,61 @@
       ]
     },
     {
-      "name": "xxh3",
-      "version": "1.2.0",
-      "dependencies": []
+      "name": "isar",
+      "version": "3.1.0+1",
+      "dependencies": [
+        "ffi",
+        "js",
+        "meta"
+      ]
+    },
+    {
+      "name": "isar_generator",
+      "version": "3.1.0+1",
+      "dependencies": [
+        "analyzer",
+        "build",
+        "dart_style",
+        "dartx",
+        "glob",
+        "isar",
+        "path",
+        "source_gen",
+        "xxh3"
+      ]
+    },
+    {
+      "name": "isar_flutter_libs",
+      "version": "3.1.0+1",
+      "dependencies": [
+        "flutter",
+        "isar"
+      ]
+    },
+    {
+      "name": "google_mlkit_text_recognition",
+      "version": "0.13.1",
+      "dependencies": [
+        "flutter",
+        "google_mlkit_commons"
+      ]
+    },
+    {
+      "name": "opencv_dart",
+      "version": "2.2.1+4",
+      "dependencies": [
+        "dartcv4",
+        "flutter"
+      ]
+    },
+    {
+      "name": "source_helper",
+      "version": "1.3.5",
+      "dependencies": [
+        "analyzer",
+        "collection",
+        "source_gen"
+      ]
     },
     {
       "name": "source_gen",
@@ -490,82 +498,6 @@
         "path",
         "source_span",
         "yaml"
-      ]
-    },
-    {
-      "name": "glob",
-      "version": "2.1.3",
-      "dependencies": [
-        "async",
-        "collection",
-        "file",
-        "path",
-        "string_scanner"
-      ]
-    },
-    {
-      "name": "dartx",
-      "version": "1.2.0",
-      "dependencies": [
-        "characters",
-        "collection",
-        "crypto",
-        "meta",
-        "path",
-        "time"
-      ]
-    },
-    {
-      "name": "dart_style",
-      "version": "2.3.2",
-      "dependencies": [
-        "analyzer",
-        "args",
-        "path",
-        "pub_semver",
-        "source_span"
-      ]
-    },
-    {
-      "name": "build",
-      "version": "2.4.1",
-      "dependencies": [
-        "analyzer",
-        "async",
-        "convert",
-        "crypto",
-        "glob",
-        "logging",
-        "meta",
-        "package_config",
-        "path"
-      ]
-    },
-    {
-      "name": "analyzer",
-      "version": "5.13.0",
-      "dependencies": [
-        "_fe_analyzer_shared",
-        "collection",
-        "convert",
-        "crypto",
-        "glob",
-        "meta",
-        "package_config",
-        "path",
-        "pub_semver",
-        "source_span",
-        "watcher",
-        "yaml"
-      ]
-    },
-    {
-      "name": "source_helper",
-      "version": "1.3.5",
-      "dependencies": [
-        "analyzer",
-        "collection",
-        "source_gen"
       ]
     },
     {
@@ -603,11 +535,44 @@
       ]
     },
     {
+      "name": "build",
+      "version": "2.4.1",
+      "dependencies": [
+        "analyzer",
+        "async",
+        "convert",
+        "crypto",
+        "glob",
+        "logging",
+        "meta",
+        "package_config",
+        "path"
+      ]
+    },
+    {
       "name": "async",
       "version": "2.13.1",
       "dependencies": [
         "collection",
         "meta"
+      ]
+    },
+    {
+      "name": "analyzer",
+      "version": "5.13.0",
+      "dependencies": [
+        "_fe_analyzer_shared",
+        "collection",
+        "convert",
+        "crypto",
+        "glob",
+        "meta",
+        "package_config",
+        "path",
+        "pub_semver",
+        "source_span",
+        "watcher",
+        "yaml"
       ]
     },
     {
@@ -729,11 +694,33 @@
       ]
     },
     {
+      "name": "glob",
+      "version": "2.1.3",
+      "dependencies": [
+        "async",
+        "collection",
+        "file",
+        "path",
+        "string_scanner"
+      ]
+    },
+    {
       "name": "frontend_server_client",
       "version": "4.0.0",
       "dependencies": [
         "async",
         "path"
+      ]
+    },
+    {
+      "name": "dart_style",
+      "version": "2.3.2",
+      "dependencies": [
+        "analyzer",
+        "args",
+        "path",
+        "pub_semver",
+        "source_span"
       ]
     },
     {
@@ -889,17 +876,6 @@
       ]
     },
     {
-      "name": "dartcv4",
-      "version": "2.2.1+4",
-      "dependencies": [
-        "code_assets",
-        "ffi",
-        "hooks",
-        "logging",
-        "native_toolchain_cmake"
-      ]
-    },
-    {
       "name": "win32",
       "version": "5.15.0",
       "dependencies": [
@@ -1020,62 +996,6 @@
       ]
     },
     {
-      "name": "typed_data",
-      "version": "1.4.0",
-      "dependencies": [
-        "collection"
-      ]
-    },
-    {
-      "name": "local_auth_windows",
-      "version": "1.0.11",
-      "dependencies": [
-        "flutter",
-        "local_auth_platform_interface"
-      ]
-    },
-    {
-      "name": "local_auth_platform_interface",
-      "version": "1.1.0",
-      "dependencies": [
-        "flutter",
-        "plugin_platform_interface"
-      ]
-    },
-    {
-      "name": "local_auth_darwin",
-      "version": "1.6.1",
-      "dependencies": [
-        "flutter",
-        "intl",
-        "local_auth_platform_interface"
-      ]
-    },
-    {
-      "name": "local_auth_android",
-      "version": "1.0.56",
-      "dependencies": [
-        "flutter",
-        "flutter_plugin_android_lifecycle",
-        "intl",
-        "local_auth_platform_interface"
-      ]
-    },
-    {
-      "name": "pointycastle",
-      "version": "3.9.1",
-      "dependencies": [
-        "collection",
-        "convert",
-        "js"
-      ]
-    },
-    {
-      "name": "asn1lib",
-      "version": "1.6.5",
-      "dependencies": []
-    },
-    {
       "name": "state_notifier",
       "version": "1.0.0",
       "dependencies": [
@@ -1162,13 +1082,6 @@
       ]
     },
     {
-      "name": "google_mlkit_commons",
-      "version": "0.8.1",
-      "dependencies": [
-        "flutter"
-      ]
-    },
-    {
       "name": "flutter_plugin_android_lifecycle",
       "version": "2.0.34",
       "dependencies": [
@@ -1234,6 +1147,62 @@
       "dependencies": []
     },
     {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
+      ]
+    },
+    {
+      "name": "local_auth_windows",
+      "version": "1.0.11",
+      "dependencies": [
+        "flutter",
+        "local_auth_platform_interface"
+      ]
+    },
+    {
+      "name": "local_auth_platform_interface",
+      "version": "1.1.0",
+      "dependencies": [
+        "flutter",
+        "plugin_platform_interface"
+      ]
+    },
+    {
+      "name": "local_auth_darwin",
+      "version": "1.6.1",
+      "dependencies": [
+        "flutter",
+        "intl",
+        "local_auth_platform_interface"
+      ]
+    },
+    {
+      "name": "local_auth_android",
+      "version": "1.0.56",
+      "dependencies": [
+        "flutter",
+        "flutter_plugin_android_lifecycle",
+        "intl",
+        "local_auth_platform_interface"
+      ]
+    },
+    {
+      "name": "pointycastle",
+      "version": "3.9.1",
+      "dependencies": [
+        "collection",
+        "convert",
+        "js"
+      ]
+    },
+    {
+      "name": "asn1lib",
+      "version": "1.6.5",
+      "dependencies": []
+    },
+    {
       "name": "http_parser",
       "version": "4.1.2",
       "dependencies": [
@@ -1289,6 +1258,41 @@
       ]
     },
     {
+      "name": "xxh3",
+      "version": "1.2.0",
+      "dependencies": []
+    },
+    {
+      "name": "dartx",
+      "version": "1.2.0",
+      "dependencies": [
+        "characters",
+        "collection",
+        "crypto",
+        "meta",
+        "path",
+        "time"
+      ]
+    },
+    {
+      "name": "google_mlkit_commons",
+      "version": "0.8.1",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "dartcv4",
+      "version": "2.2.1+4",
+      "dependencies": [
+        "code_assets",
+        "ffi",
+        "hooks",
+        "logging",
+        "native_toolchain_cmake"
+      ]
+    },
+    {
       "name": "source_span",
       "version": "1.10.2",
       "dependencies": [
@@ -1298,17 +1302,12 @@
       ]
     },
     {
-      "name": "string_scanner",
-      "version": "1.4.1",
+      "name": "checked_yaml",
+      "version": "2.0.4",
       "dependencies": [
-        "source_span"
-      ]
-    },
-    {
-      "name": "time",
-      "version": "2.1.6",
-      "dependencies": [
-        "clock"
+        "json_annotation",
+        "source_span",
+        "yaml"
       ]
     },
     {
@@ -1326,12 +1325,10 @@
       ]
     },
     {
-      "name": "checked_yaml",
-      "version": "2.0.4",
+      "name": "string_scanner",
+      "version": "1.4.1",
       "dependencies": [
-        "json_annotation",
-        "source_span",
-        "yaml"
+        "source_span"
       ]
     },
     {
@@ -1390,53 +1387,10 @@
       ]
     },
     {
-      "name": "native_toolchain_cmake",
-      "version": "0.2.4",
-      "dependencies": [
-        "change_case",
-        "code_assets",
-        "glob",
-        "hooks",
-        "logging",
-        "meta",
-        "path",
-        "pub_semver"
-      ]
-    },
-    {
-      "name": "hooks",
-      "version": "1.0.2",
-      "dependencies": [
-        "collection",
-        "crypto",
-        "logging",
-        "meta",
-        "pub_semver",
-        "yaml"
-      ]
-    },
-    {
-      "name": "code_assets",
-      "version": "1.0.0",
-      "dependencies": [
-        "collection",
-        "hooks"
-      ]
-    },
-    {
       "name": "plugin_platform_interface",
       "version": "2.1.8",
       "dependencies": [
         "meta"
-      ]
-    },
-    {
-      "name": "intl",
-      "version": "0.20.2",
-      "dependencies": [
-        "clock",
-        "meta",
-        "path"
       ]
     },
     {
@@ -1473,6 +1427,15 @@
       ]
     },
     {
+      "name": "intl",
+      "version": "0.20.2",
+      "dependencies": [
+        "clock",
+        "meta",
+        "path"
+      ]
+    },
+    {
       "name": "google_identity_services_web",
       "version": "0.3.3+1",
       "dependencies": [
@@ -1481,16 +1444,50 @@
       ]
     },
     {
+      "name": "time",
+      "version": "2.1.6",
+      "dependencies": [
+        "clock"
+      ]
+    },
+    {
+      "name": "native_toolchain_cmake",
+      "version": "0.2.4",
+      "dependencies": [
+        "change_case",
+        "code_assets",
+        "glob",
+        "hooks",
+        "logging",
+        "meta",
+        "path",
+        "pub_semver"
+      ]
+    },
+    {
+      "name": "hooks",
+      "version": "1.0.2",
+      "dependencies": [
+        "collection",
+        "crypto",
+        "logging",
+        "meta",
+        "pub_semver",
+        "yaml"
+      ]
+    },
+    {
+      "name": "code_assets",
+      "version": "1.0.0",
+      "dependencies": [
+        "collection",
+        "hooks"
+      ]
+    },
+    {
       "name": "vm_service",
       "version": "15.0.2",
       "dependencies": []
-    },
-    {
-      "name": "change_case",
-      "version": "2.2.0",
-      "dependencies": [
-        "meta"
-      ]
     },
     {
       "name": "native_toolchain_c",
@@ -1502,6 +1499,13 @@
         "logging",
         "meta",
         "pub_semver"
+      ]
+    },
+    {
+      "name": "change_case",
+      "version": "2.2.0",
+      "dependencies": [
+        "meta"
       ]
     }
   ],

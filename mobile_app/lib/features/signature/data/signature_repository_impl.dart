@@ -1,11 +1,11 @@
 import 'dart:typed_data';
-import 'package:smartscan/core/storage/file_storage_service.dart';
+import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
 class SignatureRepositoryImpl implements SignatureRepository {
   const SignatureRepositoryImpl(this._storage);
 
-  final FileStorageService _storage;
+  final FileStorageServiceImpl _storage;
   static const _fileName = 'user_signature.enc';
 
   @override

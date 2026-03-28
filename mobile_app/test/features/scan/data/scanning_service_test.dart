@@ -2,30 +2,28 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'package:image/image.dart' as img;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:smartscan_core_engine/document_pipeline/scan_pipeline.dart';
-import 'package:smartscan/features/scan/data/scanning_service.dart';
-import 'package:smartscan/core/storage/file_storage_service.dart';
+import 'package:smartscan_core_engine/core_engine.dart';
 
-class MockFileStorageService implements FileStorageService {
+class MockSecureStoragePort implements SecureStoragePort {
   @override
-  Future<File> pageFile(String documentId, String pageId, {required bool processed}) async {
+  Future<Uint8List> readImageBytes(String path) async {
+    return Uint8List(0);
+  }
+
+  @override
+  Future<String> writeImageBytes(String documentId, String pageId, Uint8List bytes, {required bool processed}) async {
     final temp = Directory.systemTemp;
-    return File('${temp.path}/$pageId.jpg');
-  }
-  
-  @override
-  Future<void> writeEncrypted(File file, Uint8List bytes) async {
+    final file = File('${temp.path}/$pageId.jpg');
     await file.writeAsBytes(bytes);
+    return file.path;
   }
-  @override
-  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   test('ScanningService dewarps and isolates frame accurately using FR-01.2 algorithms', () async {
-    final storage = MockFileStorageService();
-    final service = ScanningService(storage);
+    final storage = MockSecureStoragePort();
+    final service = ScanningServiceImpl(storage);
 
     // Generate valid memory JPEG using the native image package
     final imgImage = img.Image(width: 100, height: 100);

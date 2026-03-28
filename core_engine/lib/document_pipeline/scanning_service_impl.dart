@@ -2,19 +2,20 @@ import 'dart:isolate';
 import 'dart:math' as math;
 import 'dart:typed_data';
 import 'package:opencv_dart/opencv_dart.dart' as cv;
-import 'package:smartscan/core/storage/file_storage_service.dart';
-import 'package:smartscan_core_engine/document_pipeline/scan_pipeline.dart';
 import 'package:uuid/uuid.dart';
+
+import 'package:smartscan_core_engine/document_pipeline/scan_pipeline.dart';
+import 'package:smartscan_core_engine/ports/secure_storage_port.dart';
 
 /// Document scanning service powered by OpenCV via FFI.
 ///
 /// Uses Gaussian blur, Canny edge detection, contour detection, perspective
 /// warp (`getPerspectiveTransform2f` / `warpPerspective`), and adaptive
 /// thresholding to turn a photo of a document into a clean, flat scan.
-class ScanningService implements ScanPipeline {
-  ScanningService(this._storageService);
+class ScanningServiceImpl implements ScanPipeline {
+  ScanningServiceImpl(this._storagePort);
 
-  final FileStorageService _storageService;
+  final SecureStoragePort _storagePort;
   final _uuid = const Uuid();
 
   // ── Stability / auto-capture tuning ──────────────────────────────────
@@ -116,23 +117,22 @@ class ScanningService implements ScanPipeline {
       final label = p['label'] as String;
 
       final pageId = _uuid.v4();
-      final rawFile = await _storageService.pageFile(
+      final rawImagePath = await _storagePort.writeImageBytes(
         input.documentId,
         pageId,
+        rawJpegBytes,
         processed: false,
       );
-      final processedFile = await _storageService.pageFile(
+      final processedImagePath = await _storagePort.writeImageBytes(
         input.documentId,
         pageId,
+        processedJpegBytes,
         processed: true,
       );
 
-      await _storageService.writeEncrypted(rawFile, rawJpegBytes);
-      await _storageService.writeEncrypted(processedFile, processedJpegBytes);
-
       pages.add(ScannedPage(
-        rawImagePath: rawFile.path,
-        processedImagePath: processedFile.path,
+        rawImagePath: rawImagePath,
+        processedImagePath: processedImagePath,
         width: width,
         height: height,
         label: label,

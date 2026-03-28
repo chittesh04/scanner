@@ -3,10 +3,11 @@ import 'dart:typed_data';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:cryptography/cryptography.dart';
-import 'package:smartscan/core/security/encryption_service.dart';
+import 'package:smartscan_services/security/encryption_service.dart';
+import 'package:smartscan_core_engine/core_engine.dart';
 
-class FileStorageService {
-  FileStorageService(this._encryptionService);
+class FileStorageServiceImpl implements SecureStoragePort {
+  FileStorageServiceImpl(this._encryptionService);
 
   final EncryptionService _encryptionService;
   
@@ -35,6 +36,19 @@ class FileStorageService {
   Future<File> globalFile(String filename) async {
     final root = await _root();
     return File(p.join(root.path, filename));
+  }
+
+  @override
+  Future<String> writeImageBytes(String documentId, String pageId, Uint8List bytes, {required bool processed}) async {
+    final file = await pageFile(documentId, pageId, processed: processed);
+    await writeEncrypted(file, bytes);
+    return file.path;
+  }
+
+  @override
+  Future<Uint8List> readImageBytes(String path) async {
+    final file = File(path);
+    return readEncrypted(file);
   }
 
   Future<void> writeEncrypted(File file, Uint8List data) async {

@@ -1,6 +1,6 @@
 import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
-import 'package:smartscan_core_engine/document_pipeline/scan_pipeline.dart';
+import 'package:smartscan_core_engine/core_engine.dart';
 
 abstract interface class DocumentRepository {
   Stream<List<Document>> watchDocuments();

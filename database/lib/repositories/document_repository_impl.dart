@@ -2,21 +2,23 @@ import 'dart:async';
 
 import 'package:isar/isar.dart';
 import 'package:smartscan_database/isar_schema.dart';
+import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
-import 'package:smartscan/features/document/domain/document_repository.dart';
-import 'package:smartscan_core_engine/document_pipeline/scan_pipeline.dart';
-import 'package:smartscan_core_engine/ocr_engine/ocr_pipeline.dart';
-import 'package:smartscan_services/background_tasks/work_manager_dispatcher.dart';
+import 'package:smartscan_models/repositories/document_repository.dart';
+import 'package:smartscan_core_engine/core_engine.dart';
 import 'package:uuid/uuid.dart';
 
 class DocumentRepositoryImpl implements DocumentRepository {
-  DocumentRepositoryImpl(this._isar, this._ocrPipeline);
+  DocumentRepositoryImpl(this._dbManager, this._ocrPipeline, {this.onOcrRequested});
 
-  final Isar _isar;
+  final DatabaseManager _dbManager;
   final OcrPipeline _ocrPipeline;
+  final void Function(String documentId)? onOcrRequested;
   final _uuid = const Uuid();
   static const _starredTag = '_starred';
+
+  Isar get _isar => _dbManager.isar;
 
   @override
   Stream<List<DocumentCollection>> watchCollections() {
@@ -211,8 +213,9 @@ class DocumentRepositoryImpl implements DocumentRepository {
       }
     });
 
-    // Queue background OCR instead of blocking the main isolate.
-    unawaited(WorkManagerDispatcher.enqueueOcrIndexJob(documentId));
+    if (onOcrRequested != null) {
+      onOcrRequested!(documentId);
+    }
   }
 
   @override

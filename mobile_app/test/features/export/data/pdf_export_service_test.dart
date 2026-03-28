@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:smartscan/features/export/data/pdf_export_service.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
-import 'package:smartscan/core/storage/file_storage_service.dart';
+import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
-class MockFileStorageService implements FileStorageService {
+class MockFileStorageService implements FileStorageServiceImpl {
   @override
   Future<Uint8List> readEncrypted(File file) async {
     // Return a dummy 1x1 png image

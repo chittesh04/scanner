@@ -5,13 +5,13 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
-import 'package:smartscan/core/storage/file_storage_service.dart';
+import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
 class PdfExportService {
   PdfExportService(this._storageService, this._signatureRepository);
 
-  final FileStorageService _storageService;
+  final FileStorageServiceImpl _storageService;
   final SignatureRepository _signatureRepository;
 
   Future<File> export(ExportRequest request) async {

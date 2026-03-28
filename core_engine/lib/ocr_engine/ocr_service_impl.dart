@@ -1,23 +1,24 @@
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:smartscan_core_engine/ocr_engine/ocr_pipeline.dart';
+import 'package:smartscan_core_engine/ports/secure_storage_port.dart';
 
-import 'package:smartscan/core/storage/file_storage_service.dart';
 import 'dart:io';
 
-class OcrService implements OcrPipeline {
-  OcrService(this._storageService,
+class OcrServiceImpl implements OcrPipeline {
+  OcrServiceImpl(this._storagePort,
       {TextRecognitionScript script = TextRecognitionScript.latin})
       : _textRecognizer = TextRecognizer(script: script);
 
   final TextRecognizer _textRecognizer;
-  final FileStorageService _storageService;
+  final SecureStoragePort _storagePort;
 
   @override
   Future<OcrResult> recognizeText(String imagePath,
       {List<String> languageHints = const []}) async {
-    final file = File(imagePath);
-    final imageBytes = await _storageService.readEncrypted(file);
-    final tempFile = File('${file.path}.tmp');
+    final imageBytes = await _storagePort.readImageBytes(imagePath);
+    // Write to a temporary file because ML Kit requires a File path or a direct ByteBuffer.
+    // Using a temp file is the simplest matching the old logic for now.
+    final tempFile = File('$imagePath.tmp');
     await tempFile.writeAsBytes(imageBytes);
 
     final inputImage = InputImage.fromFile(tempFile);

@@ -5,7 +5,7 @@ import 'package:archive/archive.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
-import 'package:smartscan/core/storage/file_storage_service.dart';
+import 'package:smartscan_services/security/file_storage_service.dart';
 
 /// Exports a scanned document as a valid `.docx` (Office Open XML) file.
 ///
@@ -16,7 +16,7 @@ import 'package:smartscan/core/storage/file_storage_service.dart';
 class DocxExportService {
   DocxExportService(this._storageService);
 
-  final FileStorageService _storageService;
+  final FileStorageServiceImpl _storageService;
 
   Future<File> export(ExportRequest request) async {
     final archive = Archive();
