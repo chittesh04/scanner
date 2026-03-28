@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4562DCBA-2BAE-3290-BD2B-EC33B4B4C198}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>opencv-populate</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-mkdir.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/tmp/opencv-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (download, verify and extract) for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/download-opencv-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/verify-opencv-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/extract-opencv-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\download-opencv-populate.cmake;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\opencv-populate-urlinfo.txt;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update step for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\opencv-populate-update-info.txt;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\opencv-populate-patch-info.txt;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-configure.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\tmp\opencv-populate-cfgcmd.txt;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-build.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-install.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\2fef9940a5df6dc40266b0b40fac3c79\opencv-populate-test.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\0d1b0493f0d634738847fcb65249e220\opencv-populate-complete.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'opencv-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/Debug/opencv-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/Debug/opencv-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-install;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-mkdir;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-download;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-update;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-patch;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-configure;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-build;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\src\opencv-populate-stamp\Debug\opencv-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\Debug\opencv-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\9728dd8fe4295a6213e60e9d0b0913df\opencv-populate.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\Debug\opencv-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\opencv-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild --check-stamp-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.0\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\4.0.0\CMakeSystem.cmake;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\opencv-populate-prefix\tmp\opencv-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\CMakeFiles\opencv-populate">
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{073D5C4A-A973-3744-B410-2B72FB75C312}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

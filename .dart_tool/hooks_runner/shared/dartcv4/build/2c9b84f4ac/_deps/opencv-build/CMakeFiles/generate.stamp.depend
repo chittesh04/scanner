@@ -1,4 +1,5 @@
 # CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindFrameworks.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeParseArguments.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/CPack.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/CPackComponent.cmake
@@ -10,6 +11,8 @@ C:/Program Files/CMake/share/cmake-4.0/Modules/FindGit.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/FindPythonInterp.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPythonLibs.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/SelectLibraryConfigurations.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/TestBigEndian.cmake
 C:/Program Files/CMake/share/cmake-4.0/Templates/CPackConfig.cmake.in
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt
@@ -46,14 +49,6 @@ C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVPackaging.cmake
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVUtils.cmake
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVVersion.cmake
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_avx.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_avx2.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_avx512.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_popcnt.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_sse3.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_sse41.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_sse42.cpp
-C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/cpu_ssse3.cpp
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/directml.cpp
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/directx.cpp
 C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/checks/opencl.cpp

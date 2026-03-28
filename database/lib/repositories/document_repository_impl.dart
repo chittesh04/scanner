@@ -5,6 +5,7 @@ import 'package:smartscan_database/isar_schema.dart';
 import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
+import 'package:smartscan_models/document_summary.dart';
 import 'package:smartscan_models/repositories/document_repository.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 import 'package:uuid/uuid.dart';
@@ -40,15 +41,15 @@ class DocumentRepositoryImpl implements DocumentRepository {
   }
 
   @override
-  Stream<List<Document>> watchDocumentsByCollection(String collectionId) {
+  Stream<List<DocumentSummary>> watchDocumentsByCollection(String collectionId) {
     return _isar.documentEntitys
         .filter()
         .collectionIdEqualTo(collectionId)
         .watch(fireImmediately: true)
         .asyncMap((entities) async {
-      final output = <Document>[];
+      final output = <DocumentSummary>[];
       for (final doc in entities) {
-        output.add(await _mapToDocument(doc));
+        output.add(await _mapToSummary(doc));
       }
       output.sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
       return output;
@@ -56,17 +57,18 @@ class DocumentRepositoryImpl implements DocumentRepository {
   }
 
   @override
-  Stream<List<Document>> watchInboxDocuments() {
+  Stream<List<DocumentSummary>> watchInboxDocuments() {
     return _isar.documentEntitys
         .filter()
         .collectionIdIsNull()
         .watch(fireImmediately: true)
         .asyncMap((entities) async {
-      final output = <Document>[];
+      final output = <DocumentSummary>[];
       for (final doc in entities) {
-        final d = await _mapToDocument(doc);
-        if (d.tags.isEmpty) {
-          output.add(d);
+        await doc.tags.load();
+        final uiTags = doc.tags.where((tag) => tag.name != _starredTag);
+        if (uiTags.isEmpty) {
+          output.add(await _mapToSummary(doc));
         }
       }
       output.sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
@@ -357,14 +359,14 @@ class DocumentRepositoryImpl implements DocumentRepository {
   }
 
   @override
-  Stream<List<Document>> watchDocuments() {
+  Stream<List<DocumentSummary>> watchDocuments() {
     return _isar.documentEntitys
         .where()
         .watch(fireImmediately: true)
         .asyncMap((entities) async {
-      final output = <Document>[];
+      final output = <DocumentSummary>[];
       for (final doc in entities) {
-        output.add(await _mapToDocument(doc));
+        output.add(await _mapToSummary(doc));
       }
       return output;
     });
@@ -380,6 +382,31 @@ class DocumentRepositoryImpl implements DocumentRepository {
       if (entities.isEmpty) return null;
       return _mapToDocument(entities.first);
     });
+  }
+
+  Future<DocumentSummary> _mapToSummary(DocumentEntity doc) async {
+    final pagesCount = await _isar.pageEntitys
+        .filter()
+        .documentIdEqualTo(doc.documentId)
+        .count();
+        
+    final firstPage = await _isar.pageEntitys
+        .filter()
+        .documentIdEqualTo(doc.documentId)
+        .sortByOrder()
+        .findFirst();
+
+    await doc.tags.load();
+
+    return DocumentSummary(
+      documentId: doc.documentId,
+      title: doc.title,
+      pageCount: pagesCount,
+      updatedAt: doc.updatedAt,
+      isStarred: doc.tags.any((tag) => tag.name == _starredTag),
+      collectionId: doc.collectionId,
+      thumbnailImagePath: firstPage?.processedImagePath ?? firstPage?.rawImagePath,
+    );
   }
 
   Future<Document> _mapToDocument(DocumentEntity doc) async {

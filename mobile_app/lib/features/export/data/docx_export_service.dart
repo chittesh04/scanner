@@ -1,6 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
+import 'dart:math' as math;
+import 'dart:isolate';
+import 'package:image/image.dart' as img;
 import 'package:archive/archive.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
@@ -13,23 +16,80 @@ import 'package:smartscan_services/security/file_storage_service.dart';
 /// * A heading ("Page N")
 /// * The OCR-extracted text as paragraphs
 /// * The scanned image inlined below the text
+class _DocxExportPayload {
+  _DocxExportPayload({
+    required this.outputPath,
+    required this.pages,
+    required this.imageBytesList,
+  });
+
+  final String outputPath;
+  final List<PageExportData> pages;
+  final List<Uint8List?> imageBytesList;
+}
+
 class DocxExportService {
   DocxExportService(this._storageService);
 
   final FileStorageServiceImpl _storageService;
 
   Future<File> export(ExportRequest request) async {
+    final imageBytesList = <Uint8List?>[];
+    for (var i = 0; i < request.pages.length; i++) {
+      final imageFile = File(request.pages[i].imagePath);
+      if (!await imageFile.exists()) {
+        imageBytesList.add(null);
+        continue;
+      }
+      imageBytesList.add(await _storageService.readEncrypted(imageFile));
+    }
+
+    final root = await getTemporaryDirectory();
+    final outPath = request.outputPath ??
+        p.join(root.path, '${request.title}_${request.documentId}.docx');
+
+    final payload = _DocxExportPayload(
+      outputPath: outPath,
+      pages: request.pages,
+      imageBytesList: imageBytesList,
+    );
+
+    final path = await Isolate.run(() => _buildDocxIsolate(payload));
+    return File(path);
+  }
+
+  static Future<String> _buildDocxIsolate(_DocxExportPayload payload) async {
     final archive = Archive();
 
     // ── Collect images ──
     final imageEntries = <_ImageEntry>[];
-    for (var i = 0; i < request.pages.length; i++) {
-      final page = request.pages[i];
-      final imageFile = File(page.imagePath);
-      if (!await imageFile.exists()) continue;
-      final bytes = await _storageService.readEncrypted(imageFile);
+    for (var i = 0; i < payload.pages.length; i++) {
+      var bytes = payload.imageBytesList[i];
+      payload.imageBytesList[i] = null; // Aggressive nullification hinting
+      
+      if (bytes == null) continue;
+
+      // Downscaling optimization
+      final decodedImage = img.decodeImage(bytes);
+      bytes = null; // Free raw bytes
+
+      if (decodedImage != null) {
+        final longestSide = math.max(decodedImage.width, decodedImage.height);
+        if (longestSide > 1500) {
+          final targetWidth = decodedImage.width > decodedImage.height 
+              ? 1240 
+              : (1240 * (decodedImage.width / decodedImage.height)).round();
+          final resized = img.copyResize(decodedImage, width: targetWidth);
+          bytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
+        } else {
+          bytes = Uint8List.fromList(img.encodeJpg(decodedImage, quality: 90));
+        }
+      }
+
+      if (bytes == null) continue;
+
       final rId = 'rId${i + 10}';
-      final filename = 'image${i + 1}.png';
+      final filename = 'image${i + 1}.jpg'; // Changed to jpg due to encoding
       imageEntries.add(_ImageEntry(rId: rId, filename: filename, bytes: bytes));
       archive.addFile(ArchiveFile(
         'word/media/$filename',
@@ -50,7 +110,7 @@ class DocxExportService {
     archive.addFile(_textFile('word/_rels/document.xml.rels', docRels));
 
     // ── word/document.xml ──
-    final docXml = _buildDocumentXml(request, imageEntries);
+    final docXml = _buildDocumentXml(payload.pages, imageEntries);
     archive.addFile(_textFile('word/document.xml', docXml));
 
     // ── word/styles.xml (minimal) ──
@@ -58,20 +118,17 @@ class DocxExportService {
 
     // ── Encode & write ──
     final encoded = ZipEncoder().encode(archive)!;
-    final root = await getTemporaryDirectory();
-    final outPath = request.outputPath ??
-        p.join(root.path, '${request.title}_${request.documentId}.docx');
-    final file = File(outPath);
+    final file = File(payload.outputPath);
     await file.writeAsBytes(encoded, flush: true);
-    return file;
+    return payload.outputPath;
   }
 
   // ─────────────────────── XML Builders ───────────────────────
 
-  String _buildContentTypes(List<_ImageEntry> images) {
+  static String _buildContentTypes(List<_ImageEntry> images) {
     final imageParts = images
         .map((img) =>
-            '<Override PartName="/word/media/${img.filename}" ContentType="image/png"/>')
+            '<Override PartName="/word/media/${img.filename}" ContentType="image/jpeg"/>') // Changed to jpeg
         .join('\n  ');
     return '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -88,7 +145,7 @@ class DocxExportService {
   <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
 </Relationships>''';
 
-  String _buildDocumentRels(List<_ImageEntry> images) {
+  static String _buildDocumentRels(List<_ImageEntry> images) {
     final rels = images
         .map((img) =>
             '<Relationship Id="${img.rId}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/${img.filename}"/>')
@@ -100,12 +157,12 @@ class DocxExportService {
 </Relationships>''';
   }
 
-  String _buildDocumentXml(
-      ExportRequest request, List<_ImageEntry> imageEntries) {
+  static String _buildDocumentXml(
+      List<PageExportData> pages, List<_ImageEntry> imageEntries) {
     final body = StringBuffer();
 
-    for (var i = 0; i < request.pages.length; i++) {
-      final page = request.pages[i];
+    for (var i = 0; i < pages.length; i++) {
+      final page = pages[i];
 
       // Heading
       body.writeln('''

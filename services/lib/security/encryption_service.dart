@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 import 'dart:math';
 import 'dart:typed_data';
 import 'package:cryptography/cryptography.dart';
@@ -21,18 +21,21 @@ class EncryptionService {
     return List<int>.generate(12, (_) => random.nextInt(256));
   }
 
-  static String encodeSecretBox(SecretBox box) => jsonEncode({
-        'nonce': base64Encode(box.nonce),
-        'cipherText': base64Encode(box.cipherText),
-        'mac': base64Encode(box.mac.bytes),
-      });
+  static Uint8List encodeSecretBox(SecretBox box) {
+    final builder = BytesBuilder(copy: false);
+    builder.add(box.nonce);
+    builder.add(box.mac.bytes);
+    builder.add(box.cipherText);
+    return builder.takeBytes();
+  }
 
-  static SecretBox decodeSecretBox(String encoded) {
-    final map = jsonDecode(encoded) as Map<String, dynamic>;
-    return SecretBox(
-      base64Decode(map['cipherText'] as String),
-      nonce: base64Decode(map['nonce'] as String),
-      mac: Mac(base64Decode(map['mac'] as String)),
-    );
+  static SecretBox decodeSecretBox(Uint8List bytes) {
+    if (bytes.length < 28) {
+      throw FormatException('Invalid or corrupted encrypted payload.');
+    }
+    final nonce = bytes.sublist(0, 12);
+    final mac = Mac(bytes.sublist(12, 28));
+    final cipherText = bytes.sublist(28);
+    return SecretBox(cipherText, nonce: nonce, mac: mac);
   }
 }

@@ -54,11 +54,10 @@ class CollectionDetailPage extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Expanded(
-                        child: document.pages.isEmpty
+                        child: document.thumbnailImagePath == null
                             ? const ColoredBox(color: Colors.black12)
                             : EncryptedImage(
-                                imagePath:
-                                    document.pages.first.processedImagePath,
+                                imagePath: document.thumbnailImagePath!,
                                 fit: BoxFit.cover,
                               ),
                       ),
@@ -78,7 +77,7 @@ class CollectionDetailPage extends ConsumerWidget {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              '${document.pages.length} pages',
+                              '${document.pageCount} pages',
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                           ],

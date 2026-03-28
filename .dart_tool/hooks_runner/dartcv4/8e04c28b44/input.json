@@ -1,0 +1,21 @@
+{
+  "assets": {},
+  "config": {
+    "build_asset_types": [
+      "code_assets/code"
+    ],
+    "extensions": {
+      "code_assets": {
+        "link_mode_preference": "dynamic",
+        "target_architecture": "x64",
+        "target_os": "windows"
+      }
+    },
+    "linking_enabled": false
+  },
+  "out_dir_shared": "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\",
+  "out_file": "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\dartcv4\\8e04c28b44\\output.json",
+  "package_name": "dartcv4",
+  "package_root": "C:\\Users\\chitt\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\dartcv4-2.2.1+4\\",
+  "user_defines": {}
+}

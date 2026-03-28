@@ -1,6 +1,6 @@
 "\n"
 "General configuration for OpenCV 4.13.0 =====================================\n"
-"  Version control:               f5ad056-dirty\n"
+"  Version control:               502134d-dirty\n"
 "\n"
 "  Platform:\n"
 "    Timestamp:                   2026-03-27T16:50:49Z\n"

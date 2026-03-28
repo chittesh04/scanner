@@ -1557,6 +1557,10 @@ DARTCV_INCLUDE_DIRS:INTERNAL=C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.d
 DNN_ENABLE_PLUGINS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DNN_PLUGIN_LIST
 DNN_PLUGIN_LIST-ADVANCED:INTERNAL=1
+//Details about finding PythonInterp
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Users/chitt/AppData/Local/Microsoft/WindowsApps/python3.exe][v3.14.3(3.2)]
+//Details about finding PythonLibs
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/Python/pythoncore-3.14-64/libs/python314.lib][C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/Python/pythoncore-3.14-64/include][v3.14.3(3.14)]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include assert.h
@@ -2298,17 +2302,17 @@ PNG_INCLUDE_DIR:INTERNAL=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hoo
 //STRINGS property for variable: PNG_INTEL_SSE
 PNG_INTEL_SSE-STRINGS:INTERNAL=on;off
 PNG_LIBRARY:INTERNAL=libpng
-PYTHON3INTERP_FOUND:INTERNAL=
-PYTHON3LIBS_FOUND:INTERNAL=
-PYTHON3LIBS_VERSION_STRING:INTERNAL=
-PYTHON3_DEBUG_LIBRARIES:INTERNAL=
-PYTHON3_INCLUDE_PATH:INTERNAL=
+PYTHON3INTERP_FOUND:INTERNAL=TRUE
+PYTHON3LIBS_FOUND:INTERNAL=TRUE
+PYTHON3LIBS_VERSION_STRING:INTERNAL=3.14.3
+PYTHON3_DEBUG_LIBRARIES:INTERNAL=PYTHON_DEBUG_LIBRARY-NOTFOUND
+PYTHON3_INCLUDE_PATH:INTERNAL=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/Python/pythoncore-3.14-64/include
 //Python libraries
-PYTHON3_LIBRARIES:INTERNAL=
+PYTHON3_LIBRARIES:INTERNAL=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/Python/pythoncore-3.14-64/libs/python314.lib
 PYTHON3_NUMPY_VERSION:INTERNAL=
-PYTHON3_VERSION_MAJOR:INTERNAL=
-PYTHON3_VERSION_MINOR:INTERNAL=
-PYTHON3_VERSION_STRING:INTERNAL=4.13.0
+PYTHON3_VERSION_MAJOR:INTERNAL=3
+PYTHON3_VERSION_MINOR:INTERNAL=14
+PYTHON3_VERSION_STRING:INTERNAL=3.14.3
 Protobuf_VERSION:INTERNAL=3.19.1
 //CHECK_TYPE_SIZE: sizeof(ptrdiff_t)
 SIZEOF_PTRDIFF_T:INTERNAL=8

@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3DFF10FF-A94E-3755-93EF-7518316043C1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_imgproc</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_imgproc.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_imgproc4130d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_imgproc.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_imgproc4130</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">opencv_imgproc.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">opencv_imgproc4130</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">opencv_imgproc.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">opencv_imgproc4130</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Debug\opencv_imgproc4130d.pdb</ProgramDataBaseFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Release\opencv_imgproc4130.pdb</ProgramDataBaseFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\MinSizeRel\opencv_imgproc4130.pdb</ProgramDataBaseFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44" /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\RelWithDebInfo\opencv_imgproc4130.pdb</ProgramDataBaseFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;VK_NO_PROTOTYPES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\dlpack\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\3rdparty\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\core\include;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\CMakeFiles\e0ec5d3784385289e6812098f7ae2a95\opencl_kernels_imgproc.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Processing OpenCL kernels (imgproc)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DMODULE_NAME=imgproc -DCL_DIR=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/src/opencl -DOUTPUT=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/opencl_kernels_imgproc.cpp -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/cl2cpp.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\accumulate.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\bilateral.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\blend_linear.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\calc_back_project.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\canny.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\clahe.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_hsv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_lab.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_rgb.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_yuv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\corner.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\covardata.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2D.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2DSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepCol.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepRow.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSep_singlePass.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur5x5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gftt.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\histogram.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\hough_lines.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\integral_sum.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\linearPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\logPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\match_template.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\medianFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\moments.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\precornerdetect.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_down.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyramid_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\remap.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\resize.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\sepFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold_mask.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_affine.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_perspective.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_transform.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencl_kernels_imgproc.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Processing OpenCL kernels (imgproc)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DMODULE_NAME=imgproc -DCL_DIR=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/src/opencl -DOUTPUT=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/opencl_kernels_imgproc.cpp -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/cl2cpp.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\accumulate.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\bilateral.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\blend_linear.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\calc_back_project.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\canny.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\clahe.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_hsv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_lab.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_rgb.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_yuv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\corner.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\covardata.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2D.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2DSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepCol.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepRow.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSep_singlePass.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur5x5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gftt.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\histogram.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\hough_lines.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\integral_sum.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\linearPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\logPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\match_template.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\medianFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\moments.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\precornerdetect.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_down.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyramid_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\remap.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\resize.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\sepFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold_mask.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_affine.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_perspective.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_transform.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencl_kernels_imgproc.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Processing OpenCL kernels (imgproc)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DMODULE_NAME=imgproc -DCL_DIR=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/src/opencl -DOUTPUT=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/opencl_kernels_imgproc.cpp -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/cl2cpp.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\accumulate.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\bilateral.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\blend_linear.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\calc_back_project.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\canny.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\clahe.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_hsv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_lab.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_rgb.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_yuv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\corner.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\covardata.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2D.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2DSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepCol.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepRow.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSep_singlePass.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur5x5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gftt.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\histogram.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\hough_lines.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\integral_sum.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\linearPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\logPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\match_template.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\medianFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\moments.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\precornerdetect.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_down.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyramid_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\remap.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\resize.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\sepFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold_mask.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_affine.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_perspective.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_transform.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencl_kernels_imgproc.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Processing OpenCL kernels (imgproc)</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DMODULE_NAME=imgproc -DCL_DIR=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/src/opencl -DOUTPUT=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/opencl_kernels_imgproc.cpp -P C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/cl2cpp.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\accumulate.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\bilateral.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\blend_linear.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\calc_back_project.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\canny.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\clahe.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_hsv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_lab.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_rgb.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_yuv.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\corner.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\covardata.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2D.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2DSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepCol.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepRow.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSep_singlePass.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSmall.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur5x5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gftt.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\histogram.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\hough_lines.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\integral_sum.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian5.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\linearPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\logPolar.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\match_template.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\medianFilter.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\moments.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\precornerdetect.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_down.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyramid_up.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\remap.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\resize.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\sepFilter3x3.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold_mask.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_affine.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_perspective.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_transform.cl;C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencl_kernels_imgproc.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44 --check-stamp-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44 --check-stamp-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44 --check-stamp-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src -BC:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44 --check-stamp-file C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-build/modules/imgproc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\bindings.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\detail\legacy.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\hal\interface.h" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\imgproc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\imgproc_c.h" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\segmentation.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\include\opencv2\imgproc\types_c.h" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\accum.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\accum.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\approx.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\bilateral_filter.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\blend.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\box_filter.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\canny.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\clahe.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_hsv.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_lab.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_rgb.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_yuv.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\colormap.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\connectedcomponents.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours_approx.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours_common.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours_link.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours_new.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\convhull.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\corner.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\cornersubpix.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\demosaicing.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\deriv.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\distransform.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\drawing.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\emd.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\emd_new.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\featureselect.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\filter.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\floodfill.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\gabor.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\generalized_hough.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\geometry.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\grabcut.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\hershey_fonts.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\histogram.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\hough.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\imgwarp.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\intelligent_scissors.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\intersection.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\linefit.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\lsd.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\main.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\matchcontours.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\median_blur.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\min_enclosing_convex_polygon.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\min_enclosing_triangle.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\moments.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\morph.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\phasecorr.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\phasecorr_iterative.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\pyramids.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\resize.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\rotcalipers.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\samplers.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\segmentation.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\shapedescr.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\smooth.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\spatialgradient.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\stackblur.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\subdivision2d.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\sumpixels.dispatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\tables.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\templmatch.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\thresh.cpp" />
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\utils.cpp" />
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\accumulate.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\bilateral.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\blend_linear.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\boxFilter3x3.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\calc_back_project.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\canny.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\clahe.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_hsv.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_lab.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_rgb.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\color_yuv.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\corner.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\covardata.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2D.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filter2DSmall.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepCol.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSepRow.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSep_singlePass.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\filterSmall.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur3x3.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gaussianBlur5x5.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\gftt.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\histogram.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\hough_lines.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\integral_sum.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian3.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\laplacian5.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\linearPolar.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\logPolar.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\match_template.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\medianFilter.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\moments.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\morph3x3.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\precornerdetect.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_down.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyr_up.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\pyramid_up.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\remap.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\resize.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\sepFilter3x3.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\threshold_mask.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_affine.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_perspective.cl">
+    </None>
+    <None Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\opencl\warp_transform.cl">
+    </None>
+    <ClCompile Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencl_kernels_imgproc.cpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencl_kernels_imgproc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\_geom.h" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\accum.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\bilateral_filter.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\box_filter.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\ccl_bolelli_forest.inc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\ccl_bolelli_forest_firstline.inc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\ccl_bolelli_forest_lastline.inc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\ccl_bolelli_forest_singleline.inc.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color.simd_helpers.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_hsv.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_rgb.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\color_yuv.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours_blockstorage.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\contours_common.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\corner.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\filter.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\filter.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\filterengine.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\fixedpoint.inl.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\hal_replacement.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\imgwarp.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\median_blur.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\morph.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\precomp.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\resize.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\smooth.simd.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\sumpixels.avx512_skx.hpp" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-src\modules\imgproc\src\sumpixels.simd.hpp" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\imgwarp.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\resize.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\accum.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\box_filter.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\filter.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\color_hsv.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\color_rgb.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\color_yuv.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\median_blur.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\morph.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.dir\$(Configuration)\smooth.sse4_1.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX.dir\$(Configuration)\corner.avx.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX.dir\$(Configuration)\accum.avx.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\imgwarp.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\resize.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\accum.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\bilateral_filter.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\box_filter.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\filter.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\color_hsv.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\color_rgb.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\color_yuv.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\median_blur.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\morph.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\smooth.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\$(Configuration)\sumpixels.avx2.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX512_SKX.dir\$(Configuration)\box_filter.avx512_skx.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX512_SKX.dir\$(Configuration)\median_blur.avx512_skx.obj" />
+    <Object Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX512_SKX.dir\$(Configuration)\sumpixels.avx512_skx.obj" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\cvconfig.h" />
+    <ClInclude Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\opencv2\opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\ZERO_CHECK.vcxproj">
+      <Project>{7988F267-A4BF-3073-8B75-A6556B170EBA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\core\opencv_core.vcxproj">
+      <Project>{72D2A7AB-DDD2-3830-ABE4-B0F4BA0E4339}</Project>
+      <Name>opencv_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX.vcxproj">
+      <Project>{340FF344-7B7A-3E27-B6EE-E1D8EDF2E0FA}</Project>
+      <Name>opencv_imgproc_AVX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.vcxproj">
+      <Project>{3D15C5B5-B5E4-3DC6-BD74-32ABEACFC608}</Project>
+      <Name>opencv_imgproc_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX512_SKX.vcxproj">
+      <Project>{CCB6498A-37E5-3221-AF1B-C066E7A710DE}</Project>
+      <Name>opencv_imgproc_AVX512_SKX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_SSE4_1.vcxproj">
+      <Project>{75EB73FB-180B-3482-86F6-0493754A03E6}</Project>
+      <Name>opencv_imgproc_SSE4_1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\zlib\zlib.vcxproj">
+      <Project>{1779D568-78E9-3410-8DDA-D76B2224BA89}</Project>
+      <Name>zlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

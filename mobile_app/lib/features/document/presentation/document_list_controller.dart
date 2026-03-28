@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smartscan/core/di/service_locator.dart';
 import 'package:smartscan_models/document_collection.dart';
-import 'package:smartscan_models/document.dart';
+import 'package:smartscan_models/document_summary.dart';
 
-final documentListProvider = StreamProvider<List<Document>>((ref) {
+final documentListProvider = StreamProvider<List<DocumentSummary>>((ref) {
   final repo = ref.watch(documentRepositoryProvider);
   return repo.watchDocuments();
 });
@@ -27,12 +27,12 @@ final assignDocumentCollectionProvider =
 });
 
 final documentsByCollectionProvider =
-    StreamProvider.family<List<Document>, String>((ref, collectionId) {
+    StreamProvider.family<List<DocumentSummary>, String>((ref, collectionId) {
   final repo = ref.watch(documentRepositoryProvider);
   return repo.watchDocumentsByCollection(collectionId);
 });
 
-final inboxDocumentsProvider = StreamProvider<List<Document>>((ref) {
+final inboxDocumentsProvider = StreamProvider<List<DocumentSummary>>((ref) {
   final repo = ref.watch(documentRepositoryProvider);
   return repo.watchInboxDocuments();
 });
@@ -40,7 +40,7 @@ final inboxDocumentsProvider = StreamProvider<List<Document>>((ref) {
 class SearchMatchModel {
   const SearchMatchModel({required this.document, this.preview});
 
-  final Document document;
+  final DocumentSummary document;
   final String? preview;
 }
 
@@ -51,7 +51,7 @@ final createDocumentProvider = Provider<Future<String> Function(String)>((ref) {
 
 final documentSearchQueryProvider = StateProvider<String>((_) => '');
 
-final recentDocumentsProvider = Provider<AsyncValue<List<Document>>>((ref) {
+final recentDocumentsProvider = Provider<AsyncValue<List<DocumentSummary>>>((ref) {
   final docsAsync = ref.watch(documentListProvider);
   return docsAsync.whenData((docs) {
     final sorted = [...docs]
@@ -75,29 +75,8 @@ final filteredDocumentsProvider =
     }
 
     return items
-        .map((document) {
-          final titleMatch = document.title.toLowerCase().contains(query);
-          final ocrPool = document.pages
-              .map((page) => page.ocrText ?? '')
-              .where((text) => text.isNotEmpty)
-              .join(' ');
-          final ocrLower = ocrPool.toLowerCase();
-          final ocrIndex = ocrLower.indexOf(query);
-
-          if (!titleMatch && ocrIndex < 0) {
-            return null;
-          }
-
-          String? preview;
-          if (ocrIndex >= 0) {
-            final start = (ocrIndex - 32).clamp(0, ocrPool.length);
-            final end = (ocrIndex + query.length + 48).clamp(0, ocrPool.length);
-            preview = ocrPool.substring(start, end).trim();
-          }
-
-          return SearchMatchModel(document: document, preview: preview);
-        })
-        .whereType<SearchMatchModel>()
+        .where((document) => document.title.toLowerCase().contains(query))
+        .map((document) => SearchMatchModel(document: document))
         .toList(growable: false);
   });
 });

@@ -9,7 +9,7 @@ import 'package:smartscan/features/document/presentation/document_detail_page.da
 import 'package:smartscan/features/document/presentation/document_list_controller.dart';
 import 'package:smartscan/features/scan/presentation/scan_page.dart';
 import 'package:smartscan_models/document_collection.dart';
-import 'package:smartscan_models/document.dart';
+import 'package:smartscan_models/document_summary.dart';
 import 'package:smartscan/features/signature/presentation/signature_pad_page.dart';
 
 const double _space2 = 8;
@@ -558,7 +558,7 @@ class _RecentCarousel extends StatelessWidget {
     this.emptyMessage = 'No recent documents yet.',
   });
 
-  final List<Document> documents;
+  final List<DocumentSummary> documents;
   final ValueChanged<String> onOpen;
   final String emptyMessage;
 
@@ -593,11 +593,10 @@ class _RecentCarousel extends StatelessWidget {
                         child: SizedBox(
                           width: 72,
                           height: 92,
-                          child: document.pages.isEmpty
+                          child: document.thumbnailImagePath == null
                               ? const ColoredBox(color: Colors.black12)
                               : EncryptedImage(
-                                  imagePath:
-                                      document.pages.first.processedImagePath),
+                                  imagePath: document.thumbnailImagePath!),
                         ),
                       ),
                       const SizedBox(width: 10),
@@ -614,7 +613,7 @@ class _RecentCarousel extends StatelessWidget {
                             ),
                             const Spacer(),
                             Text(
-                              '${document.pages.length} pages',
+                              '${document.pageCount} pages',
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                           ],
@@ -724,7 +723,7 @@ class _DocumentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final document = item.document;
-    final firstPage = document.pages.isEmpty ? null : document.pages.first;
+    final firstImagePath = document.thumbnailImagePath;
 
     return AnimatedScale(
       duration: const Duration(milliseconds: 180),
@@ -759,10 +758,9 @@ class _DocumentCard extends StatelessWidget {
                     color:
                         Theme.of(context).colorScheme.surfaceContainerHighest,
                     width: double.infinity,
-                    child: firstPage == null
+                    child: firstImagePath == null
                         ? const Icon(Icons.description_rounded, size: 40)
-                        : EncryptedImage(
-                            imagePath: firstPage.processedImagePath),
+                        : EncryptedImage(imagePath: firstImagePath),
                   ),
                 ),
               ),

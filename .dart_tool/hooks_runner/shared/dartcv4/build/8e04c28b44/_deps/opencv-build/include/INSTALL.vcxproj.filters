@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\CMakeFiles\c6d38a0853e79b9d53caf4202c2c9edd\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{AA972E4A-FF3C-3587-8EF4-4F83FD8026D6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

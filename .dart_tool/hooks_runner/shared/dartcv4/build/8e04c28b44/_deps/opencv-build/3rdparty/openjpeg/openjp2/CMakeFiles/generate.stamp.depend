@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/openjpeg/openjp2/CMakeLists.txt

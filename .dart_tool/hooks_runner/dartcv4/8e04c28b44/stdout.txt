@@ -1,0 +1,2879 @@
+Running `(cd C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\; PATH=C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts;c:\Users\chitt\.antigravity\extensions\vscjava.vscode-java-debug-0.58.5-universal\bundled\scripts\noConfigScripts PROGRAMDATA=C:\ProgramData SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS C:\Users\chitt\.vscode\extensions\flutter\bin\cache\dart-sdk\bin\dart.exe --packages=C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\package_config.json C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\dartcv4\8e04c28b44\hook.dill --config=C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\dartcv4\8e04c28b44\input.json )`.
+[dartcv4] exclude modules: {}
+
+[dartcv4] merged modules: {imgcodecs, imgproc}
+
+
+Using generator: default
+
+ {windows: null, linux: null, macos: null, android: null, ios: null}
+
+
+here.exe, C:/Program Files/Microsoft Visual Studio/Installer/vswhere.exe].
+
+Found [ToolInstance(Visual Studio Locator, null, file:///C:/Program%20Files%20(x86)/Microsoft%20Visual%20Studio/Installer/vswhere.exe)].
+
+Running `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe`.
+
+le:///C:/Program%20Files%20(x86)/Microsoft%20Visual%20Studio/Installer/vswhere.exe).
+
+Visual Studio Locator version 3.1.7+f39851e70f [query version 3.12.2140.44225]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+instanceId: 41905c3a
+installDate: 21-04-2025 01:01:44 AM
+installationName: VisualStudio/17.13.6+35931.197
+installationPath: C:\Program Files\Microsoft Visual Studio\2022\Enterprise
+installationVersion: 17.13.35931.197
+productId: Microsoft.VisualStudio.Product.Enterprise
+productPath: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe
+state: 4294967295
+isComplete: 1
+isLaunchable: 1
+isPrerelease: 0
+isRebootRequired: 0
+displayName: Visual Studio Enterprise 2022
+description: Scalable, end-to-end solution for teams of any size
+channelId: VisualStudio.17.Release
+channelUri: https://aka.ms/vs/17/release/channel
+enginePath: C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service
+installedChannelId: VisualStudio.17.Release
+installedChannelUri: https://aka.ms/vs/17/release/channel
+releaseNotes: https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.13#17.13.6
+resolvedInstallationPath: C:\Program Files\Microsoft Visual Studio\2022\Enterprise
+thirdPartyNotices: https://go.microsoft.com/fwlink/?LinkId=661288
+updateDate: 2025-04-20T19:31:44.8850361Z
+catalog_buildBranch: d17.13
+catalog_buildVersion: 17.13.35931.197
+catalog_id: VisualStudio/17.13.6+35931.197
+catalog_localBuild: build-lab
+catalog_manifestName: VisualStudio
+catalog_manifestType: installer
+catalog_productDisplayVersion: 17.13.6
+catalog_productLine: Dev17
+catalog_productLineVersion: 2022
+catalog_productMilestone: RTW
+catalog_productMilestoneIsPreRelease: False
+catalog_productName: Visual Studio
+catalog_productPatchVersion: 6
+catalog_productPreReleaseMilestoneSuffix: 1.0
+catalog_productSemanticVersion: 17.13.6+35931.197
+catalog_requiredEngineVersion: 3.13.2069.59209
+properties_campaignId: 
+properties_channelManifestId: VisualStudio.17.Release/17.13.6+35931.197
+properties_includeRecommended: 1
+properties_nickname: 
+properties_setupEngineFilePath: C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe
+
+
+Found version for ToolInstance(Visual Studio Locator, 3.1.7+f39851e70f, file:///C:/Program%20Files%20(x86)/Microsoft%20Visual%20Studio/Installer/vswhere.exe). 3.1.7+f39851e70f
+
+Files (x86)\\Microsoft Visual Studio\\Installer\\resources\\app\\ServiceHub\\Services\\Microsoft.VisualStudio.Setup.Service",
+    "installedChannelId": "VisualStudio.17.Release",
+    "installedChannelUri": "https://aka.ms/vs/17/release/channel",
+    "releaseNotes": "https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.13#17.13.6",
+    "resolvedInstallationPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise",
+    "thirdPartyNotices": "https://go.microsoft.com/fwlink/?LinkId=661288",
+    "updateDate": "2025-04-20T19:31:44.8850361Z",
+    "catalog": {
+      "buildBranch": "d17.13",
+      "buildVersion": "17.13.35931.197",
+      "id": "VisualStudio/17.13.6+35931.197",
+      "localBuild": "build-lab",
+      "manifestName": "VisualStudio",
+      "manifestType": "installer",
+      "productDisplayVersion": "17.13.6",
+      "productLine": "Dev17",
+      "productLineVersion": "2022",
+      "productMilestone": "RTW",
+      "productMilestoneIsPreRelease": "False",
+      "productName": "Visual Studio",
+      "productPatchVersion": "6",
+      "productPreReleaseMilestoneSuffix": "1.0",
+      "productSemanticVersion": "17.13.6+35931.197",
+      "requiredEngineVersion": "
+
+3.13.2069.59209"
+    },
+    "properties": {
+      "campaignId": "",
+      "channelManifestId": "VisualStudio.17.Release/17.13.6+35931.197",
+      "includeRecommended": "1",
+      "nickname": "",
+      "setupEngineFilePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe"
+    }
+  }
+]
+
+
+Found [ToolInstance(vcvars64.bat, null, file:///C:/Program%20Files/Microsoft%20Visual%20Studio/2022/Enterprise/VC/Auxiliary/Build/vcvars64.bat)].
+
+Environment variables from Tool(vcvars64.bat): {CommandPromptType: Native, DevEnvDir: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\, EXTERNAL_INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt, Framework40Version: v4.0, FrameworkDir: C:\Windows\Microsoft.NET\Framework64\, FrameworkDir64: C:\Windows\Microsoft.NET\Framework64\, FrameworkVersion: v4.0.30319, FrameworkVersion64: v4.0.30319, INCLUDE: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt, LIB: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.22621.0\\um\x64, LIBPATH: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22621.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22621.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319, PATH: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Team Tools\DiagnosticsHub\Collector;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\CodeCoverage.Console;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\;C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts;c:\Users\chitt\.antigravity\extensions\vscjava.vscode-java-debug-0.58.5-universal\bundled\scripts\noConfigScripts;C:\Program Files\Microsof
+t Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg, Platform: x64, UCRTVersion: 10.0.22621.0, UniversalCRTSdkDir: C:\Program Files (x86)\Windows Kits\10\, VCIDEInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\, VCINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\, VCPKG_ROOT: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg, VCToolsInstallDir: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\, VCToolsRedistDir: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Redist\MSVC\14.42.34433\, VCToolsVersion: 14.43.34808, VisualStudioVersion: 17.0, VS170COMNTOOLS: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\, VSCMD_ARG_app_plat: Desktop, VSCMD_ARG_HOST_ARCH: x64, VSCMD_ARG_TGT_ARCH: x64, VSCMD_VER: 17.0, VSINSTALLDIR: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\, WindowsLibPath: C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22621.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22621.0, WindowsSdkBinPath: C:\Program Files (x86)\Windows Kits\10\bin\, WindowsSdkDir: C:\Program Files (x86)\Windows Kits\10\, WindowsSDKLibVersion: 10.0.22621.0\, WindowsSdkVerBinPath: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\, WindowsSDKVersion: 10.0.22621.0\, __DOTNET_ADD_64BIT: 1, __DOTNET_PREFERRED_BITNESS: 64, __VSCMD_PREINIT_PATH: C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\np
+Looking up version with --version for ToolInstance(CMake, null, file:///C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe).
+Running `C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe --version`.
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Found Android CMake: ToolInstance(CMake, 3.22.1-g37088a8-dirty, file:///C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe)
+
+.1-g37088a8-dirty
+
+e\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22621.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22621.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319 Platform=x64 UCRTVersion=10.0.22621.0 UniversalCRTSdkDir=C:\Program Files (x86)\Windows Kits\10\ VCIDEInstallDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\ VCINSTALLDIR=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\ VCPKG_ROOT=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg VCToolsInstallDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ VCToolsRedistDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Redist\MSVC\14.42.34433\ VCToolsVersion=14.43.34808 VisualStudioVersion=17.0 VS170COMNTOOLS=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\ VSCMD_ARG_app_plat=Desktop VSCMD_ARG_HOST_ARCH=x64 VSCMD_ARG_TGT_ARCH=x64 VSCMD_VER=17.0 VSINSTALLDIR=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\ WindowsLibPath=C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22621.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22621.0 WindowsSdkBinPath=C:\Program Files (x86)\Windows Kits\10\bin\ WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10\ WindowsSDKLibVersion=10.0.22621.0\ WindowsSdkVerBinPath=C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\ WindowsSDKVersion=10.0.22621.0\ __DOTNET_ADD_64BIT=1 __DOTNET_PREFERRED_BITNESS=64 __VSCMD_PREINIT_PATH=C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\c
+rosoft Visual Studio\2022\Enterprise\VC\vcpkg PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS CommandPromptType=Native DevEnvDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\ EXTERNAL_INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt Framework40Version=v4.0 FrameworkDir=C:\Windows\Microsoft.NET\Framework64\ FrameworkDir64=C:\Windows\Microsoft.NET\Framework64\ FrameworkVersion=v4.0.30319 FrameworkVersion64=v4.0.30319 INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt LIB=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x64;C:\Program Files (x86)\Windows
+
+
+
+gram Files\CMake\bin\cmake.exe
+
+
+
+
+gram Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe
+
+Looking up version with --version for ToolInstance(CMake, null, file:///C:/Program%20Files/CMake/bin/cmake.exe).
+Running `C:\Program Files\CMake\bin\cmake.exe --version`.
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Found System CMake: ToolInstance(CMake, 4.0.0, file:///C:/Program%20Files/CMake/bin/cmake.exe)
+
+.0
+
+4c28b44\; COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Team Tools\DiagnosticsHub\Collector;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\CodeCoverage.Console;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\;C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts;c:\Users\chitt\.antigravity\extensions\vscjava.vscode-java-debug-0.58.5-universal\bundled\scripts\noConfigScripts;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS CommandPromptType=Native DevEnvDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\ EXTERNAL_INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt Framework40Version=v4.0 FrameworkDir=C:\Windows\Microsoft.NET\Framework64\ FrameworkDir64=C:\Windows\Microsoft.NET\Framework64\ FrameworkVersion=v4.0.30319 FrameworkVersion64=v4.0.30319 INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt LIB=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\M
+-- Building for: Visual Studio 17 2022
+
+
+-- Selecting Windows SDK version 10.0.22621.0 to target Windows .
+
+
+-- The C compiler identification is MSVC 19.43.34810.0
+
+
+-- The CXX compiler identification is MSVC 19.43.34810.0
+
+
+-- Detecting C compiler ABI info
+
+
+-- Detecting C compiler ABI info - done
+
+
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.43.34808/bin/Hostx86/x64/cl.exe - skipped
+
+
+-- Detecting C compile features
+
+
+-- Detecting C compile features - done
+
+
+-- Detecting CXX compiler ABI info
+
+
+-- Detecting CXX compiler ABI info - done
+
+
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.43.34808/bin/Hostx86/x64/cl.exe - skipped
+
+
+-- Detecting CXX compile features
+
+
+ne
+
+
+-- dartcv Version: 2.2.1+4
+-- OpenCV Version: 4.13.0
+-- OpenCV Prebuilt Version: 4.12.0.0
+
+
+CMake Deprecation Warning at C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/CMakeLists.txt:25 (cmake_minimum_required):
+
+
+project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+
+
+-- ocv_init_download: OpenCV source tree is not fetched as git repository. 3rdparty resources will be downloaded from github.com by default.
+
+
+-- Detected processor: AMD64
+
+
+3.14.3", but required is at least "3.2" (found C:/Users/chitt/AppData/Local/Microsoft/WindowsApps/python3.exe)
+
+
+.......................
+
+
+-- Performing Test HAVE_CXX_FP:PRECISE
+
+
+-- Performing Test HAVE_CXX_FP:PRECISE - Success
+
+
+-- Performing Test HAVE_C_FP:PRECISE
+
+
+-- Performing Test HAVE_C_FP:PRECISE - Success
+
+
+-- Performing Test HAVE_CPU_SSE3_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_sse3.cpp)
+
+
+-- Performing Test HAVE_CPU_SSE3_SUPPORT - Success
+
+
+-- Performing Test HAVE_CPU_SSSE3_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_ssse3.cpp)
+
+
+-- Performing Test HAVE_CPU_SSSE3_SUPPORT - Success
+
+
+-- Performing Test HAVE_CPU_SSE4_1_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_sse41.cpp)
+
+
+-- Performing Test HAVE_CPU_SSE4_1_SUPPORT - Success
+
+
+-- Performing Test HAVE_CPU_POPCNT_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_popcnt.cpp)
+
+
+-- Performing Test HAVE_CPU_POPCNT_SUPPORT - Success
+
+
+-- Performing Test HAVE_CPU_SSE4_2_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_sse42.cpp)
+
+
+-- Performing Test HAVE_CPU_SSE4_2_SUPPORT - Success
+
+
+-- Performing Test HAVE_CXX_ARCH:AVX (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_avx.cpp)
+
+
+-- Performing Test HAVE_CXX_ARCH:AVX - Success
+
+
+-- Performing Test HAVE_CXX_ARCH:AVX2 (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_avx2.cpp)
+
+
+-- Performing Test HAVE_CXX_ARCH:AVX2 - Success
+
+
+-- Performing Test HAVE_CXX_ARCH:AVX512 (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/cmake/checks/cpu_avx512.cpp)
+
+
+-- Performing Test HAVE_CXX_ARCH:AVX512 - Success
+
+
+-- Performing Test HAVE_CPU_BASELINE_FLAGS
+
+
+-- Performing Test HAVE_CPU_BASELINE_FLAGS - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_1
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_1 - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_2
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_2 - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_FP16
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_FP16 - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX2
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX2 - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX512_SKX
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX512_SKX - Success
+
+
+-- Performing Test HAVE_CXX_W15240
+
+
+-- Performing Test HAVE_CXX_W15240 - Success
+
+
+-- Performing Test HAVE_C_W15240
+
+
+-- Performing Test HAVE_C_W15240 - Success
+
+
+-- Looking for malloc.h
+
+
+-- Looking for malloc.h - found
+
+
+-- Looking for _aligned_malloc
+
+
+-- Looking for _aligned_malloc - found
+
+
+-- Looking for fseeko
+
+
+-- Looking for fseeko - not found
+
+
+-- Looking for sys/types.h
+
+
+-- Looking for sys/types.h - found
+
+
+-- Looking for stdint.h
+
+
+-- Looking for stddef.h
+
+
+und
+
+
+-- Looking for stddef.h - found
+
+
+-- Check size of off64_t
+
+
+-- Check size of off64_t - failed
+
+
+-- libjpeg-turbo: VERSION = 3.1.2, BUILD = opencv-4.13.0-libjpeg-turbo
+
+
+-- Check size of size_t
+
+
+-- Check size of size_t - done
+
+
+-- Check size of unsigned long
+
+
+-- Check size of unsigned long - done
+
+
+-- Looking for include file intrin.h
+
+
+-- Looking for include file intrin.h - found
+
+
+-- Looking for a ASM_NASM compiler
+
+
+-- SIMD extensions disabled: could not find NASM compiler.  Performance will suffer.
+
+
+-- Looking for assert.h
+
+
+-- Looking for fcntl.h
+
+
+ound
+
+
+-- Looking for inttypes.h
+
+
+
+
+
+-- Looking for inttypes.h - found
+
+
+-- Looking for limits.h
+
+
+
+
+
+-- Looking for memory.h
+
+
+und
+
+
+-- Looking for search.h
+
+
+und
+
+
+-- Looking for string.h
+
+
+und
+
+
+-- Looking for string.h - found
+
+
+-- Performing Test C_HAS_inline - Success
+
+
+-- Check size of signed short
+
+
+-- Check size of unsigned short
+
+
+
+
+
+-- Check size of signed int
+
+
+- done
+
+
+-- Check size of unsigned int
+
+
+
+
+
+-- Check size of unsigned int - done
+
+
+-- Check size of signed long
+
+
+-- Check size of signed long - done
+
+
+-- Check size of unsigned long
+
+
+-- Check size of unsigned long - done
+
+
+-- Check size of signed long long
+
+
+-- Check size of unsigned long long
+
+
+
+
+
+-- Check size of unsigned char *
+
+
+ done
+
+
+-- Check size of unsigned char * - done
+
+
+-- Check size of size_t
+
+
+-- Check size of size_t - done
+
+
+-- Check size of ptrdiff_t
+
+
+-- Check size of ptrdiff_t - done
+
+
+-- Looking for memmove
+
+
+-- Looking for setmode
+
+
+t found
+
+
+-- Looking for setmode - found
+-- Looking for strcasecmp
+
+
+-- Looking for strchr
+
+
+- not found
+
+
+-- Looking for strrchr
+
+
+nd
+
+
+-- Looking for strrchr - found
+-- Looking for strstr
+
+
+-- Looking for strstr - found
+
+
+-- Looking for strtol
+
+
+und
+
+
+-- Looking for strtoull
+
+
+d
+
+
+-- Looking for strtoull - found
+
+
+-- Looking for lfind
+
+
+-- Looking for lfind - found
+
+
+-- Could NOT find OpenJPEG (minimal suitable version: 2.0, recommended version >= 2.3.1). OpenJPEG will be built from sources
+
+
+-- OpenJPEG: VERSION = 2.5.3, BUILD = opencv-4.13.0-openjp2-2.5.3
+
+
+-- Looking for stdlib.h
+
+
+-- Looking for stdlib.h - found
+
+
+-- Looking for stdio.h
+
+
+-- Looking for stdio.h - found
+
+
+-- Looking for math.h
+
+
+-- Looking for float.h
+
+
+nd
+
+
+-- Looking for float.h - found
+
+
+-- Looking for time.h
+
+
+-- Looking for time.h - found
+
+
+-- Looking for stdarg.h
+
+
+-- Looking for ctype.h
+
+
+ound
+
+
+-- Looking for ctype.h - found
+
+
+-- Looking for stdint.h - found
+
+-- Looking for inttypes.h
+
+
+-- Looking for strings.h
+
+
+ound
+
+
+-- Looking for strings.h - not found
+
+
+-- Looking for sys/stat.h
+
+
+-- Looking for sys/stat.h - found
+
+
+-- Looking for unistd.h
+
+
+-- Looking for unistd.h - not found
+
+
+-- Looking for include file malloc.h
+
+
+-- Looking for include file malloc.h - found
+
+
+-- Looking for _aligned_malloc
+
+
+-- Looking for _aligned_malloc - found
+
+
+-- Looking for posix_memalign
+
+
+-- Looking for posix_memalign - not found
+
+
+-- Looking for memalign
+
+
+-- Looking for memalign - not found
+
+
+-- OpenJPEG libraries will be built from sources: libopenjp2 (version "2.5.3")
+
+
+-- Looking for mfapi.h
+
+
+-- Looking for d3d11_4.h
+
+
+d
+
+
+-- Looking for d3d11_4.h - found
+
+
+-- Allocator metrics storage type: 'long long'
+
+
+-- Excluding from source files list: modules/imgproc/src/imgwarp.lasx.cpp
+
+
+-- Excluding from source files list: modules/imgproc/src/resize.lasx.cpp
+
+
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+
+
+-- General configuration for OpenCV 4.13.0 =====================================
+
+
+--   CPU--     ZLib:                        build (ver 1.3.1)
+
+
+
+r 3.1.2-70)
+
+
+va_bindings_generator js_bindings_generator ml objc_bindings_generator objdetect photo python_b--     C flags (Debug):             /DWIN32 /D_WINDOWS  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /MP /Zi /Ob0 /Od /RTC1 
+
+
+--     Disabled by dependency:      -
+
+
+-- -----------------------------------------------------------------
+
+
+--     Linker flags (Release):      /machine:x64  /NODEFAULTLIB:atlthunk.lib /INCREMENTAL:NO  /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:libcpmtd.lib /NODEFAULTLIB:msvcrtd.lib
+
+
+y libraries:
+--     Custom HAL:                  NO
+--     Protobuf:                    build (3.19.1)
+--     Flatbuffers:                 builtin/3rdparty (25.9.23)
+-- 
+--   Vulkan:                        YES
+--     Include path:                C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/include
+--     Link libraries:              Dynamic load
+-- 
+--   OpenCL:                        YES (NVD3D11)
+--     Include path:                C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/include/opencl/1.2
+--     Link libraries:              Dynamic load
+
+
+-- Added library: dartcv
+
+
+pencv_imgcodecs;opencv_imgproc
+-- PLATFORM_LIBS: 
+
+
+-- Configuring done (249.2s)
+
+
+-- Generating done (2.1s)
+
+
+-- Build files have been written to: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44
+
+
+Looking for CMake in [$HOME/AppData/Local/Android/Sdk/cmake/*/bin/cmake.exe].
+
+Running `C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe --version`.
+
+ata/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe).
+
+cmake version 3.22.1-g37088a8-dirty
+
+
+Running `COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Team Tools\DiagnosticsHub\Collector;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\CodeCoverage.Console;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\;C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts;c:\Users\chitt\.antigravity\extensions\vscjava.vscode-java-debug-0.58.5-universal\bundled\scripts\noConfigScripts;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS CommandPromptType=Native DevEnvDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\ EXTERNAL_INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt Framework40Version=v4.0 FrameworkDir=C:\Windows\Microsoft.NET\Framework64\ FrameworkDir64=C:\Windows\Microsoft.NET\Framework64\ FrameworkVersion=v4.0.30319 FrameworkVersion64=v4.0.30319 INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt LIB=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\lib\x64;C:\Program Files (x86)\Windows
+
+
+
+gram Files\CMake\bin\cmake.exe
+
+
+
+
+gram Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe
+
+:\Program Files\CMake\bin\cmake.exe --version`.
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Found version for ToolInstance(CMake, 4.0.0, file:///C:/Program%20Files/CMake/bin/cmake.exe). 4.0.0
+
+chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts;c:\Users\chitt\.antigravity\extensions\vscjava.vscode-java-debug-0.58.5-universal\bundled\scripts\noConfigScripts C:\Program Files\CMake\bin\cmake.exe --build C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\ --config Release --target install --parallel 12 )`.
+
+ UniversalCRTSdkDir=C:\Program Files (x86)\Windows Kits\10\ VCIDEInstallDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\VC\ VCINSTALLDIR=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\ VCPKG_ROOT=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg VCToolsInstallDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ VCToolsRedistDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Redist\MSVC\14.42.34433\ VCToolsVersion=14.43.34808 VisualStudioVersion=17.0 VS170COMNTOOLS=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\ VSCMD_ARG_app_plat=Desktop VSCMD_ARG_HOST_ARCH=x64 VSCMD_ARG_TGT_ARCH=x64 VSCMD_VER=17.0 VSINSTALLDIR=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\ WindowsLibPath=C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22621.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22621.0 WindowsSdkBinPath=C:\Program Files (x86)\Windows Kits\10\bin\ WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10\ WindowsSDKLibVersion=10.0.22621.0\ WindowsSdkVerBinPath=C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\ WindowsSDKVersion=10.0.22621.0\ __DOTNET_ADD_64BIT=1 __DOTNET_PREFERRED_BITNESS=64 __VSCMD_PREINIT_PATH=C:\Users\chitt\.vscode\extensions\flutter\bin\;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python
+rosoft Visual Studio\2022\Enterprise\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\vcpkg PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS CommandPromptType=Native DevEnvDir=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\ EXTERNAL_INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt Framework40Version=v4.0 FrameworkDir=C:\Windows\Microsoft.NET\Framework64\ FrameworkDir64=C:\Windows\Microsoft.NET\Framework64\ FrameworkVersion=v4.0.30319 FrameworkVersion64=v4.0.30319 INCLUDE=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt LIB=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.43.34808\ATLMFC\lib\x64;C:\Program Files\M
+MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+
+
+
+
+
+  1>Checking Build System
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/libjpeg-turbo/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/libjpeg-turbo/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/core/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/core/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/core/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/core/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/CMakeLists.txt
+
+
+eLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt
+
+
+  jcapistd.c
+
+
+  jcmainct.c
+
+
+  jdapistd.c
+
+
+  jdcolor.c
+
+
+  jddiffct.c
+
+
+  jdlossls.c
+
+
+  jdmainct.c
+
+  jdpostct.c
+
+  jdsample.c
+
+  jutils.c
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/videoio/CMakeLists.txt
+
+
+  mathfuncs_core.avx2.cpp
+
+
+  matmul.avx512_skx.cpp
+
+
+  imgwarp.avx2.cpp
+
+
+  arithm.sse4_1.cpp
+
+
+  arithm.avx2.cpp
+
+  convert.avx2.cpp
+
+  convert_scale.avx2.cpp
+
+  count_non_zero.avx2.cpp
+
+
+  has_non_zero.avx2.cpp
+
+
+  norm.sse4_1.cpp
+
+
+
+
+  color_yuv.avx2.cpp
+
+
+  matmul.avx2.cpp
+
+
+  morph.avx2.cpp
+
+
+
+
+
+  jcapistd.c
+
+
+  imgwarp.sse4_1.cpp
+
+
+  resize.sse4_1.cpp
+
+
+  jcsample.c
+
+  sum.avx2.cpp
+
+  jdapistd.c
+
+  filter.sse4_1.cpp
+
+
+th.avx2.cpp
+
+  split.avx2.cpp
+
+  jccolor.c
+
+  jcdiffct.c
+
+  jclossls.c
+
+  jcmainct.c
+
+  jcprepct.c
+
+
+  mathfuncs_core.avx.cpp
+
+
+  color_hsv.sse4_1.cpp
+
+
+  norm.avx.cpp
+
+
+  jdcolor.c
+
+
+  jddiffct.c
+
+  jdlossls.c
+
+  jdmainct.c
+
+  jdpostct.c
+
+
+oefct.c
+
+  jddctmgr.c
+
+  jdmerge.c
+
+  color_rgb.sse4_1.cpp
+
+  color_yuv.sse4_1.cpp
+
+  median_blur.sse4_1.cpp
+
+  jfdctfst.c
+
+  jfdctint.c
+
+  jidctflt.c
+
+  jidctfst.c
+
+  jidctint.c
+
+  jidctred.c
+
+  jquant1.c
+
+  jquant2.c
+
+  morph.sse4_1.cpp
+
+  smooth.sse4_1.cpp
+
+
+  corner.avx.cpp
+
+
+  accum.avx.cpp
+
+
+  jpeg16-static.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\libjpeg-turbo\jpeg16-static.dir\Release\jpeg16-static.lib
+
+
+  box_filter.avx512_skx.cpp
+
+
+  median_blur.avx512_skx.cpp
+
+
+  sumpixels.avx512_skx.cpp
+
+
+  jpeg12-static.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\libjpeg-turbo\jpeg12-static.dir\Release\jpeg12-static.lib
+
+
+  sumpixels.avx2.cpp
+
+
+  opencv_core_SSE4_2.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\core\opencv_core_SSE4_2.dir\Release\opencv_core_SSE4_2.lib
+
+
+  norm.avx2.cpp
+
+
+  opencv_imgproc_AVX.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX.dir\Release\opencv_imgproc_AVX.lib
+
+
+  opencv_core_AVX.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\core\opencv_core_AVX.dir\Release\opencv_core_AVX.lib
+
+
+  opencv_core_AVX512_SKX.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\core\opencv_core_AVX512_SKX.dir\Release\opencv_core_AVX512_SKX.lib
+
+
+  opencv_core_SSE4_1.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\core\opencv_core_SSE4_1.dir\Release\opencv_core_SSE4_1.lib
+
+
+  opencv_imgproc_AVX512_SKX.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX512_SKX.dir\Release\opencv_imgproc_AVX512_SKX.lib
+
+
+  opencv_core_AVX2.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\core\opencv_core_AVX2.dir\Release\opencv_core_AVX2.lib
+
+
+c_SSE4_1.lib
+
+
+  opencv_imgproc_AVX2.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\modules\imgproc\opencv_imgproc_AVX2.dir\Release\opencv_imgproc_AVX2.lib
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/openjpeg/openjp2/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/zlib/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/libwebp/CMakeLists.txt
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/libjpeg-turbo/CMakeLists.txt
+
+
+  thread.c
+
+
+  bio.c
+
+
+
+
+
+  deflate.c
+
+
+  image.c
+
+
+
+  dwt.c
+
+
+
+
+
+
+  invert.c
+
+
+
+  inflate.c
+
+
+  adler32.c
+
+
+  trees.c
+
+
+
+
+  uncompr.c
+
+  sharpyuv.c
+
+  mct.c
+
+  zutil.c
+
+  sharpyuv_cpu.c
+
+  mqc.c
+
+
+  alpha_processing_mips_dsp_r2.c
+  alpha_processing_neon.c
+
+
+_dsp.c
+
+  sharpyuv_gamma.c
+
+  sharpyuv_neon.c
+
+  sharpyuv_sse2.c
+
+  alpha_dec.c
+
+  buffer_dec.c
+
+  frame_dec.c
+
+  pi.c
+
+  idec_dec.c
+
+  io_dec.c
+
+  quant_dec.c
+
+  t1.c
+  t2.c
+  tcd.c
+
+  tgt.c
+
+  function_list.c
+
+  opj_malloc.c
+
+  tree_dec.c
+
+  vp8_dec.c
+  vp8l_dec.c
+
+  webp_dec.c
+
+  anim_decode.c
+
+  demux.c
+
+  sparse_array.c
+
+  alpha_processing.c
+
+
+  alpha_processing_sse2.c
+
+
+  jcsample.c
+
+
+_sse41.c
+
+  cost.c
+
+  cost_mips32.c
+  cost_mips_dsp_r2.c
+  cost_neon.c
+
+  cost_sse2.c
+
+  cpu.c
+
+  dec.c
+
+  dec_clip_tables.c
+
+  dec_mips32.c
+
+  dec_mips_dsp_r2.c
+
+  dec_msa.c
+
+  dec_neon.c
+
+  dec_sse2.c
+
+  dec_sse41.c
+
+  enc.c
+
+  enc_mips32.c
+  enc_mips_dsp_r2.c
+
+  enc_msa.c
+
+  enc_neon.c
+
+  enc_sse2.c
+  enc_sse41.c
+
+  jcapistd.c
+
+  filters.c
+
+
+  rescaler_mips32.c
+
+
+
+
+  filters_msa.c
+
+  filters_neon.c
+
+  filters_sse2.c
+
+  jdapistd.c
+
+
+  lossless.c
+
+
+  jutils.c
+
+
+  histogram_enc.c  jdcolor.c
+
+
+
+
+lpha_enc.c
+
+
+  jfdctint.c
+
+
+  jidctflt.c
+
+
+  lossless_msa.c
+
+
+
+
+
+
+
+ssless_enc_neon.c
+
+  lossless_enc_sse2.c
+
+  lossless_enc_sse41.c
+  lossless_mips_dsp_r2.c
+
+
+  iterator_enc.c
+  near_lossless_enc.c
+  picture_csp_enc.c
+
+
+  picture_enc.c
+
+
+  picture_psnr_enc.c
+
+
+  vp8l_enc.c
+
+
+  jdhuff.c
+
+
+  picture_tools_enc.c
+
+
+  jdinput.c
+
+
+
+ jquant1.c
+
+  jquant2.c
+
+  jcapimin.c
+
+  jchuff.c
+
+  jcicc.c
+
+  jcinit.c
+
+  jclhuff.c
+
+  jcmarker.c
+
+  jcmaster.c
+
+  jcomapi.c
+
+  jcparam.c
+
+  jcphuff.c
+
+  jctrans.c
+
+  jdapimin.c
+
+
+  jdlhuff.c
+
+
+  jdphuff.c
+
+
+
+  jerror.c
+
+
+  jfdctflt.c
+
+
+  webp_enc.c
+
+
+.c
+
+
+
+
+
+  anim_encode.c
+
+  muxedit.c
+
+  muxinternal.c
+
+  muxread.c
+
+  bit_reader_utils.c
+
+  bit_writer_utils.c
+
+  jmemmgr.c
+
+  jmemnobs.c
+
+  jpeg_nbits.c
+
+  jaricom.c
+
+  color_cache_utils.c
+
+  filters_utils.c
+
+  jcarith.c
+
+  jdarith.c
+
+  huffman_encode_utils.c
+
+  huffman_utils.c
+
+  palette.c
+
+  zlib.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\lib\Release\zlib.lib
+
+  quant_levels_dec_utils.c
+
+  quant_levels_utils.c
+
+  random_utils.c
+
+  rescaler_utils.c
+
+  thread_utils.c
+
+  utils.c
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/3rdparty/libtiff/CMakeLists.txt
+
+
+  libopenjp2.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\lib\Release\libopenjp2.lib
+
+
+  Processing OpenCL kernels (core)
+
+
+  png.c
+
+
+  tif_aux.c
+
+
+  pngerror.c
+
+
+  tif_close.c
+
+
+  pngget.c
+
+
+  tif_codec.c
+
+
+  pngpread.c
+
+
+  tif_dir.c
+
+
+
+
+
+  pngrio.c
+
+
+  pngrtran.c
+
+
+
+
+  tif_dirinfo.c
+
+
+  pngrutil.c
+  tif_dirwrite.c
+
+
+  tif_dumpmode.c
+
+
+  tif_extension.c
+
+
+  tif_color.c
+
+
+f_error.c
+
+
+  pngmem.c
+
+
+  pngset.c
+
+
+  tif_fax3sm.c
+
+
+  pngwio.c
+
+
+  pngwutil.c
+
+
+  tif_jbig.c
+
+
+insics.c
+
+
+  lossless_avx2.c
+
+
+  tif_jpeg_12.c
+
+
+
+ite.c
+
+
+  tif_jpeg.c
+  tif_luv.c
+  tif_lzma.c
+
+
+  tif_lzw.c
+  tif_next.c
+  tif_ojpeg.c
+
+
+  tif_open.c
+
+
+  tif_packbits.c
+
+
+  tif_pixarlog.c
+
+
+  tif_print.c
+
+
+  tif_strip.c
+
+
+  tif_read.c
+
+
+
+
+  tif_swab.c
+
+
+  tif_thunder.c
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/core/CMakeLists.txt
+
+
+  tif_webp.c
+
+
+  tif_version.c
+  tif_warning.c
+
+
+  tif_write.c
+
+
+  tif_zip.c
+
+
+  tif_zstd.c
+
+
+  tif_win32.c
+
+
+  libwebp.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\lib\Release\libwebp.lib
+
+
+  libpng.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\lib\Release\libpng.lib
+
+
+  algorithm.cpp
+
+
+  bindings_utils.cpp
+
+
+  arithm.cpp
+
+
+  channels.cpp
+
+
+  check.cpp
+
+
+  batch_distance.cpp
+
+
+  arithm.dispatch.cpp
+
+
+  command_line_parser.cpp
+
+
+  conjugate_gradient.cpp
+
+
+  tif_stream.cxx
+
+
+  convert.dispatch.cpp
+
+
+  convert_c.cpp
+
+
+  convert_scale.dispatch.cpp
+
+
+  copy.cpp
+
+
+  count_non_zero.dispatch.cpp
+
+
+  libtiff.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\lib\Release\libtiff.lib
+
+
+  cuda_gpu_mat.cpp
+
+
+  cuda_gpu_mat_nd.cpp
+
+
+  cuda_host_mem.cpp
+
+
+  libjpeg-turbo.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\3rdparty\lib\Release\libjpeg-turbo.lib
+
+
+  cuda_info.cpp
+
+
+  cuda_stream.cpp
+
+
+  datastructs.cpp
+
+
+  directx.cpp
+
+
+  downhill_simplex.cpp
+
+
+  dxt.cpp
+
+
+  gl_core_3_1.cpp
+
+
+  glob.cpp
+
+
+  hal_internal.cpp
+
+
+  has_non_zero.dispatch.cpp
+
+
+  kmeans.cpp
+
+
+  lapack.cpp
+
+
+  lda.cpp
+
+
+  logger.cpp
+
+
+  lpsolver.cpp
+
+
+  lut.cpp
+
+
+  mathfuncs.cpp
+
+
+  mathfuncs_core.dispatch.cpp
+
+
+  matmul.dispatch.cpp
+
+
+  matrix.cpp
+
+
+  matrix_c.cpp
+
+
+  matrix_decomp.cpp
+
+
+  matrix_expressions.cpp
+
+
+  matrix_iterator.cpp
+
+
+  matrix_operations.cpp
+
+
+  matrix_sparse.cpp
+
+
+  matrix_transform.cpp
+
+
+  matrix_wrap.cpp
+
+
+  mean.dispatch.cpp
+
+
+  merge.dispatch.cpp
+
+
+  minmax.cpp
+
+
+  norm.dispatch.cpp
+
+
+  ocl.cpp
+
+
+  opencl_clblas.cpp
+
+
+  opencl_clfft.cpp
+
+
+  opencl_core.cpp
+
+
+  opengl.cpp
+
+
+  out.cpp
+
+
+  ovx.cpp
+
+
+  parallel_openmp.cpp
+
+
+  parallel_tbb.cpp
+
+
+  parallel_impl.cpp
+
+
+  pca.cpp
+
+
+  persistence.cpp
+
+
+  persistence_base64_encoding.cpp
+
+
+  persistence_xml.cpp
+
+
+
+
+  persistence_yml.cpp
+
+
+  rand.cpp
+
+
+  softfloat.cpp
+
+
+  split.dispatch.cpp
+
+
+  stat.dispatch.cpp
+
+
+  stat_c.cpp
+
+
+  stl.cpp
+
+
+  sum.dispatch.cpp
+
+
+  system.cpp
+
+
+  trace.cpp
+
+  types.cpp
+
+  umatrix.cpp
+
+
+  datafile.cpp
+
+
+  filesystem.cpp
+
+
+  logtagconfigparser.cpp
+
+
+  logtagmanager.cpp
+
+
+  samples.cpp
+
+
+  va_intel.cpp
+
+
+  opencl_kernels_core.cpp
+
+
+  alloc.cpp
+
+
+  parallel.cpp
+
+
+  parallel.cpp
+
+
+  opencv_core.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Release\opencv_core4130.lib
+
+
+  Processing OpenCL kernels (imgproc)
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgproc/CMakeLists.txt
+
+
+  approx.cpp
+
+
+pp
+
+
+  blend.cpp
+
+
+
+
+
+cpp
+
+
+p
+
+
+  color_rgb.dispatch.cpp
+
+
+  color_yuv.dispatch.cpp
+
+
+  colormap.cpp
+
+
+  contours.cpp
+
+
+s.cpp
+
+
+  contours_approx.cpp
+
+
+  contours_common.cpp
+
+
+  contours_link.cpp
+
+
+  contours_new.cpp
+
+
+  convhull.cpp
+
+
+  corner.cpp
+
+
+  cornersubpix.cpp
+
+
+  demosaicing.cpp
+
+
+  deriv.cpp
+
+
+  distransform.cpp
+
+
+  drawing.cpp
+
+
+  emd.cpp
+
+
+  emd_new.cpp
+
+
+  featureselect.cpp
+
+
+  filter.dispatch.cpp
+
+
+  floodfill.cpp
+
+
+  gabor.cpp
+
+
+  generalized_hough.cpp
+
+
+  geometry.cpp
+
+
+  grabcut.cpp
+
+
+  hershey_fonts.cpp
+
+
+  histogram.cpp
+
+
+  hough.cpp
+
+
+  imgwarp.cpp
+
+
+  intelligent_scissors.cpp
+
+
+  linefit.cpp
+
+
+
+
+
+  lsd.cpp
+
+
+  main.cpp
+
+
+  matchcontours.cpp
+
+
+  median_blur.dispatch.cpp
+
+
+  min_enclosing_convex_polygon.cpp
+
+
+  min_enclosing_triangle.cpp
+
+
+  moments.cpp
+
+
+  morph.dispatch.cpp
+
+
+  phasecorr.cpp
+
+
+  phasecorr_iterative.cpp
+
+
+  pyramids.cpp
+
+
+  resize.cpp
+
+
+  rotcalipers.cpp
+
+
+  samplers.cpp
+
+
+  segmentation.cpp
+
+
+  shapedescr.cpp
+
+
+  smooth.dispatch.cpp
+
+
+  spatialgradient.cpp
+
+
+  stackblur.cpp
+
+
+  subdivision2d.cpp
+
+
+  sumpixels.dispatch.cpp
+
+
+  tables.cpp
+
+
+  templmatch.cpp
+
+
+  thresh.cpp
+
+
+  utils.cpp
+
+
+  opencl_kernels_imgproc.cpp
+
+
+  opencv_imgproc.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Release\opencv_imgproc4130.lib
+
+
+  Building Custom Rule C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-src/modules/imgcodecs/CMakeLists.txt
+
+
+  loadsave.cpp
+
+
+  grfmt_bmp.cpp
+
+  grfmt_exr.cpp
+
+
+  grfmt_hdr.cpp
+
+
+  grfmt_gif.cpp
+
+
+  grfmt_base.cpp
+
+
+ grfmt_jpeg2000.cpp
+
+
+  grfmt_jpeg2000_openjpeg.cpp
+
+
+  grfmt_jpegxl.cpp
+
+
+  grfmt_pam.cpp
+
+
+  grfmt_pfm.cpp
+
+
+  grfmt_png.cpp
+
+
+  grfmt_pxm.cpp
+
+
+  grfmt_spng.cpp
+
+
+  grfmt_sunras.cpp
+
+
+  grfmt_tiff.cpp
+
+
+  grfmt_webp.cpp
+
+
+  bitstrm.cpp
+
+
+  rgbe.cpp
+
+
+  exif.cpp
+
+
+  opencv_imgcodecs.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\_deps\opencv-build\lib\Release\opencv_imgcodecs4130.lib
+
+
+  Building Custom Rule C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src/dartcv/CMakeLists.txt
+
+
+  core.cpp
+
+
+  mat.cpp
+
+
+  exception.cpp
+
+
+  logging.cpp
+
+
+  svd.cpp
+
+
+  utils.cpp
+
+
+  version.cpp
+
+
+  stdvec.cpp
+
+
+  imgcodecs.cpp
+
+
+  imgproc.cpp
+
+
+  Generating Code...
+
+
+  Auto build dll exports
+
+
+     Creating library C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/dartcv/Release/dartcv.lib and object C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/dar
+
+tcv/Release/dartcv.exp
+
+
+  dartcv.vcxproj -> C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\8e04c28b44\dartcv\Release\dartcv.dll
+
+
+  Building Custom Rule C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/dartcv4-2.2.1+4/src/CMakeLists.txt
+
+
+  1>
+
+
+  -- Install configuration: "Release"
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/dlpack-LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/flatbuffers-LICENSE.txt
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/opencl-headers-LICENSE.txt
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/cvconfig.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/opencv_modules.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/OpenCVModules.cmake
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/OpenCVModules-release.cmake
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/OpenCVConfig-version.cmake
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/OpenCVConfig.cmake
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/./OpenCVConfig.cmake
+
+
+ke
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/./LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/./setup_vars_opencv4.cmd
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/zlib.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/zlib-LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/libjpeg-turbo.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libjpeg-turbo-README.md
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libjpeg-turbo-LICENSE.md
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libjpeg-turbo-README.ijg
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/libtiff.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libtiff-LICENSE.md
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/libwebp.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libopenjp2-README.md
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libopenjp2-LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/libopenjp2.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/libpng.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libpng-LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/libpng-README
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/protobuf-LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/protobuf-README.md
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/quirc-LICENSE
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/opencv.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/opencv_core4130.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/affine.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/async.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/base.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/bindings_utils.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/bufferpool.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/check.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/core.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/core_c.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda.inl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/block.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/border_interpolate.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/color.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/common.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/cuda_compat.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/datamov_utils.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/detail/color_detail.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/detail/reduce.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/detail/reduce_key_val.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/detail/transform_detail.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/detail/type_traits_detail.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/detail/vec_distance_detail.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/dynamic_smem.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/emulation.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/filters.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/funcattrib.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/functional.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/limits.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/reduce.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/saturate_cast.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/scan.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/simd_functions.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/transform.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/type_traits.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/utility.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/vec_distance.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/vec_math.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/vec_traits.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/warp.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/warp_reduce.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda/warp_shuffle.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda_stream_accessor.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cuda_types.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cv_cpu_dispatch.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cv_cpu_helper.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cvdef.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cvstd.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cvstd.inl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/cvstd_wrapper.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/detail/async_promise.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/detail/dispatch_helper.impl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/detail/exception_ptr.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/directx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/dualquaternion.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/dualquaternion.inl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/eigen.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/fast_math.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/hal.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/interface.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_avx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_avx512.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_cpp.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_forward.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_lasx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_legacy_ops.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_lsx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_math.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_msa.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_neon.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_rvv071.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_rvv_scalable.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_sse.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_sse_em.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_vsx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/intrin_wasm.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/msa_macros.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/hal/simd_utils.impl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/mat.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/mat.inl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/matx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/matx.inl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/neon_utils.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/ocl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/ocl_genbase.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/ocl_defs.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/opencl_info.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/opencl_svm.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/autogenerated/opencl_clblas.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/autogenerated/opencl_clfft.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/autogenerated/opencl_core.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_clblas.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_clfft.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_core.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_gl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_svm_20.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/opengl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/operations.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/optim.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/ovx.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/parallel/backend/parallel_for.openmp.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/parallel/backend/parallel_for.tbb.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/parallel/parallel_backend.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/persistence.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/quaternion.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/quaternion.inl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/saturate.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/simd_intrinsics.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/softfloat.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/sse_utils.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/traits.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/types.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/types_c.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utility.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/allocator_stats.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/allocator_stats.impl.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/filesystem.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/fp_control_utils.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/instrumentation.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/logger.defines.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/logger.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/logtag.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/tls.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/utils/trace.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/va_intel.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/version.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/core/vsx_utils.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/licenses/SoftFloat-COPYING.txt
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/opencv_imgproc4130.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/bindings.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/detail/gcgraph.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/detail/legacy.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/hal/hal.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/hal/interface.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/imgproc.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/imgproc_c.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/segmentation.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgproc/types_c.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/x64/vc17/staticlib/opencv_imgcodecs4130.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgcodecs.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgcodecs/imgcodecs.hpp
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgcodecs/imgcodecs_c.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgcodecs/ios.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgcodecs/legacy/constants_c.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/opencv2/imgcodecs/macosx.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_eye.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_eye_tree_eyeglasses.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_frontalcatface.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_frontalcatface_extended.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_frontalface_alt.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_frontalface_alt2.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_frontalface_alt_tree.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_frontalface_default.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_fullbody.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_lefteye_2splits.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_license_plate_rus_16stages.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_lowerbody.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_profileface.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_righteye_2splits.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_russian_plate_number.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_smile.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/haarcascades/haarcascade_upperbody.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/lbpcascades/lbpcascade_frontalcatface.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/lbpcascades/lbpcascade_frontalface.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/lbpcascades/lbpcascade_frontalface_improved.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/lbpcascades/lbpcascade_profileface.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/etc/lbpcascades/lbpcascade_silverware.xml
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/calib3d
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/calib3d/calib3d.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/calib3d/stereo.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib/aruco.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib/img_hash.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib/quality.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib/wechat_qrcode.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib/ximgproc.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/contrib/xobjdetect.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/constants.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/core.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/exception.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/logging.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/mat.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/stdvec.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/svd.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/types.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/utils.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/core/version.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/dnn
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/dnn/dnn.h
+
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/features2d/features2d.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/freetype
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/freetype/freetype.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/gapi/gapi.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/highgui
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/highgui/highgui.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/imgcodecs
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/imgproc
+
+
+codecs.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/imgproc/imgproc.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/objdetect
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/objdetect/objdetect.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/photo/photo.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/stitching/stitching.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/video
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/videoio
+
+
+
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/include/dartcv/videoio/videoio.h
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/lib/dartcv.lib
+
+
+  -- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/install/lib/dartcv.dll
+
+

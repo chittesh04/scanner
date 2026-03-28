@@ -1,5 +1,8 @@
 import 'dart:io';
 import 'dart:typed_data';
+import 'dart:math' as math;
+import 'dart:isolate';
+import 'package:image/image.dart' as img;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path/path.dart' as p;
@@ -8,6 +11,20 @@ import 'package:smartscan/features/export/domain/export_models.dart';
 import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
+class _PdfExportPayload {
+  _PdfExportPayload({
+    required this.outputPath,
+    required this.signatureBytes,
+    required this.pages,
+    required this.imageBytesList,
+  });
+
+  final String outputPath;
+  Uint8List? signatureBytes;
+  final List<PageExportData> pages;
+  final List<Uint8List?> imageBytesList;
+}
+
 class PdfExportService {
   PdfExportService(this._storageService, this._signatureRepository);
 
@@ -15,17 +32,68 @@ class PdfExportService {
   final SignatureRepository _signatureRepository;
 
   Future<File> export(ExportRequest request) async {
-    final pdf = pw.Document();
     final signatureBytes = await _signatureRepository.loadSignature();
-    final signatureImage =
-        signatureBytes != null ? pw.MemoryImage(signatureBytes) : null;
 
+    String path = request.outputPath ?? '';
+    if (path.isEmpty) {
+      final root = await getTemporaryDirectory();
+      path = p.join(root.path, '${request.title}_${request.documentId}.pdf');
+    }
+
+    final imageBytesList = <Uint8List?>[];
     for (final page in request.pages) {
       final imageFile = File(page.imagePath);
-      if (!await imageFile.exists()) continue;
+      if (!await imageFile.exists()) {
+        imageBytesList.add(null);
+        continue;
+      }
+      imageBytesList.add(await _storageService.readEncrypted(imageFile));
+    }
 
-      final Uint8List imageBytes =
-          await _storageService.readEncrypted(imageFile);
+    final payload = _PdfExportPayload(
+      outputPath: path,
+      signatureBytes: signatureBytes,
+      pages: request.pages,
+      imageBytesList: imageBytesList,
+    );
+
+    final resultPath = await Isolate.run(() => _buildPdfIsolate(payload));
+    return File(resultPath);
+  }
+
+  static Future<String> _buildPdfIsolate(_PdfExportPayload payload) async {
+    final pdf = pw.Document();
+    pw.MemoryImage? signatureImage;
+    if (payload.signatureBytes != null) {
+      signatureImage = pw.MemoryImage(payload.signatureBytes!);
+      payload.signatureBytes = null; // Aggressive nullification hinting
+    }
+
+    for (var i = 0; i < payload.pages.length; i++) {
+      final page = payload.pages[i];
+      var imageBytes = payload.imageBytesList[i];
+      payload.imageBytesList[i] = null; // Free from list immediately
+
+      if (imageBytes == null) continue;
+
+      // Downscaling optimization
+      final decodedImage = img.decodeImage(imageBytes);
+      imageBytes = null; // Free raw bytes
+
+      if (decodedImage != null) {
+        final longestSide = math.max(decodedImage.width, decodedImage.height);
+        if (longestSide > 1500) {
+          final targetWidth = decodedImage.width > decodedImage.height 
+              ? 1240 
+              : (1240 * (decodedImage.width / decodedImage.height)).round();
+          final resized = img.copyResize(decodedImage, width: targetWidth);
+          imageBytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
+        } else {
+          imageBytes = Uint8List.fromList(img.encodeJpg(decodedImage, quality: 90));
+        }
+      }
+
+      if (imageBytes == null) continue;
       final image = pw.MemoryImage(imageBytes);
 
       pdf.addPage(
@@ -35,29 +103,16 @@ class PdfExportService {
             final pageWidth = context.page.pageFormat.availableWidth;
             final pageHeight = context.page.pageFormat.availableHeight;
 
-            // Scale factor from image pixels → PDF points.
             final scaleX = pageWidth / page.imageWidth;
             final scaleY = pageHeight / page.imageHeight;
 
             return pw.Stack(
               children: [
-                // 1) Full-page scanned image as background.
                 pw.Positioned.fill(
                   child: pw.Image(image, fit: pw.BoxFit.contain),
                 ),
-
-                // 2) Invisible text overlay — one widget per OCR word,
-                //    positioned exactly over the corresponding region in
-                //    the image so PDF readers can select/copy/search.
                 for (final block in page.ocrBlocks)
-                  _buildInvisibleTextBlock(
-                    block,
-                    scaleX,
-                    scaleY,
-                    pageHeight,
-                  ),
-
-                // 3) Signature overlay (if present).
+                  _buildInvisibleTextBlock(block, scaleX, scaleY, pageHeight),
                 if (page.signature != null && signatureImage != null)
                   pw.Align(
                     alignment: pw.Alignment(
@@ -79,16 +134,10 @@ class PdfExportService {
       );
     }
 
-    final String path;
-    if (request.outputPath != null) {
-      path = request.outputPath!;
-    } else {
-      final root = await getTemporaryDirectory();
-      path = p.join(root.path, '${request.title}_${request.documentId}.pdf');
-    }
-    final file = File(path);
-    await file.writeAsBytes(await pdf.save(), flush: true);
-    return file;
+    final file = File(payload.outputPath);
+    final pdfBytes = await pdf.save();
+    await file.writeAsBytes(pdfBytes, flush: true);
+    return payload.outputPath;
   }
 
   /// Creates a positioned, fully transparent text widget whose bounding
@@ -97,7 +146,7 @@ class PdfExportService {
   /// PDF coordinates start at the **bottom-left**; OCR coordinates start
   /// at the **top-left**. We convert by flipping the vertical axis:
   ///   `pdfBottom = pageHeight - (ocrBottom * scaleY)`
-  pw.Widget _buildInvisibleTextBlock(
+  static pw.Widget _buildInvisibleTextBlock(
     ExportOcrBlock block,
     double scaleX,
     double scaleY,

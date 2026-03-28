@@ -2,7 +2,7 @@
   "assets": [
     {
       "encoding": {
-        "file": "c:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\install\\lib\\dartcv.dll",
+        "file": "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\install\\lib\\dartcv.dll",
         "id": "package:dartcv4/dartcv.dart",
         "link_mode": {
           "type": "dynamic_loading_bundle"
@@ -13,5 +13,5 @@
   ],
   "assets_for_linking": {},
   "status": "success",
-  "timestamp": "2026-03-27 22:16:16.000"
+  "timestamp": "2026-03-28 11:22:28.000"
 }

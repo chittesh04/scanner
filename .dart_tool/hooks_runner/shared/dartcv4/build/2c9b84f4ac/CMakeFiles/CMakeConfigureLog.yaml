@@ -5257,3 +5257,391 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVFindFrameworks.cmake:23 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:812 (include)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CONCURRENCY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_79ee8.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:34 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\cmTC_79ee8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_79ee8.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_79ee8.dir\\Release\\cmTC_79ee8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_79ee8.dir\\Release\\cmTC_79ee8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_79ee8.dir\\Release\\cmTC_79ee8.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_79ee8.dir\\Release\\\\" /Fd"cmTC_79ee8.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\concurrencytest.cpp
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_79ee8.dir\\Release\\\\" /Fd"cmTC_79ee8.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\concurrencytest.cpp
+          concurrencytest.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\Release\\cmTC_79ee8.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/CMakeFiles/CMakeTmp/Release/cmTC_79ee8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/CMakeFiles/CMakeTmp/Release/cmTC_79ee8.lib" /MACHINE:X64  /machine:x64 cmTC_79ee8.dir\\Release\\concurrencytest.obj
+          cmTC_79ee8.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\Release\\cmTC_79ee8.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_79ee8.dir\\Release\\cmTC_79ee8.tlog\\unsuccessfulbuild".
+          Touching "cmTC_79ee8.dir\\Release\\cmTC_79ee8.tlog\\cmTC_79ee8.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\CMakeFiles\\CMakeTmp\\cmTC_79ee8.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.80
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVDetectOpenCL.cmake:22 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:884 (include)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "__VALID_OPENCL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c6ad0.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:36 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_c6ad0.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c6ad0.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_c6ad0.dir\\Release\\cmTC_c6ad0.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c6ad0.dir\\Release\\cmTC_c6ad0.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c6ad0.dir\\Release\\cmTC_c6ad0.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /I"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\3rdparty\\include\\opencl\\1.2" /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c6ad0.dir\\Release\\\\" /Fd"cmTC_c6ad0.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\opencl.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\3rdparty\\include\\opencl\\1.2" /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c6ad0.dir\\Release\\\\" /Fd"cmTC_c6ad0.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\opencl.cpp"
+          opencl.cpp
+          OpenCL is valid
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_c6ad0.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_c6ad0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_c6ad0.lib" /MACHINE:X64  /machine:x64 cmTC_c6ad0.dir\\Release\\opencl.obj
+          cmTC_c6ad0.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_c6ad0.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c6ad0.dir\\Release\\cmTC_c6ad0.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c6ad0.dir\\Release\\cmTC_c6ad0.tlog\\cmTC_c6ad0.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_c6ad0.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVDetectVulkan.cmake:4 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:894 (include)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "VALID_VULKAN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c8e1b.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:37 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_c8e1b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c8e1b.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_c8e1b.dir\\Release\\cmTC_c8e1b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c8e1b.dir\\Release\\cmTC_c8e1b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c8e1b.dir\\Release\\cmTC_c8e1b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /I"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\3rdparty\\include" /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c8e1b.dir\\Release\\\\" /Fd"cmTC_c8e1b.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\vulkan.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\3rdparty\\include" /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c8e1b.dir\\Release\\\\" /Fd"cmTC_c8e1b.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\vulkan.cpp"
+          vulkan.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_c8e1b.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_c8e1b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_c8e1b.lib" /MACHINE:X64  /machine:x64 cmTC_c8e1b.dir\\Release\\vulkan.obj
+          cmTC_c8e1b.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_c8e1b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c8e1b.dir\\Release\\cmTC_c8e1b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c8e1b.dir\\Release\\cmTC_c8e1b.tlog\\cmTC_c8e1b.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_c8e1b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.81
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVDetectDirectX.cmake:2 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:909 (include)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "__VALID_DIRECTX"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9aee9.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:38 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_9aee9.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_9aee9.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_9aee9.dir\\Release\\cmTC_9aee9.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_9aee9.dir\\Release\\cmTC_9aee9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_9aee9.dir\\Release\\cmTC_9aee9.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_9aee9.dir\\Release\\\\" /Fd"cmTC_9aee9.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\directx.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_9aee9.dir\\Release\\\\" /Fd"cmTC_9aee9.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\directx.cpp"
+          directx.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_9aee9.exe" /INCREMENTAL:NO /NOLOGO d3d11.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_9aee9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_9aee9.lib" /MACHINE:X64  /machine:x64 cmTC_9aee9.dir\\Release\\directx.obj
+          cmTC_9aee9.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_9aee9.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_9aee9.dir\\Release\\cmTC_9aee9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_9aee9.dir\\Release\\cmTC_9aee9.tlog\\cmTC_9aee9.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_9aee9.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.38
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVDetectDirectX.cmake:12 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:909 (include)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "__VALID_DIRECTX_NV12"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_91714.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:40 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_91714.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_91714.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_91714.dir\\Release\\cmTC_91714.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_91714.dir\\Release\\cmTC_91714.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_91714.dir\\Release\\cmTC_91714.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D CHECK_NV12 /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_91714.dir\\Release\\\\" /Fd"cmTC_91714.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\directx.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D CHECK_NV12 /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_91714.dir\\Release\\\\" /Fd"cmTC_91714.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\directx.cpp"
+          directx.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_91714.exe" /INCREMENTAL:NO /NOLOGO d3d11.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_91714.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_91714.lib" /MACHINE:X64  /machine:x64 cmTC_91714.dir\\Release\\directx.obj
+          cmTC_91714.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_91714.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_91714.dir\\Release\\cmTC_91714.tlog\\unsuccessfulbuild".
+          Touching "cmTC_91714.dir\\Release\\cmTC_91714.tlog\\cmTC_91714.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_91714.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.38
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVDetectDirectML.cmake:2 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:913 (include)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "__VALID_DIRECTML"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b557e.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:42 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_b557e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_b557e.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_b557e.dir\\Release\\cmTC_b557e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_b557e.dir\\Release\\cmTC_b557e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_b557e.dir\\Release\\cmTC_b557e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_b557e.dir\\Release\\\\" /Fd"cmTC_b557e.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\directml.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_b557e.dir\\Release\\\\" /Fd"cmTC_b557e.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\directml.cpp"
+          directml.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_b557e.exe" /INCREMENTAL:NO /NOLOGO d3d12.lib dxcore.lib directml.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_b557e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_b557e.lib" /MACHINE:X64  /machine:x64 cmTC_b557e.dir\\Release\\directml.obj
+          cmTC_b557e.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_b557e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_b557e.dir\\Release\\cmTC_b557e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_b557e.dir\\Release\\cmTC_b557e.tlog\\cmTC_b557e.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_b557e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.43
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/modules/highgui/cmake/detect_win32ui.cmake:4 (try_compile)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/modules/highgui/cmake/init.cmake:35 (include)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/modules/highgui/cmake/init.cmake:40 (add_backend)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVModule.cmake:298 (include)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVModule.cmake:361 (_add_modules_1)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/cmake/OpenCVModule.cmake:408 (ocv_glob_modules)"
+      - "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-src/CMakeLists.txt:1097 (ocv_register_modules)"
+    directories:
+      source: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " /DWIN32 /D_WINDOWS /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP"
+      CMAKE_CXX_FLAGS_RELEASE: " /O2 /Ob2 /DNDEBUG "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64  /NODEFAULTLIB:atlthunk.lib"
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_WIN32UI"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c1ac6.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 28-03-2026 11:22:44 AM.
+        
+        Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_c1ac6.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c1ac6.dir\\Release\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\".
+          Creating directory "cmTC_c1ac6.dir\\Release\\cmTC_c1ac6.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c1ac6.dir\\Release\\cmTC_c1ac6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c1ac6.dir\\Release\\cmTC_c1ac6.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\CL.exe /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c1ac6.dir\\Release\\\\" /Fd"cmTC_c1ac6.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\win32uitest.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /W1 /WX- /diagnostics:column /MP /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D NDEBUG /D "CMAKE_INTDIR=\\"Release\\"" /EHa /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++20 /Fo"cmTC_c1ac6.dir\\Release\\\\" /Fd"cmTC_c1ac6.dir\\Release\\vc143.pdb" /external:W1 /Gd /TP /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /errorReport:queue  /bigobj "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-src\\cmake\\checks\\win32uitest.cpp"
+          win32uitest.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_c1ac6.exe" /INCREMENTAL:NO /NOLOGO user32.lib gdi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:atlthunk.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_c1ac6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/2c9b84f4ac/_deps/opencv-build/CMakeFiles/CMakeTmp/Release/cmTC_c1ac6.lib" /MACHINE:X64  /machine:x64 cmTC_c1ac6.dir\\Release\\win32uitest.obj
+          cmTC_c1ac6.vcxproj -> C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\Release\\cmTC_c1ac6.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c1ac6.dir\\Release\\cmTC_c1ac6.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c1ac6.dir\\Release\\cmTC_c1ac6.tlog\\cmTC_c1ac6.lastbuildstate".
+        Done Building Project "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\2c9b84f4ac\\_deps\\opencv-build\\CMakeFiles\\CMakeTmp\\cmTC_c1ac6.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.19
+        
+      exitCode: 0
+...

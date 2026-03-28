@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/opencv-populate"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/9728dd8fe4295a6213e60e9d0b0913df/opencv-populate.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/0d1b0493f0d634738847fcb65249e220/opencv-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/8e04c28b44/_deps/opencv-subbuild/CMakeFiles/2fef9940a5df6dc40266b0b40fac3c79/opencv-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"opencv-populate"
+		],
+		"name" : "opencv-populate"
+	}
+}

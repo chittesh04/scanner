@@ -53,13 +53,13 @@ class FileStorageServiceImpl implements SecureStoragePort {
 
   Future<void> writeEncrypted(File file, Uint8List data) async {
     final box = await _encryptionService.encrypt(data, _mockKey);
-    final encoded = EncryptionService.encodeSecretBox(box);
-    await file.writeAsString(encoded, flush: true);
+    final encodedBytes = EncryptionService.encodeSecretBox(box);
+    await file.writeAsBytes(encodedBytes, flush: true);
   }
 
   Future<Uint8List> readEncrypted(File file) async {
-    final encoded = await file.readAsString();
-    final box = EncryptionService.decodeSecretBox(encoded);
+    final encodedBytes = await file.readAsBytes();
+    final box = EncryptionService.decodeSecretBox(encodedBytes);
     return _encryptionService.decrypt(box, _mockKey);
   }
 }
