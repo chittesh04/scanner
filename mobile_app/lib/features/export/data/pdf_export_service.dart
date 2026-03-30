@@ -81,10 +81,9 @@ class PdfExportService {
       if (longestSide > 1500) {
         final decodedImage = img.decodeImage(imageBytes);
         if (decodedImage != null) {
-          final targetWidth = decodedImage.width > decodedImage.height 
-              ? 1240 
-              : (1240 * (decodedImage.width / decodedImage.height)).round();
-          final resized = img.copyResize(decodedImage, width: targetWidth);
+          final resized = decodedImage.width > decodedImage.height 
+              ? img.copyResize(decodedImage, width: 1240)
+              : img.copyResize(decodedImage, height: 1500);
           imageBytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
         }
       }
@@ -93,7 +92,10 @@ class PdfExportService {
 
       pdf.addPage(
         pw.Page(
-          pageFormat: PdfPageFormat.a4,
+          margin: pw.EdgeInsets.zero,
+          pageFormat: page.imageWidth > page.imageHeight 
+              ? PdfPageFormat.a4.landscape 
+              : PdfPageFormat.a4,
           build: (pw.Context context) {
             final pageWidth = context.page.pageFormat.availableWidth;
             final pageHeight = context.page.pageFormat.availableHeight;

@@ -243,7 +243,7 @@ class ScanningServiceImpl implements ScanPipeline {
 
       if (approx.length == 4 && area > maxArea) {
         maxArea = area;
-        bestQuad = approx.toList();
+        bestQuad = approx.toList().map((p) => cv.Point(p.x, p.y)).toList(growable: false);
       }
 
       // CRITICAL: Dispose the temporary native vector immediately

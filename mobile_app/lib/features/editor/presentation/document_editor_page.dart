@@ -104,7 +104,7 @@ class _DocumentEditorPageState extends ConsumerState<DocumentEditorPage> {
                                  decoration: BoxDecoration(
                                    border: Border.all(color: Colors.blueAccent, width: 2),
                                  ),
-                                 child: Image(image: _signatureImage!, width: 200),
+                                 child: Image(image: _signatureImage!, width: renderWidth * 0.25),
                                ),
                              ),
                            ),

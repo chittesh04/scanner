@@ -178,7 +178,7 @@ class _ScanPageState extends ConsumerState<ScanPage>
 
       if (mounted) {
         setState(() {
-          _capturedPagesPreview = output.pages;
+          _capturedPagesPreview = [..._capturedPagesPreview, ...output.pages];
         });
       }
 

@@ -117,19 +117,15 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     AspectRatio(
-                      aspectRatio: 1,
+                      aspectRatio: page.imageWidth > 0 && page.imageHeight > 0 
+                          ? page.imageWidth / page.imageHeight 
+                          : 0.75,
                       child: index == 0
                           ? Hero(
                               tag: 'document_image_${widget.documentId}',
-                              child: EncryptedImage(
-                                imagePath: page.processedImagePath,
-                                fit: BoxFit.cover,
-                              ),
+                              child: _PageImageWithSignature(page: page),
                             )
-                          : EncryptedImage(
-                              imagePath: page.processedImagePath,
-                              fit: BoxFit.cover,
-                            ),
+                          : _PageImageWithSignature(page: page),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(12),
@@ -379,6 +375,45 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
 
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Collection updated')),
+    );
+  }
+}
+
+class _PageImageWithSignature extends ConsumerWidget {
+  const _PageImageWithSignature({required this.page});
+  final DocumentPage page;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return FutureBuilder<Uint8List?>(
+      future: ref.read(signatureRepositoryProvider).loadSignature(),
+      builder: (context, snapshot) {
+        return LayoutBuilder(
+          builder: (context, constraints) {
+            return Stack(
+              fit: StackFit.expand,
+              children:[
+                EncryptedImage(
+                  imagePath: page.processedImagePath,
+                  fit: BoxFit.fill,
+                ),
+                if (page.hasSignature && snapshot.hasData && snapshot.data != null)
+                  Positioned(
+                    left: (page.signatureX ?? 0.5) * constraints.maxWidth,
+                    top: (page.signatureY ?? 0.5) * constraints.maxHeight,
+                    child: Transform.scale(
+                      scale: page.signatureScale ?? 1.0,
+                      child: Image.memory(
+                        snapshot.data!,
+                        width: constraints.maxWidth * 0.25,
+                      ),
+                    ),
+                  ),
+              ],
+            );
+          },
+        );
+      },
     );
   }
 }

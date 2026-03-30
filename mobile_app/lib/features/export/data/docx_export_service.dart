@@ -77,10 +77,9 @@ class DocxExportService {
       if (longestSide > 1500) {
         final decodedImage = img.decodeImage(bytes);
         if (decodedImage != null) {
-          final targetWidth = decodedImage.width > decodedImage.height 
-              ? 1240 
-              : (1240 * (decodedImage.width / decodedImage.height)).round();
-          final resized = img.copyResize(decodedImage, width: targetWidth);
+          final resized = decodedImage.width > decodedImage.height 
+              ? img.copyResize(decodedImage, width: 1240)
+              : img.copyResize(decodedImage, height: 1500);
           bytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
         }
       }

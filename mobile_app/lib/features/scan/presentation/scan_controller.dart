@@ -56,7 +56,7 @@ class ScanController extends StateNotifier<ScanViewState> {
 
     final lumaPlane = image.planes.first;
     await onPreviewLumaFrame(
-      lumaBytes: Uint8List.fromList(lumaPlane.bytes),
+      lumaBytes: lumaPlane.bytes,
       width: image.width,
       height: image.height,
       bytesPerRow: lumaPlane.bytesPerRow,
