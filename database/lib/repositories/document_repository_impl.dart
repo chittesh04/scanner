@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:isar/isar.dart';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
 import 'package:smartscan_database/isar_schema.dart';
 import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_models/document.dart';
@@ -156,9 +159,39 @@ class DocumentRepositoryImpl implements DocumentRepository {
       return;
     }
 
+    final docIsarIds = docs.map((e) => e.id).toList();
+
+    // Find all pages belonging to these documents
+    final pages = await _isar.pageEntitys
+        .filter()
+        .anyOf(documentIds, (q, id) => q.documentIdEqualTo(id))
+        .findAll();
+    
+    final pageIsarIds = pages.map((e) => e.id).toList();
+
+    // Find all OCR blocks for these pages
+    final pageIdsStr = pages.map((e) => e.pageId).toList();
+    final ocrBlocks = await _isar.ocrBlockEntitys
+        .filter()
+        .anyOf(pageIdsStr, (q, id) => q.pageIdEqualTo(id))
+        .findAll();
+
+    final ocrBlockIsarIds = ocrBlocks.map((e) => e.id).toList();
+
     await _isar.writeTxn(() async {
-      await _isar.documentEntitys.deleteAll(docs.map((e) => e.id).toList());
+      await _isar.ocrBlockEntitys.deleteAll(ocrBlockIsarIds);
+      await _isar.pageEntitys.deleteAll(pageIsarIds);
+      await _isar.documentEntitys.deleteAll(docIsarIds);
     });
+
+    try {
+      final dir = await getApplicationSupportDirectory();
+      final root = Directory(p.join(dir.path, 'smartscan_data'));
+      for (final id in documentIds) {
+        final docDir = Directory(p.join(root.path, id));
+        if (await docDir.exists()) await docDir.delete(recursive: true);
+      }
+    } catch (_) {}
   }
 
   @override

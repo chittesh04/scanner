@@ -73,8 +73,9 @@ class XlsxExportService {
     // ── Encode & write ──
     final encoded = ZipEncoder().encode(archive)!;
     final root = await getTemporaryDirectory();
+    final sanitizedTitle = request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
     final outPath = request.outputPath ??
-        p.join(root.path, '${request.title}_${request.documentId}.xlsx');
+        p.join(root.path, '${sanitizedTitle}_${request.documentId}.xlsx');
     final file = File(outPath);
     await file.writeAsBytes(encoded, flush: true);
     return file;

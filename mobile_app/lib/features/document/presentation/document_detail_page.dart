@@ -10,6 +10,7 @@ import 'package:smartscan/features/export/domain/export_models.dart';
 import 'package:smartscan/core/storage/encrypted_image.dart';
 import 'package:smartscan/features/editor/presentation/document_editor_page.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:smartscan_models/document.dart';
 
 class DocumentDetailPage extends ConsumerStatefulWidget {
   const DocumentDetailPage({super.key, required this.documentId});
@@ -23,11 +24,25 @@ class DocumentDetailPage extends ConsumerStatefulWidget {
 class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
   bool _exporting = false;
   final Set<String> _ocrLoadingPageIds = <String>{};
+  late Stream<Document?> _docStream;
+
+  @override
+  void initState() {
+    super.initState();
+    _docStream = ref.read(documentRepositoryProvider).watchDocument(widget.documentId);
+  }
+
+  @override
+  void didUpdateWidget(DocumentDetailPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.documentId != widget.documentId) {
+      _docStream = ref.read(documentRepositoryProvider).watchDocument(widget.documentId);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final repo = ref.watch(documentRepositoryProvider);
-    final docStream = repo.watchDocument(widget.documentId);
 
     return Scaffold(
       appBar: AppBar(
@@ -76,7 +91,7 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
         ],
       ),
       body: StreamBuilder(
-        stream: docStream,
+        stream: _docStream,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());

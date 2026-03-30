@@ -45,8 +45,9 @@ class DocxExportService {
     }
 
     final root = await getTemporaryDirectory();
+    final sanitizedTitle = request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
     final outPath = request.outputPath ??
-        p.join(root.path, '${request.title}_${request.documentId}.docx');
+        p.join(root.path, '${sanitizedTitle}_${request.documentId}.docx');
 
     final payload = _DocxExportPayload(
       outputPath: outPath,
@@ -62,35 +63,33 @@ class DocxExportService {
     final archive = Archive();
 
     // ── Collect images ──
-    final imageEntries = <_ImageEntry>[];
+    final validImageEntries = <_ImageEntry>[];
+    final pageToImageIndex = <int, _ImageEntry>{};
+
     for (var i = 0; i < payload.pages.length; i++) {
       var bytes = payload.imageBytesList[i];
       payload.imageBytesList[i] = null; // Aggressive nullification hinting
       
       if (bytes == null) continue;
 
-      // Downscaling optimization
-      final decodedImage = img.decodeImage(bytes);
-      bytes = null; // Free raw bytes
-
-      if (decodedImage != null) {
-        final longestSide = math.max(decodedImage.width, decodedImage.height);
-        if (longestSide > 1500) {
+      final page = payload.pages[i];
+      final longestSide = math.max(page.imageWidth, page.imageHeight);
+      if (longestSide > 1500) {
+        final decodedImage = img.decodeImage(bytes);
+        if (decodedImage != null) {
           final targetWidth = decodedImage.width > decodedImage.height 
               ? 1240 
               : (1240 * (decodedImage.width / decodedImage.height)).round();
           final resized = img.copyResize(decodedImage, width: targetWidth);
           bytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
-        } else {
-          bytes = Uint8List.fromList(img.encodeJpg(decodedImage, quality: 90));
         }
       }
 
-      if (bytes == null) continue;
-
       final rId = 'rId${i + 10}';
       final filename = 'image${i + 1}.jpg'; // Changed to jpg due to encoding
-      imageEntries.add(_ImageEntry(rId: rId, filename: filename, bytes: bytes));
+      final entry = _ImageEntry(rId: rId, filename: filename, bytes: bytes);
+      validImageEntries.add(entry);
+      pageToImageIndex[i] = entry;
       archive.addFile(ArchiveFile(
         'word/media/$filename',
         bytes.length,
@@ -99,18 +98,18 @@ class DocxExportService {
     }
 
     // ── [Content_Types].xml ──
-    final contentTypes = _buildContentTypes(imageEntries);
+    final contentTypes = _buildContentTypes(validImageEntries);
     archive.addFile(_textFile('[Content_Types].xml', contentTypes));
 
     // ── _rels/.rels ──
     archive.addFile(_textFile('_rels/.rels', _rootRels));
 
     // ── word/_rels/document.xml.rels ──
-    final docRels = _buildDocumentRels(imageEntries);
+    final docRels = _buildDocumentRels(validImageEntries);
     archive.addFile(_textFile('word/_rels/document.xml.rels', docRels));
 
     // ── word/document.xml ──
-    final docXml = _buildDocumentXml(payload.pages, imageEntries);
+    final docXml = _buildDocumentXml(payload.pages, pageToImageIndex);
     archive.addFile(_textFile('word/document.xml', docXml));
 
     // ── word/styles.xml (minimal) ──
@@ -158,7 +157,7 @@ class DocxExportService {
   }
 
   static String _buildDocumentXml(
-      List<PageExportData> pages, List<_ImageEntry> imageEntries) {
+      List<PageExportData> pages, Map<int, _ImageEntry> pageToImageIndex) {
     final body = StringBuffer();
 
     for (var i = 0; i < pages.length; i++) {
@@ -183,8 +182,8 @@ class DocxExportService {
       }
 
       // Inline image (if available)
-      if (i < imageEntries.length) {
-        final entry = imageEntries[i];
+      final entry = pageToImageIndex[i];
+      if (entry != null) {
         // EMU (English Metric Units): 1 inch = 914400 EMUs, assume 96 dpi
         final cxEmu = (page.imageWidth / 96.0 * 914400).round();
         final cyEmu = (page.imageHeight / 96.0 * 914400).round();

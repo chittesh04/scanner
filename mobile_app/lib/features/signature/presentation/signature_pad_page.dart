@@ -14,6 +14,7 @@ class SignaturePadPage extends ConsumerStatefulWidget {
 class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
   final _strokes = <List<Offset>>[];
   List<Offset>? _currentStroke;
+  Size _canvasSize = Size.zero;
 
   void _onPanStart(DragStartDetails details) {
     setState(() {
@@ -42,6 +43,11 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
 
     final recorder = ui.PictureRecorder();
     final canvas = Canvas(recorder);
+    
+    if (_canvasSize.width > 0 && _canvasSize.height > 0) {
+      canvas.scale(800 / _canvasSize.width, 400 / _canvasSize.height);
+    }
+
     final paint = Paint()
       ..color = Colors.black
       ..strokeWidth = 6.0
@@ -115,13 +121,18 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
-                  child: GestureDetector(
-                    onPanStart: _onPanStart,
-                    onPanUpdate: _onPanUpdate,
-                    child: CustomPaint(
-                      painter: _SignaturePainter(_strokes),
-                      size: Size.infinite,
-                    ),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      _canvasSize = Size(constraints.maxWidth, constraints.maxHeight);
+                      return GestureDetector(
+                        onPanStart: _onPanStart,
+                        onPanUpdate: _onPanUpdate,
+                        child: CustomPaint(
+                          painter: _SignaturePainter(_strokes),
+                          size: Size.infinite,
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),

@@ -37,7 +37,8 @@ class PdfExportService {
     String path = request.outputPath ?? '';
     if (path.isEmpty) {
       final root = await getTemporaryDirectory();
-      path = p.join(root.path, '${request.title}_${request.documentId}.pdf');
+      final sanitizedTitle = request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
+      path = p.join(root.path, '${sanitizedTitle}_${request.documentId}.pdf');
     }
 
     final imageBytesList = <Uint8List?>[];
@@ -76,24 +77,18 @@ class PdfExportService {
 
       if (imageBytes == null) continue;
 
-      // Downscaling optimization
-      final decodedImage = img.decodeImage(imageBytes);
-      imageBytes = null; // Free raw bytes
-
-      if (decodedImage != null) {
-        final longestSide = math.max(decodedImage.width, decodedImage.height);
-        if (longestSide > 1500) {
+      final longestSide = math.max(page.imageWidth, page.imageHeight);
+      if (longestSide > 1500) {
+        final decodedImage = img.decodeImage(imageBytes);
+        if (decodedImage != null) {
           final targetWidth = decodedImage.width > decodedImage.height 
               ? 1240 
               : (1240 * (decodedImage.width / decodedImage.height)).round();
           final resized = img.copyResize(decodedImage, width: targetWidth);
           imageBytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
-        } else {
-          imageBytes = Uint8List.fromList(img.encodeJpg(decodedImage, quality: 90));
         }
       }
 
-      if (imageBytes == null) continue;
       final image = pw.MemoryImage(imageBytes);
 
       pdf.addPage(
