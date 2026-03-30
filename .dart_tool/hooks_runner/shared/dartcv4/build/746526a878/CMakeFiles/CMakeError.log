@@ -1,0 +1,620 @@
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_sve.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e48d1 && [1/2] Building CXX object CMakeFiles/cmTC_e48d1.dir/cpu_sve.cpp.o
+FAILED: CMakeFiles/cmTC_e48d1.dir/cpu_sve.cpp.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -O3 -DNDEBUG  -fPIE -std=c++20 -MD -MT CMakeFiles/cmTC_e48d1.dir/cpu_sve.cpp.o -MF CMakeFiles\cmTC_e48d1.dir\cpu_sve.cpp.o.d -o CMakeFiles/cmTC_e48d1.dir/cpu_sve.cpp.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_sve.cpp
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_sve.cpp:17:2: error: "SVE is not supported"
+#error "SVE is not supported"
+ ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_sve.cpp:22:18: error: use of undeclared identifier 'test'
+  printf("%d\n", test());
+                 ^
+2 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_dotprod.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ede7d && [1/2] Building CXX object CMakeFiles/cmTC_ede7d.dir/cpu_neon_dotprod.cpp.o
+FAILED: CMakeFiles/cmTC_ede7d.dir/cpu_neon_dotprod.cpp.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -O3 -DNDEBUG  -fPIE -std=c++20 -MD -MT CMakeFiles/cmTC_ede7d.dir/cpu_neon_dotprod.cpp.o -MF CMakeFiles\cmTC_ede7d.dir\cpu_neon_dotprod.cpp.o.d -o CMakeFiles/cmTC_ede7d.dir/cpu_neon_dotprod.cpp.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_dotprod.cpp
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_dotprod.cpp:14:24: error: always_inline function 'vdotq_u32' requires target feature 'dotprod', but would be inlined into function 'test' that is compiled without support for 'dotprod'
+    uint32x4_t v_dst = vdotq_u32(v_src, v_m0, v_m1);
+                       ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_7b2d4 && [1/2] Building CXX object CMakeFiles/cmTC_7b2d4.dir/cpu_neon_fp16.cpp.o
+FAILED: CMakeFiles/cmTC_7b2d4.dir/cpu_neon_fp16.cpp.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -O3 -DNDEBUG  -fPIE -std=c++20 -MD -MT CMakeFiles/cmTC_7b2d4.dir/cpu_neon_fp16.cpp.o -MF CMakeFiles\cmTC_7b2d4.dir\cpu_neon_fp16.cpp.o.d -o CMakeFiles/cmTC_7b2d4.dir/cpu_neon_fp16.cpp.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:28:21: error: always_inline function 'vsubq_f16' requires target feature 'fullfp16', but would be inlined into function 'test' that is compiled without support for 'fullfp16'
+    float16x8_t d = vsubq_f16(s1, s1);
+                    ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:29:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 0);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:30:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 1);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:31:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 2);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:32:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 3);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:33:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 4);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:34:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 5);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:35:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 6);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp:36:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16
+    d = vfmaq_laneq_f16(d, s1, s2, 7);
+        ^
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include/arm_neon.h:63778:25: note: expanded from macro 'vfmaq_laneq_f16'
+  __ret = (float16x8_t) __builtin_neon_vfmaq_laneq_f16((int8x16_t)__s0, (int8x16_t)__s1, (int8x16_t)__s2, __p3, 40); \
+                        ^
+9 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_917ba && [1/2] Building CXX object CMakeFiles/cmTC_917ba.dir/cpu_neon_bf16.cpp.o
+FAILED: CMakeFiles/cmTC_917ba.dir/cpu_neon_bf16.cpp.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -O3 -DNDEBUG  -fPIE -std=c++20 -MD -MT CMakeFiles/cmTC_917ba.dir/cpu_neon_bf16.cpp.o -MF CMakeFiles\cmTC_917ba.dir\cpu_neon_bf16.cpp.o.d -o CMakeFiles/cmTC_917ba.dir/cpu_neon_bf16.cpp.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp:14:26: error: always_inline function 'vcvt_bf16_f32' requires target feature 'bf16', but would be inlined into function 'vld1q_as_bf16' that is compiled without support for 'bf16'
+    return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+                         ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp:14:45: error: always_inline function 'vcvt_bf16_f32' requires target feature 'bf16', but would be inlined into function 'vld1q_as_bf16' that is compiled without support for 'bf16'
+    return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+                                            ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp:14:12: error: always_inline function 'vcombine_bf16' requires target feature 'bf16', but would be inlined into function 'vld1q_as_bf16' that is compiled without support for 'bf16'
+    return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+           ^
+3 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_12a47 && [1/2] Building C object CMakeFiles/cmTC_12a47.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_12a47.dir/CheckSymbolExists.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_12a47.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_12a47.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_12a47.dir/CheckSymbolExists.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'elf_aux_info'
+  return ((int*)(&elf_aux_info))[argc];
+                  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file io.h exists failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_6909a && [1/2] Building C object CMakeFiles/cmTC_6909a.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_6909a.dir/CheckIncludeFile.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_6909a.dir/CheckIncludeFile.c.o -MF CMakeFiles\cmTC_6909a.dir\CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_6909a.dir/CheckIncludeFile.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'io.h' file not found
+#include <io.h>
+         ^~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining size of INT8 failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ae110 && [1/2] Building C object CMakeFiles/cmTC_ae110.dir/int8.c.o
+FAILED: CMakeFiles/cmTC_ae110.dir/int8.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_ae110.dir/int8.c.o -MF CMakeFiles\cmTC_ae110.dir\int8.c.o.d -o CMakeFiles/cmTC_ae110.dir/int8.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:29:12: error: use of undeclared identifier 'INT8'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT8))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:30:12: error: use of undeclared identifier 'INT8'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT8))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:31:12: error: use of undeclared identifier 'INT8'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT8))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:32:12: error: use of undeclared identifier 'INT8'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT8))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:33:12: error: use of undeclared identifier 'INT8'
+  ('0' +  (SIZE    % 10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT8))
+                     ^
+5 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT8))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT16 failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_3297e && [1/2] Building C object CMakeFiles/cmTC_3297e.dir/int16.c.o
+FAILED: CMakeFiles/cmTC_3297e.dir/int16.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_3297e.dir/int16.c.o -MF CMakeFiles\cmTC_3297e.dir\int16.c.o.d -o CMakeFiles/cmTC_3297e.dir/int16.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:29:12: error: use of undeclared identifier 'INT16'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT16))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:30:12: error: use of undeclared identifier 'INT16'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT16))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:31:12: error: use of undeclared identifier 'INT16'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT16))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:32:12: error: use of undeclared identifier 'INT16'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT16))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:33:12: error: use of undeclared identifier 'INT16'
+  ('0' +  (SIZE    % 10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT16))
+                     ^
+5 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT16))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT32 failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_433eb && [1/2] Building C object CMakeFiles/cmTC_433eb.dir/int32.c.o
+FAILED: CMakeFiles/cmTC_433eb.dir/int32.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_433eb.dir/int32.c.o -MF CMakeFiles\cmTC_433eb.dir\int32.c.o.d -o CMakeFiles/cmTC_433eb.dir/int32.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:29:12: error: use of undeclared identifier 'INT32'
+  ('0' + ((SIZE / 10000)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT32))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:30:12: error: use of undeclared identifier 'INT32'
+  ('0' + ((SIZE / 1000)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT32))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:31:12: error: use of undeclared identifier 'INT32'
+  ('0' + ((SIZE / 100)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT32))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:32:12: error: use of undeclared identifier 'INT32'
+  ('0' + ((SIZE / 10)%10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT32))
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:33:12: error: use of undeclared identifier 'INT32'
+  ('0' +  (SIZE    % 10)),
+           ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:27:22: note: expanded from macro 'SIZE'
+#define SIZE (sizeof(INT32))
+                     ^
+5 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CheckTypeSize/int32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT32))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function setmode exists failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_475a5 && [1/2] Building C object CMakeFiles/cmTC_475a5.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_475a5
+FAILED: cmTC_475a5 
+cmd.exe /C "cd . && C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=setmode -O3 -DNDEBUG   -DNDEBUG -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments    -Wl,--as-needed -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_475a5.dir/CheckFunctionExists.c.o -o cmTC_475a5  -latomic -lm && cd ."
+ld.lld: error: undefined symbol: setmode
+>>> referenced by CheckFunctionExists.c:17 (C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:17)
+>>>               CMakeFiles/cmTC_475a5.dir/CheckFunctionExists.c.o:(main)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Build output check failed:
+    Regex: 'unknown .*option'
+    Output line: 'warning: unknown warning option '-Wno-maybe-uninitialized', did you mean '-Wno-uninitialized'? [-Wunknown-warning-option]'
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-maybe-uninitialized'
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_17618 && [1/2] Building C object CMakeFiles/cmTC_17618.dir/src.c.o
+warning: unknown warning option '-Wno-maybe-uninitialized'; did you mean '-Wno-uninitialized'? [-Wunknown-warning-option]
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:1:8: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma
+       ^
+2 warnings generated.
+[2/2] Linking C executable cmTC_17618
+
+
+===== END =====
+
+Determining if the _aligned_malloc exist failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_b3ec6 && [1/2] Building C object CMakeFiles/cmTC_b3ec6.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_b3ec6.dir/CheckSymbolExists.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-implicit-const-int-float-conversion -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-documentation  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_b3ec6.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_b3ec6.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b3ec6.dir/CheckSymbolExists.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier '_aligned_malloc'
+  return ((int*)(&_aligned_malloc))[argc];
+                  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _aligned_malloc
+  return ((int*)(&_aligned_malloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_1f597 && [1/2] Building C object CMakeFiles/cmTC_1f597.dir/src.c.o
+FAILED: CMakeFiles/cmTC_1f597.dir/src.c.o 
+C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-implicit-const-int-float-conversion -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-documentation -Wno-undef -Wno-strict-prototypes -Wno-cast-function-type -Wno-shadow -Wno-unused-function  -O3 -DNDEBUG   -DNDEBUG -fPIE -std=gnu99 -MD -MT CMakeFiles/cmTC_1f597.dir/src.c.o -MF CMakeFiles\cmTC_1f597.dir\src.c.o.d -o CMakeFiles/cmTC_1f597.dir/src.c.o -c C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:13:3: error: call to undeclared function 'pthread_cancel'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  pthread_cancel(thread);
+  ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:13:3: note: did you mean 'pthread_once'?
+C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/pthread.h:258:5: note: 'pthread_once' declared here
+int pthread_once(pthread_once_t* _Nonnull __once, void (* _Nonnull __init_routine)(void));
+    ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_d2200 && [1/2] Building C object CMakeFiles/cmTC_d2200.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_d2200
+FAILED: cmTC_d2200 
+cmd.exe /C "cd . && C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-implicit-const-int-float-conversion -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-documentation -Wno-undef -Wno-strict-prototypes -Wno-cast-function-type -Wno-shadow -Wno-unused-function -DCHECK_FUNCTION_EXISTS=pthread_create -O3 -DNDEBUG   -DNDEBUG -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments    -Wl,--as-needed -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_d2200.dir/CheckFunctionExists.c.o -o cmTC_d2200  -lpthreads  -latomic -lm && cd ."
+ld.lld: error: unable to find library -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_cf01b && [1/2] Building C object CMakeFiles/cmTC_cf01b.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_cf01b
+FAILED: cmTC_cf01b 
+cmd.exe /C "cd . && C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android24 --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-implicit-const-int-float-conversion -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-documentation -Wno-undef -Wno-strict-prototypes -Wno-cast-function-type -Wno-shadow -Wno-unused-function -DCHECK_FUNCTION_EXISTS=pthread_create -O3 -DNDEBUG   -DNDEBUG -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments    -Wl,--as-needed -Wl,--no-undefined  -Wl,--gc-sections CMakeFiles/cmTC_cf01b.dir/CheckFunctionExists.c.o -o cmTC_cf01b  -lpthread  -latomic -lm && cd ."
+ld.lld: error: unable to find library -lpthread
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
+Build output check failed:
+    Regex: 'unknown .*option'
+    Output line: 'warning: unknown warning option '-Wno-stringop-overflow', did you mean '-Wno-shift-overflow'? [-Wunknown-warning-option]'
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-stringop-overflow'
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_c7057 && [1/2] Building CXX object CMakeFiles/cmTC_c7057.dir/src.cxx.o
+warning: unknown warning option '-Wno-stringop-overflow'; did you mean '-Wno-shift-overflow'? [-Wunknown-warning-option]
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.cxx:1:8: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma
+       ^
+2 warnings generated.
+[2/2] Linking CXX executable cmTC_c7057
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unknown .*option'
+    Output line: 'warning: unknown warning option '-Wno-stringop-overread' [-Wunknown-warning-option]'
+Compilation failed:
+    source file: 'C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-stringop-overread'
+===== BUILD LOG =====
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_022f3 && [1/2] Building CXX object CMakeFiles/cmTC_022f3.dir/src.cxx.o
+warning: unknown warning option '-Wno-stringop-overread' [-Wunknown-warning-option]
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.cxx:1:8: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma
+       ^
+2 warnings generated.
+[2/2] Linking CXX executable cmTC_022f3
+
+
+===== END =====
+

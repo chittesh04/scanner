@@ -1,0 +1,14 @@
+#use_cache "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/.cache"
+#do_unpack "kleidicv-0.7.0.tar.gz" "e8f94e427bd78a745afa5c8cd073b416" "https://gitlab.arm.com/kleidi/kleidicv/-/archive/0.7.0/kleidicv-0.7.0.tar.gz" "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-build/3rdparty/kleidicv"
+#cmake_download "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/.cache/kleidicv/e8f94e427bd78a745afa5c8cd073b416-kleidicv-0.7.0.tar.gz" "https://gitlab.arm.com/kleidi/kleidicv/-/archive/0.7.0/kleidicv-0.7.0.tar.gz"
+#try 1
+# timeout on name lookup is not supported
+#   Trying 13.213.155.27:443...
+# Connected to gitlab.arm.com (13.213.155.27) port 443 (#0)
+# schannel: disabled automatic use of client certificate
+# schannel: ALPN, offering h2
+# schannel: ALPN, offering http/1.1
+# schannel: failed to receive handshake, SSL/TLS connection failed
+# Closing connection 0
+# 
+

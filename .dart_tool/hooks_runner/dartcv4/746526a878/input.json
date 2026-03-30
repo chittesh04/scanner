@@ -1,0 +1,29 @@
+{
+  "assets": {},
+  "config": {
+    "build_asset_types": [
+      "code_assets/code"
+    ],
+    "extensions": {
+      "code_assets": {
+        "android": {
+          "target_ndk_api": 24
+        },
+        "c_compiler": {
+          "ar": "C:\\Users\\chitt\\AppData\\Local\\Android\\sdk\\ndk\\26.3.11579264\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-ar.exe",
+          "cc": "C:\\Users\\chitt\\AppData\\Local\\Android\\sdk\\ndk\\26.3.11579264\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+          "ld": "C:\\Users\\chitt\\AppData\\Local\\Android\\sdk\\ndk\\26.3.11579264\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\ld.lld.exe"
+        },
+        "link_mode_preference": "dynamic",
+        "target_architecture": "arm64",
+        "target_os": "android"
+      }
+    },
+    "linking_enabled": false
+  },
+  "out_dir_shared": "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\shared\\dartcv4\\build\\",
+  "out_file": "C:\\Users\\chitt\\Desktop\\project\\SmartScan\\.dart_tool\\hooks_runner\\dartcv4\\746526a878\\output.json",
+  "package_name": "dartcv4",
+  "package_root": "C:\\Users\\chitt\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\dartcv4-2.2.1+4\\",
+  "user_defines": {}
+}

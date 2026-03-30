@@ -1,0 +1,21 @@
+# ninja log v5
+1	427	7965648945930804	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-mkdir	f59fb2540b799f36
+1	427	7965648945930804	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-mkdir	f59fb2540b799f36
+430	64125	7965649582863579	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-download	8b1dc48267814ac1
+430	64125	7965649582863579	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-download	8b1dc48267814ac1
+64126	64302	7965649584649355	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-update	e443fc43aa26a2eb
+64126	64302	7965649584649355	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-update	e443fc43aa26a2eb
+64303	64469	7965649586250046	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-patch	3e1b3cd7562cb47f
+64303	64469	7965649586250046	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-patch	3e1b3cd7562cb47f
+64470	64656	7965649588140688	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-configure	a279ff5dd8a3ad25
+64470	64656	7965649588140688	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-configure	a279ff5dd8a3ad25
+64657	64847	7965649590068798	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-build	2b255a90c75420f5
+64657	64847	7965649590068798	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-build	2b255a90c75420f5
+64848	65042	7965649592049233	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-install	8c74c0431a992759
+64848	65042	7965649592049233	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-install	8c74c0431a992759
+65043	65245	7965649594043176	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-test	50394bb8d2b205cc
+65043	65245	7965649594043176	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-test	50394bb8d2b205cc
+65246	65478	7965649596436382	CMakeFiles/opencv-populate-complete	276201fe34cf811b
+65246	65478	7965649596436382	opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-done	276201fe34cf811b
+65246	65478	7965649596436382	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/CMakeFiles/opencv-populate-complete	276201fe34cf811b
+65246	65478	7965649596436382	C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-done	276201fe34cf811b

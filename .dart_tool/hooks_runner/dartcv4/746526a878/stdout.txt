@@ -1,0 +1,5587 @@
+Running `(cd C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\; PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts; PROGRAMDATA=C:\ProgramData SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS C:\Users\chitt\.vscode\extensions\flutter\bin\cache\dart-sdk\bin\dart --packages=C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\package_config.json C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\dartcv4\746526a878\hook.dill --config=C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\dartcv4\746526a878\input.json )`.
+[dartcv4] merged modules: {imgcodecs, imgproc}
+
+
+Using generator: Ninja
+
+PATH.
+
+ows: null, linux: null, macos: null, android: null, ios: null}
+
+
+Running `where ndk-build.cmd`.
+
+INFO: Could not find files for the given pattern(s).
+
+
+Did not find ndk-build on PATH.
+
+].
+
+ta/Local/Android/Sdk/ndk/*/].
+
+Found [ToolInstance(Android NDK, null, file:///C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/)].
+
+Looking up version with --version for ToolInstance(Clang, null, file:///C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe).
+
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
+
+
+Found version for ToolInstance(Clang, 17.0.2, file:///C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe). 17.0.2
+
+/bin/llvm-ar.exe).
+
+LLVM (http://llvm.org/):
+  LLVM version 17.0.2
+  Optimized build.
+
+
+Looking up version with --version for ToolInstance(LLD, null, file:///C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld.exe).
+Running `C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\toolchains\llvm\prebuilt\windows-x86_64\bin\ld.lld.exe --version`.
+
+LLD 17.0.2 (compatible with GNU linkers)
+
+
+Found version for ToolInstance(LLD, 17.0.2, file:///C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld.exe). 17.0.2
+
+Running `C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe --version`.
+
+2.1/bin/ninja.exe)].
+
+make/3.22.1/bin/ninja.exe).
+
+Found Android Ninja: ToolInstance(Ninja, 1.10.2, file:///C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe)
+
+.2
+
+Running `COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts; PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS where ninja`.
+
+INFO: Could not find files for the given pattern(s).
+
+
+Did not find Ninja on PATH.
+
+a\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe --version`.
+
+2.1/bin/cmake.exe)].
+
+xe)
+
+.22.1/bin/cmake.exe).
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Running `COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts; PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS where cmake`.
+
+
+
+
+gram Files\CMake\bin\cmake.exe
+
+Looking up version with --version for ToolInstance(CMake, null, file:///C:/Program%20Files/CMake/bin/cmake.exe).
+Running `C:\Program Files\CMake\bin\cmake.exe --version`.
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Running `(cd C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\746526a878\; COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts; PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe --log-level=STATUS -S C:\Users\chitt\AppData\Local\Pub\Cache\hosted\pub.dev\dartcv4-2.2.1+4\src -B C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\746526a878\ -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=C:\Users\chitt\AppData\Local\Android\Sdk\ndk\26.3.11579264\build\cmake\android.toolchain.cmake -DANDROID_PLATFORM=android-24 -DANDROID_ABI=arm64-v8a -DANDROID_STL=c++_static -DANDROID_ARM_NEON=true -DDARTCV_ENABLE_INSTALL=ON -DCMAKE_INSTALL_PREFIX=C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\746526a878\install\ -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DDARTCV_WITH_CALIB3D=OFF -DDARTCV_WITH_DNN=OFF -DDARTCV_WITH_FEATURES2D=OFF -DDARTCV_WITH_FLANN=OFF -DDARTCV_WITH_FREETYPE=OFF -DDARTCV_WITH_HIGHGUI=OFF -DDARTCV_WITH_IMGCODECS=ON -DDARTCV_WITH_IMGPROC=ON -DDARTCV_WITH_OBJDETECT=OFF -DDARTCV_WITH_PHOTO=OFF -DDARTCV_WITH_STITCHING=OFF -DDARTCV_WITH_VIDEO=OFF -DDARTCV_WITH_VIDEOIO=OFF -DDARTCV_WITH_ARUCO=OFF -DDARTCV_WITH_IMG_HASH=OFF -DDARTCV_WITH_QUALITY=OFF -DDARTCV_WITH_WECHAT_QRCODE=OFF -DDARTCV_WITH_XIMGPROC=OFF -DDARTCV_WITH_XOBJDETECT=OFF -DCMAKE_PROGRAM_PATH=C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin )`.
+
+-- The C compiler identification is Clang 17.0.2
+
+
+-- The CXX compiler identification is Clang 17.0.2
+
+
+-- Detecting C compiler ABI info
+
+
+-- Detecting C compiler ABI info - done
+
+
+-- Check for working C compiler: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
+
+
+-- Detecting C compile features - done
+
+
+-- Detecting CXX compiler ABI info
+
+
+-- Detecting CXX compiler ABI info - done
+
+
+-- Detecting CXX compile features
+
+
+Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe - skipped
+
+
+-- Detecting CXX compile features - done
+
+
+-- dartcv Version: 2.2.1+4
+
+
+penCV Prebuilt Version: 4.12.0.0
+
+
+-- ocv_init_download: OpenCV source tree is not fetched as git repository. 3rdparty resources will be downloaded from github.com by default.
+
+
+CMake Warning at C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/OpenCVUtils.cmake:762 (message):
+
+
+runner/shared/dartcv4/build/746526a878/_deps/opencv-src/CMakeLists.txt:497 (OCV_OPTION)
+
+
+
+
+-- Found PythonInterp: C:/msys64/mingw64/bin/python3.exe (found suitable version "3.12.9", minimum required is "3.2") 
+
+
+-- Looking for ccache - not found
+
+
+-- Performing Test HAVE_CXX_FSIGNED_CHAR
+
+
+-- Performing Test HAVE_CXX_FSIGNED_CHAR - Success
+
+
+-- Performing Test HAVE_C_FSIGNED_CHAR
+
+
+-- Performing Test HAVE_C_FSIGNED_CHAR - Success
+
+
+-- Performing Test HAVE_CXX_W
+
+
+-- Performing Test HAVE_CXX_W - Success
+
+
+-- Performing Test HAVE_C_W
+
+
+-- Performing Test HAVE_C_W - Success
+
+
+-- Performing Test HAVE_CXX_WALL
+
+
+-- Performing Test HAVE_CXX_WALL - Success
+
+
+-- Performing Test HAVE_C_WALL
+
+
+-- Performing Test HAVE_C_WALL - Success
+
+
+-- Performing Test HAVE_CXX_WRETURN_TYPE
+
+
+-- Performing Test HAVE_CXX_WRETURN_TYPE - Success
+
+
+-- Performing Test HAVE_C_WRETURN_TYPE
+
+
+-- Performing Test HAVE_C_WRETURN_TYPE - Success
+
+
+-- Performing Test HAVE_CXX_WNON_VIRTUAL_DTOR
+
+
+-- Performing Test HAVE_CXX_WNON_VIRTUAL_DTOR - Success
+
+
+-- Performing Test HAVE_C_WNON_VIRTUAL_DTOR
+
+
+-- Performing Test HAVE_C_WNON_VIRTUAL_DTOR - Success
+
+
+-- Performing Test HAVE_CXX_WADDRESS
+
+
+-- Performing Test HAVE_CXX_WADDRESS - Success
+
+
+-- Performing Test HAVE_C_WADDRESS
+
+
+-- Performing Test HAVE_C_WADDRESS - Success
+
+
+-- Performing Test HAVE_CXX_WSEQUENCE_POINT
+
+
+-- Performing Test HAVE_CXX_WSEQUENCE_POINT - Success
+
+
+-- Performing Test HAVE_C_WSEQUENCE_POINT
+
+
+-- Performing Test HAVE_C_WSEQUENCE_POINT - Success
+
+
+-- Performing Test HAVE_CXX_WFORMAT
+
+
+-- Performing Test HAVE_CXX_WFORMAT - Success
+
+
+-- Performing Test HAVE_C_WFORMAT
+
+
+-- Performing Test HAVE_C_WFORMAT - Success
+
+
+-- Performing Test HAVE_CXX_WFORMAT_SECURITY
+
+
+-- Performing Test HAVE_CXX_WFORMAT_SECURITY - Success
+
+
+-- Performing Test HAVE_C_WFORMAT_SECURITY
+
+
+-- Performing Test HAVE_C_WFORMAT_SECURITY - Success
+
+
+-- Performing Test HAVE_CXX_WMISSING_DECLARATIONS
+
+
+-- Performing Test HAVE_CXX_WMISSING_DECLARATIONS - Success
+
+
+-- Performing Test HAVE_C_WMISSING_DECLARATIONS
+
+
+-- Performing Test HAVE_C_WMISSING_DECLARATIONS - Success
+
+
+-- Performing Test HAVE_CXX_WMISSING_PROTOTYPES
+
+
+-- Performing Test HAVE_CXX_WMISSING_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_C_WMISSING_PROTOTYPES
+
+
+-- Performing Test HAVE_C_WMISSING_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_CXX_WSTRICT_PROTOTYPES
+
+
+-- Performing Test HAVE_CXX_WSTRICT_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_C_WSTRICT_PROTOTYPES
+
+
+-- Performing Test HAVE_C_WSTRICT_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_CXX_WUNDEF
+
+
+-- Performing Test HAVE_CXX_WUNDEF - Success
+
+
+-- Performing Test HAVE_C_WUNDEF
+
+
+-- Performing Test HAVE_C_WUNDEF - Success
+
+
+-- Performing Test HAVE_CXX_WINIT_SELF
+
+
+-- Performing Test HAVE_CXX_WINIT_SELF - Success
+
+
+-- Performing Test HAVE_C_WINIT_SELF
+
+
+-- Performing Test HAVE_C_WINIT_SELF - Success
+
+
+-- Performing Test HAVE_CXX_WPOINTER_ARITH
+
+
+-- Performing Test HAVE_CXX_WPOINTER_ARITH - Success
+
+
+-- Performing Test HAVE_C_WPOINTER_ARITH
+
+
+-- Performing Test HAVE_C_WPOINTER_ARITH - Success
+
+
+-- Performing Test HAVE_CXX_WSHADOW
+
+
+-- Performing Test HAVE_CXX_WSHADOW - Success
+
+
+-- Performing Test HAVE_C_WSHADOW
+
+
+-- Performing Test HAVE_C_WSHADOW - Success
+
+
+-- Performing Test HAVE_CXX_WSIGN_PROMO
+
+
+-- Performing Test HAVE_CXX_WSIGN_PROMO - Success
+
+
+-- Performing Test HAVE_C_WSIGN_PROMO
+
+
+-- Performing Test HAVE_C_WSIGN_PROMO - Success
+
+
+-- Performing Test HAVE_CXX_WUNINITIALIZED
+
+
+-- Performing Test HAVE_CXX_WUNINITIALIZED - Success
+
+
+-- Performing Test HAVE_C_WUNINITIALIZED
+
+
+-- Performing Test HAVE_C_WUNINITIALIZED - Success
+
+
+-- Performing Test HAVE_CXX_WINCONSISTENT_MISSING_OVERRIDE
+
+
+-- Performing Test HAVE_CXX_WINCONSISTENT_MISSING_OVERRIDE - Success
+
+
+-- Performing Test HAVE_C_WINCONSISTENT_MISSING_OVERRIDE
+
+
+-- Performing Test HAVE_C_WINCONSISTENT_MISSING_OVERRIDE - Success
+
+
+-- Performing Test HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR
+
+
+-- Performing Test HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR - Success
+
+
+-- Performing Test HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR
+
+
+-- Performing Test HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR - Success
+
+
+-- Performing Test HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS
+
+
+-- Performing Test HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS - Success
+
+
+-- Performing Test HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS
+
+
+-- Performing Test HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS - Success
+
+
+-- Performing Test HAVE_CXX_WNO_COMMENT
+
+
+-- Performing Test HAVE_CXX_WNO_COMMENT - Success
+
+
+-- Performing Test HAVE_C_WNO_COMMENT
+
+
+-- Performing Test HAVE_C_WNO_COMMENT - Success
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_ENUM_ENUM_CONVERSION
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_ENUM_ENUM_CONVERSION - Success
+
+
+-- Performing Test HAVE_C_WNO_DEPRECATED_ENUM_ENUM_CONVERSION
+
+
+-- Performing Test HAVE_C_WNO_DEPRECATED_ENUM_ENUM_CONVERSION - Success
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_ANON_ENUM_ENUM_CONVERSION
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_ANON_ENUM_ENUM_CONVERSION - Success
+
+
+-- Performing Test HAVE_C_WNO_DEPRECATED_ANON_ENUM_ENUM_CONVERSION
+
+
+-- Performing Test HAVE_C_WNO_DEPRECATED_ANON_ENUM_ENUM_CONVERSION - Success
+
+
+-- Performing Test HAVE_CXX_FDIAGNOSTICS_SHOW_OPTION
+
+
+-- Performing Test HAVE_CXX_FDIAGNOSTICS_SHOW_OPTION - Success
+
+
+-- Performing Test HAVE_C_FDIAGNOSTICS_SHOW_OPTION
+
+
+-- Performing Test HAVE_C_FDIAGNOSTICS_SHOW_OPTION - Success
+
+
+-- Performing Test HAVE_CXX_QUNUSED_ARGUMENTS
+
+
+-- Performing Test HAVE_CXX_QUNUSED_ARGUMENTS - Success
+
+
+-- Performing Test HAVE_C_QUNUSED_ARGUMENTS
+
+
+-- Performing Test HAVE_C_QUNUSED_ARGUMENTS - Success
+
+
+-- Performing Test HAVE_CPU_SVE_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_sve.cpp)
+
+
+-- Performing Test HAVE_CPU_SVE_SUPPORT - Failed
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+SVE (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_sve.cpp)
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+SVE - Success
+
+
+-- Performing Test HAVE_CPU_NEON_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon.cpp)
+
+
+-- Performing Test HAVE_CPU_NEON_SUPPORT - Success
+
+
+-- Performing Test HAVE_CPU_FP16_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_fp16.cpp)
+
+
+-- Performing Test HAVE_CPU_FP16_SUPPORT - Success
+
+
+-- Performing Test HAVE_CPU_NEON_DOTPROD_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_dotprod.cpp)
+
+
+-- Performing Test HAVE_CPU_NEON_DOTPROD_SUPPORT - Failed
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+DOTPROD (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_dotprod.cpp)
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+DOTPROD - Success
+
+
+-- Performing Test HAVE_CPU_NEON_FP16_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp)
+
+
+-- Performing Test HAVE_CPU_NEON_FP16_SUPPORT - Failed
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+FP16 (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_fp16.cpp)
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+FP16 - Success
+
+
+-- Performing Test HAVE_CPU_NEON_BF16_SUPPORT (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp)
+
+
+-- Performing Test HAVE_CPU_NEON_BF16_SUPPORT - Failed
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+BF16 (check file: ../../../../../../../../Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/checks/cpu_neon_bf16.cpp)
+
+
+-- Performing Test HAVE_CXX_MARCH_ARMV8_2_A+BF16 - Success
+
+
+-- Performing Test HAVE_CPU_BASELINE_FLAGS
+
+
+-- Performing Test HAVE_CPU_BASELINE_FLAGS - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_NEON_DOTPROD
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_NEON_DOTPROD - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_NEON_FP16
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_NEON_FP16 - Success
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_NEON_BF16
+
+
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_NEON_BF16 - Success
+
+
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN
+
+
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN - Success
+
+
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN
+
+
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN - Success
+
+
+-- Performing Test HAVE_CXX_FVISIBILITY_INLINES_HIDDEN
+
+
+-- Performing Test HAVE_CXX_FVISIBILITY_INLINES_HIDDEN - Success
+
+
+-- Performing Test HAVE_C_FVISIBILITY_INLINES_HIDDEN
+
+
+-- Performing Test HAVE_C_FVISIBILITY_INLINES_HIDDEN - Success
+
+
+-- Performing Test HAVE_LINK_AS_NEEDED
+
+
+-- Performing Test HAVE_LINK_AS_NEEDED - Success
+
+
+-- Performing Test HAVE_LINK_NO_UNDEFINED
+
+
+-- Performing Test HAVE_LINK_NO_UNDEFINED - Success
+
+
+-- OpenCV disables pkg-config to avoid using of host libraries. Consider using PKG_CONFIG_LIBDIR to specify target SYSROOT
+
+
+-- Looking for pthread.h
+
+
+-- Looking for pthread.h - found
+
+
+-- Looking for posix_memalign
+
+
+-- Looking for posix_memalign - found
+
+
+-- Looking for malloc.h
+
+
+-- Looking for malloc.h - found
+
+
+-- Looking for memalign
+
+
+-- Looking for memalign - found
+
+
+-- Looking for getauxval
+
+
+-- Looking for getauxval - found
+
+
+-- Looking for elf_aux_info
+
+
+-- Looking for elf_aux_info - not found
+
+
+-- Looking for fseeko
+
+
+-- Looking for fseeko - found
+
+
+-- Looking for unistd.h
+
+
+-- Looking for unistd.h - found
+
+
+-- Looking for sys/types.h
+
+
+-- Looking for sys/types.h - found
+
+
+-- Looking for stdint.h
+
+
+-- Looking for stdint.h - found
+
+
+-- Looking for stddef.h
+
+
+-- Looking for stddef.h - found
+
+
+-- Check size of off64_t
+
+
+-- Check size of off64_t - done
+
+
+-- Performing Test HAVE_C_WNO_SHORTEN_64_TO_32
+
+
+-- Performing Test HAVE_C_WNO_SHORTEN_64_TO_32 - Success
+
+
+-- Performing Test HAVE_C_WNO_ATTRIBUTES
+
+
+-- Performing Test HAVE_C_WNO_ATTRIBUTES - Success
+
+
+-- Performing Test HAVE_C_WNO_STRICT_PROTOTYPES
+
+
+-- Performing Test HAVE_C_WNO_STRICT_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_C_WNO_MISSING_PROTOTYPES
+
+
+-- Performing Test HAVE_C_WNO_MISSING_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_C_WNO_MISSING_DECLARATIONS
+
+
+-- Performing Test HAVE_C_WNO_MISSING_DECLARATIONS - Success
+
+
+-- Performing Test HAVE_C_WNO_SHIFT_NEGATIVE_VALUE
+
+
+-- Performing Test HAVE_C_WNO_SHIFT_NEGATIVE_VALUE - Success
+
+
+-- Performing Test HAVE_C_WNO_UNDEF
+
+
+-- Performing Test HAVE_C_WNO_UNDEF - Success
+
+
+-- Performing Test HAVE_C_WNO_IMPLICIT_FALLTHROUGH
+
+
+-- Performing Test HAVE_C_WNO_IMPLICIT_FALLTHROUGH - Success
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_PARAMETER
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_PARAMETER - Success
+
+
+-- Performing Test HAVE_C_WNO_SIGN_COMPARE
+
+
+-- Performing Test HAVE_C_WNO_SIGN_COMPARE - Success
+
+
+-- libjpeg-turbo: VERSION = 3.1.2, BUILD = opencv-4.13.0-libjpeg-turbo
+
+
+-- Check size of size_t - done
+
+
+-- Check size of unsigned long
+
+
+-- Check size of unsigned long - done
+
+
+-- Looking for include file locale.h
+
+
+-- Looking for include file locale.h - found
+
+
+-- Looking for include file stdlib.h
+
+
+-- Looking for include file stdlib.h - found
+
+
+-- Looking for include file sys/types.h
+
+
+-- Looking for include file sys/types.h - found
+
+
+-- Performing Test HAVE_VLD1_S16_X3
+
+
+-- Performing Test HAVE_VLD1_S16_X3 - Success
+
+
+-- Performing Test HAVE_VLD1_U16_X2
+
+
+-- Performing Test HAVE_VLD1_U16_X2 - Success
+
+
+-- Performing Test HAVE_VLD1Q_U8_X4
+
+
+-- Performing Test HAVE_VLD1Q_U8_X4 - Success
+
+
+-- SIMD extensions: arm64 (WITH_SIMD = 1)
+
+
+n (NEON_INTRINSICS = ON)
+
+
+-- Looking for assert.h
+
+
+-- Looking for assert.h - found
+
+
+-- Looking for dlfcn.h
+
+
+-- Looking for dlfcn.h - found
+
+
+-- Looking for fcntl.h
+
+
+-- Looking for fcntl.h - found
+
+
+-- Looking for inttypes.h
+
+
+-- Looking for inttypes.h - found
+
+
+-- Looking for io.h
+
+
+-- Looking for io.h - not found
+
+
+-- Looking for limits.h
+
+
+-- Looking for limits.h - found
+
+
+-- Looking for memory.h
+
+
+-- Looking for memory.h - found
+
+
+-- Looking for search.h
+
+
+-- Looking for search.h - found
+
+
+-- Looking for string.h
+
+
+-- Looking for string.h - found
+
+
+-- Looking for strings.h
+
+
+-- Looking for strings.h - found
+
+
+-- Looking for sys/time.h
+
+
+-- Looking for sys/time.h - found
+
+
+-- Looking for unistd.h
+
+
+-- Looking for unistd.h - found
+
+
+-- Performing Test C_HAS_inline
+
+
+-- Performing Test C_HAS_inline - Success
+
+
+-- Check size of signed short
+
+
+-- Check size of signed short - done
+
+
+-- Check size of unsigned short
+
+
+-- Check size of unsigned short - done
+
+
+-- Check size of signed int
+
+
+-- Check size of signed int - done
+
+
+-- Check size of unsigned int
+
+
+-- Check size of unsigned int - done
+
+
+-- Check size of signed long
+
+
+-- Check size of signed long - done
+
+
+-- Check size of unsigned long
+
+
+-- Check size of unsigned long - done
+
+
+-- Check size of signed long long
+
+
+-- Check size of signed long long - done
+
+
+-- Check size of unsigned long long
+
+
+-- Check size of unsigned long long - done
+
+
+-- Check size of unsigned char *
+
+
+-- Check size of unsigned char * - done
+
+
+-- Check size of size_t
+
+
+-- Check size of size_t - done
+
+
+-- Check size of ptrdiff_t
+
+
+-- Check size of ptrdiff_t - done
+
+
+-- Check size of INT8
+
+
+-- Check size of INT8 - failed
+
+
+-- Check size of INT16
+
+
+-- Check size of INT16 - failed
+
+
+-- Check size of INT32
+
+
+-- Check size of INT32 - failed
+
+
+-- Looking for floor
+
+
+-- Looking for floor - found
+
+
+-- Looking for pow
+
+
+-- Looking for pow - found
+
+
+-- Looking for sqrt
+
+
+-- Looking for sqrt - found
+
+
+-- Looking for isascii
+
+
+-- Looking for isascii - found
+
+
+-- Looking for memset
+
+
+-- Looking for memset - found
+
+
+-- Looking for mmap
+
+
+-- Looking for mmap - found
+
+
+-- Looking for getopt
+
+
+-- Looking for getopt - found
+
+
+-- Looking for memmove
+
+
+-- Looking for memmove - found
+
+
+-- Looking for setmode
+
+
+-- Looking for setmode - not found
+
+
+-- Looking for strcasecmp
+
+
+-- Looking for strcasecmp - found
+
+
+-- Looking for strchr
+
+
+-- Looking for strchr - found
+
+
+-- Looking for strrchr
+
+
+-- Looking for strrchr - found
+
+
+-- Looking for strstr
+
+
+-- Looking for strstr - found
+
+
+-- Looking for strtol
+
+
+-- Looking for strtol - found
+
+
+-- Looking for strtol
+
+
+-- Looking for strtol - found
+
+
+-- Looking for strtoull
+
+
+-- Looking for strtoull - found
+
+
+-- Looking for lfind
+
+
+-- Looking for lfind - found
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_VARIABLE
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_BUT_SET_VARIABLE - Success
+
+
+-- Performing Test HAVE_C_WNO_UNUSED
+
+
+-- Performing Test HAVE_C_WNO_UNUSED - Success
+
+
+-- Performing Test HAVE_C_WNO_CAST_ALIGN
+
+
+-- Performing Test HAVE_C_WNO_CAST_ALIGN - Success
+
+
+-- Performing Test HAVE_C_WNO_SHADOW
+
+
+-- Performing Test HAVE_C_WNO_SHADOW - Success
+
+
+-- Performing Test HAVE_C_WNO_MAYBE_UNINITIALIZED
+
+
+-- Performing Test HAVE_C_WNO_MAYBE_UNINITIALIZED - Failed
+
+
+-- Performing Test HAVE_C_WNO_POINTER_TO_INT_CAST
+
+
+-- Performing Test HAVE_C_WNO_POINTER_TO_INT_CAST - Success
+
+
+-- Performing Test HAVE_C_WNO_INT_TO_POINTER_CAST
+
+
+-- Performing Test HAVE_C_WNO_INT_TO_POINTER_CAST - Success
+
+
+-- Performing Test HAVE_C_WNO_MISLEADING_INDENTATION
+
+
+-- Performing Test HAVE_C_WNO_MISLEADING_INDENTATION - Success
+
+
+-- Performing Test HAVE_C_WNO_ARRAY_PARAMETER
+
+
+-- Performing Test HAVE_C_WNO_ARRAY_PARAMETER - Success
+
+
+-- Performing Test HAVE_CXX_WNO_MISSING_DECLARATIONS
+
+
+-- Performing Test HAVE_CXX_WNO_MISSING_DECLARATIONS - Success
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_PARAMETER
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_PARAMETER - Success
+
+
+-- Performing Test HAVE_CXX_WNO_MISSING_PROTOTYPES
+
+
+-- Performing Test HAVE_CXX_WNO_MISSING_PROTOTYPES - Success
+
+
+-- Performing Test HAVE_CXX_WNO_UNDEF
+
+
+-- Performing Test HAVE_CXX_WNO_UNDEF - Success
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_VARIABLE
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_VARIABLE - Success
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_FUNCTION
+
+
+-- Performing Test HAVE_C_WNO_UNUSED_FUNCTION - Success
+
+
+-- Could NOT find OpenJPEG (minimal suitable version: 2.0, recommended version >= 2.3.1). OpenJPEG will be built from sources
+
+
+-- Performing Test HAVE_C_WNO_IMPLICIT_CONST_INT_FLOAT_CONVERSION
+
+
+-- Performing Test HAVE_C_WNO_IMPLICIT_CONST_INT_FLOAT_CONVERSION - Success
+
+
+-- Performing Test HAVE_C_WNO_DOCUMENTATION
+
+
+-- Performing Test HAVE_C_WNO_DOCUMENTATION - Success
+
+
+-- OpenJPEG: VERSION = 2.5.3, BUILD = opencv-4.13.0-openjp2-2.5.3
+
+
+-- Looking for stdio.h - found
+
+
+-- Looking for math.h
+
+
+-- Looking for math.h - found
+
+
+-- Looking for float.h
+
+
+-- Looking for float.h - found
+
+
+-- Looking for time.h
+
+
+-- Looking for time.h - found
+
+
+-- Looking for stdarg.h
+
+
+-- Looking for stdarg.h - found
+
+
+-- Looking for ctype.h
+
+
+-- Looking for ctype.h - found
+
+
+-- Looking for stdint.h
+
+
+-- Looking for stdint.h - found
+
+
+-- Looking for inttypes.h
+
+
+-- Looking for inttypes.h - found
+
+
+-- Looking for sys/stat.h
+
+
+-- Looking for sys/stat.h - found
+
+
+-- Looking for include file malloc.h
+
+
+-- Looking for include file malloc.h - found
+
+
+-- Looking for _aligned_malloc
+
+
+-- Looking for _aligned_malloc - not found
+
+
+-- Looking for posix_memalign
+
+
+-- Looking for posix_memalign - found
+
+
+-- Looking for memalign
+
+
+-- Looking for memalign - found
+
+
+-- Performing Test HAVE_C_WNO_CAST_FUNCTION_TYPE
+
+
+-- Performing Test HAVE_C_WNO_CAST_FUNCTION_TYPE - Success
+
+
+-- Check if compiler accepts -pthread
+
+
+-- Check if compiler accepts -pthread - yes
+
+
+-- OpenJPEG libraries will be built from sources: libopenjp2 (version "2.5.3")
+
+
+-- The ASM compiler identification is Clang with GNU-like command-line
+
+
+-- Found assembler: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+
+
+-- Performing Test HAVE_C_WNO_NULL_POINTER_SUBTRACTION
+
+
+-- Performing Test HAVE_C_WNO_NULL_POINTER_SUBTRACTION - Success
+
+
+-- KLEIDICV: Downloading kleidicv-0.7.0.tar.gz from https://gitlab.arm.com/kleidi/kleidicv/-/archive/0.7.0/kleidicv-0.7.0.tar.gz
+
+
+  KLEIDICV: Download failed: 35;"SSL connect error"
+
+  For details please refer to the download log file:
+
+  
+  C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-build/CMakeDownloadLog.txt
+
+
+Call Stack (most recent call first):
+  C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/hal/kleidicv/kleidicv.cmake:8 (ocv_download)
+  C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/cmake/OpenCVFindLibsPerf.cmake:179 (download_kleidicv)
+  C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/CMakeLists.txt:817 (include)
+
+
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED - Success
+
+
+-- Performing Test HAVE_CXX_WNO_SHADOW
+
+
+-- Performing Test HAVE_CXX_WNO_SHADOW - Success
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_LOCAL_TYPEDEFS
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_LOCAL_TYPEDEFS - Success
+
+
+-- Performing Test HAVE_CXX_WNO_SIGN_COMPARE
+
+
+-- Performing Test HAVE_CXX_WNO_SIGN_COMPARE - Success
+
+
+-- Performing Test HAVE_CXX_WNO_SIGN_PROMO
+
+
+-- Performing Test HAVE_CXX_WNO_SIGN_PROMO - Success
+
+
+-- Performing Test HAVE_CXX_WNO_TAUTOLOGICAL_UNDEFINED_COMPARE
+
+
+-- Performing Test HAVE_CXX_WNO_TAUTOLOGICAL_UNDEFINED_COMPARE - Success
+
+
+-- Performing Test HAVE_CXX_WNO_IGNORED_QUALIFIERS
+
+
+-- Performing Test HAVE_CXX_WNO_IGNORED_QUALIFIERS - Success
+
+
+-- Performing Test HAVE_CXX_WNO_EXTRA
+
+
+-- Performing Test HAVE_CXX_WNO_EXTRA - Success
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_FUNCTION
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_FUNCTION - Success
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_CONST_VARIABLE
+
+
+-- Performing Test HAVE_CXX_WNO_UNUSED_CONST_VARIABLE - Success
+
+
+-- Performing Test HAVE_CXX_WNO_SHORTEN_64_TO_32
+
+
+-- Performing Test HAVE_CXX_WNO_SHORTEN_64_TO_32 - Success
+
+
+-- Performing Test HAVE_CXX_WNO_INVALID_OFFSETOF
+
+
+-- Performing Test HAVE_CXX_WNO_INVALID_OFFSETOF - Success
+
+
+-- Performing Test HAVE_CXX_WNO_ENUM_COMPARE_SWITCH
+
+
+-- Performing Test HAVE_CXX_WNO_ENUM_COMPARE_SWITCH - Success
+
+
+-- Performing Test HAVE_CXX_WNO_SUGGEST_OVERRIDE
+
+
+-- Performing Test HAVE_CXX_WNO_SUGGEST_OVERRIDE - Success
+
+
+-- Performing Test HAVE_CXX_WNO_INCONSISTENT_MISSING_OVERRIDE
+
+
+-- Performing Test HAVE_CXX_WNO_INCONSISTENT_MISSING_OVERRIDE - Success
+
+
+-- Performing Test HAVE_CXX_WNO_IMPLICIT_FALLTHROUGH
+
+
+-- Performing Test HAVE_CXX_WNO_IMPLICIT_FALLTHROUGH - Success
+
+
+-- Performing Test HAVE_CXX_WNO_ARRAY_BOUNDS
+
+
+-- Performing Test HAVE_CXX_WNO_ARRAY_BOUNDS - Success
+
+
+-- Performing Test HAVE_CXX_WNO_STRINGOP_OVERFLOW
+
+
+-- Performing Test HAVE_CXX_WNO_STRINGOP_OVERFLOW - Failed
+
+
+-- Performing Test HAVE_CXX_WNO_STRINGOP_OVERREAD
+
+
+-- Performing Test HAVE_CXX_WNO_STRINGOP_OVERREAD - Failed
+
+
+-- Performing Test HAVE_CXX_WNO_EXTRA_SEMI
+
+
+-- Performing Test HAVE_CXX_WNO_EXTRA_SEMI - Success
+
+
+-- Performing Test HAVE_CXX_WNO_COMMA
+
+
+-- Performing Test HAVE_CXX_WNO_COMMA - Success
+
+
+-- Allocator metrics storage type: 'int'
+
+
+-- Excluding from source files list: modules/imgproc/src/corner.avx.cpp
+
+
+-- Excluding from source files list: modules/imgproc/src/resize.lasx.cpp
+
+
+
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_DECLARATIONS
+
+
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_DECLARATIONS - Success
+
+
+-- General configuration for OpenCV 4.13.0 =====================================
+
+
+--     NDK toolchain:               aarch64-linux-andr--       SIMD Support Request:      YES
+
+
+bjpeg-turbo (ver 3.1.2-70)
+
+
+ndings_generator objdetect photo stitching video videoio world
+
+
+urity    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG   -DNDEBUG
+
+
+-DDEBUG -D_DEBUG
+
+
+
+--   Android SDK:                   not used, projects are not built
+
+
+--     W--       SIMD Support:              YES (Arm NEON)
+
+
+
+
+
+oder: 0x0210, demux: 0x0107)
+
+
+26.3.11579264)
+
+
+ld/746526a878/_deps/opencv-src/3rdparty/include/opencl/1.2
+
+
+--     ZLib:                        build (ver 1.3.1)
+
+
+--   Trace:                         YES (built-in)
+
+
+-- Added library: dartcv
+-- DARTCV_DEPS: opencv_core;opencv_imgcodecs;opencv_imgproc
+-- PLATFORM_LIBS: camera2ndk;mediandk;-landroid
+-- Installing  to C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install
+
+
+-- Configuring done
+
+
+-- Generating done
+
+
+-- Build files have been written to: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878
+
+
+Looking for CMake in [$HOME/AppData/Local/Android/Sdk/cmake/*/bin/cmake.exe].
+
+Looking up version with --version for ToolInstance(CMake, null, file:///C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe).
+Running `C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe --version`.
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Found version for ToolInstance(CMake, 3.22.1-g37088a8-dirty, file:///C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe). 3.22.1-g37088a8-dirty
+
+PATH.
+Running `COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts; PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS where cmake`.
+
+
+
+
+gram Files\CMake\bin\cmake.exe
+
+Looking up version with --version for ToolInstance(CMake, null, file:///C:/Program%20Files/CMake/bin/cmake.exe).
+Running `C:\Program Files\CMake\bin\cmake.exe --version`.
+
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+Found version for ToolInstance(CMake, 4.0.0, file:///C:/Program%20Files/CMake/bin/cmake.exe). 4.0.0
+
+526a878\; COMSPEC=C:\WINDOWS\SYSTEM32\cmd.exe PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\Tailscale\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\cloudflared\;C:\Program Files\dotnet\;C:\Users\chitt\AppData\Local\Programs\Python\Launcher\;C:\Users\chitt\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.5\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;C:\Users\chitt\AppData\Local\Programs\Python\Python3.12.2;C:\Program Files\Java\jdk-22\bin;C:\Users\chitt\.vscode\extensions\flutter\bin;C:\Users\chitt\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\.lmstudio\bin;C:\Program Files\CMake\bin;C:\Users\chitt\AppData\Roaming\npm;C:\Users\chitt\.dotnet\tools;C:\Users\chitt\AppData\Local\Programs\Antigravity\bin;C:\Users\chitt\AppData\Local\JetBrains\Toolbox\scripts; PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC PROGRAMDATA=C:\ProgramData PROMPT=$P$G SYSTEMDRIVE=C: SYSTEMROOT=C:\WINDOWS TEMP=C:\Users\chitt\AppData\Local\Temp TMP=C:\Users\chitt\AppData\Local\Temp USERPROFILE=C:\Users\chitt WINDIR=C:\WINDOWS C:\Users\chitt\AppData\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe --build C:\Users\chitt\Desktop\project\SmartScan\.dart_tool\hooks_runner\shared\dartcv4\build\746526a878\ --config Release --target install --parallel 12 )`.
+
+1/604] Building C object _deps/opencv-build/3rdparty/libjpeg
+-turbo/CMakeFiles/jpeg16-static.dir/src/jdpostct.c.o
+
+
+[
+
+4] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcapistd.c.o
+
+
+[
+5/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jddiffct.c.o
+
+
+[
+4/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jutils.c.o
+
+
+6/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcdiffct.c.o
+
+
+[2/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/
+s
+rc/jcmainct.c.o
+
+
+[
+
+04] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdlossls.c.o
+
+
+8/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdmainct.c.o
+
+
+[9/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-tur
+
+[
+
+10/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdsample.c.o
+
+
+[12/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcprepct.c.o
+
+
+[13/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.
+
+[14/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpe
+
+[15/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jutils.c.o
+
+
+
+[16/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdm
+ainct.c.o
+
+
+[17/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMa
+keFile
+s/libjpeg-turbo.dir/src/jdapistd.c.o
+
+
+18/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jddiffct.c.o
+
+
+[
+
+04] Building C object _deps/opencv-build/3rdparty/libjpeg-tur
+bo/CMakeFiles/libjpeg-turbo.dir/src/jcsample.c.o
+
+
+[
+20/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libj
+peg-turbo.dir/src/jdsample.c.o
+
+
+[21/604] Building C object _deps/open
+cv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jccolor.c.o
+
+
+22/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/s
+rc/jccoefct.c.o
+
+
+[
+
+[23/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/j
+idctr
+ed.c.o
+
+
+[
+24/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjp
+eg-turbo.dir/src/jidctfst.c.o
+
+
+[
+25/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcinit.c.o
+
+
+[26/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpe
+g
+-turbo.dir/src/jcicc.c.o
+
+
+s/libjpeg-turbo.dir/src/jcapimin.c.o
+
+
+build/3rdparty/libjpeg-turbo/CMakeFil
+
+[28/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpe
+g-t
+urbo.dir/src/jquant1.c.o
+
+
+[29/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo
+.dir/
+src/jclhuff.c.o
+
+
+30/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcomapi.c.o
+
+
+rbo.d
+ir/src/jdcolor.c.o
+
+
+s/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-tu
+
+turbo
+/CMakeFiles/libjpeg-turbo.dir/
+src/jfdctf
+st.c.o
+
+
+
+
+[33/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/lib
+jpeg-
+turbo.dir/src/jcmaster.c.o
+
+
+c/jddctmgr.c.o
+
+
+/CMakeFiles/libjpeg-turbo.dir/sr
+
+o/CMake
+Files/libjpeg-turbo.dir/src/jcmarker.c.o
+
+
+[36/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcdctmgr.c.o
+
+
+[37/604] Building C object _deps/opencv-build/3rdparty/lib
+jpeg-t
+urbo/CMakeFiles/libjpeg-turbo.dir/src/jquant2.c.o
+
+
+Files/libjpeg-turbo.dir/src/jfdctint.c.o
+
+
+d/3rdparty/libjpeg-turbo/CMake
+
+[34/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turb
+
+[
+
+04] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jidctf
+lt.c.o
+
+
+[
+39/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/C
+MakeFiles/libjpeg-turbo.dir/src/jcparam.c.o
+
+
+[42/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdcoefct.c.o
+
+
+[43/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdapimin.c.o
+
+
+[
+44/604] Building C object _deps/opencv-build/3rdparty/libjpe
+g-turbo/CMakeFiles/libjpeg-turbo.dir/src
+
+o
+
+
+s.c.
+
+[
+
+04] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/s
+rc/jidctint.c.o
+
+
+47/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir
+/src/jdatasrc.c.o
+
+
+46/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdlhuff.c.o
+
+
+
+
+[
+49/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdicc.c.o
+
+
+[
+50/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.
+dir/src/jdinput.c.o
+
+
+es/libjp
+eg-turbo.dir/src/jpeg_nbits.c.o
+
+
+rdparty/libjpeg-turbo/CMakeFil
+
+52/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/lib
+jpeg-turbo.dir/src/jdmerge.c.o
+
+
+[
+
+04] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/sr
+c/jerror.c.o
+
+
+[
+54/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CM
+akeFiles/libjpeg-turbo.dir/src/jmemnobs.c.o
+
+
+[56/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jfdctflt.c.o
+
+
+55/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jaricom.c.o
+
+
+[
+57/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdmaster.c.o
+
+
+58/604] Building C object _deps/opencv-build/3rdparty/libjp
+eg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdphuff.c.o
+
+
+59/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdmarke
+r.c.o
+
+
+[
+
+[60/604] Building C object _deps/opencv-build/3rdparty/libtif
+f
+/CMakeFiles/libtiff.dir/tif_jpeg_12.c.o
+
+
+bo/CMakeFile
+s/libjpeg-turbo.dir/src/jdhuff.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libjpeg-tur
+
+/CMakeFiles/libjpeg-turbo.dir/src/jmemmgr.c.o
+
+
+[63/604] Building C object _deps/opencv-build/3rdparty/libjpeg-t
+
+64/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/l
+ibjpeg-turbo.dir/src/jcarith.c.o
+
+
+65/604] Building C object _deps/opencv-buil
+d/3rdparty/libjpeg-turbo/sim
+d/CMakeFiles/s
+imd.dir/arm/jdsa
+
+mple-neon.c.o
+
+
+66/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/CMakeFiles/simd.dir/arm/jcsample-neon.c
+.o
+
+
+67/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/CMakeFiles/simd.dir/arm/jfdctfst-neon.c.o
+
+
+[
+
+68/604] Building C object _deps/opencv-build/3rdparty/libjpe
+g-turbo/simd/CMakeFiles/simd.dir/arm/jidctred-neon.c.o
+
+
+neon.c.o
+
+
+lding C object _deps/ope
+ncv-build/3rdparty/libjpeg-turbo/simd/CMakeFiles/simd.d
+ir/arm/jcgray-
+
+simd/CMakeFiles/simd.dir/arm/jquanti-neon.c.o
+
+
+ty/libjpeg-turbo/
+
+71/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/CMakeFiles/simd.dir/arm/jcphuff-neon.c.o
+
+
+72/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/CMak
+eFiles/simd.dir/arm/jidctint-neon.c.o
+
+
+[73/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeF
+
+74/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/CMakeFiles/simd
+.dir/arm/jidctfst-neon.c.o
+
+
+75/604] Building C object _deps/opencv-build/3rdparty/li
+
+b
+jpeg-turbo/simd/CMakeFiles/simd.dir/arm/aarch64/jsimd.c.o
+
+
+[
+76/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFil
+es/libtiff.dir/tif_error.c.o
+
+
+[
+
+77/604] Building C object _deps/open
+
+c
+v-build/3rdparty/libjpeg-
+
+t
+
+/simd/CMakeFiles/simd.dir/arm/jfd
+ctint-neon.c.o
+
+
+[
+
+04] Building C object _deps/opencv-build/3rdpart
+y/libtiff/CMakeFiles/libtiff.dir/tif_flush.c.o
+
+
+[78/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dumpmode.c.o
+
+
+[
+
+f/CMakeFiles/libtiff.dir/tif_has
+h_set.c.o
+
+
+/li
+
+[81/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_jbig.c.o
+
+
+i
+
+2/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeF
+
+les/libtiff.dir/
+tif_codec
+.c.o
+
+
+83/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo
+/simd/CMakeFiles/simd.dir/arm/aarch64/jchuff
+-neon.c.o
+
+
+84/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/CMakeFiles/simd.dir/arm/
+jccolor-neon.c.o
+
+
+[
+
+les/libtiff.dir/tif_compress.c.o
+
+
+v-build/3rdparty/libtiff/CMakeFi
+
+86/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_fa
+x3sm.c.o
+
+
+[
+
+87/604] Building C object _deps/opencv-build/3rdparty/libjpeg-t
+urbo/simd/CMakeFiles/simd.dir/arm/jdmerge-neon.c.o
+
+
+88/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/simd/
+CMakeFiles/simd.dir/a
+rm/jdcolor-
+neon.c.o
+
+
+[
+89/604] Building C object _deps/opencv-build/3rdparty/libtif
+f/CMakeFiles/libtiff.dir/tif_clo
+se.c.o
+
+
+[
+90/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFile
+
+[91/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_aux.c.o
+
+
+s
+
+/libtiff.dir/tif_color.c.o
+
+
+
+[
+92/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMa
+keFiles/libwebp.dir/sharpyuv/sharpyuv_gamma.c.o
+
+
+iles/libwebp.dir/sharpyuv/sharpyuv_csp.c.o
+
+
+3rdparty/libwebp/CMakeF
+
+94/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFil
+es/libtiff.dir/tif_dirinfo.c.o
+
+
+95/604] Building C object _deps/opencv-build/3rdparty/libw
+ebp/CMakeFiles/libwebp.dir/sharpyuv/sha
+rpyuv_sse2.c.o
+
+
+[
+96/604] Building C object _deps/opencv-build/3rdpa
+rty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_dsp.c
+
+97/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dirwrite.c.o
+
+
+[98/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMa
+keFil
+es/libwebp.dir/sharpyuv/sharpyuv_neon.c.o
+
+
+[
+
+04] Building C object _deps/opencv-build/3rdparty/libwebp/C
+MakeFiles/libwebp.dir/src/dec/alpha_dec.c.o
+
+
+[
+
+100/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff
+.dir/tif_dir.c.o
+
+
+101/604] Building C object _deps/opencv-build/3rdparty/lib
+
+[102/604] Building C object _deps/opencv-build/3rdparty/libw
+ebp
+/CMakeFiles/libwebp.dir/src/dec/idec_dec.c.o
+
+
+w
+
+ebp/CMake
+
+[104/604] Building C object _deps/opencv-build/3
+
+[
+
+103/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_fax3.c.o
+
+
+rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/quant_dec.c.o
+
+
+[
+
+s/libwebp.dir/src/dec/buffer_dec.c.o
+
+
+3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/frame_dec.c.o
+
+
+106/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/tree_dec.c.o
+
+
+[107/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_getimage.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_lzma.c.o
+
+
+if_ojpeg.c
+.o
+
+
+ object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/t
+
+110/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/
+libwebp.dir/src/dec/io_dec.c.o
+
+
+111/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_pix
+arlog.c.o
+
+
+112/604] Building C object _deps/opencv-build/3rdparty/l
+ibtiff/CMakeFiles/libtiff.dir/tif_next.c.o
+
+
+113/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/de
+c/vp8_dec.c.o
+
+
+f/CM
+akeFiles/libtiff.dir/tif_lzw.c.o
+
+
+ld/3rdparty/libtif
+
+[115/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_print.c.o
+
+
+[116/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff
+.dir/tif_p
+ackbits.c.o
+
+
+.c.o
+
+
+ld/3rdparty/libtiff/CMakeFi
+les/libtiff.dir/tif_strip
+
+
+
+
+i
+
+[119/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_
+open.c
+
+[
+120/604] Building C object _deps/opencv-build/3rdpa
+
+[117/604] Building C object _deps/opencv-bu
+
+f/C
+MakeFiles/libtiff.dir/tif_dirread.c.o
+
+
+rdparty/libtif
+
+rty/libtiff/CMakeFiles/libtiff.dir/tif_thunder.c.o
+
+
+122/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMa
+
+keFiles/libtiff.dir/tif_read.c.o
+
+
+libtiff/CMakeFiles/libtiff.dir/tif
+_tile.c.o
+
+
+arty
+
+[124/604] Building C object _deps/opencv-
+build/
+3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_swab.c.o
+
+
+125/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_
+predict.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libtiff/CMak
+eFiles/libtiff.dir/tif_warning.c.o
+
+
+[
+127/604] Building C object _deps/opencv-build/3rd
+party/libtiff/CMakeFiles/libtiff.dir/ti
+
+[128/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_luv.c.o
+
+
+[129/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeF
+i
+les/libtiff.dir/tif_zstd.c.o
+
+
+ff.dir
+/tif_jpeg.c.o
+
+
+ _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libti
+
+[
+131/604] Building C object _deps/opencv-build/3rdparty/libtif
+
+/CMakeFiles/libtiff.dir/tif_write.c.o
+
+
+[132/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_version.c.o
+
+
+[
+133/604] Building C object _deps/opencv-build/3rdparty/li
+bwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv
+_cpu.c.o
+
+
+[134/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_zip.c.o
+
+
+hal.dir/dummy.cpp.o
+
+
+_
+
+/604] Building C object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_unix.c.o
+
+
+[137/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv.c.o
+
+
+[
+
+138/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/bitwise.cpp.o
+
+
+[139/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carot
+
+e
+
+ne/CMakeFiles/carotene_objs.d
+ir/src/absdiff.cpp.o
+
+
+[
+140/604] Building CXX object _deps/opencv-build/hal/caro
+
+tene/hal/carotene/CMakeFiles/carotene_objs.dir/src/add_weighted.cpp.o
+
+
+
+
+04] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/C
+M
+akeFiles/carotene_objs.dir/src/convert.cpp.o
+
+
+[
+141/604] Building CXX object _deps/opencv-build/3rdparty/libtiff/CMakeFiles/li
+btiff.dir/tif_stream.cxx.o
+
+
+[143/604] Building CXX object _deps/opencv-build/hal/carotene/hal/caroten
+
+e/CMakeFiles/carotene_objs.dir/src/common.cpp.o
+
+
+[144/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFi
+
+les/carotene_objs.dir/src/channels_combine.cpp.o
+
+
+[145/604] Building CXX object _deps/opencv-build/hal/carotene/hal
+
+carotene/CMakeFiles/carotene_objs.dir/src/accumulate.cpp.o
+
+
+/
+
+[
+146/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/C
+
+MakeFiles/carotene_objs.dir/src/blur.cpp.o
+
+
+147/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/add.cpp.o
+
+
+148/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMak
+
+e
+Files/carotene_objs.dir/src/canny.c
+
+[149/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/count_nonzero.cpp.o
+
+
+[150/604] Building CXX object _deps/opencv-build/hal/carotene/ha
+
+o
+
+
+
+/CMakeFiles/carotene_objs.dir/src/convolution.c
+pp.
+
+l
+
+151/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/caroten
+
+_objs.dir/src/dot_product.cpp.o
+
+
+e
+
+152/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/
+carotene_objs.dir/src/dummy.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMa
+
+k
+
+es/carotene_objs.dir/src/div.cpp.o
+
+
+t
+
+.o
+
+
+ilding CXX object _deps/opencv-build/hal/carotene/hal/carotene/
+CMakeF
+iles/carotene_objs.dir/src/channel_extrac
+
+155/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/fast.cpp.o
+
+
+[
+156/604] Building CXX object _deps/opencv-build/hal/carotene/
+hal/carotene/CMakeFiles/carotene_objs.dir/src/co
+nvert_scale.cpp
+.o
+
+
+ir/src/colorconvert.cpp.o
+
+
+ _deps/opencv-build/hal/carote
+ne/hal/carotene/CMakeFiles/carotene_objs.d
+
+[158/604] Building CXX object _deps/opencv-buil
+
+/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/fill_minmaxloc.cpp.o
+
+
+[159/604] Building CXX object _deps/opencv-
+
+build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/flip.cpp.
+o
+
+
+
+/hal/ca
+
+Building CXX object _deps/opencv-build
+
+rotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/median
+_filter.cpp.o
+
+
+161/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carot
+
+ne/CMakeFiles/carotene_objs.dir/src/cmp.cpp.o
+
+
+[
+162/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carote
+ne/CMakeFiles/carotene_objs.dir/src/magnitude.cpp.o
+
+
+[163/604] Building CXX object _deps/opencv-build/hal/carotene/ha
+
+l/carotene/CMakeFiles/carotene_objs.dir/src/convert_d
+
+[164/604] Building CXX object _deps/opencv-build/hal/ca
+
+an.cpp.o
+
+
+ing CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMa
+
+ange.cpp.o
+
+
+ding CXX object _deps/opencv-build/hal/caroten
+e/hal/carotene/CMakeFiles/carotene_objs.dir/src/in_r
+
+[167/604] Building CXX object _deps/opencv-build/hal/carot
+
+n
+
+al/carotene/CMakeFiles/carotene_objs.dir/src/mea
+
+e
+
+[
+
+o
+tene/hal/carotene/CMakeFiles/carotene_objs
+
+hal/car
+
+169/604] Building CXX object _deps/opencv-build/hal/carotene/hal
+
+/carotene/CMakeFiles/carotene_objs.dir/src/minmaxloc.cpp.o
+
+
+170/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/phase.cpp.o
+
+
+[171/604] Building CXX object _deps/opencv-build/hal
+
+/
+
+/src/norm.cpp.o
+
+
+/CMakeFiles/carotene_objs.dir
+
+[172/604] Building C object _deps/opencv-build/3rdparty/l
+
+ibj
+peg-turbo/CMakeFiles/libjpeg
+-turbo.
+
+dir/src/jchu
+ff.c.o
+
+
+173/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/C
+MakeFiles/carotene_objs.dir/src/reduce.cpp.o
+
+
+[174/604] Building C
+
+o
+
+
+
+XX object _deps/opencv-build/hal/carot
+
+[175/604] Building CXX object _deps/opencv-build/hal/carot
+ene/
+hal/carotene/CMakeFiles/carotene_objs.dir/src/min_max.cpp.o
+
+
+[176/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/C
+
+M
+
+/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/scharr.cpp.o
+
+
+[
+
+/remap.cpp.o
+
+
+object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/morph.cpp.o
+
+
+akeFiles/carotene_objs.dir
+
+[179/604] Building C object _deps/opencv-build/3rdparty/cpufeatures/CMakeFiles/libcpufea
+
+tures
+.dir/cpu-features.c.o
+
+
+otene_objs.
+
+ilding CXX object _deps/opencv-build/hal/
+carotene/hal/carotene/CMakeFiles/car
+
+dir/src/pyramid.c
+pp.o
+
+
+[
+181/604] Linking C static library _deps\openc
+v-build\3rdparty\lib\arm64-v8a\libcpufeatures
+.a
+
+
+182/604] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.o
+
+
+183/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/s
+rc/sum.cpp.o
+
+
+l
+d/3rdparty/zlib/CMak
+eFiles/zlib.dir/
+compress.c.o
+
+
+[185/604] Building CXX object _deps/opencv-build/hal/carotene
+
+/
+hal/carotene/CMakeFiles/carotene_objs.dir/src/s
+
+
+
+
+04] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.o
+
+[18
+
+7/604] Building CXX object _deps/opencv-build/hal/car
+
+o
+tene/hal/carotene/CMakeFiles/carotene_objs.dir/src/t
+
+[188/604] Building C object _deps/opencv-build/3rdpar
+ty/zlib/
+CMakeFiles/zlib.dir/gzwrite.c.o
+
+
+[189/604] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.o
+
+
+[190/604] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.o
+
+
+[
+
+ene_objs.dir/src/war
+p_persp
+ective.cpp.o
+
+
+191/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/car
+ot
+
+ene_objs.dir/src/warp_affine.cpp
+.o
+
+
+[193/604] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.o
+
+
+[194/604] Building C object _deps/opencv-build/3rdparty/zlib/CMake
+Files/
+zlib.dir/gzlib.c.o
+
+
+/
+
+/604] Building C object _deps/opencv-build/3rdparty
+
+zlib/CMakeFiles/z
+lib.dir/uncompr.c.o
+
+
+[196/604] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/
+gzread.c.
+o
+
+
+nftrees.c.
+o
+
+
+C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/i
+
+til.c.
+o
+
+
+ing C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/zu
+
+iles/jpeg
+12-static.dir/src/jcapistd.c.o
+
+
+3rdparty/libjpeg-turbo/CMakeF
+
+[200/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turb
+o/CMakeFiles/j
+peg12-static.dir/src/jcmainct.c.o
+
+
+[
+201/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/sub.c
+
+p
+p.o
+
+
+[202/604] Building C object _deps/opencv-build/3rdparty/zlib/CM
+
+a
+keFiles
+/zlib.dir/inflate.c.o
+
+
+203/604] Building C object _deps/opencv-build/3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.o
+
+
+[
+
+d/3rdparty/zlib/CMakeF
+iles/zlib.dir/inffast.c.o
+
+
+
+[205/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/j
+clossls
+.c.o
+
+
+204/604] Building C object _deps/opencv-
+
+[206/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcdiffct.c.o
+
+
+207/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-stati
+c.dir/src/jcprepct.c.o
+
+
+Files/j
+peg12-static.dir/src/jddiffct.c.o
+
+
+rdparty/libjpeg-turbo/CMake
+
+a
+
+/604] Building CXX object _deps/opencv-build/hal/carotene/h
+
+l/carotene/CMakeFiles/carotene_objs.dir/src/threshold.cpp.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libjp
+
+eg-turbo/CMakeFiles/jpeg12-static.dir/src/jcsample.c.
+o
+
+
+ils.
+c.o
+
+
+[
+
+212/604] Building C object _deps/opencv-build/3r
+dparty/libjpeg-turbo/CMakeFiles/jp
+eg12-static.dir/sr
+c/jccolor.c.o
+
+
+[214/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdsample.c.o
+
+
+210/604] Building C object _deps/opencv-build/3rdpart
+
+[215/604] Linking C static library _deps\opencv-build\3rdparty\lib\arm
+
+MakeFiles/jpeg12-static.dir/src/jdapistd.c.o
+
+
+[
+216/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpe
+g12-static.dir/src/jdmainct.c.o
+
+
+[
+217/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/
+src/jdlossls.c.o
+
+
+[218/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jp
+eg12-s
+tatic.dir/src/jdpostct.c.o
+
+
+o/CMa
+keFiles/jpeg12-static.dir/src/jccoefct.c.o
+
+
+/libjpeg-turb
+
+220/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jidctfst.c.o
+
+
+CMakeFiles/jpeg12-static.dir/src/jidctred.c.o
+
+
+221/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/
+
+p
+
+/604] Building CXX object _de
+
+s/
+opencv-build/hal
+
+e/
+CMakeFiles/car
+oten
+
+[223/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/sr
+c
+/jidctflt.c.o
+
+
+[224/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-sta
+tic.dir/
+src/jddctmgr.c.o
+
+
+[225/604] Building C object _deps/opencv-build/3rdparty/libjpeg-tu
+rbo/CMake
+Files/jpeg12-static.dir/src/jfdctfst.c.o
+
+
+[
+
+226/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir
+/src/jdcolor.c.o
+
+
+[227/604] Building C object _deps/opencv-build/3rdparty/libjpeg-tur
+bo/CM
+akeFiles/jpeg12-static.dir/src/jcdctmgr.c.o
+
+
+[228/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jfdctint.c.o
+
+
+l
+
+/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFi
+
+es/jpeg16-static.dir/src/jcprepct.c.o
+
+
+230/604] Building C object _deps/opencv-build/3rdparty/libjpe
+g-turbo/CMakeFiles/jpeg16-static.dir/src/jcm
+ainct.c.o
+
+
+[231/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static
+.di
+r/src/jdapistd.c.o
+
+
+[
+232/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMa
+
+c
+
+es/jpeg12-stati
+
+o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpe
+g12-static.dir/src/jdmerge.c.o
+
+
+csample
+.c.o
+
+
+C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/j
+
+[235/604] Building CXX object _deps/opencv-build/
+
+d
+ir/src/separable_filter.cpp.o
+
+[237/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFil
+es
+/jpeg16-static.dir/src/jcdiffct.c.o
+
+
+236/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jcapistd.c.o
+
+
+[
+238/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jquant1.c.o
+
+
+[
+
+[
+239/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFiles/jpeg
+16-static.dir/src/jclossls.c.o
+
+
+h
+
+241/604] Building C object _deps/opencv-build/3rdparty/libjpeg-turbo/CMakeFile
+s/jpeg12-static.dir/src/jidctint.c.o
+
+
+al/carotene/hal/ca
+
+object _deps/opencv-build/3rdparty/libjpeg-t
+urbo/CM
+akeFiles/jpeg16-static.dir/src/jccolor.c.o
+
+
+[243/604] Building C object _deps/opencv-build/3rdparty
+/libweb
+p/CMakeFiles/libwebp.dir/src/dsp/alpha_processing_mips_d
+sp_r2.c.o
+
+
+[244/604] Building C object _deps/opencv-build/3rdparty/libjpeg-
+t
+urbo/CMakeFiles/jpeg16-st
+
+tic.dir/src/jdcolor.c.o
+
+
+
+e
+
+ir/src/dsp/alpha_pro
+cessing_sse2.c.o
+
+
+rdparty/libwebp/CMakeFiles/libw
+
+[246/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/demux/anim_decode.c.o
+
+
+247/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost_mips32.c.o
+
+
+[248/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/alpha_processing_sse41.c.o
+
+
+uant2.c.o
+
+
+rc/jq
+
+object _deps/opencv-build/3rd
+party/libjpeg-turbo/CMakeFiles/jpeg
+
+[251/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/de
+
+[252/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFi
+
+les/libwebp.dir/src/dsp/cpu.c.o
+
+
+
+
+[254/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost_mips_dsp_r2.c.o
+
+
+[
+
+/3rdparty/libwebp/CMakeFiles/
+libwebp.dir/src/dsp/cost.c.o
+
+
+253/604] Building C object _deps/opencv-b
+
+uild/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/demux/demux.c.o
+
+
+[
+255/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/sr
+c/dsp/dec_mips_dsp_r2.c.o
+
+
+[
+256/604] Building C object _deps/opencv-build/3rdparty/li
+bwebp/CMakeFiles/libwebp.dir/src/dsp/dec.c.o
+
+
+[257/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFile
+
+258/604] Building C object _deps/opencv-build/3rdparty/libwebp/CM
+akeFiles/libwebp.dir/src/dsp/cost_sse2
+.c.o
+
+
+259/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_clip_tables.c.o
+
+
+[
+
+60/604] Building C object _deps/opencv-build/3rdparty/libwebp
+/CMakeFiles/libwebp.dir/src/dsp/dec_mips32.c.o
+
+
+[
+262/604] Building C object _deps/opencv-build/3rdparty
+/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_sse2.c.o
+
+
+[
+263/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.di
+r/src/dsp/alpha_processing_neon.c.o
+
+
+dsp/dec_sse
+41.c.o
+
+
+ic library _deps\opencv-build\3
+rdparty\lib\arm64-v8a\liblibtiff.a
+
+
+ir
+/src/dsp/cost_neon.c.o
+
+
+s/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.d
+
+ir/src/d
+sp/enc_msa.c.o
+
+
+eps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.d
+
+268/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_mips_dsp_r2.c.o
+
+
+[269/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_sse2.c.o
+
+
+[270/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeF
+i
+
+les/libwebp.dir/src/dsp/enc_sse41.c.
+
+dsp/enc.c.o
+
+
+ing C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/
+
+[271/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/filters_mips_dsp_r2.c.o
+
+
+o
+
+
+
+[274/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir
+
+/s
+rc/dsp/filters.c.o
+
+
+[275/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/
+libwebp.dir/src
+/dsp/filters_msa.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_avx2.c.o
+
+
+[277/604] Building C object _deps/opencv-build/3rdparty/lib
+webp/C
+MakeFiles/libwebp.dir/src/dsp/lossless_avx2.c.o
+
+
+[278/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.di
+
+r/src/d
+sp/lossless_enc_sse2.c.o
+
+
+279/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/
+libwebp.dir/src/dsp/lossless_enc_msa.c.o
+
+
+[
+
+280/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/loss
+less_enc_mips32.c.o
+
+
+[
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwe
+bp.dir/src/dsp/lossless_enc_mips_dsp_r2.c.o
+
+
+282/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/fi
+
+l
+ters_neon.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/l
+ibwebp/CMakeFiles/libwebp.dir/src/dsp/enc_neon.c.o
+
+
+[284/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp
+
+uilding C object _deps/
+
+opencv-build/3rdparty/libwe
+bp/CMakeFiles/libwebp.dir/src/dsp/dec_neon.c.o
+
+
+[286/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libweb
+p
+
+.dir/src/enc/picture_p
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless.c.o
+
+
+enc.c.o
+
+
+lding C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp
+.d
+ir/src/dsp/lossless_
+
+[289/604] Building C object _deps/opencv-build/3rdparty/libwebp
+
+290/604] Building C object _deps/opencv-build/3rdparty/l
+ibwebp/CMakeFiles/libwebp.dir/src/dsp/los
+
+s
+
+less_mips_dsp_r2.c.o
+
+
+[291/604] Building C object _deps/opencv-build/3r
+
+
+
+
+party/libwebp/CMak
+eFiles/libwebp.dir/s
+rc/dsp/los
+sless_msa.c.o
+
+[
+293/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_rescale_enc.c.o
+
+
+294/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp
+.dir/src/dsp/rescaler_mips32.c.o
+
+
+[292/604] Building C object _deps/opencv-build/3rdparty/libweb
+p/CMa
+keFiles/libwebp.dir/src/dsp/lossless_sse2.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFile
+s/libwebp.dir/src/enc/picture_enc.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/lib
+webp.dir/src/dsp/lossless_sse41.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/sr
+c/dsp/rescaler_mips_dsp_r2.c.o
+
+
+[298/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_msa.c.o
+
+
+[
+299/604] Building C object _deps/opencv-build
+/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler.c.o
+
+
+ir/src/dsp/ssim_sse2.c.o
+
+
+eps/opencv-build/3rdparty/libwebp/CMakeFiles/l
+ibwebp.d
+
+301/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwe
+bp.dir/src/dsp/rescaler_sse2.c.o
+
+
+[
+302/604] Building C object _deps/opencv-bui
+ld/3rdparty/libwebp/CMakeFiles/libwe
+
+bp.dir/src/dsp/upsamp
+
+
+
+
+304/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFile
+s/libwebp.dir/src/dsp/lossless_neon.c.o
+
+
+[305/604] Building C object _deps/opencv-build/3rd
+part
+y/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling
+
+c.o
+
+
+306/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/d
+sp/upsampling_msa.c.o
+
+
+webp/
+CMakeFiles/libwebp.dir/src/enc/predict
+
+rdparty/lib
+
+[
+308/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_mips_dsp_r2.c.o
+
+
+[
+
+309/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_mips32.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/sr
+c/enc/picture_tools_enc.c.o
+
+
+[311/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFil
+
+mpling_sse41.c.o
+
+
+ object _deps/openc
+v-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/
+
+[313/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_neon.c.o
+
+
+[314/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_sse2.c.o
+
+
+[315/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling.c.o
+
+
+316/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp
+.dir/src/dsp/yuv_neon.c.o
+
+
+317/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/l
+ibwebp.dir/src/enc/config_enc.c.o
+
+
+318/604] Building C object _deps/opencv-build/3rdparty/libwebp
+/CMakeFiles/libwebp.dir/src/enc/alpha_enc.c.o
+
+
+[319/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeF
+iles/li
+
+[320/604] Building C object _deps/opencv-build/3rdparty/libwebp/C
+Make
+Files/libwebp.dir/src/enc/filter_enc.c.o
+
+
+[
+321/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeF
+iles/libwebp.dir/src/dsp/yuv.c.o
+
+
+[322/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFil
+es/libwe
+bp.dir/src/enc/analysis_enc.c.o
+
+
+323/604] Building C object _deps/opencv-build/3rdparty/libwe
+
+bp/CMakeFiles/libwebp.dir/src/enc/backward_references_cost_enc.c.o
+
+
+[324/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/lib
+
+325/604] Building C object _deps/opencv-build/3rdparty/l
+ibwebp/CMakeFiles/libwebp.dir/src/enc/iterator_enc.c.o
+
+
+[326/604] Building C object _deps/opencv-build/3rdpar
+ty/libwe
+bp/CMakeFiles/libwebp.dir/src/enc/tree_enc.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/
+
+[328/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFi
+le
+s/libwebp.dir/src/enc/token_enc.c.o
+
+
+[329/604] Building C object _deps/opencv-build/3rdparty/libw
+ebp/C
+MakeFiles/libwebp.dir/src/enc/picture_csp_enc.c.o
+
+
+[330/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/sr
+
+[331/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/mux/muxedit.c.o
+
+
+332/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/e
+
+nc/back
+
+.c.o
+
+
+[333/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/histogram_enc.c.o
+
+
+[334/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMa
+keFiles/libwebp.dir
+/src/dsp/upsampling_neon.c.o
+
+
+x/muxinternal
+
+[
+
+[
+335/604] Building C object _deps/opencv-build/3r
+dparty/libwebp/CMakeFiles/libwebp.dir/src/mu
+
+.c.o
+
+
+[337/604] Building C object _deps/opencv-build/3rdparty/lib
+
+
+336/604] Building C object _deps/opencv-build/3r
+dparty/libwebp/CMakeFiles/libwebp.dir/src/enc/webp
+_enc.c.o
+
+
+[338/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwe
+bp.dir/sr
+c/utils/color_cache_utils.c.o
+
+
+webp/CMakeFiles/libwebp.dir/src/mux/muxread.c.o
+
+
+arty/lib
+
+340/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/
+libwebp.dir/src/utils/bit_reader_utils.c.o
+
+
+[341/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles
+
+/
+
+libwebp.dir/src/enc/qu
+ant_enc.c.o
+
+
+o
+pencv-build/3rdparty/libwebp/CMakeFi
+les/libwebp.dir/src
+
+/utils/palette
+.c.o
+
+
+[343/604] Building C object _deps/opencv-build/3rdparty/libwe
+bp/CMa
+keFiles/libwebp.dir/src/utils/bit_write
+r_utils.c.o
+
+
+[344/604] Building C object _deps/opencv-build/3rdparty/libwebp/C
+MakeFil
+es/libwebp.dir/src/utils/huffman_utils.c.o
+
+
+CMakeFiles/libwebp.dir/src/utils/quant_levels_dec_utils.c
+
+bwebp/
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/thread_utils.c.o
+
+
+[
+348/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFil
+es/libwebp.dir/src/utils/quant_levels_utils.c.o
+
+
+[349/604] Building C object _deps/opencv-bui
+ld/3rdpa
+rty/libwebp/CMakeFiles/libwebp.dir/src/utils/random_utils.c.o
+
+
+[350/604] Building C object _deps/opencv-build/3rdparty/libwebp/C
+MakeFi
+les/libwebp.dir/src/utils/huffman_e
+ncode_utils.c.o
+
+
+351/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/utils
+.c.o
+
+
+[352/604] Building C object _deps/opencv-build/3rdparty/libwebp/CMakeFi
+
+[
+353/604] Linking C static library _deps\opencv-build\3rdparty\lib\arm64-v8a\liblibjpeg-turb
+
+o.a
+
+
+354/604] Building C object _deps/opencv-build/3rdpart
+y/libwebp/CMakeFiles/libwebp.dir/src/
+en
+
+c/vp8l_e
+n
+c.c.o
+
+
+[
+355/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp
+2.dir/event.c.o
+
+
+[
+
+jp2/CMakeFiles/libopenjp2.dir/bio.c.o
+
+
+rdparty/openjpeg/
+
+357/604] Building C object _deps/opencv-build/3rdparty/openjpeg/o
+penjp2/CMakeFiles/libopenjp2.dir/image.c.o
+
+
+358/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.
+dir/invert.c.o
+
+
+[359/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/mqc.c.o
+
+
+[
+360/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/cio.c.o
+
+
+[
+361/604] Building C object _deps/opencv-build/3rdparty/openjpeg/ope
+njp2/CMakeFiles/libopenjp2.dir/thread.c.o
+
+
+[362/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/opj_clock.c.o
+
+
+[
+363/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp
+2/CMakeFiles/libopenjp2.dir/mct.c.o
+
+
+[
+364/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/openjpeg.c.o
+
+
+[
+
+604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp
+
+[366/604] Building C object _deps/opencv-build/3rdparty/openjpeg/o
+pe
+njp2/CMakeFiles/libopenjp2.dir/ht_dec.c.o
+
+
+[
+367/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/jp2.c.o
+
+
+[368/604] Building C object _deps/opencv-build/3rdparty/openj
+peg/
+openjp2/CMakeFiles/libopenjp2.dir/function_list.c.o
+
+
+[369/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFile
+s/libo
+penjp2.dir/t2.c.o
+
+
+[370/604] Building C object _deps/opencv-build/3rdparty/openjpeg/
+
+keFiles/libo
+penjp2.dir/sparse_array.c.o
+
+
+3rdparty/openjpeg/openjp2/CMa
+
+[372/604] Building C object _deps/
+
+opencv-build/3rdpa
+
+rty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/pi.c.o
+
+
+[373/604] Building C object _deps/opencv-build/3rdparty
+/lib
+png/CMakeFiles/libpng.dir/pngget.c.o
+
+
+[374/604] Linking C static library _deps\open
+cv-buil
+d\3rdparty\lib\arm64-v8a\liblibwebp.a
+
+
+[
+375/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/p
+ngpread.c.o
+
+
+376/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/tcd.c.o
+
+
+[377/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng
+.dir/pnge
+rror.c.o
+
+
+/libp
+ng/CMakeFiles/libpng.dir/pngmem.c.o
+
+
+rdparty
+
+379/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/pn
+grio.c.o
+
+
+r/pngtrans.c.o
+
+
+ C object _deps/opencv-build/3r
+dparty/libpng/CMakeFiles/libpng.di
+
+.o
+
+
+[381/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/png.c
+
+382/604] Building C object _deps/opencv-build/3rdparty/lib
+png/CMakeFiles/libpng.dir/pngread.c.o
+
+
+[383/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.o
+
+
+o
+
+
+604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.
+
+[385/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/arm/arm_init.c.o
+
+
+[386/604] Building ASM object _deps/opencv-build/3rdpa
+rty/lib
+png/CMakeFiles/libpng.dir/arm/filter_neon.S.o
+
+
+[
+
+387/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.o
+
+
+png/CM
+akeFiles/libpng.dir/pngwrite.c.o
+
+
+/3rdparty/lib
+
+[
+389/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/arm/palette_neon_intrinsics.c.o
+
+
+v-build/
+3rdparty/libpng/CMakeFiles/libpng.dir/arm/filter_neon_intrins
+ics.c.o
+
+
+[391/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/lib
+ope
+njp2.dir/dwt.c.o
+
+
+[
+
+392/604] Building C object _deps/opencv-build/3rdparty/lib
+png/CMakeFiles/libpng.dir
+/pngrutil.c.o
+
+
+393/604] Building C object _deps/opencv-build/3rdparty/libpng/CMakeFiles/libpng.dir/png
+wutil.c.o
+
+
+jp2.
+dir/j2k.c.o
+
+
+ject _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/libopen
+
+[
+395/604] Building C object _deps/opencv-build/3rdparty/libpng/CMake
+Files/libpng.dir/pngrtran.c.o
+
+
+396/604] Building CXX object _deps/opencv-build/hal/carotene/hal/carotene/CMakeFiles/carotene_objs.dir/src/mul.cpp.o
+
+
+[
+
+604] Linking C static library _deps\opencv-build\3rdparty
+\lib\arm64-v8a\liblibpng.a
+
+
+398/604] Linking CXX static library _deps\open
+
+
+
+
+[
+399/604] Processing OpenCL kernels (core)
+
+
+[400/604] Building C object _deps/opencv-build/3rdparty/openjpeg/openjp2/CMakeFiles/lib
+openjp2
+.dir/t1.c.o
+
+
+[401/604] Building CXX object _deps/opencv-build/module
+
+orithm.cpp.o
+
+
+s/core/CMakeFiles/opencv_core.dir/src/al
+
+e
+s/core/CMakeFiles/
+opencv_core.dir/s
+rc/alloc.cp
+p.o
+
+
+[402/604] Building CXX object _deps/opencv-build/modul
+
+g
+
+[403/604] Building CXX object _deps/opencv
+
+-
+build/modules/core/CMakeFiles/opencv_
+
+co
+re.dir/src/conjugate_g
+ra
+dient.cpp.o
+
+
+[404/604] Building CXX object _deps/opencv-build/modules/core/CM
+akeFiles/opencv_co
+re.dir/src/check.cpp.o
+
+
+[405/604] Building CXX object _deps/opencv-build/modules/core/CM
+
+akeFiles/opencv_core.dir/src/async.cpp.o
+
+
+[406/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/channels.cpp.o
+
+
+[407/604] Building CXX object _deps/opencv-build/modules/core/
+CMakeFiles/opencv_core.dir/src/bindings_utils.cpp.o
+
+
+[408/604] Building CXX object _deps/opencv-build
+
+/
+modules/core/CMakeFiles/opencv_core.dir/src/batch
+
+distance.cpp.o
+
+
+409/604] Building CXX objec
+
+t _deps/opencv-build/modules/cor
+
+CMakeFiles/opencv_core.dir/src/array.cpp.o
+
+
+e/
+
+[410/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/arithm.
+
+cpp.o
+
+
+[
+
+411/604] Building CXX object _deps/opencv-build
+
+_a
+
+rea.cpp.o
+
+
+[
+412/604] Building CXX object _deps/opencv-build/modules
+
+/
+
+/CMakeFiles/opencv_core.dir/src/count_non_zero.dispatch
+
+[413/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/c
+
+onvert_c.cpp.o
+
+
+414/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv
+
+core.dir/src/cuda_gpu_mat.cpp.o
+
+
+_
+
+[415/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/cuda_s
+tream
+.cpp.o
+
+
+.cpp.o
+
+
+t_mem
+
+XX object _deps/opencv-build/modules/core/CM
+a
+keFiles/opencv_core.dir/
+
+[
+417/604] Building C
+
+y
+
+.o
+
+
+XX object _deps/opencv-build/modules/core/CMakeFiles/op
+e
+ncv_core.dir/src/cop
+
+[418/604] 
+
+uilding CXX
+ object _dep
+
+r
+/src/convert_sc
+
+s
+/opencv-build/modules/core/CMakeFiles/opencv_core.di
+
+[419/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv
+
+_core.dir/src/cuda_info.cpp.o
+
+
+[
+420/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.di
+
+r
+
+/src/convert.dispat
+ch.cpp.o
+
+
+[421/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/cud
+
+a
+
+_gpu_mat_nd.cpp.o
+
+
+422/604] Building CXX object _deps/opencv-build/modules
+
+F
+
+rser.cpp.o
+
+
+/
+
+v_core.dir/src/command_li
+
+c
+
+iles/open
+
+core/CMake
+
+423/604] Building CXX object _deps/opencv-build/modules/co
+
+/src/directx.cpp.o
+
+
+.dir
+
+[424/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/op
+
+e
+
+core.dir/src/downhill_simplex.cpp.o
+
+[425/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/hal_internal.cpp.o
+
+
+[
+426/604] Building CXX object _deps/opencv-
+build/modules/core/CMakeFiles/opencv_core.dir/src/datastructs.cpp
+
+.o
+
+
+cpp.o
+
+
+ilding CXX object _deps/opencv-build/modules/core/CMakeFil
+es/opencv_core.dir/src/kmeans.cpp.o
+
+
+rithm.dispatch.
+
+ng CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/
+a
+
+core_3_1.cpp.o
+
+
+ CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/gl_
+
+[
+
+4
+
+les/core/CMakeFiles/opencv_core.dir/src/h
+
+
+s_non_zero.dispatch.cpp.o
+
+
+[431/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_
+
+core.dir/src/glob.
+
+cpp.o
+
+
+432/604] Building CXX object _deps/opencv-build/modules/core/CMakeFil
+
+e
+s/opencv_core.dir/src/logger.cpp.o
+
+
+[
+433/604] Building CXX object _deps/opencv-build/modules/
+
+c
+ore/CMakeFiles/opencv_core.dir/src/lapack.cpp.o
+
+
+[434/604] Building CXX object _deps/opencv-build/modules/cor
+
+e/CMakeFiles/opencv_core.dir/src/lut.cpp.o
+
+
+[435/604] Building CXX object _deps/opencv-build/modules/core/CMakeFil
+
+es/opencv_core.dir/src/dxt.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-build/modules/co
+
+r
+
+e.dir/src/matrix_c.cpp.o
+
+
+v
+
+e/CMakeFiles/openc
+
+/modul
+es/core/CMakeFiles/opencv_core.dir/src/lpsolver.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/lda.cp
+
+p.o
+
+
+[
+
+604] Building CXX object _deps/opencv
+-build/modules/core/CMakeFiles/opencv_core.dir/src/matrix.cpp.o
+
+
+440/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/mathfuncs_core.di
+spatch.cpp.o
+
+
+[441/604] Building CXX object _deps/opencv-build/
+
+o
+
+
+
+/core/CMakeFiles/opencv_core.dir/src/matrix_iterator.cpp.
+
+442/604] Building CXX object _deps/opencv-build/modules/c
+
+o
+re/CMakeFiles/opencv_core.dir/s
+rc/mathfuncs.cpp.o
+
+
+443/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_
+
+core.dir/src/matrix_decomp.cpp.o
+
+
+444/604] Building CXX object _deps
+
+cpp.o
+
+
+.
+
+/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/matrix_sparse
+
+[
+445/604] Building CXX object _deps/opencv-build/module
+
+s/core/CMakeFiles/opencv_core.dir/src/merge.dispatc
+
+.cpp.o
+
+
+446/604] Building CXX object _deps/opencv-build/modules/core/C
+
+akeFiles/opencv_core.dir/src/matrix_expressions.cpp.o
+
+
+M
+
+o
+
+47/604] Building CXX object _deps/opencv-build/modules/c
+
+re/CMakeFiles/o
+
+p
+encv_core.dir/src/opencl/runtime/opencl_clfft.cpp.o
+
+
+[
+
+448/604] Building CXX object _deps/opencv-build/modules/core/CM
+akeFiles/opencv_core.dir/src/minmax.cpp.o
+
+
+449/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/opencl/runtime/opencl_clblas.cpp.o
+
+
+rc/o
+pencl/runtime/opencl_core.cpp.o
+
+
+build/modules/core/CMakeFiles/opencv_core.dir/s
+
+[451/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core
+
+.
+
+
+
+c/mean.dispatch.c
+
+p.
+
+[452/604] Building CXX obje
+
+_core.dir/src/matrix_transform.cpp.o
+
+
+v
+
+ct _deps/opencv-build/modules/core/CMakeFiles/openc
+
+453/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/opengl.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-build/modules/core/
+
+CMakeFiles/opencv_core.dir/src/ovx.cpp.o
+
+
+[455/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core
+
+.
+dir/src/matmul.dispatch.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/norm.dispatch.cpp.o
+
+
+[
+
+pca.cp
+
+cv_core.dir/sr
+c/
+
+deps/opencv-build/modules/core/CMakeFil
+
+[458/604] Linking C static library _deps\opencv-build\3rdparty\lib\arm64-v8a\liblibopenjp2
+.a
+
+
+[
+
+u
+
+core/CMakeFiles/open
+
+t _deps/opencv-build/mod
+
+v_core.dir/src/parallel.cpp.o
+
+
+[460/604] Building CXX object _deps/opencv-build/modu
+
+l
+
+es/core/CMakeFiles/opencv_core.dir/src/out.cpp.o
+
+
+[
+461/604] Building CXX object _deps/opencv-build/modules/c
+ore/CMakeFiles/opencv_cor
+
+e.dir/src/matr
+
+pp.o
+
+
+462/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/parallel/pa
+rallel_tbb.cp
+p.o
+
+
+[
+
+cpp.o
+
+
+ng CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_c
+ore.dir/src/parallel_
+i
+
+es/opencv_core.dir/src/parallel/para
+
+pencv-build/modules/core/CMakeFil
+
+llel_openmp.cpp.o
+
+
+e
+
+/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/op
+
+ncv_core.dir/src/pa
+
+allel/parallel.cpp.o
+
+
+r
+
+[466/604] Building CXX object _deps/opencv-build/modules/core/C
+
+akeFiles/opencv_core.dir/src/persistence_base64_encoding.cpp.o
+
+
+M
+
+467/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles
+
+/opencv_core.dir/src/persistence_yml.cpp.o
+
+
+[468/604] Building CXX object _deps/opencv-build/modules/cor
+
+e/CMakeFiles/opencv_core.dir/src/persistence_types.cpp.o
+
+
+469/604] Building CXX object _deps/opencv
+
+x
+ml.cpp.o
+
+
+-
+build/modules/core/CMakeFiles/opencv_core.dir/src/persistence_
+
+[
+470/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/openc
+
+v_core.dir/src/matrix_wrap.cpp.o
+
+
+[471/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/o
+
+p
+
+_core.dir/src/stat.dispatch.cpp.o
+
+
+472/604] Building CXX object _deps/opencv-build/modules/core/CMake
+
+iles/opencv_core.dir/src/stat_c.cpp.o
+
+
+[
+473/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/persistence_json.cpp.o
+
+
+474/604] Building CXX object _deps/opencv-build/modules/core/CMakeF
+
+iles/opencv_core.dir/src/rand.cpp.o
+
+
+es/open
+
+Building CXX object _deps/opencv-build/modules/core/CMakeFil
+
+cv_core.dir/src/persistence.cpp.o
+
+
+s
+
+76/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/
+
+plit.dispatch.cpp.o
+
+
+_core.dir/src/softfloat.cpp.o
+
+
+/opencv-build/modules/core/CMakeFiles/
+
+478/604] Build
+
+i
+
+.o
+
+
+ect _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/tables.c
+
+les/opencv_core.dir/src/stl.cpp.o
+
+
+ncv-build/modules/co
+re/CMakeFi
+
+[480/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/s
+
+rc/types.cpp.o
+
+
+481/604] Building CXX object _deps/opencv-build/modules/core
+
+/CMakeFiles/opencv_core.dir/src/trace.cpp.o
+
+
+482/604] Building CXX object _deps/opencv-build/mod
+ules/core/CMakeFiles/opencv_core.dir/src/ocl.cpp.o
+
+
+[483/604]
+
+t
+
+ding CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/u
+
+ils/filesystem.cpp.o
+
+
+484/604] Building CXX object _deps/opencv-build/modules/co
+re/CMakeFiles/opencv_core.dir/src/utils/datafile.cpp.o
+
+
+[
+
+485/604] Building CXX object _deps/opencv-build/modules/core/CMakeF
+iles/opencv_core.dir/src/sum.dispatch.cpp.o
+
+
+[486/604] Building
+
+ CXX object _deps/opencv-build/modules/core/
+
+C
+MakeFiles/opencv_core.dir/src/umatrix.cpp.o
+
+
+iles/
+opencv_core.dir/src/system.cpp.o
+
+
+ild/modules/core/CMakeF
+
+488/604] Building CXX object _deps/opencv-build/modules/core/CMak
+eFiles/opencv_core.dir/opencl_kernels_core.cpp.o
+
+
+[
+489/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/sr
+c/utils/logtagmanager.cpp.o
+
+
+[
+490/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/utils/samples.cpp.o
+
+
+[
+491/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/ut
+ils/logtagconfigparser.cpp.o
+
+
+492/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/src/va_intel.cpp.o
+
+
+pen
+cv_core.dir/norm.neon_dotprod.cpp.o
+
+
+ld/modules/core/CMakeFiles/o
+
+[494/604] Building CXX object _deps/opencv-build/modules/core/CMakeFiles/opencv_core.dir/matmul.neon_dotprod.cpp.o
+
+
+495/604] Linking CXX static library _deps\opencv-build\lib\arm64-v8a\libopencv_core.a
+
+
+[
+
+604] Processing OpenCL kernels (imgproc)
+
+
+eFiles/opencv_imgproc.dir/src/color.cpp.o
+
+
+d/modules/imgproc/CMak
+
+[498/604] Building CXX object _deps/opencv-build/modul
+
+o
+
+
+[
+499/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/
+opencv_imgproc.dir/src/blend.cpp.o
+
+
+uild/modules/imgproc/CMakeFiles/opencv_imgproc.dir/src/approx.cpp.o
+
+
+[501/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/src/clahe.cpp.o
+
+
+502/604] Building CXX object _deps/opencv-buil
+
+.
+dispatch.cpp.o
+
+
+iles/opencv_imgproc.dir/src/bilateral_filter
+
+503/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/src/color_hsv.dispatch.cpp.o
+
+
+[504/604] Buildi
+
+r
+
+_deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgp
+
+g CXX ob
+
+oc.dir/src/canny.cpp.o
+
+
+505/604] Building CXX object _deps/opencv-build/modules
+
+patch.cpp.o
+
+
+es/opencv_imgproc.dir/src/accum.di
+
+[
+
+604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/
+
+[
+507/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles
+/opencv_imgproc.dir/src/colormap.cpp.o
+
+
+[
+508/604] Building CXX object _deps/opencv-build/modules/imgp
+
+oc/CMakeFiles/opencv_imgproc.dir/src/contours_approx.
+
+[509/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgpro
+c.dir/src/contours_common
+
+[
+
+g
+
+604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_im
+
+roc.dir/src/contours_link.cpp.o
+
+
+[511/604] Building CXX object _deps/opencv-build/modules/imgproc/
+
+C
+MakeFiles/opencv_imgproc.dir/src/box_filter.dispatch.cpp.o
+
+
+[512/604] Building CXX object _deps/opencv-build/modules/imgpr
+
+o
+c/CMakeFiles/opencv_imgproc.dir/src/color_rgb.dispatch.cpp.o
+
+
+513/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgproc
+.dir/src/contours.cpp.o
+
+
+514/604] Building CXX object _deps/opencv-build/modules/
+
+i
+
+mgproc/CMakeFiles/opencv_imgproc.dir/src/cor
+nersubpix.cpp.o
+
+
+515/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_
+imgproc.dir/src/color_lab.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-
+
+.dir/src/convhull.cpp.
+
+o
+
+b
+
+uild/modules/imgproc/CMakeFiles/opencv_imgp
+
+r
+
+
+
+
+o
+
+[
+517/604] Building CXX object _deps/opencv-b
+
+u
+ild/modules/imgproc/CMakeFiles/
+
+o
+
+v_imgproc.dir/src/color_yuv.dispatch.cpp.o
+
+
+518/604] Building CXX object _deps/opencv-build/modules/img
+
+p
+
+CMakeFiles/opencv_imgproc.dir/src/corner.
+
+[519/604] Building CXX object _deps/opencv-build/modules/imgproc/CM
+
+a
+keFiles/opencv_imgproc.dir/src/contours_new.cpp.o
+
+
+[
+
+eps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgproc.d
+i
+r/src/distransform.c
+pp.o
+
+
+520/604] Building CXX object _d
+
+[
+521/604] Building CXX ob
+
+c/CMakeFiles/opencv_imgproc.dir/src/emd.cpp.o
+
+
+ect _deps/opencv-build/modules/imgpr
+
+[522/604] Building CXX object _deps/
+
+opencv_imgproc.dir/src/emd_new.cpp.o
+
+
+
+[523/604] Building CXX object _deps/opencv-build/modules/imgproc/CMa
+
+k
+eFiles/opencv_imgproc.dir/src/demosaicing.cpp.o
+
+
+proc
+/CMakeFiles/opencv_imgproc.dir/src/deriv.cpp.o
+
+
+mg
+
+[525/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/src/g
+
+abor.cpp.o
+
+
+[526/604] Building CXX object _deps/opencv-build/modules/
+
+imgproc/CMakeFiles/opencv_imgproc.dir/src/featureselect.cpp.o
+
+
+[
+527/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFil
+
+s/opencv_imgproc.dir/src/hershey_fonts.cpp.o
+
+
+e
+
+[
+528/604] Building CXX object _deps/opencv-build/m
+odules/imgproc/CMakeFiles/openc
+
+v
+
+proc.dir/src/drawing.cpp.o
+
+
+529/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_i
+
+m
+
+gproc.dir/src/intersection.cpp.o
+
+
+[
+530/604] Building CXX object _deps/opencv-build/modules/i
+
+t.cpp.o
+
+
+u
+
+mgproc/CMakeFiles/opencv_imgproc.dir/src/grabc
+
+531/604] Building CXX object _deps/opencv-build/modu
+les/imgproc/CMakeFiles/opencv_
+
+i
+
+
+
+
+p
+
+mgproc.dir/src/geometry.c
+
+
+
+
+Files/opencv_imgproc.dir/src/floodfill.cpp.o
+
+[532/604] Building CXX object _deps/opencv-build/modules/imgproc/C
+
+[533/604] Building CXX object _deps/opencv-build/modules
+
+/imgproc/CMakeFiles/opencv_imgproc.dir/src/generaliz
+
+e
+d_hough.cpp.o
+
+
+roc.dir/src/intelli
+
+
+
+X object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgp
+
+[
+535/604] Building CXX object _deps/opencv-build/modules/imgp
+
+roc/CMakeFiles/opencv_imgproc.dir/src/histogram.cpp.o
+
+
+[
+536/604] Building CXX object _deps/opencv-build/mod
+
+ules/imgproc/CMakeFiles/opencv_imgproc.dir/src
+
+linefit.cpp.o
+
+
+[
+
+537/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv
+
+[
+
+538/604] Building CXX object _deps/opencv-build/modules/imgproc/CMak
+
+eFiles/opencv_imgproc.dir/src/main.cpp.o
+
+
+[539/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/
+o
+pencv_imgproc.dir/src/lsd.cpp.o
+
+
+gproc/CMak
+eFiles/opencv_imgproc.dir/src/min_enclosing_triangle.cpp.o
+
+
+[541/604] Building CXX object _deps/opencv-build/modules/imgproc/C
+
+MakeFiles/opencv_imgproc.dir/src/min_e
+
+nclosing_convex_polygon.cpp.o
+
+
+[542/604] Building CXX object _deps/opencv-build/modules/i
+
+n
+
+r.dispatch.cpp.o
+
+
+m
+
+gproc/CMakeFiles/opencv_imgproc.dir/src/media
+
+543/604] Building CXX object _deps/opencv-build/mo
+dules/imgproc/CMakeFiles/opencv_imgproc.dir/src/phasecorr.cpp.o
+
+
+
+
+[544/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles
+
+/
+
+opencv_imgproc.dir/src/moments.cpp.o
+
+
+[
+545/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFile
+s/opencv_imgproc.dir/src/phasecorr_iterative.cpp.
+
+[
+
+546/604] Building CXX object _deps/opencv-build/modules/imgproc/CMak
+
+eFiles/opencv_imgproc.dir/src/hough.cpp.o
+
+
+[547/604] Building CXX object _deps/opencv-bui
+
+l
+
+pencv_imgproc.dir/src/filter.dispatch.cpp.o
+
+d/modules/imgproc/CMakeFil
+
+[548/604] Building CXX object _deps/opencv-build/modules/i
+mgpr
+oc/CMakeFiles/opencv_imgproc.dir/src/rotcalipers.cpp.o
+
+
+549/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles
+
+opencv_imgproc.dir/src/connectedcomponents
+
+/
+
+.cpp.o
+
+
+[
+
+550/604] Building CXX object _deps/opencv
+
+roc.dir/src/segmentation.cpp.o
+
+
+551/604] Building CXX object _deps/opencv-build/modules/imgp
+
+r
+oc.dir/src/samplers.cpp.o
+
+
+cpp.o
+
+
+ilding CXX object _deps/opencv-build/modules/imgproc/C
+MakeFiles/opencv_imgproc.dir/src/spatialgradient.
+
+553/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/
+imgproc/imgproc.cpp.o
+
+
+554/604] Building CXX object _deps/opencv-build/modules/imgproc/CM
+
+keFiles/opencv_imgproc.dir/src/shapedes
+
+r.cpp.o
+
+
+c
+
+[
+
+604] Building CXX object _deps/opencv-
+build/modules/imgproc/CMakeFiles/opencv_
+
+i
+mgproc.dir/src/stackblur.cpp.o
+
+
+[
+556/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/o
+pencv_imgproc.dir/src/tables.cpp.o
+
+
+[557/604] Buildi
+
+CXX object _deps/opencv-build/modules
+
+/src/morph.dispatch.cpp.o
+
+
+[558/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/src/subdi
+
+vision2d.cpp.o
+
+
+[559/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFiles/opencv_img
+
+[560/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFi
+
+a
+
+pencv_imgproc.dir/src/imgw
+
+[561/604] Building CXX object _deps/opencv-build/modules/imgproc/CMakeFi
+
+les/opencv_imgproc.dir/src/templmatch.cp
+
+[
+562/604] Building CXX object _deps/opencv-build/modules/imgproc/CM
+akeFiles/opencv_imgproc.dir/opencl_kernels_imgpr
+oc.cpp.o
+
+
+563/604] Building CXX object _deps/open
+
+oc
+
+Files/opencv_imgproc.dir/src/thresh.cpp.o
+
+
+[
+564/604] Building CXX object _deps/opencv-build/mod
+
+.
+
+
+patch
+
+ules/imgproc/CMakeFiles/opencv_imgproc.dir/src/sumpixels.d
+
+[
+
+565/604] Building CXX object _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/gr
+fmt_avif.cpp.o
+
+
+decs.dir/
+
+Building CXX object _deps/opencv-build/modules/imgcodecs/
+CMakeFiles/opencv_imgco
+
+src/utils.cpp.o
+
+
+[
+
+604] Building CXX object _deps/opencv-build/modul
+
+p.o
+
+
+es/imgproc/CMakeFiles/opencv_imgproc.dir/src/resize.c
+
+p
+
+[568/604] Building CXX object _deps/opencv-build/modules/imgcod
+
+cs/CMakeFiles/opencv_imgcodecs.dir/
+
+[569/604] Building CXX object _deps/opencv-build/modules/imgcode
+cs/CM
+akeFiles/opencv_imgcodecs.dir/src/grfmt_gdcm.cpp.o
+
+
+570/604] Building CXX object _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_
+
+imgcodecs.dir/src/grfmt_gdal.cpp.o
+
+
+[571/604] Building CXX object 
+
+_deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.o
+
+
+[
+
+t
+
+604] Building CXX object _de
+
+MakeFiles/opencv_imgcodecs.dir/src/grfm
+
+[573/604] Building CXX object _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_imgcodec
+
+s
+
+.dir/src/grfmt_jpeg2000.cpp.o
+
+
+[
+574/604] Building CXX object _deps/openc
+
+t
+
+_jpegxl.cpp.o
+
+
+v-build/modules/imgcodecs/CM
+
+a
+keFiles/opencv_imgcodecs.dir/src/grfm
+
+575/604] Building CXX object _deps/opencv-bu
+
+
+
+
+
+eg.cp
+p.
+
+v_imgcodecs.dir/src/grfm
+
+[576/604] Building CXX object _deps/opencv-build/modules/
+
+.dir/src/smooth.dispatch.cpp.o
+
+
+
+c
+
+gproc.a
+
+
+king CXX static library _deps\opencv-build\lib\arm64-v8a\libop
+encv_im
+
+u
+
+78/604] B
+
+ilding CXX objec
+
+c/grfmt_hdr.cpp.o
+
+
+
+t _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/sr
+
+[
+
+604] Building CXX object _deps/opencv
+
+enjpeg.cpp.o
+
+
+-
+
+codecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000_op
+
+build/modules
+
+[580/604] Building CXX object _deps/opencv-build/modules/imgcodecs
+/CM
+
+akeFiles/opencv_imgco
+
+p
+
+-build/modules/imgcodecs/CMakeFiles/opencv_imgcodec
+
+[
+581/
+604] Building CXX object _deps/o
+
+582/604] Building CXX object _deps/opencv-build/modules/im
+gcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pam.cpp.
+o
+
+
+583/604] Building CXX o
+
+bject _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/
+
+cs/CMakeFiles/opencv_imgcodecs.dir
+/src/grfmt_spng.cpp.o
+
+
+e
+
+p
+encv_imgcodecs.dir/src/
+
+_deps/opencv-build/modules/imgcodecs/CMakeFiles/o
+
+loadsave.cpp.o
+
+
+[
+586/604] Building CXX object _deps/opencv-build/modules/imgcodecs
+
+/CMakeFiles/opencv_imgc
+
+o
+
+
+odecs.dir/src/grfmt_pxm.cpp.
+
+ding
+ CXX
+
+
+ 
+
+CMakeFiles/opencv_imgcodecs.dir/src/bits
+
+b
+
+/modules/imgcodecs/
+
+t
+
+object _deps/opencv
+-
+
+rm.cpp.o
+
+
+[588/604] Building CXX object _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_img
+codecs.di
+r/src/rgbe.cpp.o
+
+
+[589/604] Building CXX object dartcv/CMake
+F
+iles/dartcv.dir/core/versio
+
+n
+.cpp.o
+
+
+[590/604] Building CXX object _deps/opencv-build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/exif.cp
+
+.
+
+
+
+[
+
+591/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/core/exception.cpp.o
+
+
+[592/604] Building CXX object dartcv/CMakeFiles
+
+593/604] Building CXX object _deps/opencv-build/modules/im
+
+cv_imgcode
+cs.dir/src/grfmt_png.cp
+
+g
+codecs/CMakeFiles/open
+
+p.o
+
+
+[594/604] Building CXX object dartcv/CMakeFiles/dartcv.
+di
+r/core/logging.cpp.o
+
+
+[
+595/604] Building CXX object _deps/opencv-build
+/modules/imgcodecs/CMak
+
+eFiles/op
+
+c
+s.dir/src/grf
+mt_tiff.cpp
+.o
+
+
+596/604] Building CXX object _deps/opencv-build/modules/imgcodecs/CM
+akeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.o
+
+
+[597/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/core/core.cpp.o
+
+
+598/604] Linking CXX static library _deps\opencv-build\lib\arm64
+-v8a\libopencv_imgcodecs.a
+
+
+[599/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/core/utils.cpp.o
+
+
+[
+600/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/imgcodecs/imgcodecs.cpp.o
+
+
+[601/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/core/ma
+t.cpp.
+o
+
+
+602/604] Building CXX object dartcv/CMakeFiles/dartcv.dir/core/stdvec.cpp.o
+
+
+[
+
+604] Linking CXX shared library dartcv\libdartcv.so
+
+
+[603/604] Install the p
+roject...
+
+
+-- Install configuration: "Release"
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/dlpack-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/flatbuffers-LICENSE.txt
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/opencl-headers-LICENSE.txt
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/cvconfig.h
+
+
+hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/OpenCV.mk
+
+
+8a.mk
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/abi-arm64-v8a/OpenCVModules.cmake
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/abi-arm64-v8a/OpenCVModules-release.cmake
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/abi-arm64-v8a/OpenCVConfig-version.cmake
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/abi-arm64-v8a/OpenCVConfig.cmake
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/OpenCVConfig-version.cmake
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/./LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/./README.android
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/valgrind.supp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/valgrind_3rdparty.supp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/libcpufeatures.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/cpufeatures-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/cpufeatures-README.md
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/libzlib.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/zlib-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/liblibjpeg-turbo.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libjpeg-turbo-README.md
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libjpeg-turbo-LICENSE.md
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libjpeg-turbo-README.ijg
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/liblibtiff.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libtiff-LICENSE.md
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/liblibwebp.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libopenjp2-README.md
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libopenjp2-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/liblibopenjp2.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/liblibpng.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libpng-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/libpng-README
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/protobuf-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/protobuf-README.md
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/quirc-LICENSE
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/3rdparty/libs/arm64-v8a/libtegra_hal.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/opencv.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/staticlibs/arm64-v8a/libopencv_core.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/affine.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/async.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/base.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/bindings_utils.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/bufferpool.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/core.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/core_c.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda.inl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/block.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/border_interpolate.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/color.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/common.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/cuda_compat.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/datamov_utils.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/detail/color_detail.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/detail/reduce.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/detail/reduce_key_val.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/detail/transform_detail.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/detail/type_traits_detail.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/detail/vec_distance_detail.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/dynamic_smem.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/emulation.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/filters.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/funcattrib.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/functional.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/limits.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/reduce.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/saturate_cast.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/scan.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/simd_functions.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/transform.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/type_traits.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/utility.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/vec_distance.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/vec_math.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/vec_traits.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/warp.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/warp_reduce.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda/warp_shuffle.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda_stream_accessor.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cuda_types.hpp
+
+
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cv_cpu_helper.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cvdef.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/cvstd_wrapper.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/detail/async_promise.hpp
+
+
+pp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/directx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/dualquaternion.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/dualquaternion.inl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/eigen.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/fast_math.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/hal.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/interface.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_avx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_avx512.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_cpp.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_forward.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_lasx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_legacy_ops.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_lsx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_math.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_msa.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_neon.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_rvv071.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_rvv_scalable.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_sse.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_sse_em.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_vsx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/intrin_wasm.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/msa_macros.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/hal/simd_utils.impl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/mat.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/mat.inl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/matx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/matx.inl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/neon_utils.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/ocl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/ocl_defs.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/opencl_info.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/opencl_svm.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/autogenerated/opencl_clblas.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/autogenerated/opencl_clfft.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/autogenerated/opencl_core.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_clblas.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_core.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_svm_20.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/operations.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/optim.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/ovx.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/parallel/backend/parallel_for.openmp.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/parallel/backend/parallel_for.tbb.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/persistence.hpp
+
+
+ckend.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/quaternion.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/quaternion.inl.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/saturate.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/simd_intrinsics.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/softfloat.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/sse_utils.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/traits.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/types.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/types_c.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/utility.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/utils/allocator_stats.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/utils/fp_control_utils.hpp
+
+
+
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/utils/logger.defines.hpp
+
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/utils/logger.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/utils/logtag.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/va_intel.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/version.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/core/vsx_utils.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/licenses/SoftFloat-COPYING.txt
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/staticlibs/arm64-v8a/libopencv_imgproc.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/bindings.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/detail/gcgraph.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/detail/legacy.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/hal/hal.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/hal/interface.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/imgproc.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/segmentation.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgproc/types_c.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/staticlibs/arm64-v8a/libopencv_imgcodecs.a
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgcodecs.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgcodecs/imgcodecs.hpp
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgcodecs/imgcodecs_c.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgcodecs/ios.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgcodecs/legacy/constants_c.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/native/jni/include/opencv2/imgcodecs/macosx.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_eye.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_eye_tree_eyeglasses.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_frontalcatface.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_frontalcatface_extended.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_frontalface_alt.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_frontalface_alt2.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_frontalface_alt_tree.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_frontalface_default.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_fullbody.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_lefteye_2splits.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_license_plate_rus_16stages.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_lowerbody.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_profileface.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_righteye_2splits.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_russian_plate_number.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_smile.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/haarcascades/haarcascade_upperbody.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/lbpcascades/lbpcascade_frontalcatface.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/lbpcascades/lbpcascade_frontalface.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/lbpcascades/lbpcascade_frontalface_improved.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/lbpcascades/lbpcascade_profileface.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/sdk/etc/lbpcascades/lbpcascade_silverware.xml
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/calib3d
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/calib3d/calib3d.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/calib3d/stereo.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib/aruco.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib/img_hash.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib/quality.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib/wechat_qrcode.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib/ximgproc.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/contrib/xobjdetect.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core/constants.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core/core.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core/exception.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core/stdvec.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core/svd.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/core/types.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/dnn
+
+
+sion.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/dnn/dnn.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/features2d
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/features2d/features2d.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/freetype
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/freetype/freetype.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/gapi/gapi.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/highgui
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/highgui/highgui.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/imgcodecs
+
+
+odecs.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/imgproc/imgproc.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/objdetect
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/objdetect/objdetect.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/photo
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/photo/photo.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/video
+
+
+stitching.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/videoio
+
+
+h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/include/dartcv/videoio/videoio.h
+
+
+-- Installing: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/install/lib/libdartcv.so
+
+

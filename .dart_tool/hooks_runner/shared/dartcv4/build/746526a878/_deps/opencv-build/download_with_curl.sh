@@ -1,0 +1,1 @@
+curl --create-dirs --output "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/_deps/opencv-src/.cache/kleidicv/e8f94e427bd78a745afa5c8cd073b416-kleidicv-0.7.0.tar.gz" "https://gitlab.arm.com/kleidi/kleidicv/-/archive/0.7.0/kleidicv-0.7.0.tar.gz"

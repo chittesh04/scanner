@@ -1,0 +1,1097 @@
+The target system is: Android - 1 - aarch64
+The host system is: Windows - 10.0.26200 - 
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe 
+Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security;
+Id flags: -c;--target=aarch64-none-linux-android24 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is Clang, found in "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/3.22.1-g37088a8-dirty/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe 
+Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security;;
+Id flags: -c;--target=aarch64-none-linux-android24 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is Clang, found in "C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/3.22.1-g37088a8-dirty/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e6963 && [1/2] Building C object CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: aarch64-none-linux-android24
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
+ (in-process)
+ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe" -cc1 -triple aarch64-none-linux-android24 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -resource-dir C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17 -dependency-file "CMakeFiles\\cmTC_e6963.dir\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o -x c C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target x86_64-w64-windows-gnu
+ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include"
+ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking C executable cmTC_e6963
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: aarch64-none-linux-android24
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
+ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld" --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_e6963 C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include]
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include]
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  implicit include dirs: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e6963 && [1/2] Building C object CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Android (11349228  based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+  ignore line: [Target: aarch64-none-linux-android24]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe" -cc1 -triple aarch64-none-linux-android24 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -resource-dir C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17 -dependency-file "CMakeFiles\\cmTC_e6963.dir\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o -x c C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target x86_64-w64-windows-gnu]
+  ignore line: [ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_e6963]
+  ignore line: [Android (11349228  based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+  ignore line: [Target: aarch64-none-linux-android24]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin]
+  link line: [ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld" --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_e6963 C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld] ==> ignore
+    arg [--sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-zmax-page-size=4096] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e6963] ==> ignore
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o] ==> obj [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+    arg [--build-id=sha1] ==> ignore
+    arg [--no-rosegment] ==> ignore
+    arg [--no-undefined-version] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [CMakeFiles/cmTC_e6963.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o] ==> obj [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o]
+  remove lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  remove lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit libs: [-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+  implicit objs: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o]
+  implicit dirs: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ce237 && [1/2] Building CXX object CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: aarch64-none-linux-android24
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
+ (in-process)
+ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple aarch64-none-linux-android24 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -resource-dir C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17 -dependency-file "CMakeFiles\\cmTC_ce237.dir\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdeprecated-macro -fdebug-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target x86_64-w64-windows-gnu
+ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include"
+ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android
+ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking CXX executable cmTC_ce237
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: aarch64-none-linux-android24
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
+ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld" --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_ce237 C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include]
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+    add: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include]
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  collapse include dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  implicit include dirs: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ce237 && [1/2] Building CXX object CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Android (11349228  based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+  ignore line: [Target: aarch64-none-linux-android24]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple aarch64-none-linux-android24 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -resource-dir C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17 -dependency-file "CMakeFiles\\cmTC_ce237.dir\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include -internal-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdeprecated-macro -fdebug-compilation-dir=C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 17.0.2 based upon LLVM 17.0.2 default target x86_64-w64-windows-gnu]
+  ignore line: [ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/include]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  ignore line: [ C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_ce237]
+  ignore line: [Android (11349228  based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)]
+  ignore line: [Target: aarch64-none-linux-android24]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin]
+  link line: [ "C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld" --sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_ce237 C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24 -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld] ==> ignore
+    arg [--sysroot=C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-zmax-page-size=4096] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ce237] ==> ignore
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o] ==> obj [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+    arg [-LC:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+    arg [--build-id=sha1] ==> ignore
+    arg [--no-rosegment] ==> ignore
+    arg [--no-undefined-version] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [CMakeFiles/cmTC_ce237.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-Bstatic] ==> search static
+    arg [-lc++] ==> lib [c++]
+    arg [-Bdynamic] ==> search dynamic
+    arg [-lm] ==> lib [m]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o] ==> obj [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o]
+  remove lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  remove lib [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+  collapse library dir [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit libs: [c++;m;-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+  implicit objs: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtbegin_dynamic.o;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/crtend_android.o]
+  implicit dirs: [C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/aarch64;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android;C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_2e345 && [1/2] Building C object CMakeFiles/cmTC_2e345.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2e345
+
+
+
+Determining if the posix_memalign exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e12c3 && [1/2] Building C object CMakeFiles/cmTC_e12c3.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e12c3
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_memalign
+  return ((int*)(&posix_memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file malloc.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_57e13 && [1/2] Building C object CMakeFiles/cmTC_57e13.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_57e13
+
+
+
+Determining if the memalign exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_df5fd && [1/2] Building C object CMakeFiles/cmTC_df5fd.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_df5fd
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memalign
+  return ((int*)(&memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getauxval exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_abc55 && [1/2] Building C object CMakeFiles/cmTC_abc55.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_abc55
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getauxval
+  return ((int*)(&getauxval))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function fseeko exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_dd7cf && [1/2] Building C object CMakeFiles/cmTC_dd7cf.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_dd7cf
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_439f3 && [1/2] Building C object CMakeFiles/cmTC_439f3.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_439f3
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_50488 && [1/2] Building C object CMakeFiles/cmTC_50488.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_50488
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e135d && [1/2] Building C object CMakeFiles/cmTC_e135d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e135d
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_12cf5 && [1/2] Building C object CMakeFiles/cmTC_12cf5.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_12cf5
+
+
+
+Determining size of off64_t passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_6a418 && [1/2] Building C object CMakeFiles/cmTC_6a418.dir/OFF64_T.c.o
+[2/2] Linking C executable cmTC_6a418
+
+
+
+Determining size of size_t passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_f3fd0 && [1/2] Building C object CMakeFiles/cmTC_f3fd0.dir/SIZE_T.c.o
+[2/2] Linking C executable cmTC_f3fd0
+
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_4673e && [1/2] Building C object CMakeFiles/cmTC_4673e.dir/UNSIGNED_LONG.c.o
+[2/2] Linking C executable cmTC_4673e
+
+
+
+Determining if files locale.h exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_222c4 && [1/2] Building C object CMakeFiles/cmTC_222c4.dir/HAVE_LOCALE_H.c.o
+[2/2] Linking C executable cmTC_222c4
+
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_12f02 && [1/2] Building C object CMakeFiles/cmTC_12f02.dir/HAVE_STDLIB_H.c.o
+[2/2] Linking C executable cmTC_12f02
+
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_722a7 && [1/2] Building C object CMakeFiles/cmTC_722a7.dir/NEED_SYS_TYPES_H.c.o
+[2/2] Linking C executable cmTC_722a7
+
+
+
+Performing C SOURCE FILE Test HAVE_VLD1_S16_X3 succeeded with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_021bc && [1/2] Building C object CMakeFiles/cmTC_021bc.dir/src.c.o
+[2/2] Linking C executable cmTC_021bc
+
+
+Source file was:
+
+  #include <arm_neon.h>
+  int main(int argc, char **argv) {
+    int16_t input[12];
+    int16x4x3_t output;
+    int i;
+    for (i = 0; i < 12; i++) input[i] = (int16_t)argc;
+    output = vld1_s16_x3(input);
+    vst3_s16(input, output);
+    return (int)input[0];
+  }
+Performing C SOURCE FILE Test HAVE_VLD1_U16_X2 succeeded with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_86c30 && [1/2] Building C object CMakeFiles/cmTC_86c30.dir/src.c.o
+[2/2] Linking C executable cmTC_86c30
+
+
+Source file was:
+
+  #include <arm_neon.h>
+  int main(int argc, char **argv) {
+    uint16_t input[8];
+    uint16x4x2_t output;
+    int i;
+    for (i = 0; i < 8; i++) input[i] = (uint16_t)argc;
+    output = vld1_u16_x2(input);
+    vst2_u16(input, output);
+    return (int)input[0];
+  }
+Performing C SOURCE FILE Test HAVE_VLD1Q_U8_X4 succeeded with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_5e782 && [1/2] Building C object CMakeFiles/cmTC_5e782.dir/src.c.o
+[2/2] Linking C executable cmTC_5e782
+
+
+Source file was:
+
+  #include <arm_neon.h>
+  int main(int argc, char **argv) {
+    uint8_t input[64];
+    uint8x16x4_t output;
+    int i;
+    for (i = 0; i < 64; i++) input[i] = (uint8_t)argc;
+    output = vld1q_u8_x4(input);
+    vst4q_u8(input, output);
+    return (int)input[0];
+  }
+Determining if the include file assert.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_a7a77 && [1/2] Building C object CMakeFiles/cmTC_a7a77.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a7a77
+
+
+
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_a1930 && [1/2] Building C object CMakeFiles/cmTC_a1930.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a1930
+
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_f6ab6 && [1/2] Building C object CMakeFiles/cmTC_f6ab6.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_f6ab6
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_b7602 && [1/2] Building C object CMakeFiles/cmTC_b7602.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_b7602
+
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_95ee3 && [1/2] Building C object CMakeFiles/cmTC_95ee3.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_95ee3
+
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_2753d && [1/2] Building C object CMakeFiles/cmTC_2753d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2753d
+
+
+
+Determining if the include file search.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_5b81f && [1/2] Building C object CMakeFiles/cmTC_5b81f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_5b81f
+
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_15132 && [1/2] Building C object CMakeFiles/cmTC_15132.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_15132
+
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_3655f && [1/2] Building C object CMakeFiles/cmTC_3655f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3655f
+
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_01023 && [1/2] Building C object CMakeFiles/cmTC_01023.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_01023
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_47632 && [1/2] Building C object CMakeFiles/cmTC_47632.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_47632
+
+
+
+Performing C SOURCE FILE Test C_HAS_inline succeeded with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_6e892 && [1/2] Building C object CMakeFiles/cmTC_6e892.dir/src.c.o
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:3:39: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+        static inline foo_t static_foo() {return 0;}
+                                      ^
+                                       void
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:4:18: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+        foo_t foo(){return 0;}
+                 ^
+                  void
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:4:15: warning: no previous prototype for function 'foo' [-Wmissing-prototypes]
+        foo_t foo(){return 0;}
+              ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:4:9: note: declare 'static' if the function is not intended to be used outside of this translation unit
+        foo_t foo(){return 0;}
+        ^
+        static 
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:5:22: warning: unused parameter 'argc' [-Wunused-parameter]
+        int main(int argc, char *argv[]) {return 0;}
+                     ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:5:34: warning: unused parameter 'argv' [-Wunused-parameter]
+        int main(int argc, char *argv[]) {return 0;}
+                                 ^
+C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/src.c:3:29: warning: unused function 'static_foo' [-Wunused-function]
+        static inline foo_t static_foo() {return 0;}
+                            ^
+6 warnings generated.
+[2/2] Linking C executable cmTC_6e892
+
+
+Source file was:
+
+        typedef int foo_t;
+        static inline foo_t static_foo() {return 0;}
+        foo_t foo(){return 0;}
+        int main(int argc, char *argv[]) {return 0;}
+Determining size of signed short passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_47ca4 && [1/2] Building C object CMakeFiles/cmTC_47ca4.dir/SIZEOF_SIGNED_SHORT.c.o
+[2/2] Linking C executable cmTC_47ca4
+
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_a4995 && [1/2] Building C object CMakeFiles/cmTC_a4995.dir/SIZEOF_UNSIGNED_SHORT.c.o
+[2/2] Linking C executable cmTC_a4995
+
+
+
+Determining size of signed int passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_03403 && [1/2] Building C object CMakeFiles/cmTC_03403.dir/SIZEOF_SIGNED_INT.c.o
+[2/2] Linking C executable cmTC_03403
+
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_85ddb && [1/2] Building C object CMakeFiles/cmTC_85ddb.dir/SIZEOF_UNSIGNED_INT.c.o
+[2/2] Linking C executable cmTC_85ddb
+
+
+
+Determining size of signed long passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_b7956 && [1/2] Building C object CMakeFiles/cmTC_b7956.dir/SIZEOF_SIGNED_LONG.c.o
+[2/2] Linking C executable cmTC_b7956
+
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_c28dd && [1/2] Building C object CMakeFiles/cmTC_c28dd.dir/SIZEOF_UNSIGNED_LONG.c.o
+[2/2] Linking C executable cmTC_c28dd
+
+
+
+Determining size of signed long long passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_9cdbd && [1/2] Building C object CMakeFiles/cmTC_9cdbd.dir/SIZEOF_SIGNED_LONG_LONG.c.o
+[2/2] Linking C executable cmTC_9cdbd
+
+
+
+Determining size of unsigned long long passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_77ea1 && [1/2] Building C object CMakeFiles/cmTC_77ea1.dir/SIZEOF_UNSIGNED_LONG_LONG.c.o
+[2/2] Linking C executable cmTC_77ea1
+
+
+
+Determining size of unsigned char * passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_18cfa && [1/2] Building C object CMakeFiles/cmTC_18cfa.dir/SIZEOF_UNSIGNED_CHAR_P.c.o
+[2/2] Linking C executable cmTC_18cfa
+
+
+
+Determining size of size_t passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_3f43c && [1/2] Building C object CMakeFiles/cmTC_3f43c.dir/SIZEOF_SIZE_T.c.o
+[2/2] Linking C executable cmTC_3f43c
+
+
+
+Determining size of ptrdiff_t passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e9629 && [1/2] Building C object CMakeFiles/cmTC_e9629.dir/SIZEOF_PTRDIFF_T.c.o
+[2/2] Linking C executable cmTC_e9629
+
+
+
+Determining if the function floor exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_d2816 && [1/2] Building C object CMakeFiles/cmTC_d2816.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'floor' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS floor
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'floor' is a builtin with type 'double (double)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS floor
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_d2816
+
+
+
+Determining if the function pow exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_af0a6 && [1/2] Building C object CMakeFiles/cmTC_af0a6.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS pow
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'pow' is a builtin with type 'double (double, double)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS pow
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_af0a6
+
+
+
+Determining if the function sqrt exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_6fa16 && [1/2] Building C object CMakeFiles/cmTC_6fa16.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'sqrt' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS sqrt
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'sqrt' is a builtin with type 'double (double)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS sqrt
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_6fa16
+
+
+
+Determining if the function isascii exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_793a4 && [1/2] Building C object CMakeFiles/cmTC_793a4.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_793a4
+
+
+
+Determining if the function memset exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_4d565 && [1/2] Building C object CMakeFiles/cmTC_4d565.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'memset' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS memset
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'memset' is a builtin with type 'void *(void *, int, unsigned long)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS memset
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_4d565
+
+
+
+Determining if the function mmap exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_65ec7 && [1/2] Building C object CMakeFiles/cmTC_65ec7.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_65ec7
+
+
+
+Determining if the function getopt exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_0a3d7 && [1/2] Building C object CMakeFiles/cmTC_0a3d7.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_0a3d7
+
+
+
+Determining if the function memmove exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_f0a43 && [1/2] Building C object CMakeFiles/cmTC_f0a43.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'memmove' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS memmove
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'memmove' is a builtin with type 'void *(void *, const void *, unsigned long)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS memmove
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_f0a43
+
+
+
+Determining if the function strcasecmp exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_03c1a && [1/2] Building C object CMakeFiles/cmTC_03c1a.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strcasecmp' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strcasecmp
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strcasecmp' is a builtin with type 'int (const char *, const char *)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strcasecmp
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_03c1a
+
+
+
+Determining if the function strchr exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_7089f && [1/2] Building C object CMakeFiles/cmTC_7089f.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strchr' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strchr
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strchr' is a builtin with type 'char *(const char *, int)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strchr
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_7089f
+
+
+
+Determining if the function strrchr exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_924e7 && [1/2] Building C object CMakeFiles/cmTC_924e7.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strrchr' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strrchr
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strrchr' is a builtin with type 'char *(const char *, int)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strrchr
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_924e7
+
+
+
+Determining if the function strstr exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_c225f && [1/2] Building C object CMakeFiles/cmTC_c225f.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strstr' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strstr
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strstr' is a builtin with type 'char *(const char *, const char *)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strstr
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_c225f
+
+
+
+Determining if the function strtol exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_a87bd && [1/2] Building C object CMakeFiles/cmTC_a87bd.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strtol' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strtol
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strtol' is a builtin with type 'long (const char *, char **, int)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strtol
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_a87bd
+
+
+
+Determining if the function strtol exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_53de0 && [1/2] Building C object CMakeFiles/cmTC_53de0.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strtol' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strtol
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strtol' is a builtin with type 'long (const char *, char **, int)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strtol
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_53de0
+
+
+
+Determining if the function strtoull exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_5a763 && [1/2] Building C object CMakeFiles/cmTC_5a763.dir/CheckFunctionExists.c.o
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strtoull' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strtoull
+                              ^
+C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'strtoull' is a builtin with type 'unsigned long long (const char *, char **, int)'
+<command line>:3:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+#define CHECK_FUNCTION_EXISTS strtoull
+                              ^
+1 warning generated.
+[2/2] Linking C executable cmTC_5a763
+
+
+
+Determining if the function lfind exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_d6511 && [1/2] Building C object CMakeFiles/cmTC_d6511.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_d6511
+
+
+
+Determining if the include file stdio.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_7abff && [1/2] Building C object CMakeFiles/cmTC_7abff.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_7abff
+
+
+
+Determining if the include file math.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_288dd && [1/2] Building C object CMakeFiles/cmTC_288dd.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_288dd
+
+
+
+Determining if the include file float.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e2273 && [1/2] Building C object CMakeFiles/cmTC_e2273.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e2273
+
+
+
+Determining if the include file time.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_bd97c && [1/2] Building C object CMakeFiles/cmTC_bd97c.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_bd97c
+
+
+
+Determining if the include file stdarg.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ce5e4 && [1/2] Building C object CMakeFiles/cmTC_ce5e4.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_ce5e4
+
+
+
+Determining if the include file ctype.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_2e1d8 && [1/2] Building C object CMakeFiles/cmTC_2e1d8.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2e1d8
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ab736 && [1/2] Building C object CMakeFiles/cmTC_ab736.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_ab736
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_f677b && [1/2] Building C object CMakeFiles/cmTC_f677b.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_f677b
+
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ebfa5 && [1/2] Building C object CMakeFiles/cmTC_ebfa5.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_ebfa5
+
+
+
+Determining if files malloc.h exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_55990 && [1/2] Building C object CMakeFiles/cmTC_55990.dir/OPJ_HAVE_MALLOC_H.c.o
+[2/2] Linking C executable cmTC_55990
+
+
+
+Determining if the posix_memalign exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ef2c1 && [1/2] Building C object CMakeFiles/cmTC_ef2c1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ef2c1
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_memalign
+  return ((int*)(&posix_memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the memalign exist passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_82210 && [1/2] Building C object CMakeFiles/cmTC_82210.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_82210
+
+
+File C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memalign
+  return ((int*)(&memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/chitt/Desktop/project/SmartScan/.dart_tool/hooks_runner/shared/dartcv4/build/746526a878/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/chitt/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_91609 && [1/2] Building C object CMakeFiles/cmTC_91609.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_91609
+
+
+
+Checking whether the ASM compiler is Clang using "--version" matched "(clang version)":
+Android (11349228, based on r487747e) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: C:/Users/chitt/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin
