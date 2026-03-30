@@ -156,6 +156,10 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
       orElse: () => const <String, int>{},
     );
 
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final int docCrossAxisCount = (screenWidth / 180).floor().clamp(2, 8);
+    final int colCrossAxisCount = (screenWidth / 200).floor().clamp(2, 8);
+
     return Scaffold(
       appBar: AppBar(
         title: _multiSelectMode
@@ -298,6 +302,7 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
                     return _CollectionGrid(
                       collections: items,
                       counts: collectionCounts,
+                      crossAxisCount: colCrossAxisCount,
                       onTap: (collection) {
                         HapticFeedback.selectionClick();
                         Navigator.of(context).push(
@@ -426,8 +431,8 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
                     },
                     childCount: items.length,
                   ),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: docCrossAxisCount,
                     mainAxisSpacing: 12,
                     crossAxisSpacing: 12,
                     childAspectRatio: 0.75,
@@ -639,11 +644,13 @@ class _CollectionGrid extends StatelessWidget {
     required this.collections,
     required this.counts,
     required this.onTap,
+    this.crossAxisCount = 2,
   });
 
   final List<DocumentCollection> collections;
   final Map<String, int> counts;
   final ValueChanged<DocumentCollection> onTap;
+  final int crossAxisCount;
 
   @override
   Widget build(BuildContext context) {
@@ -651,8 +658,8 @@ class _CollectionGrid extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: collections.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,
         childAspectRatio: 1.9,

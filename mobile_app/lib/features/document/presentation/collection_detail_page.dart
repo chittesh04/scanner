@@ -17,6 +17,8 @@ class CollectionDetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final docsAsync = ref.watch(documentsByCollectionProvider(collectionId));
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final crossAxisCount = (screenWidth / 180).floor().clamp(2, 8);
 
     return Scaffold(
       appBar: AppBar(title: Text(collectionName)),
@@ -30,8 +32,8 @@ class CollectionDetailPage extends ConsumerWidget {
 
           return GridView.builder(
             padding: const EdgeInsets.all(16),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: crossAxisCount,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
               childAspectRatio: 0.78,

@@ -110,111 +110,117 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
             itemCount: doc.pages.length,
             itemBuilder: (context, index) {
               final page = doc.pages[index];
-              return Card(
-                clipBehavior: Clip.antiAlias,
-                margin: const EdgeInsets.only(bottom: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    AspectRatio(
-                      aspectRatio: page.imageWidth > 0 && page.imageHeight > 0 
-                          ? page.imageWidth / page.imageHeight 
-                          : 0.75,
-                      child: index == 0
-                          ? Hero(
-                              tag: 'document_image_${widget.documentId}',
-                              child: _PageImageWithSignature(page: page),
-                            )
-                          : _PageImageWithSignature(page: page),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Page ${page.order + 1}',
-                              style: Theme.of(context).textTheme.titleMedium),
-                          if (page.ocrText != null) ...[
-                            const SizedBox(height: 8),
-                            Text(
-                              page.ocrText!,
-                              maxLines: 3,
-                              overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
-                          ],
-                          const SizedBox(height: 8),
-                          Row(
+              return Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 800),
+                  child: Card(
+                    clipBehavior: Clip.antiAlias,
+                    margin: const EdgeInsets.only(bottom: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        AspectRatio(
+                          aspectRatio: page.imageWidth > 0 && page.imageHeight > 0 
+                              ? page.imageWidth / page.imageHeight 
+                              : 0.75,
+                          child: index == 0
+                              ? Hero(
+                                  tag: 'document_image_${widget.documentId}',
+                                  child: _PageImageWithSignature(page: page),
+                                )
+                              : _PageImageWithSignature(page: page),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              FilledButton.tonalIcon(
-                                onPressed: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => DocumentEditorPage(
-                                        documentId: widget.documentId,
-                                        page: page,
-                                      ),
-                                    ),
-                                  );
-                                },
-                                icon: const Icon(Icons.draw_rounded, size: 18),
-                                label: const Text('Sign'),
-                              ),
-                              const SizedBox(width: 8),
-                              FilledButton.tonalIcon(
-                                onPressed: _ocrLoadingPageIds
-                                        .contains(page.pageId)
-                                    ? null
-                                    : () async {
-                                        await HapticFeedback.selectionClick();
-                                        setState(() {
-                                          _ocrLoadingPageIds.add(page.pageId);
-                                        });
-                                        try {
-                                          await repo.performOcr(
-                                              widget.documentId, page.pageId);
-                                          if (!mounted) return;
-                                          ScaffoldMessenger.of(this.context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                  'OCR complete for Page ${page.order + 1}'),
-                                            ),
-                                          );
-                                        } catch (e) {
-                                          if (!mounted) return;
-                                          ScaffoldMessenger.of(this.context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                                content:
-                                                    Text('OCR failed: $e')),
-                                          );
-                                        } finally {
-                                          if (mounted) {
+                              Text('Page ${page.order + 1}',
+                                  style: Theme.of(context).textTheme.titleMedium),
+                              if (page.ocrText != null) ...[
+                                const SizedBox(height: 8),
+                                Text(
+                                  page.ocrText!,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ],
+                              const SizedBox(height: 8),
+                              Wrap(
+                                spacing: 8,
+                                runSpacing: 8,
+                                children: [
+                                  FilledButton.tonalIcon(
+                                    onPressed: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (_) => DocumentEditorPage(
+                                            documentId: widget.documentId,
+                                            page: page,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                    icon: const Icon(Icons.draw_rounded, size: 18),
+                                    label: const Text('Sign'),
+                                  ),
+                                  FilledButton.tonalIcon(
+                                    onPressed: _ocrLoadingPageIds
+                                            .contains(page.pageId)
+                                        ? null
+                                        : () async {
+                                            await HapticFeedback.selectionClick();
                                             setState(() {
-                                              _ocrLoadingPageIds
-                                                  .remove(page.pageId);
+                                              _ocrLoadingPageIds.add(page.pageId);
                                             });
-                                          }
-                                        }
-                                      },
-                                icon: _ocrLoadingPageIds.contains(page.pageId)
-                                    ? const SizedBox(
-                                        width: 14,
-                                        height: 14,
-                                        child: CircularProgressIndicator(
-                                            strokeWidth: 2),
-                                      )
-                                    : const Icon(Icons.auto_awesome_rounded,
-                                        size: 18),
-                                label: const Text('Run OCR'),
+                                            try {
+                                              await repo.performOcr(
+                                                  widget.documentId, page.pageId);
+                                              if (!mounted) return;
+                                              ScaffoldMessenger.of(this.context)
+                                                  .showSnackBar(
+                                                SnackBar(
+                                                  content: Text(
+                                                      'OCR complete for Page ${page.order + 1}'),
+                                                ),
+                                              );
+                                            } catch (e) {
+                                              if (!mounted) return;
+                                              ScaffoldMessenger.of(this.context)
+                                                  .showSnackBar(
+                                                SnackBar(
+                                                    content:
+                                                        Text('OCR failed: $e')),
+                                              );
+                                            } finally {
+                                              if (mounted) {
+                                                setState(() {
+                                                  _ocrLoadingPageIds
+                                                      .remove(page.pageId);
+                                                });
+                                              }
+                                            }
+                                          },
+                                    icon: _ocrLoadingPageIds.contains(page.pageId)
+                                        ? const SizedBox(
+                                            width: 14,
+                                            height: 14,
+                                            child: CircularProgressIndicator(
+                                                strokeWidth: 2),
+                                          )
+                                        : const Icon(Icons.auto_awesome_rounded,
+                                            size: 18),
+                                    label: const Text('Run OCR'),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               );
             },
@@ -306,54 +312,61 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setSheetState) {
-            return Padding(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Add to Collection',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+            return SafeArea(
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Add to Collection',
+                            style:
+                                TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        RadioListTile<String?>(
+                          contentPadding: EdgeInsets.zero,
+                          title: const Text('No collection'),
+                          value: null,
+                          groupValue: selectedCollectionId,
+                          onChanged: (value) => setSheetState(() {
+                            selectedCollectionId = value;
+                          }),
+                        ),
+                        ...collections.map(
+                          (collection) => RadioListTile<String?>(
+                            contentPadding: EdgeInsets.zero,
+                            title: Text(collection.name),
+                            value: collection.collectionId,
+                            groupValue: selectedCollectionId,
+                            onChanged: (value) => setSheetState(() {
+                              selectedCollectionId = value;
+                            }),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        SizedBox(
+                          width: double.infinity,
+                          child: FilledButton(
+                            onPressed: () => Navigator.of(context).pop(
+                              <String, Object?>{
+                                'saved': true,
+                                'collectionId': selectedCollectionId,
+                              },
+                            ),
+                            child: const Text('Save'),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 8),
-                  RadioListTile<String?>(
-                    contentPadding: EdgeInsets.zero,
-                    title: const Text('No collection'),
-                    value: null,
-                    groupValue: selectedCollectionId,
-                    onChanged: (value) => setSheetState(() {
-                      selectedCollectionId = value;
-                    }),
-                  ),
-                  ...collections.map(
-                    (collection) => RadioListTile<String?>(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(collection.name),
-                      value: collection.collectionId,
-                      groupValue: selectedCollectionId,
-                      onChanged: (value) => setSheetState(() {
-                        selectedCollectionId = value;
-                      }),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  SizedBox(
-                    width: double.infinity,
-                    child: FilledButton(
-                      onPressed: () => Navigator.of(context).pop(
-                        <String, Object?>{
-                          'saved': true,
-                          'collectionId': selectedCollectionId,
-                        },
-                      ),
-                      child: const Text('Save'),
-                    ),
-                  ),
-                ],
+                ),
               ),
             );
           },

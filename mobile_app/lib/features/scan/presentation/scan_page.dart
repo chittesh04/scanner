@@ -415,56 +415,59 @@ class _BottomControlBar extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: SafeArea(
-        child: Container(
-          margin: const EdgeInsets.all(12),
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-          decoration: BoxDecoration(
-            color: Colors.black.withValues(alpha: 0.55),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Row(
-                  children: [
-                    const Text('Auto', style: TextStyle(color: Colors.white)),
-                    Switch(
-                      value: autoMode,
-                      onChanged: isBusy
-                          ? null
-                          : (enabled) {
-                              HapticFeedback.selectionClick();
-                              onAutoModeToggle(enabled);
-                            },
-                    ),
-                  ],
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 600),
+          child: Container(
+            margin: const EdgeInsets.all(12),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: BoxDecoration(
+              color: Colors.black.withValues(alpha: 0.55),
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      const Text('Auto', style: TextStyle(color: Colors.white)),
+                      Switch(
+                        value: autoMode,
+                        onChanged: isBusy
+                            ? null
+                            : (enabled) {
+                                HapticFeedback.selectionClick();
+                                onAutoModeToggle(enabled);
+                              },
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              IconButton(
-                icon: Icon(flashOn ? Icons.flash_on : Icons.flash_off,
-                    color: Colors.white),
-                onPressed: isBusy ? null : onFlashToggle,
-              ),
-              IconButton(
-                icon: const Icon(Icons.check_rounded, color: Colors.white),
-                onPressed: isBusy ? null : onDoneTap,
-              ),
-              const SizedBox(width: 8),
-              AnimatedScale(
-                scale: isBusy ? 0.96 : 1,
-                duration: const Duration(milliseconds: 120),
-                child: FloatingActionButton.small(
-                  heroTag: 'capture_fab',
-                  onPressed: isBusy
-                      ? null
-                      : () {
-                          HapticFeedback.mediumImpact();
-                          onCaptureTap();
-                        },
-                  child: const Icon(Icons.camera_alt),
+                IconButton(
+                  icon: Icon(flashOn ? Icons.flash_on : Icons.flash_off,
+                      color: Colors.white),
+                  onPressed: isBusy ? null : onFlashToggle,
                 ),
-              ),
-            ],
+                IconButton(
+                  icon: const Icon(Icons.check_rounded, color: Colors.white),
+                  onPressed: isBusy ? null : onDoneTap,
+                ),
+                const SizedBox(width: 8),
+                AnimatedScale(
+                  scale: isBusy ? 0.96 : 1,
+                  duration: const Duration(milliseconds: 120),
+                  child: FloatingActionButton.small(
+                    heroTag: 'capture_fab',
+                    onPressed: isBusy
+                        ? null
+                        : () {
+                            HapticFeedback.mediumImpact();
+                            onCaptureTap();
+                          },
+                    child: const Icon(Icons.camera_alt),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
