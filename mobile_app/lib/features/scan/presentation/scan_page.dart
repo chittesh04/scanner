@@ -178,6 +178,12 @@ class _ScanPageState extends ConsumerState<ScanPage>
       final file = await controller.takePicture();
       final bytes = await file.readAsBytes();
 
+      // Remove the flash overlay before the heavy processing starts
+      // so the user sees the camera preview is paused, not a white screen.
+      if (mounted) {
+        setState(() => _flashOverlayVisible = false);
+      }
+
       final output =
           await ref.read(scanControllerProvider.notifier).processCapture(
                 documentId: widget.documentId,
@@ -193,9 +199,7 @@ class _ScanPageState extends ConsumerState<ScanPage>
       final repository = ref.read(documentRepositoryProvider);
       await repository.addPage(widget.documentId, output);
 
-      if (!mounted) {
-        return;
-      }
+      if (!mounted) return;
 
       final pageCount = output.pages.length;
       ScaffoldMessenger.of(context).showSnackBar(
@@ -210,12 +214,14 @@ class _ScanPageState extends ConsumerState<ScanPage>
         );
       }
     } finally {
+      // Only restart the stream AFTER everything is done.
+      // This prevents flooding the persistent isolate with edge detection
+      // requests while it's still processing the capture.
       if (mounted) {
-        setState(() => _flashOverlayVisible = false);
-      }
-      await Future<void>.delayed(const Duration(milliseconds: 120));
-      if (mounted) {
-        setState(() => _isProcessingCapture = false);
+        setState(() {
+          _isProcessingCapture = false;
+          _flashOverlayVisible = false;
+        });
         await _startImageStream();
       }
     }
