@@ -67,6 +67,12 @@ class _ScanPageState extends ConsumerState<ScanPage>
 
       await controller.initialize();
       await controller.setFocusMode(FocusMode.auto);
+
+      if (!mounted) {
+        await controller.dispose();
+        return;
+      }
+
       _cameraController = controller;
       _cameraError = null;
 
@@ -83,6 +89,8 @@ class _ScanPageState extends ConsumerState<ScanPage>
   }
 
   Future<void> _startImageStream() async {
+    if (!mounted) return;
+    
     final controller = _cameraController;
     if (controller == null ||
         !controller.value.isInitialized ||
@@ -208,8 +216,8 @@ class _ScanPageState extends ConsumerState<ScanPage>
       await Future<void>.delayed(const Duration(milliseconds: 120));
       if (mounted) {
         setState(() => _isProcessingCapture = false);
+        await _startImageStream();
       }
-      await _startImageStream();
     }
   }
 
@@ -235,8 +243,17 @@ class _ScanPageState extends ConsumerState<ScanPage>
       );
     }
 
-    return Scaffold(
-      body: Stack(
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+        await _stopImageStream();
+        if (context.mounted) {
+          Navigator.of(context).pop(result);
+        }
+      },
+      child: Scaffold(
+        body: Stack(
         fit: StackFit.expand,
         children: [
           _CameraPreviewLayer(
@@ -278,15 +295,18 @@ class _ScanPageState extends ConsumerState<ScanPage>
             onAutoModeToggle: (enabled) =>
                 ref.read(scanControllerProvider.notifier).setAutoMode(enabled),
             onFlashToggle: _toggleFlash,
-            onDoneTap: () {
+            onDoneTap: () async {
               HapticFeedback.selectionClick();
-              Navigator.of(context).maybePop();
+              await _stopImageStream();
+              if (context.mounted) {
+                Navigator.of(context).maybePop();
+              }
             },
             onCaptureTap: _capture,
           ),
         ],
       ),
-    );
+    ));
   }
 }
 

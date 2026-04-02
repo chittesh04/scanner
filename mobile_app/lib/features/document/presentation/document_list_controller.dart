@@ -74,10 +74,25 @@ final filteredDocumentsProvider =
           .toList(growable: false);
     }
 
-    return items
-        .where((document) => document.title.toLowerCase().contains(query))
-        .map((document) => SearchMatchModel(document: document))
-        .toList(growable: false);
+    final results = <SearchMatchModel>[];
+    for (final document in items) {
+      final titleMatch = document.title.toLowerCase().contains(query);
+      final ocrSnippet = document.ocrSnippet?.toLowerCase() ?? '';
+      final ocrMatch = ocrSnippet.contains(query);
+
+      if (titleMatch || ocrMatch) {
+        String? preview;
+        if (ocrMatch && document.ocrSnippet != null) {
+          // Show context around the match in the OCR text.
+          final idx = ocrSnippet.indexOf(query);
+          final start = (idx - 20).clamp(0, ocrSnippet.length);
+          final end = (idx + query.length + 40).clamp(0, document.ocrSnippet!.length);
+          preview = '${start > 0 ? '...' : ''}${document.ocrSnippet!.substring(start, end)}${end < document.ocrSnippet!.length ? '...' : ''}';
+        }
+        results.add(SearchMatchModel(document: document, preview: preview));
+      }
+    }
+    return results;
   });
 });
 

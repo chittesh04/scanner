@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:smartscan_services/security/encryption_service.dart';
 import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan_services/background_tasks/work_manager_dispatcher.dart';
 import 'package:smartscan_database/database_manager.dart';
@@ -27,10 +26,8 @@ final signatureRepositoryProvider = Provider<SignatureRepository>((ref) {
 
 final databaseManagerProvider = Provider<DatabaseManager>((_) => databaseManager);
 
-final encryptionProvider = Provider<EncryptionService>((_) => EncryptionService());
-
-final fileStorageProvider = Provider<FileStorageServiceImpl>((ref) {
-  return FileStorageServiceImpl(ref.watch(encryptionProvider));
+final fileStorageProvider = Provider<FileStorageServiceImpl>((_) {
+  return FileStorageServiceImpl();
 });
 
 final scanPipelineProvider = Provider<ScanPipeline>((ref) {

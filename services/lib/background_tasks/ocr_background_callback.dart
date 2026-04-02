@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:cryptography/cryptography.dart';
 import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_database/isar_schema.dart';
-import 'package:smartscan_services/security/encryption_service.dart';
 import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 import 'package:workmanager/workmanager.dart';
@@ -37,8 +36,7 @@ Future<bool> _handleOcrIndexTask(Map<String, dynamic>? inputData) async {
 
   final isar = await DatabaseManager.openInstance();
 
-  final encryptionService = EncryptionService();
-  final fileStorage = FileStorageServiceImpl(encryptionService);
+  final fileStorage = FileStorageServiceImpl();
   final ocrPipeline = OcrServiceImpl(fileStorage);
 
   try {
@@ -103,6 +101,9 @@ Future<bool> _handleOcrIndexTask(Map<String, dynamic>? inputData) async {
     return true;
   } finally {
     await ocrPipeline.dispose();
-    await DatabaseManager.instance.close();
+    // NOTE: Do NOT close the shared DatabaseManager instance here.
+    // If the background task runs while the app is in the foreground,
+    // closing Isar would kill all active UI streams (watchDocuments, etc).
+    // The OS will reclaim resources when the isolate is terminated.
   }
 }

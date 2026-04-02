@@ -7,6 +7,7 @@ class DocumentSummary {
     required this.isStarred,
     this.collectionId,
     this.thumbnailImagePath,
+    this.ocrSnippet,
   });
 
   final String documentId;
@@ -16,4 +17,8 @@ class DocumentSummary {
   final bool isStarred;
   final String? collectionId;
   final String? thumbnailImagePath;
+
+  /// First ~200 characters of concatenated OCR text across all pages.
+  /// Used for full-text search from the document list.
+  final String? ocrSnippet;
 }

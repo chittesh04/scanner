@@ -7,8 +7,10 @@ abstract interface class DocumentRepository {
   Stream<List<DocumentSummary>> watchDocuments();
   Stream<Document?> watchDocument(String documentId);
   Future<String> createDocument(String title);
+  Future<void> updateTitle(String documentId, String title);
   Future<void> deleteDocument(String documentId);
   Future<void> deleteDocuments(List<String> documentIds);
+  Future<void> deletePage(String documentId, String pageId);
   Future<void> reorderPages(String documentId, List<String> orderedPageIds);
   Future<void> addPage(String documentId, ScanPipelineOutput scanOutput);
   Future<void> performOcr(String documentId, String pageId);

@@ -33,6 +33,7 @@
       "dependencies": [
         "isar",
         "isar_flutter_libs",
+        "path",
         "path_provider",
         "smartscan_core_engine",
         "smartscan_models",

@@ -130,6 +130,21 @@ class DocumentRepositoryImpl implements DocumentRepository {
   }
 
   @override
+  Future<void> updateTitle(String documentId, String title) async {
+    final doc = await _isar.documentEntitys
+        .filter()
+        .documentIdEqualTo(documentId)
+        .findFirst();
+    if (doc == null) return;
+
+    await _isar.writeTxn(() async {
+      doc.title = title.trim();
+      doc.updatedAt = DateTime.now();
+      await _isar.documentEntitys.put(doc);
+    });
+  }
+
+  @override
   Future<void> deleteDocument(String documentId) async {
     final doc = await _isar.documentEntitys
         .filter()
@@ -186,6 +201,44 @@ class DocumentRepositoryImpl implements DocumentRepository {
         final docDir = Directory(p.join(root.path, id));
         if (await docDir.exists()) await docDir.delete(recursive: true);
       }
+    } catch (_) {}
+  }
+
+  @override
+  Future<void> deletePage(String documentId, String pageId) async {
+    final page = await _isar.pageEntitys
+        .filter()
+        .pageIdEqualTo(pageId)
+        .findFirst();
+    if (page == null) return;
+
+    // Delete associated OCR blocks.
+    await page.ocrBlocks.load();
+    final ocrBlockIds = page.ocrBlocks.map((b) => b.id).toList();
+
+    await _isar.writeTxn(() async {
+      await _isar.ocrBlockEntitys.deleteAll(ocrBlockIds);
+      await _isar.pageEntitys.delete(page.id);
+
+      // Update document's updatedAt.
+      final doc = await _isar.documentEntitys
+          .filter()
+          .documentIdEqualTo(documentId)
+          .findFirst();
+      if (doc != null) {
+        doc.updatedAt = DateTime.now();
+        await _isar.documentEntitys.put(doc);
+      }
+    });
+
+    // Delete the physical image files.
+    try {
+      final dir = await getApplicationSupportDirectory();
+      final root = Directory(p.join(dir.path, 'smartscan_data'));
+      final rawFile = File(p.join(root.path, documentId, 'raw_$pageId.enc'));
+      final procFile = File(p.join(root.path, documentId, 'proc_$pageId.enc'));
+      if (await rawFile.exists()) await rawFile.delete();
+      if (await procFile.exists()) await procFile.delete();
     } catch (_) {}
   }
 
@@ -423,6 +476,28 @@ class DocumentRepositoryImpl implements DocumentRepository {
 
     await doc.tags.load();
 
+    // Build OCR snippet for full-text search (first ~200 chars).
+    String? ocrSnippet;
+    final pages = await _isar.pageEntitys
+        .filter()
+        .documentIdEqualTo(doc.documentId)
+        .sortByOrder()
+        .findAll();
+    final snippetBuffer = StringBuffer();
+    for (final page in pages) {
+      await page.ocrBlocks.load();
+      for (final block in page.ocrBlocks) {
+        if (snippetBuffer.length >= 200) break;
+        if (snippetBuffer.isNotEmpty) snippetBuffer.write(' ');
+        snippetBuffer.write(block.text);
+      }
+      if (snippetBuffer.length >= 200) break;
+    }
+    if (snippetBuffer.isNotEmpty) {
+      final full = snippetBuffer.toString();
+      ocrSnippet = full.length > 200 ? full.substring(0, 200) : full;
+    }
+
     return DocumentSummary(
       documentId: doc.documentId,
       title: doc.title,
@@ -431,6 +506,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
       isStarred: doc.tags.any((tag) => tag.name == _starredTag),
       collectionId: doc.collectionId,
       thumbnailImagePath: firstPage?.processedImagePath ?? firstPage?.rawImagePath,
+      ocrSnippet: ocrSnippet,
     );
   }
 

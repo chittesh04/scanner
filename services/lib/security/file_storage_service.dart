@@ -8,13 +8,7 @@ import 'package:smartscan_services/security/encryption_service.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 
 class FileStorageServiceImpl implements SecureStoragePort {
-  FileStorageServiceImpl(this._encryptionService);
-
-  final EncryptionService _encryptionService;
-  
-  // In production, this key should be retrieved from secure storage (e.g., flutter_secure_storage)
-  // and sealed with biometric authentication.
-  static final _mockKey = SecretKey([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]);
+  FileStorageServiceImpl();
 
   Future<Directory> _root() async {
     final dir = await getApplicationSupportDirectory();
