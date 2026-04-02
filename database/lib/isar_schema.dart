@@ -42,6 +42,7 @@ class PageEntity {
 
   @Index(unique: true)
   late String pageId;
+  @Index()
   late String documentId;
   late int order;
   late String rawImagePath;

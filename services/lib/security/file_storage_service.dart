@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:isolate';
 import 'dart:typed_data';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
@@ -52,14 +53,22 @@ class FileStorageServiceImpl implements SecureStoragePort {
   }
 
   Future<void> writeEncrypted(File file, Uint8List data) async {
-    final box = await _encryptionService.encrypt(data, _mockKey);
-    final encodedBytes = EncryptionService.encodeSecretBox(box);
+    final encodedBytes = await Isolate.run(() async {
+      final svc = EncryptionService();
+      final key = SecretKey(const [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]);
+      final box = await svc.encrypt(data, key);
+      return EncryptionService.encodeSecretBox(box);
+    });
     await file.writeAsBytes(encodedBytes, flush: true);
   }
 
   Future<Uint8List> readEncrypted(File file) async {
     final encodedBytes = await file.readAsBytes();
-    final box = EncryptionService.decodeSecretBox(encodedBytes);
-    return _encryptionService.decrypt(box, _mockKey);
+    return Isolate.run(() async {
+      final svc = EncryptionService();
+      final key = SecretKey(const [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]);
+      final box = EncryptionService.decodeSecretBox(encodedBytes);
+      return await svc.decrypt(box, key);
+    });
   }
 }

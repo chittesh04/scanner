@@ -50,12 +50,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
         .collectionIdEqualTo(collectionId)
         .watch(fireImmediately: true)
         .asyncMap((entities) async {
-      final output = <DocumentSummary>[];
-      for (final doc in entities) {
-        output.add(await _mapToSummary(doc));
-      }
-      output.sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
-      return output;
+      final output = await Future.wait(entities.map(_mapToSummary));
+      return output..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
     });
   }
 
@@ -66,16 +62,15 @@ class DocumentRepositoryImpl implements DocumentRepository {
         .collectionIdIsNull()
         .watch(fireImmediately: true)
         .asyncMap((entities) async {
-      final output = <DocumentSummary>[];
-      for (final doc in entities) {
+      final summaries = await Future.wait(entities.map((doc) async {
         await doc.tags.load();
         final uiTags = doc.tags.where((tag) => tag.name != _starredTag);
-        if (uiTags.isEmpty) {
-          output.add(await _mapToSummary(doc));
-        }
-      }
-      output.sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
-      return output;
+        if (uiTags.isEmpty) return await _mapToSummary(doc);
+        return null;
+      }));
+      
+      final output = summaries.whereType<DocumentSummary>().toList();
+      return output..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
     });
   }
 
@@ -397,11 +392,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
         .where()
         .watch(fireImmediately: true)
         .asyncMap((entities) async {
-      final output = <DocumentSummary>[];
-      for (final doc in entities) {
-        output.add(await _mapToSummary(doc));
-      }
-      return output;
+      final output = await Future.wait(entities.map(_mapToSummary));
+      return output..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
     });
   }
 
