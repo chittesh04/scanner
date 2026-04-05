@@ -110,36 +110,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "camera",
-      "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/camera-0.11.4",
-      "packageUri": "lib/",
-      "languageVersion": "3.9"
-    },
-    {
-      "name": "camera_android_camerax",
-      "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/camera_android_camerax-0.6.30",
-      "packageUri": "lib/",
-      "languageVersion": "3.9"
-    },
-    {
-      "name": "camera_avfoundation",
-      "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/camera_avfoundation-0.9.23+2",
-      "packageUri": "lib/",
-      "languageVersion": "3.9"
-    },
-    {
-      "name": "camera_platform_interface",
-      "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/camera_platform_interface-2.12.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
-      "name": "camera_web",
-      "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/camera_web-0.3.5+3",
-      "packageUri": "lib/",
-      "languageVersion": "3.8"
-    },
-    {
       "name": "change_case",
       "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/change_case-2.2.0",
       "packageUri": "lib/",
@@ -328,6 +298,12 @@
     {
       "name": "google_mlkit_commons",
       "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/google_mlkit_commons-0.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "google_mlkit_document_scanner",
+      "rootUri": "file:///C:/Users/chitt/AppData/Local/Pub/Cache/hosted/pub.dev/google_mlkit_document_scanner-0.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },

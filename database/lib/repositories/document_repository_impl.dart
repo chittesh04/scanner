@@ -14,11 +14,10 @@ import 'package:smartscan_core_engine/core_engine.dart';
 import 'package:uuid/uuid.dart';
 
 class DocumentRepositoryImpl implements DocumentRepository {
-  DocumentRepositoryImpl(this._dbManager, this._ocrPipeline, {this.onOcrRequested});
+  DocumentRepositoryImpl(this._dbManager, this._ocrPipeline);
 
   final DatabaseManager _dbManager;
   final OcrPipeline _ocrPipeline;
-  final void Function(String documentId)? onOcrRequested;
   final _uuid = const Uuid();
   static const _starredTag = '_starred';
 
@@ -44,7 +43,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
   }
 
   @override
-  Stream<List<DocumentSummary>> watchDocumentsByCollection(String collectionId) {
+  Stream<List<DocumentSummary>> watchDocumentsByCollection(
+      String collectionId) {
     return _isar.documentEntitys
         .filter()
         .collectionIdEqualTo(collectionId)
@@ -68,7 +68,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
         if (uiTags.isEmpty) return await _mapToSummary(doc);
         return null;
       }));
-      
+
       final output = summaries.whereType<DocumentSummary>().toList();
       return output..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
     });
@@ -176,7 +176,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
         .filter()
         .anyOf(documentIds, (q, id) => q.documentIdEqualTo(id))
         .findAll();
-    
+
     final pageIsarIds = pages.map((e) => e.id).toList();
 
     // Find all OCR blocks for these pages
@@ -206,10 +206,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
 
   @override
   Future<void> deletePage(String documentId, String pageId) async {
-    final page = await _isar.pageEntitys
-        .filter()
-        .pageIdEqualTo(pageId)
-        .findFirst();
+    final page =
+        await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
     if (page == null) return;
 
     // Delete associated OCR blocks.
@@ -235,8 +233,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
     try {
       final dir = await getApplicationSupportDirectory();
       final root = Directory(p.join(dir.path, 'smartscan_data'));
-      final rawFile = File(p.join(root.path, documentId, 'raw_$pageId.enc'));
-      final procFile = File(p.join(root.path, documentId, 'proc_$pageId.enc'));
+      final rawFile = File(p.join(root.path, documentId, 'raw_$pageId.jpg'));
+      final procFile = File(p.join(root.path, documentId, 'proc_$pageId.jpg'));
       if (await rawFile.exists()) await rawFile.delete();
       if (await procFile.exists()) await procFile.delete();
     } catch (_) {}
@@ -295,17 +293,15 @@ class DocumentRepositoryImpl implements DocumentRepository {
         await _isar.documentEntitys.put(doc);
       }
     });
-
-    if (onOcrRequested != null) {
-      onOcrRequested!(documentId);
-    }
   }
 
   @override
-  Future<void> updatePageSignature(String documentId, String pageId, double x, double y, double scale) async {
-    final page = await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
+  Future<void> updatePageSignature(String documentId, String pageId, double x,
+      double y, double scale) async {
+    final page =
+        await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
     if (page == null) return;
-    
+
     await _isar.writeTxn(() async {
       page.hasSignature = true;
       page.signatureX = x;
@@ -318,9 +314,10 @@ class DocumentRepositoryImpl implements DocumentRepository {
 
   @override
   Future<void> removePageSignature(String documentId, String pageId) async {
-    final page = await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
+    final page =
+        await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
     if (page == null) return;
-    
+
     await _isar.writeTxn(() async {
       page.hasSignature = false;
       page.signatureX = null;
@@ -337,33 +334,51 @@ class DocumentRepositoryImpl implements DocumentRepository {
         await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
     if (page == null) return;
 
-    final result = await _ocrPipeline.recognizeText(page.processedImagePath);
-
+    // 1. Mark as processing
     await _isar.writeTxn(() async {
-      // Clear old blocks
-      await page.ocrBlocks.load();
-      await _isar.ocrBlockEntitys
-          .deleteAll(page.ocrBlocks.map((e) => e.id).toList());
-      page.ocrBlocks.clear();
-
-      for (final word in result.words) {
-        final block = OcrBlockEntity()
-          ..pageId = pageId
-          ..text = word.text
-          ..left = word.left
-          ..top = word.top
-          ..right = word.right
-          ..bottom = word.bottom
-          ..languageCode = result.detectedLanguages.firstOrNull ?? 'en';
-
-        await _isar.ocrBlockEntitys.put(block);
-        page.ocrBlocks.add(block);
-      }
-
-      await page.ocrBlocks.save();
-      page.updatedAt = DateTime.now();
+      page.ocrStatus = OcrStatus.processing;
       await _isar.pageEntitys.put(page);
     });
+
+    try {
+      final result = await _ocrPipeline.recognizeText(page.processedImagePath);
+
+      // 2. Save results
+      await _isar.writeTxn(() async {
+        // Clear old blocks
+        await page.ocrBlocks.load();
+        await _isar.ocrBlockEntitys
+            .deleteAll(page.ocrBlocks.map((e) => e.id).toList());
+        page.ocrBlocks.clear();
+
+        for (final word in result.words) {
+          final block = OcrBlockEntity()
+            ..pageId = pageId
+            ..text = word.text
+            ..left = word.left
+            ..top = word.top
+            ..right = word.right
+            ..bottom = word.bottom
+            ..languageCode = result.detectedLanguages.firstOrNull ?? 'en';
+
+          await _isar.ocrBlockEntitys.put(block);
+          page.ocrBlocks.add(block);
+        }
+
+        await page.ocrBlocks.save();
+        page.ocrStatus = OcrStatus.completed;
+        page.updatedAt = DateTime.now();
+        await _isar.pageEntitys.put(page);
+      });
+    } catch (_) {
+      // 3. Mark as failed on error
+      await _isar.writeTxn(() async {
+        page.ocrStatus = OcrStatus.failed;
+        page.updatedAt = DateTime.now();
+        await _isar.pageEntitys.put(page);
+      });
+      rethrow;
+    }
   }
 
   @override
@@ -467,7 +482,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
         .filter()
         .documentIdEqualTo(doc.documentId)
         .count();
-        
+
     final firstPage = await _isar.pageEntitys
         .filter()
         .documentIdEqualTo(doc.documentId)
@@ -505,7 +520,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
       updatedAt: doc.updatedAt,
       isStarred: doc.tags.any((tag) => tag.name == _starredTag),
       collectionId: doc.collectionId,
-      thumbnailImagePath: firstPage?.processedImagePath ?? firstPage?.rawImagePath,
+      thumbnailImagePath:
+          firstPage?.processedImagePath ?? firstPage?.rawImagePath,
       ocrSnippet: ocrSnippet,
     );
   }

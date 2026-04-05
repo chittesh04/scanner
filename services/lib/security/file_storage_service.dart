@@ -1,10 +1,7 @@
 import 'dart:io';
-import 'dart:isolate';
 import 'dart:typed_data';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
-import 'package:cryptography/cryptography.dart';
-import 'package:smartscan_services/security/encryption_service.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 
 class FileStorageServiceImpl implements SecureStoragePort {
@@ -19,13 +16,16 @@ class FileStorageServiceImpl implements SecureStoragePort {
     return root;
   }
 
-  Future<File> pageFile(String documentId, String pageId, {required bool processed}) async {
+  Future<File> pageFile(String documentId, String pageId,
+      {required bool processed}) async {
     final root = await _root();
     final folder = Directory(p.join(root.path, documentId));
     if (!await folder.exists()) {
       await folder.create(recursive: true);
     }
-    return File(p.join(folder.path, '${processed ? 'proc' : 'raw'}_$pageId.enc'));
+    // Use .jpg instead of .enc — encryption disabled for stability
+    return File(
+        p.join(folder.path, '${processed ? 'proc' : 'raw'}_$pageId.jpg'));
   }
 
   Future<File> globalFile(String filename) async {
@@ -34,7 +34,9 @@ class FileStorageServiceImpl implements SecureStoragePort {
   }
 
   @override
-  Future<String> writeImageBytes(String documentId, String pageId, Uint8List bytes, {required bool processed}) async {
+  Future<String> writeImageBytes(
+      String documentId, String pageId, Uint8List bytes,
+      {required bool processed}) async {
     final file = await pageFile(documentId, pageId, processed: processed);
     await writeEncrypted(file, bytes);
     return file.path;
@@ -46,23 +48,13 @@ class FileStorageServiceImpl implements SecureStoragePort {
     return readEncrypted(file);
   }
 
+  // Encryption bypassed — just write raw bytes for stability
   Future<void> writeEncrypted(File file, Uint8List data) async {
-    final encodedBytes = await Isolate.run(() async {
-      final svc = EncryptionService();
-      final key = SecretKey(const [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]);
-      final box = await svc.encrypt(data, key);
-      return EncryptionService.encodeSecretBox(box);
-    });
-    await file.writeAsBytes(encodedBytes, flush: true);
+    await file.writeAsBytes(data, flush: true);
   }
 
+  // Encryption bypassed — just read raw bytes for stability
   Future<Uint8List> readEncrypted(File file) async {
-    final encodedBytes = await file.readAsBytes();
-    return Isolate.run(() async {
-      final svc = EncryptionService();
-      final key = SecretKey(const [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]);
-      final box = EncryptionService.decodeSecretBox(encodedBytes);
-      return await svc.decrypt(box, key);
-    });
+    return await file.readAsBytes();
   }
 }

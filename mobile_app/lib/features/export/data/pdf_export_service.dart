@@ -37,7 +37,8 @@ class PdfExportService {
     String path = request.outputPath ?? '';
     if (path.isEmpty) {
       final root = await getTemporaryDirectory();
-      final sanitizedTitle = request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
+      final sanitizedTitle =
+          request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
       path = p.join(root.path, '${sanitizedTitle}_${request.documentId}.pdf');
     }
 
@@ -77,46 +78,53 @@ class PdfExportService {
 
       if (imageBytes == null) continue;
 
-      final longestSide = math.max(page.imageWidth, page.imageHeight);
-      if (longestSide > 1500) {
-        final decodedImage = img.decodeImage(imageBytes);
-        if (decodedImage != null) {
-          final resized = decodedImage.width > decodedImage.height 
-              ? img.copyResize(decodedImage, width: 1240)
-              : img.copyResize(decodedImage, height: 1500);
-          imageBytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
+      try {
+        final longestSide = math.max(page.imageWidth, page.imageHeight);
+        if (longestSide > 800) {
+          final decodedImage = img.decodeImage(imageBytes);
+          if (decodedImage != null) {
+            final resized = decodedImage.width > decodedImage.height
+                ? img.copyResize(decodedImage, width: 800)
+                : img.copyResize(decodedImage, height: 800);
+            imageBytes =
+                Uint8List.fromList(img.encodeJpg(resized, quality: 75));
+          }
         }
+
+        final image = pw.MemoryImage(imageBytes);
+
+        pdf.addPage(
+          pw.Page(
+            margin: pw.EdgeInsets.zero,
+            pageFormat: page.imageWidth > page.imageHeight
+                ? PdfPageFormat.a4.landscape
+                : PdfPageFormat.a4,
+            build: (pw.Context context) {
+              final pageWidth = context.page.pageFormat.availableWidth;
+              final pageHeight = context.page.pageFormat.availableHeight;
+
+              final scaleX = pageWidth / page.imageWidth;
+              final scaleY = pageHeight / page.imageHeight;
+
+              return pw.Stack(
+                children: [
+                  pw.Positioned.fill(
+                    child: pw.Image(image, fit: pw.BoxFit.contain),
+                  ),
+                  for (final block in page.ocrBlocks)
+                    _buildInvisibleTextBlock(block, scaleX, scaleY, pageHeight),
+                  if (page.signature != null && signatureImage != null)
+                    _buildPdfSignature(
+                        page.signature!, signatureImage, pageWidth, pageHeight),
+                ],
+              );
+            },
+          ),
+        );
+      } catch (e) {
+        // Skip this page if it fails — don't crash the entire export
+        continue;
       }
-
-      final image = pw.MemoryImage(imageBytes);
-
-      pdf.addPage(
-        pw.Page(
-          margin: pw.EdgeInsets.zero,
-          pageFormat: page.imageWidth > page.imageHeight 
-              ? PdfPageFormat.a4.landscape 
-              : PdfPageFormat.a4,
-          build: (pw.Context context) {
-            final pageWidth = context.page.pageFormat.availableWidth;
-            final pageHeight = context.page.pageFormat.availableHeight;
-
-            final scaleX = pageWidth / page.imageWidth;
-            final scaleY = pageHeight / page.imageHeight;
-
-            return pw.Stack(
-              children: [
-                pw.Positioned.fill(
-                  child: pw.Image(image, fit: pw.BoxFit.contain),
-                ),
-                for (final block in page.ocrBlocks)
-                  _buildInvisibleTextBlock(block, scaleX, scaleY, pageHeight),
-                if (page.signature != null && signatureImage != null)
-                  _buildPdfSignature(page.signature!, signatureImage, pageWidth, pageHeight),
-              ],
-            );
-          },
-        ),
-      );
     }
 
     final file = File(payload.outputPath);
@@ -131,9 +139,9 @@ class PdfExportService {
     double pageWidth,
     double pageHeight,
   ) {
-    final baseSignatureWidth = pageWidth * 0.25; 
+    final baseSignatureWidth = pageWidth * 0.25;
     final finalSignatureWidth = baseSignatureWidth * signature.scale;
-    final finalSignatureHeight = finalSignatureWidth / 2.0; 
+    final finalSignatureHeight = finalSignatureWidth / 2.0;
 
     final pdfLeft = signature.x * pageWidth;
     final pdfTop = signature.y * pageHeight;

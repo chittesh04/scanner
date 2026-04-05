@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:smartscan_services/security/file_storage_service.dart';
-import 'package:smartscan_services/background_tasks/work_manager_dispatcher.dart';
 import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_database/repositories/document_repository_impl.dart';
 import 'package:smartscan_models/repositories/document_repository.dart';
@@ -24,25 +23,30 @@ final signatureRepositoryProvider = Provider<SignatureRepository>((ref) {
   return SignatureRepositoryImpl(ref.watch(fileStorageProvider));
 });
 
-final databaseManagerProvider = Provider<DatabaseManager>((_) => databaseManager);
+final databaseManagerProvider =
+    Provider<DatabaseManager>((_) => databaseManager);
 
 final fileStorageProvider = Provider<FileStorageServiceImpl>((_) {
   return FileStorageServiceImpl();
 });
 
-final scanPipelineProvider = Provider<ScanPipeline>((ref) {
-  return ScanningServiceImpl(ref.watch(fileStorageProvider));
+/// ML Kit scanner service — used by ScanPage to launch the native scanner.
+final scannerServiceProvider = Provider<MlKitScannerService>((ref) {
+  return MlKitScannerService(ref.watch(fileStorageProvider));
 });
 
-final ocrPipelineProvider = Provider<OcrPipeline>((ref) => OcrServiceImpl(ref.watch(fileStorageProvider)));
+/// Kept for backward compatibility with ScanController.
+final scanPipelineProvider = Provider<ScanPipeline>((ref) {
+  return ref.watch(scannerServiceProvider);
+});
+
+final ocrPipelineProvider = Provider<OcrPipeline>(
+    (ref) => OcrServiceImpl(ref.watch(fileStorageProvider)));
 
 final documentRepositoryProvider = Provider<DocumentRepository>((ref) {
   return DocumentRepositoryImpl(
     ref.watch(databaseManagerProvider),
     ref.watch(ocrPipelineProvider),
-    onOcrRequested: (documentId) {
-      WorkManagerDispatcher.enqueueOcrIndexJob(documentId);
-    }
   );
 });
 

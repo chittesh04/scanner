@@ -74,13 +74,12 @@
       "version": "1.0.0+1",
       "dependencies": [
         "archive",
-        "camera",
         "collection",
         "cupertino_icons",
-        "ffi",
         "flutter",
         "flutter_riverpod",
         "freezed_annotation",
+        "google_mlkit_document_scanner",
         "image",
         "json_annotation",
         "logging",
@@ -302,11 +301,6 @@
       ]
     },
     {
-      "name": "ffi",
-      "version": "2.2.0",
-      "dependencies": []
-    },
-    {
       "name": "image",
       "version": "4.3.0",
       "dependencies": [
@@ -348,15 +342,10 @@
       ]
     },
     {
-      "name": "camera",
-      "version": "0.11.4",
+      "name": "google_mlkit_document_scanner",
+      "version": "0.3.0",
       "dependencies": [
-        "camera_android_camerax",
-        "camera_avfoundation",
-        "camera_platform_interface",
-        "camera_web",
-        "flutter",
-        "flutter_plugin_android_lifecycle"
+        "flutter"
       ]
     },
     {
@@ -898,6 +887,11 @@
       "dependencies": []
     },
     {
+      "name": "ffi",
+      "version": "2.2.0",
+      "dependencies": []
+    },
+    {
       "name": "url_launcher_platform_interface",
       "version": "2.3.2",
       "dependencies": [
@@ -1089,54 +1083,6 @@
       "dependencies": [
         "flutter",
         "path_provider_platform_interface"
-      ]
-    },
-    {
-      "name": "flutter_plugin_android_lifecycle",
-      "version": "2.0.34",
-      "dependencies": [
-        "flutter"
-      ]
-    },
-    {
-      "name": "camera_web",
-      "version": "0.3.5+3",
-      "dependencies": [
-        "camera_platform_interface",
-        "flutter",
-        "flutter_web_plugins",
-        "stream_transform",
-        "web"
-      ]
-    },
-    {
-      "name": "camera_platform_interface",
-      "version": "2.12.0",
-      "dependencies": [
-        "cross_file",
-        "flutter",
-        "plugin_platform_interface",
-        "stream_transform"
-      ]
-    },
-    {
-      "name": "camera_avfoundation",
-      "version": "0.9.23+2",
-      "dependencies": [
-        "camera_platform_interface",
-        "flutter",
-        "stream_transform"
-      ]
-    },
-    {
-      "name": "camera_android_camerax",
-      "version": "0.6.30",
-      "dependencies": [
-        "async",
-        "camera_platform_interface",
-        "flutter",
-        "meta",
-        "stream_transform"
       ]
     },
     {
@@ -1443,6 +1389,13 @@
         "clock",
         "meta",
         "path"
+      ]
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "version": "2.0.34",
+      "dependencies": [
+        "flutter"
       ]
     },
     {

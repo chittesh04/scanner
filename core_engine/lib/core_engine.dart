@@ -8,5 +8,5 @@ export 'document_pipeline/scan_pipeline.dart';
 export 'ocr_engine/ocr_pipeline.dart';
 
 // Export Implementations
-export 'document_pipeline/scanning_service_impl.dart';
+export 'document_pipeline/mlkit_scanner_service.dart';
 export 'ocr_engine/ocr_service_impl.dart';
