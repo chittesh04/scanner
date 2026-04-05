@@ -74,6 +74,11 @@ final filteredDocumentsProvider =
           .toList(growable: false);
     }
 
+    // Use SearchIndexService for deep full-text OCR search.
+    // Since search() is async but Riverpod's whenData is sync,
+    // we do a hybrid: filter by title immediately, and use the
+    // ocrSnippet for OCR matches (the snippet is populated from
+    // PageEntity.fullText which is indexed by Isar).
     final results = <SearchMatchModel>[];
     for (final document in items) {
       final titleMatch = document.title.toLowerCase().contains(query);
@@ -94,6 +99,16 @@ final filteredDocumentsProvider =
     }
     return results;
   });
+});
+
+/// Async deep search provider — queries Isar's fullText index via
+/// SearchIndexService for results that the in-memory ocrSnippet filter
+/// would miss (e.g. text beyond the 200-char snippet).
+final deepSearchProvider =
+    FutureProvider.family<Set<String>, String>((ref, query) async {
+  if (query.trim().isEmpty) return <String>{};
+  final searchIndex = ref.watch(searchIndexServiceProvider);
+  return searchIndex.search(query);
 });
 
 final toggleStarredProvider =

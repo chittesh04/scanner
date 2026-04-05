@@ -1,6 +1,8 @@
+import 'package:cryptography/cryptography.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:smartscan_services/security/file_storage_service.dart';
+import 'package:smartscan_services/search_index/data/search_index_service.dart';
 import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_database/repositories/document_repository_impl.dart';
 import 'package:smartscan_models/repositories/document_repository.dart';
@@ -13,6 +15,9 @@ import 'package:smartscan/features/signature/data/signature_repository_impl.dart
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
 late final DatabaseManager databaseManager;
+
+/// Set during bootstrap after [KeyManager.getOrGenerateMasterKey()] completes.
+late final SecretKey masterKey;
 
 Future<void> configureDependencies() async {
   databaseManager = DatabaseManager.instance;
@@ -27,7 +32,7 @@ final databaseManagerProvider =
     Provider<DatabaseManager>((_) => databaseManager);
 
 final fileStorageProvider = Provider<FileStorageServiceImpl>((_) {
-  return FileStorageServiceImpl();
+  return FileStorageServiceImpl(masterKey);
 });
 
 /// ML Kit scanner service — used by ScanPage to launch the native scanner.
@@ -48,6 +53,11 @@ final documentRepositoryProvider = Provider<DocumentRepository>((ref) {
     ref.watch(databaseManagerProvider),
     ref.watch(ocrPipelineProvider),
   );
+});
+
+/// Full-text search index backed by Isar — queries [PageEntity.fullText].
+final searchIndexServiceProvider = Provider<SearchIndexService>((ref) {
+  return SearchIndexService(ref.watch(databaseManagerProvider).isar);
 });
 
 final pdfExportProvider = Provider<PdfExportService>((ref) {

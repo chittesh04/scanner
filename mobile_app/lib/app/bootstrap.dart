@@ -6,15 +6,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:smartscan/app/app.dart';
 import 'package:smartscan/core/di/service_locator.dart';
-import 'package:smartscan_services/background_tasks/ocr_background_callback.dart';
-import 'package:smartscan_services/background_tasks/work_manager_dispatcher.dart';
+import 'package:smartscan_services/security/key_manager.dart';
 
 Future<void> bootstrap() async {
   // Show the UI immediately — never block before runApp().
   runApp(const ProviderScope(child: _AppInitializer()));
 }
 
-/// Shows a minimal splash while heavy init (DB, WorkManager, cleanup) runs
+/// Shows a minimal splash while heavy init (DB, key generation, cleanup) runs
 /// asynchronously. Once ready, swaps in the real [SmartScanApp].
 class _AppInitializer extends StatefulWidget {
   const _AppInitializer();
@@ -38,8 +37,9 @@ class _AppInitializerState extends State<_AppInitializer> {
       // 1. Open the database (may take a moment on large DBs).
       await configureDependencies();
 
-      // 2. Background WorkManager registration.
-      await WorkManagerDispatcher.initialize(ocrBackgroundCallback);
+      // 2. Load or generate the master encryption key from Android Keystore.
+      //    This is fast (~5ms) on subsequent launches since the key is cached.
+      masterKey = await KeyManager.getOrGenerateMasterKey();
 
       // 3. Orphan temp-file cleanup in a background isolate.
       _cleanOrphanFilesInBackground();

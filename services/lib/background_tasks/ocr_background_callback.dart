@@ -1,10 +1,11 @@
-import 'dart:ui';
 import 'dart:io';
+import 'dart:ui';
 import 'package:flutter/widgets.dart';
 import 'package:cryptography/cryptography.dart';
 import 'package:smartscan_database/database_manager.dart';
 import 'package:smartscan_database/isar_schema.dart';
 import 'package:smartscan_services/security/file_storage_service.dart';
+import 'package:smartscan_services/security/key_manager.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 import 'package:workmanager/workmanager.dart';
 import 'package:isar/isar.dart';
@@ -36,7 +37,8 @@ Future<bool> _handleOcrIndexTask(Map<String, dynamic>? inputData) async {
 
   final isar = await DatabaseManager.openInstance();
 
-  final fileStorage = FileStorageServiceImpl();
+  final masterKey = await KeyManager.getOrGenerateMasterKey();
+  final fileStorage = FileStorageServiceImpl(masterKey);
   final ocrPipeline = OcrServiceImpl(fileStorage);
 
   try {
@@ -81,7 +83,8 @@ Future<bool> _handleOcrIndexTask(Map<String, dynamic>? inputData) async {
 
           await page.ocrBlocks.save();
 
-        page.ocrStatus = OcrStatus.completed;
+          page.fullText = result.words.map((w) => w.text).join(' ');
+          page.ocrStatus = OcrStatus.completed;
           page.updatedAt = DateTime.now();
           await isar.pageEntitys.put(page);
         });
