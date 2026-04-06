@@ -9,7 +9,16 @@ class DatabaseManager {
   DatabaseManager._();
 
   Isar? _isar;
-  Isar get isar => _isar!;
+  Future<void>? _opening;
+  Isar get isar {
+    final instance = _isar;
+    if (instance == null || !instance.isOpen) {
+      throw StateError(
+        'DatabaseManager is not open. Call open() before accessing isar.',
+      );
+    }
+    return instance;
+  }
 
   static Future<Isar> openInstance() async {
     final manager = DatabaseManager.instance;
@@ -18,26 +27,40 @@ class DatabaseManager {
   }
 
   Future<void> open() async {
-    if (_isar != null && _isar!.isOpen) return;
+    final instance = _isar;
+    if (instance != null && instance.isOpen) return;
+    if (_opening != null) {
+      await _opening;
+      return;
+    }
 
-    final directory = await getApplicationDocumentsDirectory();
-    _isar = await Isar.open(
-      [
-        DocumentEntitySchema,
-        PageEntitySchema,
-        OcrBlockEntitySchema,
-        TagEntitySchema,
-        CollectionEntitySchema,
-      ],
-      directory: directory.path,
-      name: 'smartscan',
-      inspector: false,
-    );
+    _opening = () async {
+      final directory = await getApplicationDocumentsDirectory();
+      _isar = await Isar.open(
+        [
+          DocumentEntitySchema,
+          PageEntitySchema,
+          OcrBlockEntitySchema,
+          TagEntitySchema,
+          CollectionEntitySchema,
+        ],
+        directory: directory.path,
+        name: 'smartscan',
+        inspector: false,
+      );
+    }();
+
+    try {
+      await _opening;
+    } finally {
+      _opening = null;
+    }
   }
 
   Future<void> close() async {
-    if (_isar != null && _isar!.isOpen) {
-      await _isar!.close();
+    final instance = _isar;
+    if (instance != null && instance.isOpen) {
+      await instance.close();
       _isar = null;
     }
   }

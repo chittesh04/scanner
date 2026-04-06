@@ -10,7 +10,10 @@ import 'package:smartscan_core_engine/core_engine.dart';
 
 import 'package:smartscan/features/export/data/pdf_export_service.dart';
 import 'package:smartscan/features/export/data/docx_export_service.dart';
+import 'package:smartscan/features/export/data/txt_export_service.dart';
 import 'package:smartscan/features/export/data/xlsx_export_service.dart';
+import 'package:smartscan/features/export/data/zip_export_service.dart';
+import 'package:smartscan/features/document/domain/usecases/document_use_cases.dart';
 import 'package:smartscan/features/signature/data/signature_repository_impl.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
 
@@ -35,7 +38,7 @@ final fileStorageProvider = Provider<FileStorageServiceImpl>((_) {
   return FileStorageServiceImpl(masterKey);
 });
 
-/// ML Kit scanner service — used by ScanPage to launch the native scanner.
+/// ML Kit scanner service used by ScanPage to launch the native scanner.
 final scannerServiceProvider = Provider<MlKitScannerService>((ref) {
   return MlKitScannerService(ref.watch(fileStorageProvider));
 });
@@ -55,7 +58,98 @@ final documentRepositoryProvider = Provider<DocumentRepository>((ref) {
   );
 });
 
-/// Full-text search index backed by Isar — queries [PageEntity.fullText].
+final watchDocumentsUseCaseProvider = Provider<WatchDocumentsUseCase>((ref) {
+  return WatchDocumentsUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final fetchDocumentSummaryPageUseCaseProvider =
+    Provider<FetchDocumentSummaryPageUseCase>((ref) {
+  return FetchDocumentSummaryPageUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final watchDocumentUseCaseProvider = Provider<WatchDocumentUseCase>((ref) {
+  return WatchDocumentUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final watchCollectionsUseCaseProvider =
+    Provider<WatchCollectionsUseCase>((ref) {
+  return WatchCollectionsUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final watchInboxDocumentsUseCaseProvider =
+    Provider<WatchInboxDocumentsUseCase>((ref) {
+  return WatchInboxDocumentsUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final watchDocumentsByCollectionUseCaseProvider =
+    Provider<WatchDocumentsByCollectionUseCase>((ref) {
+  return WatchDocumentsByCollectionUseCase(
+      ref.watch(documentRepositoryProvider));
+});
+
+final createDocumentUseCaseProvider = Provider<CreateDocumentUseCase>((ref) {
+  return CreateDocumentUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final createCollectionUseCaseProvider =
+    Provider<CreateCollectionUseCase>((ref) {
+  return CreateCollectionUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final renameCollectionUseCaseProvider =
+    Provider<RenameCollectionUseCase>((ref) {
+  return RenameCollectionUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final deleteCollectionUseCaseProvider =
+    Provider<DeleteCollectionUseCase>((ref) {
+  return DeleteCollectionUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final assignDocumentCollectionUseCaseProvider =
+    Provider<AssignDocumentCollectionUseCase>((ref) {
+  return AssignDocumentCollectionUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final addScannedPagesUseCaseProvider = Provider<AddScannedPagesUseCase>((ref) {
+  return AddScannedPagesUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final updateDocumentTitleUseCaseProvider =
+    Provider<UpdateDocumentTitleUseCase>((ref) {
+  return UpdateDocumentTitleUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final deleteDocumentsUseCaseProvider = Provider<DeleteDocumentsUseCase>((ref) {
+  return DeleteDocumentsUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final deleteDocumentPageUseCaseProvider =
+    Provider<DeleteDocumentPageUseCase>((ref) {
+  return DeleteDocumentPageUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final reorderDocumentPagesUseCaseProvider =
+    Provider<ReorderDocumentPagesUseCase>((ref) {
+  return ReorderDocumentPagesUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final updateDocumentPageTextUseCaseProvider =
+    Provider<UpdateDocumentPageTextUseCase>((ref) {
+  return UpdateDocumentPageTextUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final setDocumentStarredUseCaseProvider =
+    Provider<SetDocumentStarredUseCase>((ref) {
+  return SetDocumentStarredUseCase(ref.watch(documentRepositoryProvider));
+});
+
+final performOcrForPageUseCaseProvider =
+    Provider<PerformOcrForPageUseCase>((ref) {
+  return PerformOcrForPageUseCase(ref.watch(documentRepositoryProvider));
+});
+
+/// Full-text search index backed by Isar and querying [PageEntity.fullText].
 final searchIndexServiceProvider = Provider<SearchIndexService>((ref) {
   return SearchIndexService(ref.watch(databaseManagerProvider).isar);
 });
@@ -73,4 +167,12 @@ final docxExportProvider = Provider<DocxExportService>((ref) {
 
 final xlsxExportProvider = Provider<XlsxExportService>((_) {
   return XlsxExportService();
+});
+
+final txtExportProvider = Provider<TxtExportService>((_) {
+  return TxtExportService();
+});
+
+final zipExportProvider = Provider<ZipExportService>((_) {
+  return ZipExportService();
 });

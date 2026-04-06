@@ -131,12 +131,20 @@ class _EncryptedImageState extends ConsumerState<EncryptedImage> {
       return const Center(child: Icon(Icons.broken_image, size: 48));
     }
 
-    return Image.memory(
-      _bytes!,
-      fit: widget.fit,
-      width: widget.width,
-      height: widget.height,
-      gaplessPlayback: true, // Prevent flicker during hero transitions.
+    final imageBytes = _bytes;
+    if (imageBytes == null) {
+      return const Center(child: Icon(Icons.broken_image, size: 48));
+    }
+
+    return RepaintBoundary(
+      child: Image.memory(
+        imageBytes,
+        fit: widget.fit,
+        width: widget.width,
+        height: widget.height,
+        filterQuality: FilterQuality.medium,
+        gaplessPlayback: true, // Prevent flicker during hero transitions.
+      ),
     );
   }
 }

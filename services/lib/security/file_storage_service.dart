@@ -1,11 +1,14 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:typed_data';
+
+import 'package:cryptography/cryptography.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
-import 'package:cryptography/cryptography.dart';
-import 'package:smartscan_services/security/encryption_service.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
+import 'package:smartscan_services/logging/services_logger.dart';
+import 'package:smartscan_services/security/encryption_service.dart';
 
 class FileStorageServiceImpl implements SecureStoragePort {
   FileStorageServiceImpl(this._masterKey);
@@ -21,8 +24,11 @@ class FileStorageServiceImpl implements SecureStoragePort {
     return root;
   }
 
-  Future<File> pageFile(String documentId, String pageId,
-      {required bool processed}) async {
+  Future<File> pageFile(
+    String documentId,
+    String pageId, {
+    required bool processed,
+  }) async {
     final root = await _root();
     final folder = Directory(p.join(root.path, documentId));
     if (!await folder.exists()) {
@@ -39,8 +45,11 @@ class FileStorageServiceImpl implements SecureStoragePort {
 
   @override
   Future<String> writeImageBytes(
-      String documentId, String pageId, Uint8List bytes,
-      {required bool processed}) async {
+    String documentId,
+    String pageId,
+    Uint8List bytes, {
+    required bool processed,
+  }) async {
     final file = await pageFile(documentId, pageId, processed: processed);
     await writeEncrypted(file, bytes);
     return file.path;
@@ -69,36 +78,42 @@ class FileStorageServiceImpl implements SecureStoragePort {
   /// Reads and decrypts a file. Uses graceful fallback + lazy re-encryption:
   ///
   /// 1. Try AES-GCM decryption (assumes encrypted file).
-  /// 2. On failure, assume it's an old unencrypted JPEG from Phase 1.
-  ///    Return raw bytes immediately so the UI doesn't lag.
-  /// 3. Fire-and-forget: re-encrypt the file in a background isolate
-  ///    so it becomes secure for future reads.
+  /// 2. On failure, assume it is an old unencrypted JPEG from earlier versions.
+  /// 3. Fire-and-forget: re-encrypt the file in a background isolate.
   Future<Uint8List> readEncrypted(File file) async {
     final fileBytes = await file.readAsBytes();
     final keyBytes = await _masterKey.extractBytes();
 
     try {
-      // 1. Try to decrypt (new encrypted file).
       return await Isolate.run(() async {
         final svc = EncryptionService();
         final key = SecretKey(keyBytes);
         final box = EncryptionService.decodeSecretBox(fileBytes);
-        return await svc.decrypt(box, key);
+        return svc.decrypt(box, key);
       });
-    } catch (_) {
-      // 2. Fallback: decryption failed → old unencrypted image.
-      //    Return raw bytes immediately for zero-lag UI.
+    } catch (error, stackTrace) {
+      ServicesLogger.warn(
+        'security',
+        'Encrypted read failed, falling back to legacy plaintext bytes',
+        error: error,
+        stackTrace: stackTrace,
+      );
 
-      // 3. Lazy re-encryption: fire-and-forget background isolate
-      //    to secure it for future reads.
       final filePath = file.path;
-      Isolate.run(() async {
+      unawaited(Isolate.run(() async {
         final svc = EncryptionService();
         final key = SecretKey(keyBytes);
         final box = await svc.encrypt(fileBytes, key);
         final encryptedBytes = EncryptionService.encodeSecretBox(box);
         await File(filePath).writeAsBytes(encryptedBytes, flush: true);
-      });
+      }).catchError((Object error, StackTrace stackTrace) {
+        ServicesLogger.error(
+          'security',
+          'Lazy re-encryption failed',
+          error: error,
+          stackTrace: stackTrace,
+        );
+      }));
 
       return fileBytes;
     }

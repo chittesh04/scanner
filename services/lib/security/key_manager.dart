@@ -21,12 +21,14 @@ class KeyManager {
   /// The key is cached in memory after the first call to avoid repeated
   /// Keystore lookups during the app session.
   static Future<SecretKey> getOrGenerateMasterKey() async {
-    if (_cachedKey != null) return _cachedKey!;
+    final cached = _cachedKey;
+    if (cached != null) return cached;
 
     final stored = await _storage.read(key: _storageKey);
     if (stored != null) {
-      _cachedKey = SecretKey(base64Decode(stored));
-      return _cachedKey!;
+      final restored = SecretKey(base64Decode(stored));
+      _cachedKey = restored;
+      return restored;
     }
 
     // First launch: generate a secure random 256-bit key.
@@ -35,18 +37,19 @@ class KeyManager {
     await _storage.write(key: _storageKey, value: base64Encode(keyBytes));
 
     _cachedKey = newKey;
-    return _cachedKey!;
+    return newKey;
   }
 
   /// Retrieves the cached key. Throws if [getOrGenerateMasterKey] hasn't
   /// been called yet (i.e. bootstrap hasn't completed).
   static SecretKey get currentKey {
-    if (_cachedKey == null) {
+    final cached = _cachedKey;
+    if (cached == null) {
       throw StateError(
         'KeyManager.getOrGenerateMasterKey() must be called during bootstrap '
         'before accessing currentKey.',
       );
     }
-    return _cachedKey!;
+    return cached;
   }
 }

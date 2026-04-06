@@ -18,8 +18,9 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
 
   void _onPanStart(DragStartDetails details) {
     setState(() {
-      _currentStroke = [details.localPosition];
-      _strokes.add(_currentStroke!);
+      final stroke = <Offset>[details.localPosition];
+      _currentStroke = stroke;
+      _strokes.add(stroke);
     });
   }
 
@@ -43,7 +44,7 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
 
     final recorder = ui.PictureRecorder();
     final canvas = Canvas(recorder);
-    
+
     if (_canvasSize.width > 0 && _canvasSize.height > 0) {
       canvas.scale(800 / _canvasSize.width, 400 / _canvasSize.height);
     }
@@ -69,7 +70,7 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
     if (byteData == null) return;
 
     final bytes = byteData.buffer.asUint8List();
-    
+
     // Save via repository
     await ref.read(signatureRepositoryProvider).saveSignature(bytes);
 
@@ -89,12 +90,12 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
         actions: [
           IconButton(
             tooltip: 'Clear',
-            icon: const Icon(Icons.clear_all_rounded), 
+            icon: const Icon(Icons.clear_all_rounded),
             onPressed: _clear,
           ),
           IconButton(
             tooltip: 'Save',
-            icon: const Icon(Icons.check_rounded), 
+            icon: const Icon(Icons.check_rounded),
             onPressed: _save,
           ),
         ],
@@ -117,13 +118,16 @@ class _SignaturePadPageState extends ConsumerState<SignaturePadPage> {
                 decoration: BoxDecoration(
                   color: Colors.white, // Draw on an explicitly white canvas
                   borderRadius: BorderRadius.circular(16),
-                  boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 10)],
+                  boxShadow: const [
+                    BoxShadow(color: Colors.black26, blurRadius: 10)
+                  ],
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: LayoutBuilder(
                     builder: (context, constraints) {
-                      _canvasSize = Size(constraints.maxWidth, constraints.maxHeight);
+                      _canvasSize =
+                          Size(constraints.maxWidth, constraints.maxHeight);
                       return GestureDetector(
                         onPanStart: _onPanStart,
                         onPanUpdate: _onPanUpdate,

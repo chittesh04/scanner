@@ -6,9 +6,11 @@ import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:smartscan_database/isar_schema.dart';
 import 'package:smartscan_database/database_manager.dart';
+import 'package:smartscan_database/logging/db_logger.dart';
 import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
 import 'package:smartscan_models/document_summary.dart';
+import 'package:smartscan_models/document_summary_page.dart';
 import 'package:smartscan_models/repositories/document_repository.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 import 'package:uuid/uuid.dart';
@@ -97,6 +99,58 @@ class DocumentRepositoryImpl implements DocumentRepository {
   }
 
   @override
+  Future<void> renameCollection(String collectionId, String newName) async {
+    final normalized = newName.trim();
+    if (normalized.isEmpty) {
+      throw ArgumentError('Collection name cannot be empty');
+    }
+    final collection = await _isar.collectionEntitys
+        .filter()
+        .collectionIdEqualTo(collectionId)
+        .findFirst();
+    if (collection == null) {
+      return;
+    }
+    final duplicate = await _isar.collectionEntitys
+        .filter()
+        .nameEqualTo(normalized, caseSensitive: false)
+        .findFirst();
+    if (duplicate != null && duplicate.collectionId != collectionId) {
+      throw StateError('Collection name already exists');
+    }
+
+    await _isar.writeTxn(() async {
+      collection.name = normalized;
+      await _isar.collectionEntitys.put(collection);
+    });
+  }
+
+  @override
+  Future<void> deleteCollection(String collectionId) async {
+    final collection = await _isar.collectionEntitys
+        .filter()
+        .collectionIdEqualTo(collectionId)
+        .findFirst();
+    if (collection == null) {
+      return;
+    }
+
+    final docs = await _isar.documentEntitys
+        .filter()
+        .collectionIdEqualTo(collectionId)
+        .findAll();
+
+    await _isar.writeTxn(() async {
+      for (final doc in docs) {
+        doc.collectionId = null;
+        doc.updatedAt = DateTime.now();
+        await _isar.documentEntitys.put(doc);
+      }
+      await _isar.collectionEntitys.delete(collection.id);
+    });
+  }
+
+  @override
   Future<void> assignDocumentToCollection(
       String documentId, String? collectionId) async {
     final document = await _isar.documentEntitys
@@ -146,12 +200,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
 
   @override
   Future<void> deleteDocument(String documentId) async {
-    final doc = await _isar.documentEntitys
-        .filter()
-        .documentIdEqualTo(documentId)
-        .findFirst();
-    if (doc == null) return;
-    await _isar.writeTxn(() => _isar.documentEntitys.delete(doc.id));
+    await deleteDocuments([documentId]);
   }
 
   @override
@@ -193,6 +242,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
       await _isar.pageEntitys.deleteAll(pageIsarIds);
       await _isar.documentEntitys.deleteAll(docIsarIds);
     });
+    DbLogger.info('Deleted ${docIsarIds.length} document(s) from Isar');
 
     try {
       final dir = await getApplicationSupportDirectory();
@@ -201,7 +251,13 @@ class DocumentRepositoryImpl implements DocumentRepository {
         final docDir = Directory(p.join(root.path, id));
         if (await docDir.exists()) await docDir.delete(recursive: true);
       }
-    } catch (_) {}
+    } catch (error, stackTrace) {
+      DbLogger.warn(
+        'Document storage cleanup failed for deleted documents',
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
   }
 
   @override
@@ -259,6 +315,11 @@ class DocumentRepositoryImpl implements DocumentRepository {
 
   @override
   Future<void> addPage(String documentId, ScanPipelineOutput scanOutput) async {
+    if (scanOutput.pages.isEmpty) {
+      DbLogger.warn('addPage called with empty scan output for $documentId');
+      return;
+    }
+
     final existingPages = await _isar.pageEntitys
         .filter()
         .documentIdEqualTo(documentId)
@@ -293,6 +354,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
         await _isar.documentEntitys.put(doc);
       }
     });
+
+    DbLogger.info('Added ${insertedPageIds.length} page(s) to $documentId');
   }
 
   @override
@@ -326,6 +389,66 @@ class DocumentRepositoryImpl implements DocumentRepository {
       page.updatedAt = DateTime.now();
       await _isar.pageEntitys.put(page);
     });
+  }
+
+  @override
+  Future<void> updatePageText(
+      String documentId, String pageId, String text) async {
+    final page =
+        await _isar.pageEntitys.filter().pageIdEqualTo(pageId).findFirst();
+    if (page == null) return;
+
+    final trimmed = text.trim();
+    await _isar.writeTxn(() async {
+      await page.ocrBlocks.load();
+      if (page.ocrBlocks.isNotEmpty) {
+        await _isar.ocrBlockEntitys
+            .deleteAll(page.ocrBlocks.map((b) => b.id).toList());
+        page.ocrBlocks.clear();
+        await page.ocrBlocks.save();
+      }
+      page.fullText = trimmed;
+      page.ocrStatus =
+          trimmed.isEmpty ? OcrStatus.pending : OcrStatus.completed;
+      page.updatedAt = DateTime.now();
+      await _isar.pageEntitys.put(page);
+
+      final doc = await _isar.documentEntitys
+          .filter()
+          .documentIdEqualTo(documentId)
+          .findFirst();
+      if (doc != null) {
+        doc.updatedAt = DateTime.now();
+        await _isar.documentEntitys.put(doc);
+      }
+    });
+  }
+
+  @override
+  Future<DocumentSummaryPage> fetchDocumentsPage({
+    int limit = 30,
+    DateTime? updatedBeforeCursor,
+  }) async {
+    final safeLimit = limit < 1 ? 1 : (limit > 100 ? 100 : limit);
+
+    final entities = updatedBeforeCursor == null
+        ? await _isar.documentEntitys.where().findAll()
+        : await _isar.documentEntitys
+            .filter()
+            .updatedAtLessThan(updatedBeforeCursor, include: false)
+            .findAll();
+    entities.sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
+
+    final hasMore = entities.length > safeLimit;
+    final slice = hasMore ? entities.sublist(0, safeLimit) : entities;
+    final mapped = await Future.wait<DocumentSummary>(slice.map(_mapToSummary));
+    final sorted = mapped..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
+
+    return DocumentSummaryPage(
+      items: sorted,
+      hasMore: hasMore,
+      nextCursor: hasMore && sorted.isNotEmpty ? sorted.last.updatedAt : null,
+    );
   }
 
   @override
@@ -371,13 +494,19 @@ class DocumentRepositoryImpl implements DocumentRepository {
         page.updatedAt = DateTime.now();
         await _isar.pageEntitys.put(page);
       });
-    } catch (_) {
+      DbLogger.info('OCR completed for page $pageId');
+    } catch (error, stackTrace) {
       // 3. Mark as failed on error
       await _isar.writeTxn(() async {
         page.ocrStatus = OcrStatus.failed;
         page.updatedAt = DateTime.now();
         await _isar.pageEntitys.put(page);
       });
+      DbLogger.error(
+        'OCR failed for page $pageId',
+        error: error,
+        stackTrace: stackTrace,
+      );
       rethrow;
     }
   }
@@ -492,7 +621,8 @@ class DocumentRepositoryImpl implements DocumentRepository {
 
     await doc.tags.load();
 
-    // Build OCR snippet for full-text search (first ~200 chars).
+    // Build OCR snippet from page.fullText (already indexed/denormalized).
+    // This avoids loading every page->ocrBlocks relation per list tile.
     String? ocrSnippet;
     final pages = await _isar.pageEntitys
         .filter()
@@ -501,11 +631,10 @@ class DocumentRepositoryImpl implements DocumentRepository {
         .findAll();
     final snippetBuffer = StringBuffer();
     for (final page in pages) {
-      await page.ocrBlocks.load();
-      for (final block in page.ocrBlocks) {
-        if (snippetBuffer.length >= 200) break;
+      final fullText = page.fullText?.trim();
+      if (fullText != null && fullText.isNotEmpty) {
         if (snippetBuffer.isNotEmpty) snippetBuffer.write(' ');
-        snippetBuffer.write(block.text);
+        snippetBuffer.write(fullText);
       }
       if (snippetBuffer.length >= 200) break;
     }
@@ -538,7 +667,12 @@ class DocumentRepositoryImpl implements DocumentRepository {
     final mappedPages = <DocumentPage>[];
     for (final page in pages) {
       await page.ocrBlocks.load();
-      final ocrText = page.ocrBlocks.map((b) => b.text).join(' ');
+      final ocrTextFromBlocks =
+          page.ocrBlocks.map((b) => b.text).join(' ').trim();
+      final manualOrIndexedText = page.fullText?.trim() ?? '';
+      final resolvedOcrText = manualOrIndexedText.isNotEmpty
+          ? manualOrIndexedText
+          : ocrTextFromBlocks;
 
       final ocrBlocks = page.ocrBlocks
           .map((b) => OcrBlock(
@@ -556,7 +690,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
         processedImagePath: page.processedImagePath,
         imageWidth: page.width,
         imageHeight: page.height,
-        ocrText: ocrText.isEmpty ? null : ocrText,
+        ocrText: resolvedOcrText.isEmpty ? null : resolvedOcrText,
         ocrBlocks: ocrBlocks,
         hasSignature: page.hasSignature,
         signatureX: page.signatureX,

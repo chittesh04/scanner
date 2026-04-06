@@ -1,57 +1,73 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smartscan/core/di/service_locator.dart';
+import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
 import 'package:smartscan_models/document_summary.dart';
 
 final documentListProvider = StreamProvider<List<DocumentSummary>>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.watchDocuments();
+  return ref.watch(watchDocumentsUseCaseProvider).call();
 });
 
 final documentCollectionsProvider =
     StreamProvider<List<DocumentCollection>>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.watchCollections();
+  return ref.watch(watchCollectionsUseCaseProvider).call();
 });
 
 final createCollectionProvider =
     Provider<Future<String> Function(String)>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.createCollection;
+  final useCase = ref.watch(createCollectionUseCaseProvider);
+  return useCase.call;
+});
+
+final renameCollectionProvider =
+    Provider<Future<void> Function(String, String)>((ref) {
+  final useCase = ref.watch(renameCollectionUseCaseProvider);
+  return useCase.call;
+});
+
+final deleteCollectionProvider = Provider<Future<void> Function(String)>((ref) {
+  final useCase = ref.watch(deleteCollectionUseCaseProvider);
+  return useCase.call;
 });
 
 final assignDocumentCollectionProvider =
     Provider<Future<void> Function(String, String?)>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.assignDocumentToCollection;
+  final useCase = ref.watch(assignDocumentCollectionUseCaseProvider);
+  return useCase.call;
 });
 
 final documentsByCollectionProvider =
     StreamProvider.family<List<DocumentSummary>, String>((ref, collectionId) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.watchDocumentsByCollection(collectionId);
+  return ref
+      .watch(watchDocumentsByCollectionUseCaseProvider)
+      .call(collectionId);
+});
+
+final documentProvider =
+    StreamProvider.family<Document?, String>((ref, documentId) {
+  return ref.watch(watchDocumentUseCaseProvider).call(documentId);
 });
 
 final inboxDocumentsProvider = StreamProvider<List<DocumentSummary>>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.watchInboxDocuments();
+  return ref.watch(watchInboxDocumentsUseCaseProvider).call();
 });
 
-class SearchMatchModel {
-  const SearchMatchModel({required this.document, this.preview});
+class DocumentSearchHit {
+  const DocumentSearchHit({required this.document, this.preview});
 
   final DocumentSummary document;
   final String? preview;
 }
 
 final createDocumentProvider = Provider<Future<String> Function(String)>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.createDocument;
+  final useCase = ref.watch(createDocumentUseCaseProvider);
+  return useCase.call;
 });
 
 final documentSearchQueryProvider = StateProvider<String>((_) => '');
 
-final recentDocumentsProvider = Provider<AsyncValue<List<DocumentSummary>>>((ref) {
+final recentDocumentsProvider =
+    Provider<AsyncValue<List<DocumentSummary>>>((ref) {
   final docsAsync = ref.watch(documentListProvider);
   return docsAsync.whenData((docs) {
     final sorted = [...docs]
@@ -61,7 +77,7 @@ final recentDocumentsProvider = Provider<AsyncValue<List<DocumentSummary>>>((ref
 });
 
 final filteredDocumentsProvider =
-    Provider<AsyncValue<List<SearchMatchModel>>>((ref) {
+    Provider<AsyncValue<List<DocumentSearchHit>>>((ref) {
   final docsAsync = ref.watch(documentListProvider);
   final query = ref.watch(documentSearchQueryProvider).trim().toLowerCase();
 
@@ -70,16 +86,11 @@ final filteredDocumentsProvider =
 
     if (query.isEmpty) {
       return items
-          .map((document) => SearchMatchModel(document: document))
+          .map((document) => DocumentSearchHit(document: document))
           .toList(growable: false);
     }
 
-    // Use SearchIndexService for deep full-text OCR search.
-    // Since search() is async but Riverpod's whenData is sync,
-    // we do a hybrid: filter by title immediately, and use the
-    // ocrSnippet for OCR matches (the snippet is populated from
-    // PageEntity.fullText which is indexed by Isar).
-    final results = <SearchMatchModel>[];
+    final results = <DocumentSearchHit>[];
     for (final document in items) {
       final titleMatch = document.title.toLowerCase().contains(query);
       final ocrSnippet = document.ocrSnippet?.toLowerCase() ?? '';
@@ -87,38 +98,47 @@ final filteredDocumentsProvider =
 
       if (titleMatch || ocrMatch) {
         String? preview;
-        if (ocrMatch && document.ocrSnippet != null) {
-          // Show context around the match in the OCR text.
+        final snippet = document.ocrSnippet;
+        if (ocrMatch && snippet != null) {
           final idx = ocrSnippet.indexOf(query);
           final start = (idx - 20).clamp(0, ocrSnippet.length);
-          final end = (idx + query.length + 40).clamp(0, document.ocrSnippet!.length);
-          preview = '${start > 0 ? '...' : ''}${document.ocrSnippet!.substring(start, end)}${end < document.ocrSnippet!.length ? '...' : ''}';
+          final end = (idx + query.length + 40).clamp(0, snippet.length);
+          preview =
+              '${start > 0 ? '...' : ''}${snippet.substring(start, end)}${end < snippet.length ? '...' : ''}';
         }
-        results.add(SearchMatchModel(document: document, preview: preview));
+        results.add(DocumentSearchHit(document: document, preview: preview));
       }
     }
     return results;
   });
 });
 
-/// Async deep search provider — queries Isar's fullText index via
-/// SearchIndexService for results that the in-memory ocrSnippet filter
-/// would miss (e.g. text beyond the 200-char snippet).
-final deepSearchProvider =
-    FutureProvider.family<Set<String>, String>((ref, query) async {
-  if (query.trim().isEmpty) return <String>{};
-  final searchIndex = ref.watch(searchIndexServiceProvider);
-  return searchIndex.search(query);
-});
-
 final toggleStarredProvider =
     Provider<Future<void> Function(String, bool)>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.setStarred;
+  final useCase = ref.watch(setDocumentStarredUseCaseProvider);
+  return useCase.call;
 });
 
 final deleteDocumentsProvider =
     Provider<Future<void> Function(List<String>)>((ref) {
-  final repo = ref.watch(documentRepositoryProvider);
-  return repo.deleteDocuments;
+  final useCase = ref.watch(deleteDocumentsUseCaseProvider);
+  return useCase.call;
+});
+
+final deleteDocumentPageProvider =
+    Provider<Future<void> Function(String, String)>((ref) {
+  final useCase = ref.watch(deleteDocumentPageUseCaseProvider);
+  return useCase.call;
+});
+
+final reorderDocumentPagesProvider =
+    Provider<Future<void> Function(String, List<String>)>((ref) {
+  final useCase = ref.watch(reorderDocumentPagesUseCaseProvider);
+  return useCase.call;
+});
+
+final updateDocumentPageTextProvider =
+    Provider<Future<void> Function(String, String, String)>((ref) {
+  final useCase = ref.watch(updateDocumentPageTextUseCaseProvider);
+  return useCase.call;
 });

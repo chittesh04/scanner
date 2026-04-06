@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:archive/archive.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
 
 /// Exports OCR-detected tabular data as a valid `.xlsx` (SpreadsheetML) file.
@@ -14,6 +15,7 @@ import 'package:smartscan/features/export/domain/export_models.dart';
 /// 4. Align columns across rows using X midpoint proximity
 class XlsxExportService {
   Future<File> export(ExportRequest request) async {
+    AppLogger.info('export', 'Preparing XLSX export for ${request.documentId}');
     // Detect tables from each page's OCR blocks.
     final allTables = <TableData>[];
     for (final page in request.pages) {
@@ -43,8 +45,8 @@ class XlsxExportService {
     }
 
     // ── [Content_Types].xml ──
-    archive.addFile(_textFile('[Content_Types].xml',
-        _buildContentTypes(sheetXmls.length)));
+    archive.addFile(
+        _textFile('[Content_Types].xml', _buildContentTypes(sheetXmls.length)));
 
     // ── _rels/.rels ──
     archive.addFile(_textFile('_rels/.rels', _rootRels));
@@ -59,8 +61,8 @@ class XlsxExportService {
 
     // ── xl/worksheets/sheetN.xml ──
     for (var i = 0; i < sheetXmls.length; i++) {
-      archive.addFile(
-          _textFile('xl/worksheets/sheet${i + 1}.xml', sheetXmls[i]));
+      archive
+          .addFile(_textFile('xl/worksheets/sheet${i + 1}.xml', sheetXmls[i]));
     }
 
     // ── xl/sharedStrings.xml ──
@@ -71,9 +73,13 @@ class XlsxExportService {
     archive.addFile(_textFile('xl/styles.xml', _minimalStyles));
 
     // ── Encode & write ──
-    final encoded = ZipEncoder().encode(archive)!;
+    final encoded = ZipEncoder().encode(archive);
+    if (encoded == null) {
+      throw StateError('Failed to encode XLSX archive.');
+    }
     final root = await getTemporaryDirectory();
-    final sanitizedTitle = request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
+    final sanitizedTitle =
+        request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
     final outPath = request.outputPath ??
         p.join(root.path, '${sanitizedTitle}_${request.documentId}.xlsx');
     final file = File(outPath);
@@ -96,8 +102,7 @@ class XlsxExportService {
     if (blocks.isEmpty) return const TableData(rows: []);
 
     // Sort by vertical midpoint.
-    final sorted = [...blocks]
-      ..sort((a, b) {
+    final sorted = [...blocks]..sort((a, b) {
         final midA = (a.top + a.bottom) / 2;
         final midB = (b.top + b.bottom) / 2;
         return midA.compareTo(midB);
@@ -146,7 +151,8 @@ class XlsxExportService {
     // Cluster X midpoints into columns.
     final columnCentres = <double>[];
     for (final xMid in allXMids) {
-      final match = columnCentres.indexWhere((c) => (c - xMid).abs() <= xTolerance);
+      final match =
+          columnCentres.indexWhere((c) => (c - xMid).abs() <= xTolerance);
       if (match == -1) {
         columnCentres.add(xMid);
       } else {
@@ -186,8 +192,7 @@ class XlsxExportService {
 
   String _buildSheetXml(TableData table, List<String> sharedStrings) {
     final sb = StringBuffer();
-    sb.writeln(
-        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
+    sb.writeln('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
     sb.writeln(
         '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">');
     sb.writeln('  <sheetData>');
@@ -199,8 +204,7 @@ class XlsxExportService {
         final value = table.rows[r][c];
         final ssIndex = sharedStrings.length;
         sharedStrings.add(value);
-        sb.writeln(
-            '      <c r="$cellRef" t="s"><v>$ssIndex</v></c>');
+        sb.writeln('      <c r="$cellRef" t="s"><v>$ssIndex</v></c>');
       }
       sb.writeln('    </row>');
     }
@@ -238,7 +242,8 @@ class XlsxExportService {
 </Types>''';
   }
 
-  static const _rootRels = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  static const _rootRels =
+      '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>
 </Relationships>''';
@@ -289,7 +294,8 @@ class XlsxExportService {
     return sb.toString();
   }
 
-  static const _minimalStyles = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  static const _minimalStyles =
+      '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
   <fonts count="1"><font><sz val="11"/><name val="Calibri"/></font></fonts>
   <fills count="1"><fill><patternFill patternType="none"/></fill></fills>

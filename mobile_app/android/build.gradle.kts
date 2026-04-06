@@ -25,6 +25,7 @@ subprojects {
         if (project.plugins.hasPlugin("com.android.library")) {
             extensions.findByName("android")?.let { ext ->
                 ext as com.android.build.gradle.LibraryExtension
+                ext.compileSdk = 35
                 if (ext.namespace == null) {
                     ext.namespace = "com.example.${project.name}"
                 }

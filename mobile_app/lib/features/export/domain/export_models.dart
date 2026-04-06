@@ -1,4 +1,4 @@
-enum ExportFormat { pdf, docx, xlsx }
+enum ExportFormat { pdf, docx, xlsx, txt }
 
 /// Positional OCR word/element with bounding box coordinates.
 ///

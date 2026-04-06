@@ -7,6 +7,7 @@ import 'package:image/image.dart' as img;
 import 'package:archive/archive.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
 import 'package:smartscan_services/security/file_storage_service.dart';
 
@@ -34,6 +35,7 @@ class DocxExportService {
   final FileStorageServiceImpl _storageService;
 
   Future<File> export(ExportRequest request) async {
+    AppLogger.info('export', 'Preparing DOCX export for ${request.documentId}');
     final imageBytesList = <Uint8List?>[];
     for (var i = 0; i < request.pages.length; i++) {
       final imageFile = File(request.pages[i].imagePath);
@@ -45,7 +47,8 @@ class DocxExportService {
     }
 
     final root = await getTemporaryDirectory();
-    final sanitizedTitle = request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
+    final sanitizedTitle =
+        request.title.replaceAll(RegExp(r'[\\/:*?"<>|]'), '_');
     final outPath = request.outputPath ??
         p.join(root.path, '${sanitizedTitle}_${request.documentId}.docx');
 
@@ -69,7 +72,7 @@ class DocxExportService {
     for (var i = 0; i < payload.pages.length; i++) {
       var bytes = payload.imageBytesList[i];
       payload.imageBytesList[i] = null; // Aggressive nullification hinting
-      
+
       if (bytes == null) continue;
 
       final page = payload.pages[i];
@@ -77,7 +80,7 @@ class DocxExportService {
       if (longestSide > 1500) {
         final decodedImage = img.decodeImage(bytes);
         if (decodedImage != null) {
-          final resized = decodedImage.width > decodedImage.height 
+          final resized = decodedImage.width > decodedImage.height
               ? img.copyResize(decodedImage, width: 1240)
               : img.copyResize(decodedImage, height: 1500);
           bytes = Uint8List.fromList(img.encodeJpg(resized, quality: 85));
@@ -115,7 +118,10 @@ class DocxExportService {
     archive.addFile(_textFile('word/styles.xml', _minimalStyles));
 
     // ── Encode & write ──
-    final encoded = ZipEncoder().encode(archive)!;
+    final encoded = ZipEncoder().encode(archive);
+    if (encoded == null) {
+      throw StateError('Failed to encode DOCX archive.');
+    }
     final file = File(payload.outputPath);
     await file.writeAsBytes(encoded, flush: true);
     return payload.outputPath;
@@ -138,7 +144,8 @@ class DocxExportService {
 </Types>''';
   }
 
-  static const _rootRels = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  static const _rootRels =
+      '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
 </Relationships>''';
@@ -234,7 +241,8 @@ class DocxExportService {
 </w:document>''';
   }
 
-  static const _minimalStyles = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  static const _minimalStyles =
+      '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
   <w:style w:type="paragraph" w:styleId="Heading1">
     <w:name w:val="heading 1"/>

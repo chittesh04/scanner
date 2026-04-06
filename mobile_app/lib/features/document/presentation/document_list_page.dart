@@ -3,11 +3,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:smartscan/core/di/service_locator.dart';
+import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan/core/storage/encrypted_image.dart';
 import 'package:smartscan/features/document/presentation/collection_detail_page.dart';
 import 'package:smartscan/features/document/presentation/document_detail_page.dart';
 import 'package:smartscan/features/document/presentation/document_list_controller.dart';
 import 'package:smartscan/features/scan/presentation/scan_page.dart';
+import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
 import 'package:smartscan_models/document_summary.dart';
 import 'package:smartscan/features/signature/presentation/signature_pad_page.dart';
@@ -26,59 +30,100 @@ class DocumentListPage extends ConsumerStatefulWidget {
 class _DocumentListPageState extends ConsumerState<DocumentListPage> {
   final TextEditingController _searchController = TextEditingController();
   final Set<String> _selectedDocumentIds = <String>{};
+  bool _actionInProgress = false;
 
   bool get _multiSelectMode => _selectedDocumentIds.isNotEmpty;
 
   @override
-  void initState() {
-    super.initState();
-    _searchController.addListener(_onSearchChanged);
-  }
-
-  void _onSearchChanged() {
-    if (mounted) {
-      setState(() {});
-    }
-  }
-
-  @override
   void dispose() {
-    _searchController.removeListener(_onSearchChanged);
     _searchController.dispose();
     super.dispose();
   }
 
-  Future<void> _createAndScan() async {
-    await HapticFeedback.mediumImpact();
-    final docId = await ref.read(createDocumentProvider)(
-      'Document ${DateTime.now().toIso8601String().substring(0, 16)}',
-    );
+  void _showError(String message) {
     if (!mounted) return;
-
-    await Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => ScanPage(documentId: docId)),
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
     );
+  }
+
+  Future<void> _guardedAction(Future<void> Function() action) async {
+    if (_actionInProgress) {
+      return;
+    }
+    _actionInProgress = true;
+    try {
+      await action();
+    } catch (error) {
+      _showError('Action failed: $error');
+    } finally {
+      _actionInProgress = false;
+    }
+  }
+
+  Future<void> _createAndScan() async {
+    await _guardedAction(() async {
+      await HapticFeedback.mediumImpact();
+      final docId = await ref.read(createDocumentProvider)(
+        'Document ${DateTime.now().toIso8601String().substring(0, 16)}',
+      );
+      if (!mounted) return;
+
+      await Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => ScanPage(documentId: docId)),
+      );
+    });
   }
 
   Future<void> _toggleStar(String documentId, bool isStarred) async {
-    await HapticFeedback.selectionClick();
-    await ref.read(toggleStarredProvider)(documentId, !isStarred);
+    await _guardedAction(() async {
+      await HapticFeedback.selectionClick();
+      await ref.read(toggleStarredProvider)(documentId, !isStarred);
+    });
   }
 
   Future<void> _deleteDocument(String documentId) async {
-    await HapticFeedback.lightImpact();
-    await ref.read(deleteDocumentsProvider)([documentId]);
-    _selectedDocumentIds.remove(documentId);
-    if (mounted) setState(() {});
+    await _guardedAction(() async {
+      await HapticFeedback.lightImpact();
+      await ref.read(deleteDocumentsProvider)([documentId]);
+      _selectedDocumentIds.remove(documentId);
+      if (mounted) setState(() {});
+    });
   }
 
   Future<void> _deleteSelected() async {
     if (_selectedDocumentIds.isEmpty) return;
-    await HapticFeedback.heavyImpact();
-    final ids = _selectedDocumentIds.toList(growable: false);
-    await ref.read(deleteDocumentsProvider)(ids);
-    if (!mounted) return;
-    setState(_selectedDocumentIds.clear);
+    await _guardedAction(() async {
+      await HapticFeedback.heavyImpact();
+      final ids = _selectedDocumentIds.toList(growable: false);
+      await ref.read(deleteDocumentsProvider)(ids);
+      if (!mounted) return;
+      setState(_selectedDocumentIds.clear);
+    });
+  }
+
+  Future<void> _exportSelectedAsZip() async {
+    if (_selectedDocumentIds.isEmpty) return;
+    await _guardedAction(() async {
+      await HapticFeedback.lightImpact();
+      final ids = _selectedDocumentIds.toList(growable: false);
+      final docs = await Future.wait(
+        ids.map((id) => ref.read(documentProvider(id).future)),
+      );
+      final existingDocs = docs.whereType<Document>().toList(growable: false);
+      if (existingDocs.isEmpty) {
+        _showError('No documents available to export.');
+        return;
+      }
+
+      final file =
+          await ref.read(zipExportProvider).exportDocuments(existingDocs);
+      if (!mounted) return;
+      await Share.shareXFiles(
+        [XFile(file.path)],
+        text: 'SmartScan export (${existingDocs.length} documents)',
+      );
+    });
   }
 
   Future<void> _createCollection() async {
@@ -132,6 +177,92 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Could not create collection: $error')),
       );
+    }
+  }
+
+  Future<void> _renameCollection(DocumentCollection collection) async {
+    final controller = TextEditingController(text: collection.name);
+    final result = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Rename Collection'),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          textInputAction: TextInputAction.done,
+          decoration: const InputDecoration(hintText: 'Collection name'),
+          onSubmitted: (value) => Navigator.of(context).pop(value.trim()),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(controller.text.trim()),
+            child: const Text('Save'),
+          ),
+        ],
+      ),
+    );
+    controller.dispose();
+
+    final name = result?.trim() ?? '';
+    if (name.isEmpty || name == collection.name) return;
+
+    try {
+      await ref.read(renameCollectionProvider)(collection.collectionId, name);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Collection renamed')),
+      );
+    } catch (error, stackTrace) {
+      AppLogger.error(
+        'collection',
+        'Failed to rename collection ${collection.collectionId}',
+        error: error,
+        stackTrace: stackTrace,
+      );
+      _showError('Could not rename collection: $error');
+    }
+  }
+
+  Future<void> _deleteCollection(DocumentCollection collection) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Delete Collection?'),
+        content: Text(
+          '"${collection.name}" will be removed. Documents stay in Inbox.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed != true) return;
+    try {
+      await ref.read(deleteCollectionProvider)(collection.collectionId);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Collection deleted')),
+      );
+    } catch (error, stackTrace) {
+      AppLogger.error(
+        'collection',
+        'Failed to delete collection ${collection.collectionId}',
+        error: error,
+        stackTrace: stackTrace,
+      );
+      _showError('Could not delete collection: $error');
     }
   }
 
@@ -207,6 +338,12 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
           ),
           if (_multiSelectMode)
             IconButton(
+              tooltip: 'Export selected ZIP',
+              onPressed: _exportSelectedAsZip,
+              icon: const Icon(Icons.folder_zip_rounded),
+            ),
+          if (_multiSelectMode)
+            IconButton(
               tooltip: 'Delete selected',
               onPressed: _deleteSelected,
               icon: const Icon(Icons.delete_sweep_rounded),
@@ -220,7 +357,7 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: _createAndScan,
+        onPressed: _actionInProgress ? null : _createAndScan,
         icon: const Icon(Icons.document_scanner_rounded),
         label: const Text('Scan'),
       ),
@@ -238,24 +375,22 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
                 ),
                 const SizedBox(height: 10),
                 ref.watch(inboxDocumentsProvider).when(
-                  data: (docs) => _RecentCarousel(
-                    documents: docs,
-                    emptyMessage: 'Inbox is clean.',
-                    onOpen: (documentId) {
-                      HapticFeedback.selectionClick();
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) =>
-                              DocumentDetailPage(documentId: documentId),
-                        ),
-                      );
-                    },
-                  ),
-                  loading: () => const SizedBox(
-                      height: 112,
-                      child: Center(child: CircularProgressIndicator())),
-                  error: (error, _) => const SizedBox.shrink(),
-                ),
+                      data: (docs) => _RecentCarousel(
+                        documents: docs,
+                        emptyMessage: 'Inbox is clean.',
+                        onOpen: (documentId) {
+                          HapticFeedback.selectionClick();
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  DocumentDetailPage(documentId: documentId),
+                            ),
+                          );
+                        },
+                      ),
+                      loading: () => const _HorizontalSkeletonRow(height: 112),
+                      error: (error, _) => const SizedBox.shrink(),
+                    ),
                 const SizedBox(height: 18),
                 const _SectionTitle(
                   title: 'Recent',
@@ -275,9 +410,7 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
                       );
                     },
                   ),
-                  loading: () => const SizedBox(
-                      height: 112,
-                      child: Center(child: CircularProgressIndicator())),
+                  loading: () => const _HorizontalSkeletonRow(height: 112),
                   error: (error, _) => const SizedBox.shrink(),
                 ),
                 const SizedBox(height: 18),
@@ -314,12 +447,19 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
                           ),
                         );
                       },
+                      onRename: _renameCollection,
+                      onDelete: _deleteCollection,
                     );
                   },
-                  loading: () =>
-                      const Center(child: CircularProgressIndicator()),
-                  error: (error, _) =>
-                      Text('Failed to load collections: $error'),
+                  loading: () => _GridSkeleton(
+                    itemCount: 4,
+                    crossAxisCount: colCrossAxisCount,
+                    childAspectRatio: 1.9,
+                  ),
+                  error: (error, _) => _InlineStateCard(
+                    icon: Icons.error_outline_rounded,
+                    message: 'Failed to load collections: $error',
+                  ),
                 ),
                 const SizedBox(height: 18),
                 const _SectionTitle(
@@ -335,8 +475,12 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
               if (items.isEmpty) {
                 return const SliverFillRemaining(
                   hasScrollBody: false,
-                  child:
-                      Center(child: Text('No documents match your filters.')),
+                  child: Center(
+                    child: _InlineStateCard(
+                      icon: Icons.search_off_rounded,
+                      message: 'No documents match your filters.',
+                    ),
+                  ),
                 );
               }
               return SliverPadding(
@@ -440,16 +584,22 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
                 ),
               );
             },
-            loading: () => const SliverToBoxAdapter(
+            loading: () => SliverToBoxAdapter(
               child: Padding(
-                padding: EdgeInsets.all(24),
-                child: Center(child: CircularProgressIndicator()),
+                padding: const EdgeInsets.all(24),
+                child: _GridSkeleton(
+                  itemCount: 8,
+                  crossAxisCount: docCrossAxisCount,
+                ),
               ),
             ),
             error: (error, _) => SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.all(24),
-                child: Text('Failed to load documents: $error'),
+                child: _InlineStateCard(
+                  icon: Icons.error_outline_rounded,
+                  message: 'Failed to load documents: $error',
+                ),
               ),
             ),
           ),
@@ -512,17 +662,20 @@ class _HeroHeader extends ConsumerWidget {
                 decoration: InputDecoration(
                   hintText: 'Search title or OCR text',
                   prefixIcon: const Icon(Icons.search_rounded),
-                  suffixIcon: searchController.text.isEmpty
-                      ? null
-                      : IconButton(
-                          onPressed: () {
-                            searchController.clear();
-                            ref
-                                .read(documentSearchQueryProvider.notifier)
-                                .state = '';
-                          },
-                          icon: const Icon(Icons.close_rounded),
-                        ),
+                  suffixIcon: ValueListenableBuilder<TextEditingValue>(
+                    valueListenable: searchController,
+                    builder: (context, value, _) {
+                      if (value.text.isEmpty) return const SizedBox.shrink();
+                      return IconButton(
+                        onPressed: () {
+                          searchController.clear();
+                          ref.read(documentSearchQueryProvider.notifier).state =
+                              '';
+                        },
+                        icon: const Icon(Icons.close_rounded),
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
@@ -584,6 +737,7 @@ class _RecentCarousel extends StatelessWidget {
         separatorBuilder: (_, __) => const SizedBox(width: 10),
         itemBuilder: (context, index) {
           final document = documents[index];
+          final imagePath = document.thumbnailImagePath;
           return SizedBox(
             width: 220,
             child: Card(
@@ -598,12 +752,11 @@ class _RecentCarousel extends StatelessWidget {
                         child: SizedBox(
                           width: 72,
                           height: 92,
-                          child: document.thumbnailImagePath == null
+                          child: imagePath == null
                               ? const ColoredBox(color: Colors.black12)
                               : Hero(
                                   tag: 'document_image_${document.documentId}',
-                                  child: EncryptedImage(
-                                      imagePath: document.thumbnailImagePath!),
+                                  child: EncryptedImage(imagePath: imagePath),
                                 ),
                         ),
                       ),
@@ -644,12 +797,16 @@ class _CollectionGrid extends StatelessWidget {
     required this.collections,
     required this.counts,
     required this.onTap,
+    required this.onRename,
+    required this.onDelete,
     this.crossAxisCount = 2,
   });
 
   final List<DocumentCollection> collections;
   final Map<String, int> counts;
   final ValueChanged<DocumentCollection> onTap;
+  final ValueChanged<DocumentCollection> onRename;
+  final ValueChanged<DocumentCollection> onDelete;
   final int crossAxisCount;
 
   @override
@@ -703,6 +860,39 @@ class _CollectionGrid extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
+                PopupMenuButton<String>(
+                  icon:
+                      const Icon(Icons.more_vert_rounded, color: Colors.white),
+                  onSelected: (value) {
+                    if (value == 'rename') {
+                      onRename(collection);
+                    } else if (value == 'delete') {
+                      onDelete(collection);
+                    }
+                  },
+                  itemBuilder: (context) => const [
+                    PopupMenuItem<String>(
+                      value: 'rename',
+                      child: Row(
+                        children: [
+                          Icon(Icons.drive_file_rename_outline_rounded),
+                          SizedBox(width: 8),
+                          Text('Rename'),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem<String>(
+                      value: 'delete',
+                      child: Row(
+                        children: [
+                          Icon(Icons.delete_outline_rounded),
+                          SizedBox(width: 8),
+                          Text('Delete'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
                 Text(
                   '$count',
                   style: const TextStyle(
@@ -725,7 +915,7 @@ class _DocumentCard extends StatelessWidget {
     required this.onLongPress,
   });
 
-  final SearchMatchModel item;
+  final DocumentSearchHit item;
   final bool selected;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
@@ -816,10 +1006,10 @@ class _DocumentCard extends StatelessWidget {
                       _friendlyDate(document.updatedAt),
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
-                    if (item.preview != null) ...[
+                    if (item.preview case final preview?) ...[
                       const SizedBox(height: 4),
                       Text(
-                        item.preview!,
+                        preview,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.bodySmall,
@@ -867,6 +1057,82 @@ class _SwipeBackground extends StatelessWidget {
               style: TextStyle(color: color, fontWeight: FontWeight.w600)),
         ],
       ),
+    );
+  }
+}
+
+class _InlineStateCard extends StatelessWidget {
+  const _InlineStateCard({required this.icon, required this.message});
+
+  final IconData icon;
+  final String message;
+
+  @override
+  Widget build(BuildContext context) {
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 520),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Icon(icon),
+              const SizedBox(width: 12),
+              Expanded(child: Text(message)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _HorizontalSkeletonRow extends StatelessWidget {
+  const _HorizontalSkeletonRow({required this.height});
+
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: height,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: 3,
+        separatorBuilder: (_, __) => const SizedBox(width: 10),
+        itemBuilder: (_, __) => const SizedBox(
+          width: 220,
+          child: Card(),
+        ),
+      ),
+    );
+  }
+}
+
+class _GridSkeleton extends StatelessWidget {
+  const _GridSkeleton({
+    required this.itemCount,
+    required this.crossAxisCount,
+    this.childAspectRatio = 0.75,
+  });
+
+  final int itemCount;
+  final int crossAxisCount;
+  final double childAspectRatio;
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: itemCount,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        mainAxisSpacing: 12,
+        crossAxisSpacing: 12,
+        childAspectRatio: childAspectRatio,
+      ),
+      itemBuilder: (_, __) => const Card(),
     );
   }
 }

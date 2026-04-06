@@ -7,6 +7,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
 import 'package:smartscan_services/security/file_storage_service.dart';
 import 'package:smartscan/features/signature/domain/signature_repository.dart';
@@ -32,6 +33,7 @@ class PdfExportService {
   final SignatureRepository _signatureRepository;
 
   Future<File> export(ExportRequest request) async {
+    AppLogger.info('export', 'Preparing PDF export for ${request.documentId}');
     final signatureBytes = await _signatureRepository.loadSignature();
 
     String path = request.outputPath ?? '';
@@ -66,8 +68,9 @@ class PdfExportService {
   static Future<String> _buildPdfIsolate(_PdfExportPayload payload) async {
     final pdf = pw.Document();
     pw.MemoryImage? signatureImage;
-    if (payload.signatureBytes != null) {
-      signatureImage = pw.MemoryImage(payload.signatureBytes!);
+    final loadedSignature = payload.signatureBytes;
+    if (loadedSignature != null) {
+      signatureImage = pw.MemoryImage(loadedSignature);
       payload.signatureBytes = null; // Aggressive nullification hinting
     }
 
@@ -113,9 +116,14 @@ class PdfExportService {
                   ),
                   for (final block in page.ocrBlocks)
                     _buildInvisibleTextBlock(block, scaleX, scaleY, pageHeight),
-                  if (page.signature != null && signatureImage != null)
-                    _buildPdfSignature(
-                        page.signature!, signatureImage, pageWidth, pageHeight),
+                  if (page.signature case final signature?)
+                    if (signatureImage != null)
+                      _buildPdfSignature(
+                        signature,
+                        signatureImage,
+                        pageWidth,
+                        pageHeight,
+                      ),
                 ],
               );
             },

@@ -41,6 +41,7 @@ class CollectionDetailPage extends ConsumerWidget {
             itemCount: docs.length,
             itemBuilder: (context, index) {
               final document = docs[index];
+              final imagePath = document.thumbnailImagePath;
               return Card(
                 clipBehavior: Clip.antiAlias,
                 child: InkWell(
@@ -56,10 +57,10 @@ class CollectionDetailPage extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Expanded(
-                        child: document.thumbnailImagePath == null
+                        child: imagePath == null
                             ? const ColoredBox(color: Colors.black12)
                             : EncryptedImage(
-                                imagePath: document.thumbnailImagePath!,
+                                imagePath: imagePath,
                                 fit: BoxFit.cover,
                               ),
                       ),

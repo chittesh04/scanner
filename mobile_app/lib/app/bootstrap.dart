@@ -6,10 +6,44 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:smartscan/app/app.dart';
 import 'package:smartscan/core/di/service_locator.dart';
+import 'package:smartscan/core/logging/app_logger.dart';
+import 'package:smartscan_services/background_tasks/ocr_background_callback.dart';
+import 'package:smartscan_services/background_tasks/work_manager_dispatcher.dart';
 import 'package:smartscan_services/security/key_manager.dart';
 
 Future<void> bootstrap() async {
-  // Show the UI immediately — never block before runApp().
+  ErrorWidget.builder = (details) => Material(
+        color: const Color(0xFF111827),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.report_gmailerrorred_rounded,
+                    color: Color(0xFFF97316), size: 40),
+                const SizedBox(height: 12),
+                const Text(
+                  'Something went wrong',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  details.exceptionAsString(),
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.white70, fontSize: 12),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+
+  // Show the UI immediately - never block before runApp().
   runApp(const ProviderScope(child: _AppInitializer()));
 }
 
@@ -44,9 +78,32 @@ class _AppInitializerState extends State<_AppInitializer> {
       // 3. Orphan temp-file cleanup in a background isolate.
       _cleanOrphanFilesInBackground();
 
+      // 4. Background task dispatcher.
+      try {
+        await WorkManagerDispatcher.initialize(ocrBackgroundCallback);
+      } catch (error, stackTrace) {
+        AppLogger.warn(
+          'background',
+          'WorkManager initialization failed. App will continue without background OCR.',
+          error: error,
+        );
+        AppLogger.error(
+          'background',
+          'WorkManager initialization stack trace',
+          error: error,
+          stackTrace: stackTrace,
+        );
+      }
+
       if (mounted) setState(() => _ready = true);
-    } catch (e) {
-      if (mounted) setState(() => _error = e.toString());
+    } catch (error, stackTrace) {
+      AppLogger.error(
+        'bootstrap',
+        'Startup initialization failed',
+        error: error,
+        stackTrace: stackTrace,
+      );
+      if (mounted) setState(() => _error = error.toString());
     }
   }
 
@@ -66,7 +123,19 @@ class _AppInitializerState extends State<_AppInitializer> {
           }
         }
       });
-    }).catchError((_) {});
+    }).catchError((error, stackTrace) {
+      AppLogger.warn(
+        'bootstrap',
+        'Temp cleanup skipped',
+        error: error,
+      );
+      AppLogger.error(
+        'bootstrap',
+        'Temp cleanup stack trace',
+        error: error,
+        stackTrace: stackTrace,
+      );
+    });
   }
 
   @override
@@ -75,7 +144,7 @@ class _AppInitializerState extends State<_AppInitializer> {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: const Color(0xFF030712),
           body: Center(
             child: Padding(
               padding: const EdgeInsets.all(32),
@@ -94,7 +163,7 @@ class _AppInitializerState extends State<_AppInitializer> {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: const Color(0xFF030712),
           body: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,

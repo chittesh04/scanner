@@ -1,6 +1,7 @@
 import 'package:smartscan_models/document.dart';
 import 'package:smartscan_models/document_collection.dart';
 import 'package:smartscan_models/document_summary.dart';
+import 'package:smartscan_models/document_summary_page.dart';
 import 'package:smartscan_core_engine/core_engine.dart';
 
 abstract interface class DocumentRepository {
@@ -20,8 +21,18 @@ abstract interface class DocumentRepository {
   Stream<List<DocumentSummary>> watchDocumentsByCollection(String collectionId);
   Stream<List<DocumentSummary>> watchInboxDocuments();
   Future<String> createCollection(String name);
+  Future<void> renameCollection(String collectionId, String newName);
+  Future<void> deleteCollection(String collectionId);
   Future<void> assignDocumentToCollection(
       String documentId, String? collectionId);
-  Future<void> updatePageSignature(String documentId, String pageId, double x, double y, double scale);
+  Future<void> updatePageText(String documentId, String pageId, String text);
+  Future<void> updatePageSignature(
+      String documentId, String pageId, double x, double y, double scale);
   Future<void> removePageSignature(String documentId, String pageId);
+
+  /// Fetches a summary page for scalable list rendering (cursor pagination).
+  Future<DocumentSummaryPage> fetchDocumentsPage({
+    int limit = 30,
+    DateTime? updatedBeforeCursor,
+  });
 }
