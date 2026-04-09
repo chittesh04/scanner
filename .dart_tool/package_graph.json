@@ -19,7 +19,9 @@
       "version": "1.0.0",
       "dependencies": [
         "google_mlkit_text_recognition",
+        "http",
         "image",
+        "path",
         "path_provider",
         "smartscan_models",
         "uuid"

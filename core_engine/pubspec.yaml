@@ -14,5 +14,7 @@ dependencies:
   image: ^4.2.0
 
   google_mlkit_text_recognition: ^0.13.0
+  http: ^1.2.0
+  path: ^1.9.0
   uuid: ^4.5.1
   path_provider: ^2.1.3

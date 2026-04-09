@@ -6,11 +6,11 @@ import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan/features/document/presentation/document_list_controller.dart';
 import 'package:smartscan/features/document/presentation/document_text_editor_page.dart';
 import 'package:smartscan/features/document/presentation/page_management_page.dart';
+import 'package:smartscan/features/export/presentation/export_helpers.dart';
 import 'package:smartscan/features/scan/presentation/scan_page.dart';
 import 'package:smartscan/features/export/domain/export_models.dart';
 import 'package:smartscan/core/storage/encrypted_image.dart';
 import 'package:smartscan/features/editor/presentation/document_editor_page.dart';
-import 'package:share_plus/share_plus.dart';
 import 'package:smartscan_models/document.dart';
 
 class DocumentDetailPage extends ConsumerStatefulWidget {
@@ -510,13 +510,14 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
     }
   }
 
-  Future<ExportRequest?> _buildExportRequest() async {
+  Future<ExportRequest?> _buildExportRequest({String? outputPath}) async {
     final doc = await ref.read(documentProvider(widget.documentId).future);
     if (doc == null || doc.pages.isEmpty) return null;
 
     return ExportRequest(
       documentId: widget.documentId,
       title: doc.title,
+      outputPath: outputPath,
       pages: doc.pages
           .map((p) => PageExportData(
                 imagePath: p.processedImagePath,
@@ -547,7 +548,18 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
     await HapticFeedback.lightImpact();
     setState(() => _exporting = true);
     try {
-      final request = await _buildExportRequest();
+      final doc = await ref.read(documentProvider(widget.documentId).future);
+      if (doc == null || !context.mounted) return;
+      final delivery = await promptForExportDelivery(context);
+      if (delivery == null || !context.mounted) return;
+      final outputPath = await promptForExportPath(
+        context,
+        extension: 'pdf',
+        currentTitle: doc.title,
+        delivery: delivery,
+      );
+      if (outputPath == null || !context.mounted) return;
+      final request = await _buildExportRequest(outputPath: outputPath);
       if (request == null || !context.mounted) return;
       AppLogger.info('export', 'Starting PDF export for ${request.documentId}');
 
@@ -558,8 +570,7 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
       final file = await ref.read(pdfExportProvider).export(request);
 
       if (!context.mounted) return;
-      await Share.shareXFiles([XFile(file.path)],
-          text: 'Exported Document: ${request.title}');
+      await handleExportedFile(context, file, request.title, delivery);
     } catch (e) {
       AppLogger.error('export', 'PDF export failed', error: e);
       if (!context.mounted) return;
@@ -575,7 +586,18 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
     await HapticFeedback.lightImpact();
     setState(() => _exporting = true);
     try {
-      final request = await _buildExportRequest();
+      final doc = await ref.read(documentProvider(widget.documentId).future);
+      if (doc == null || !context.mounted) return;
+      final delivery = await promptForExportDelivery(context);
+      if (delivery == null || !context.mounted) return;
+      final outputPath = await promptForExportPath(
+        context,
+        extension: 'docx',
+        currentTitle: doc.title,
+        delivery: delivery,
+      );
+      if (outputPath == null || !context.mounted) return;
+      final request = await _buildExportRequest(outputPath: outputPath);
       if (request == null || !context.mounted) return;
       AppLogger.info(
           'export', 'Starting DOCX export for ${request.documentId}');
@@ -587,8 +609,7 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
       final file = await ref.read(docxExportProvider).export(request);
 
       if (!context.mounted) return;
-      await Share.shareXFiles([XFile(file.path)],
-          text: 'Exported Document: ${request.title}');
+      await handleExportedFile(context, file, request.title, delivery);
     } catch (e) {
       AppLogger.error('export', 'DOCX export failed', error: e);
       if (!context.mounted) return;
@@ -604,7 +625,18 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
     await HapticFeedback.lightImpact();
     setState(() => _exporting = true);
     try {
-      final request = await _buildExportRequest();
+      final doc = await ref.read(documentProvider(widget.documentId).future);
+      if (doc == null || !context.mounted) return;
+      final delivery = await promptForExportDelivery(context);
+      if (delivery == null || !context.mounted) return;
+      final outputPath = await promptForExportPath(
+        context,
+        extension: 'xlsx',
+        currentTitle: doc.title,
+        delivery: delivery,
+      );
+      if (outputPath == null || !context.mounted) return;
+      final request = await _buildExportRequest(outputPath: outputPath);
       if (request == null || !context.mounted) return;
       AppLogger.info(
           'export', 'Starting XLSX export for ${request.documentId}');
@@ -616,8 +648,7 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
       final file = await ref.read(xlsxExportProvider).export(request);
 
       if (!context.mounted) return;
-      await Share.shareXFiles([XFile(file.path)],
-          text: 'Exported Document: ${request.title}');
+      await handleExportedFile(context, file, request.title, delivery);
     } catch (e) {
       AppLogger.error('export', 'XLSX export failed', error: e);
       if (!context.mounted) return;
@@ -633,7 +664,18 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
     await HapticFeedback.lightImpact();
     setState(() => _exporting = true);
     try {
-      final request = await _buildExportRequest();
+      final doc = await ref.read(documentProvider(widget.documentId).future);
+      if (doc == null || !context.mounted) return;
+      final delivery = await promptForExportDelivery(context);
+      if (delivery == null || !context.mounted) return;
+      final outputPath = await promptForExportPath(
+        context,
+        extension: 'txt',
+        currentTitle: doc.title,
+        delivery: delivery,
+      );
+      if (outputPath == null || !context.mounted) return;
+      final request = await _buildExportRequest(outputPath: outputPath);
       if (request == null || !context.mounted) return;
       AppLogger.info('export', 'Starting TXT export for ${request.documentId}');
 
@@ -644,8 +686,7 @@ class _DocumentDetailPageState extends ConsumerState<DocumentDetailPage> {
       final file = await ref.read(txtExportProvider).export(request);
 
       if (!context.mounted) return;
-      await Share.shareXFiles([XFile(file.path)],
-          text: 'Exported Document: ${request.title}');
+      await handleExportedFile(context, file, request.title, delivery);
     } catch (e) {
       AppLogger.error('export', 'TXT export failed', error: e);
       if (!context.mounted) return;

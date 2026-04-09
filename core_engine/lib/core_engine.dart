@@ -9,4 +9,5 @@ export 'ocr_engine/ocr_pipeline.dart';
 
 // Export Implementations
 export 'document_pipeline/mlkit_scanner_service.dart';
+export 'ocr_engine/openai_vision_ocr_client.dart';
 export 'ocr_engine/ocr_service_impl.dart';

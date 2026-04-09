@@ -489,7 +489,7 @@ class DocumentRepositoryImpl implements DocumentRepository {
         }
 
         await page.ocrBlocks.save();
-        page.fullText = result.words.map((w) => w.text).join(' ');
+        page.fullText = result.fullText.trim();
         page.ocrStatus = OcrStatus.completed;
         page.updatedAt = DateTime.now();
         await _isar.pageEntitys.put(page);

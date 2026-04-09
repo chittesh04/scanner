@@ -77,40 +77,67 @@ final recentDocumentsProvider =
 });
 
 final filteredDocumentsProvider =
-    Provider<AsyncValue<List<DocumentSearchHit>>>((ref) {
-  final docsAsync = ref.watch(documentListProvider);
+    FutureProvider<List<DocumentSearchHit>>((ref) async {
+  final docs = await ref.watch(documentListProvider.future);
   final query = ref.watch(documentSearchQueryProvider).trim().toLowerCase();
+  final items = [...docs]..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
 
-  return docsAsync.whenData((docs) {
-    final items = [...docs]..sort((a, b) => b.updatedAt.compareTo(a.updatedAt));
+  if (query.isEmpty) {
+    return items
+        .map((document) => DocumentSearchHit(document: document))
+        .toList(growable: false);
+  }
 
-    if (query.isEmpty) {
-      return items
-          .map((document) => DocumentSearchHit(document: document))
-          .toList(growable: false);
+  final matchedDocumentIds =
+      await ref.watch(searchIndexServiceProvider).search(query);
+  final ranked = <({int score, DocumentSearchHit hit})>[];
+
+  for (final document in items) {
+    final lowerTitle = document.title.toLowerCase();
+    final titleStartsWith = lowerTitle.startsWith(query);
+    final titleMatch = lowerTitle.contains(query);
+    final snippet = document.ocrSnippet;
+    final lowerSnippet = snippet?.toLowerCase() ?? '';
+    final snippetMatch = lowerSnippet.contains(query);
+    final fullTextMatch = matchedDocumentIds.contains(document.documentId);
+
+    if (!titleMatch && !snippetMatch && !fullTextMatch) {
+      continue;
     }
 
-    final results = <DocumentSearchHit>[];
-    for (final document in items) {
-      final titleMatch = document.title.toLowerCase().contains(query);
-      final ocrSnippet = document.ocrSnippet?.toLowerCase() ?? '';
-      final ocrMatch = ocrSnippet.contains(query);
-
-      if (titleMatch || ocrMatch) {
-        String? preview;
-        final snippet = document.ocrSnippet;
-        if (ocrMatch && snippet != null) {
-          final idx = ocrSnippet.indexOf(query);
-          final start = (idx - 20).clamp(0, ocrSnippet.length);
-          final end = (idx + query.length + 40).clamp(0, snippet.length);
-          preview =
-              '${start > 0 ? '...' : ''}${snippet.substring(start, end)}${end < snippet.length ? '...' : ''}';
-        }
-        results.add(DocumentSearchHit(document: document, preview: preview));
-      }
+    String? preview;
+    if (snippetMatch && snippet != null) {
+      final idx = lowerSnippet.indexOf(query);
+      final start = (idx - 20).clamp(0, snippet.length);
+      final end = (idx + query.length + 40).clamp(0, snippet.length);
+      preview =
+          '${start > 0 ? '...' : ''}${snippet.substring(start, end)}${end < snippet.length ? '...' : ''}';
+    } else if (fullTextMatch) {
+      preview = 'Matched in OCR text';
     }
-    return results;
+
+    final score = switch ((titleStartsWith, titleMatch, fullTextMatch)) {
+      (true, _, _) => 3,
+      (_, true, _) => 2,
+      (_, _, true) => 1,
+      _ => 0,
+    };
+
+    ranked.add((
+      score: score,
+      hit: DocumentSearchHit(document: document, preview: preview),
+    ));
+  }
+
+  ranked.sort((left, right) {
+    final byScore = right.score.compareTo(left.score);
+    if (byScore != 0) {
+      return byScore;
+    }
+    return right.hit.document.updatedAt.compareTo(left.hit.document.updatedAt);
   });
+
+  return ranked.map((entry) => entry.hit).toList(growable: false);
 });
 
 final toggleStarredProvider =

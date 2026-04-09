@@ -7,6 +7,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:smartscan/core/di/service_locator.dart';
 import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan/core/storage/encrypted_image.dart';
+import 'package:smartscan/core/widgets/text_value_dialog.dart';
 import 'package:smartscan/features/document/presentation/collection_detail_page.dart';
 import 'package:smartscan/features/document/presentation/document_detail_page.dart';
 import 'package:smartscan/features/document/presentation/document_list_controller.dart';
@@ -64,8 +65,12 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
   Future<void> _createAndScan() async {
     await _guardedAction(() async {
       await HapticFeedback.mediumImpact();
+      final documentName = await _promptForDocumentName();
+      if (!mounted || documentName == null) {
+        return;
+      }
       final docId = await ref.read(createDocumentProvider)(
-        'Document ${DateTime.now().toIso8601String().substring(0, 16)}',
+        documentName,
       );
       if (!mounted) return;
 
@@ -127,34 +132,12 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
   }
 
   Future<void> _createCollection() async {
-    final controller = TextEditingController();
-    final result = await showDialog<String>(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: const Text('New Collection'),
-          content: TextField(
-            controller: controller,
-            autofocus: true,
-            textInputAction: TextInputAction.done,
-            decoration: const InputDecoration(hintText: 'Collection name'),
-            onSubmitted: (value) => Navigator.of(context).pop(value.trim()),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Cancel'),
-            ),
-            FilledButton(
-              onPressed: () =>
-                  Navigator.of(context).pop(controller.text.trim()),
-              child: const Text('Create'),
-            ),
-          ],
-        );
-      },
+    final result = await showTextValueDialog(
+      context,
+      title: 'New Collection',
+      confirmLabel: 'Create',
+      hintText: 'Collection name',
     );
-    controller.dispose();
 
     final name = result?.trim() ?? '';
     if (name.isEmpty) {
@@ -180,32 +163,31 @@ class _DocumentListPageState extends ConsumerState<DocumentListPage> {
     }
   }
 
-  Future<void> _renameCollection(DocumentCollection collection) async {
-    final controller = TextEditingController(text: collection.name);
-    final result = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Rename Collection'),
-        content: TextField(
-          controller: controller,
-          autofocus: true,
-          textInputAction: TextInputAction.done,
-          decoration: const InputDecoration(hintText: 'Collection name'),
-          onSubmitted: (value) => Navigator.of(context).pop(value.trim()),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
-          ),
-          FilledButton(
-            onPressed: () => Navigator.of(context).pop(controller.text.trim()),
-            child: const Text('Save'),
-          ),
-        ],
-      ),
+  Future<String?> _promptForDocumentName() async {
+    final result = await showTextValueDialog(
+      context,
+      title: 'Document Name',
+      confirmLabel: 'Continue',
+      initialValue:
+          'Document ${DateTime.now().toIso8601String().substring(0, 16)}',
+      hintText: 'File name',
     );
-    controller.dispose();
+
+    final name = result?.trim();
+    if (name == null || name.isEmpty) {
+      return null;
+    }
+    return name;
+  }
+
+  Future<void> _renameCollection(DocumentCollection collection) async {
+    final result = await showTextValueDialog(
+      context,
+      title: 'Rename Collection',
+      confirmLabel: 'Save',
+      initialValue: collection.name,
+      hintText: 'Collection name',
+    );
 
     final name = result?.trim() ?? '';
     if (name.isEmpty || name == collection.name) return;
@@ -826,38 +808,56 @@ class _CollectionGrid extends StatelessWidget {
         final count = counts[collection.collectionId] ?? 0;
         const gradient = [Color(0xFF0EA5E9), Color(0xFF0284C7)];
 
-        return InkWell(
-          borderRadius: BorderRadius.circular(18),
-          onTap: () => onTap(collection),
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 180),
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              gradient: const LinearGradient(
-                colors: gradient,
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: gradient.first.withValues(alpha: 0.3),
-                  blurRadius: 16,
-                  offset: const Offset(0, 8),
-                ),
-              ],
+        return AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            gradient: const LinearGradient(
+              colors: gradient,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
+            boxShadow: [
+              BoxShadow(
+                color: gradient.first.withValues(alpha: 0.3),
+                blurRadius: 16,
+                offset: const Offset(0, 8),
+              ),
+            ],
+          ),
+          child: Material(
+            color: Colors.transparent,
             child: Row(
               children: [
-                const Icon(Icons.folder_rounded, color: Colors.white),
-                const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
-                    collection.name,
-                    style: const TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w600),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(18),
+                    onTap: () => onTap(collection),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.folder_rounded, color: Colors.white),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              collection.name,
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          Text(
+                            '$count',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
                 PopupMenuButton<String>(
@@ -892,11 +892,6 @@ class _CollectionGrid extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-                Text(
-                  '$count',
-                  style: const TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.w800),
                 ),
               ],
             ),

@@ -8,7 +8,11 @@ import 'package:smartscan/core/logging/app_logger.dart';
 import 'package:smartscan_models/document.dart';
 
 class ZipExportService {
-  Future<File> exportDocuments(List<Document> documents) async {
+  Future<File> exportDocuments(
+    List<Document> documents, {
+    String? outputPath,
+    String? archiveName,
+  }) async {
     if (documents.isEmpty) {
       throw ArgumentError('No documents selected for ZIP export.');
     }
@@ -31,9 +35,10 @@ class ZipExportService {
     }
 
     final root = await getTemporaryDirectory();
-    final filename =
-        'smartscan_export_${DateTime.now().millisecondsSinceEpoch}.zip';
-    final output = File(p.join(root.path, filename));
+    final filename = outputPath == null
+        ? '${_sanitize(archiveName ?? 'smartscan_export_${DateTime.now().millisecondsSinceEpoch}')}.zip'
+        : null;
+    final output = File(outputPath ?? p.join(root.path, filename!));
     await output.writeAsBytes(encoded, flush: true);
     return output;
   }
